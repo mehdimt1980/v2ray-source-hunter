@@ -61,9 +61,15 @@ def evaluate_candidate(
 
     real = run_optional_real_check(tcp_items[:10])
     report.diagnostics["real_check"] = real.to_dict()
-    if real.requested and real.available:
-        report.notes.append("real-check binary available; full per-config probe pending")
-    return score_report(report), unique
+    report = score_report(report)
+    if real.checked > 0:
+        if real.success_rate < 0.20 and report.status == "trusted":
+            report.status = "candidate"
+            report.notes.append("demoted by low real-validation success")
+        elif real.success_rate >= 0.50 and report.status == "candidate":
+            report.status = "trusted"
+            report.notes.append("promoted by real-validation success")
+    return report, unique
 
 
 def run_hunt(
