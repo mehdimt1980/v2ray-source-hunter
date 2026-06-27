@@ -40,6 +40,7 @@ class FeedReport:
     score: float = 0.0
     status: str = "rejected"
     notes: list[str] = field(default_factory=list)
+    diagnostics: dict[str, Any] = field(default_factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         data = asdict(self)
@@ -54,7 +55,10 @@ class HunterResult:
     evaluated: int
     trusted: list[dict[str, Any]]
     candidates: list[dict[str, Any]]
-    rejected: list[dict[str, Any]]
+    experimental: list[dict[str, Any]] = field(default_factory=list)
+    redundant: list[dict[str, Any]] = field(default_factory=list)
+    rejected: list[dict[str, Any]] = field(default_factory=list)
+    dead_paths: list[dict[str, Any]] = field(default_factory=list)
     errors: list[dict[str, str]] = field(default_factory=list)
 
     def to_dict(self) -> dict[str, Any]:
