@@ -19,7 +19,7 @@ from .web_collect import collect_web_candidates
 def collect_all(registry_dir: Path) -> list[FeedCandidate]:
     candidates: list[FeedCandidate] = []
     candidates.extend(collect_seed_candidates(registry_dir / "seeds.json"))
-    candidates.extend(collect_github_repo_candidates(registry_dir / "github_repos.json"))
+    candidates.extend(collect_github_repo_candidates(registry_dir / "repositories.json"))
     candidates.extend(collect_web_candidates(registry_dir / "web_pages.json"))
     candidates.extend(collect_telegram_candidates(registry_dir / "telegram_channels.json"))
     by_url: dict[str, FeedCandidate] = {}
