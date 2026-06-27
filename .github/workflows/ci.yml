@@ -15,11 +15,31 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: true
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - run: python -m pip install -e .
-      - run: source-hunter run --json | tee output.json
+
+      - name: Install Python packages
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e .
+          python -m pip install "git+https://github.com/mehdimt1980/v2ray-finder.git" || true
+
+      - name: Install Xray
+        run: |
+          set -euxo pipefail
+          mkdir -p "$RUNNER_TEMP/xray"
+          curl -L --fail --retry 3 -o "$RUNNER_TEMP/xray/xray.zip" "https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip"
+          unzip -o "$RUNNER_TEMP/xray/xray.zip" -d "$RUNNER_TEMP/xray"
+          chmod +x "$RUNNER_TEMP/xray/xray"
+          "$RUNNER_TEMP/xray/xray" version
+          echo "XRAY_BINARY=$RUNNER_TEMP/xray/xray" >> "$GITHUB_ENV"
+          echo "HUNTER_REAL_CHECK=1" >> "$GITHUB_ENV"
+
+      - name: Run source hunter
+        run: source-hunter run --json | tee output.json
+
       - name: Commit outputs
         run: |
           git config user.name "github-actions[bot]"
@@ -31,12 +51,14 @@ jobs:
             git commit -m "Update source hunter outputs"
             git push
           fi
+
       - name: Optional sync
         env:
           TARGET_REPO_TOKEN: ${{ secrets.TARGET_REPO_TOKEN }}
           TARGET_REPO: ${{ secrets.TARGET_REPO }}
           TARGET_PATH: ${{ secrets.TARGET_PATH }}
         run: python -m source_hunter.sync_registry || true
+
       - uses: actions/upload-artifact@v4
         with:
           name: source-hunter-output
