@@ -38,6 +38,9 @@ jobs:
           echo "HUNTER_REAL_CHECK=1" >> "$GITHUB_ENV"
 
       - name: Run source hunter
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HUNTER_AUTO_DISCOVER: "1"
         run: source-hunter run --json | tee output.json
 
       - name: Commit outputs
