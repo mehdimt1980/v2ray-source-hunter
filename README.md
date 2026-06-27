@@ -109,4 +109,4 @@ If the secrets are missing, sync is skipped safely.
 
 ## GitHub Actions
 
-The workflow runs every 6 hours by default, commits updated output files to this repository, uploads artifacts, and optionally syncs the Android-compatible registry to a target repo.
+The workflow runs every 24 hours by default, commits updated output files to this repository, uploads artifacts, and optionally syncs the Android-compatible registry to a target repo.
