@@ -1,7 +1,9 @@
 from __future__ import annotations
 
+import os
 from pathlib import Path
 
+from .auto_discover import run_auto_discovery
 from .extractors import extract_all
 from .exporter import export_app_registry
 from .github_collect import collect_github_repo_candidates
@@ -26,8 +28,11 @@ def collect_all(registry_dir: Path) -> list[FeedCandidate]:
     candidates.extend(collect_seed_candidates(registry_dir / "seeds.json"))
     candidates.extend(collect_github_repo_candidates(registry_dir / "repositories.json"))
     candidates.extend(collect_repo_tree_candidates(registry_dir / "repositories.json"))
+    candidates.extend(collect_github_repo_candidates(registry_dir / "discovered_repositories.json"))
+    candidates.extend(collect_repo_tree_candidates(registry_dir / "discovered_repositories.json"))
     candidates.extend(collect_web_candidates(registry_dir / "web_pages.json"))
     candidates.extend(collect_telegram_candidates(registry_dir / "telegram_channels.json"))
+    candidates.extend(collect_telegram_candidates(registry_dir / "discovered_telegram_channels.json"))
     by_url: dict[str, FeedCandidate] = {}
     for c in candidates:
         by_url.setdefault(c.url, c)
@@ -79,6 +84,9 @@ def run_hunt(
     tcp_sample_size: int = 30,
     fetch_timeout: float = 20.0,
 ) -> HunterResult:
+    if os.environ.get("HUNTER_AUTO_DISCOVER", "1") != "0":
+        run_auto_discovery(registry_dir)
+
     raw_candidates = collect_all(registry_dir)
     preflighted, dead_paths = preflight_candidates(raw_candidates[:max_candidates])
     candidates = preflighted[:max_candidates]
