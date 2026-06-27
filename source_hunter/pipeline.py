@@ -7,6 +7,7 @@ from .auto_discover import run_auto_discovery
 from .candidate_queue import select_live_candidates
 from .extractors import extract_all
 from .exporter import export_app_registry
+from .generated_feeds import materialize_telegram_feeds
 from .github_collect import collect_github_repo_candidates
 from .http_client import fetch_text
 from .models import FeedCandidate, FeedReport, HunterResult, utc_now
@@ -28,12 +29,7 @@ def collect_all(registry_dir: Path) -> list[FeedCandidate]:
     candidates.extend(collect_seed_candidates(registry_dir / "seeds.json"))
     candidates.extend(collect_github_repo_candidates(registry_dir / "repositories.json"))
     candidates.extend(collect_repo_tree_candidates(registry_dir / "repositories.json"))
-
-    # Auto-discovered repositories should be inspected through their actual tree.
-    # Do not generate guessed common paths for them; that creates many 404s and
-    # starves better discovered candidates before validation.
     candidates.extend(collect_repo_tree_candidates(registry_dir / "discovered_repositories.json", max_paths_per_repo=12))
-
     candidates.extend(collect_web_candidates(registry_dir / "web_pages.json"))
     candidates.extend(collect_telegram_candidates(registry_dir / "telegram_channels.json"))
     candidates.extend(collect_telegram_candidates(registry_dir / "discovered_telegram_channels.json"))
@@ -54,20 +50,17 @@ def evaluate_candidate(
     if not fetched.ok:
         report.notes.append("fetch failed")
         return score_report(report), []
-
     raw = extract_all(fetched.text)
     unique = dedupe_keep_order(raw)
     report.raw_items = len(raw)
     report.unique_items = len(unique)
     report.duplicate_ratio = 0.0 if not raw else round(1.0 - (len(unique) / len(raw)), 4)
     report.protocols = protocol_counts(unique)
-
     tcp_items = stratified_sample(unique, requested=tcp_sample_size, seed=candidate.url)
     ok, checked = tcp_sample(tcp_items, sample_size=len(tcp_items), timeout=4.0)
     report.tcp_ok_count = ok
     report.tcp_sample_size = checked
     report.tcp_success_rate = round(ok / checked, 4) if checked else 0.0
-
     real = run_optional_real_check(tcp_items[:10])
     report.diagnostics["real_check"] = real.to_dict()
     report = score_report(report)
@@ -91,7 +84,6 @@ def run_hunt(
 ) -> HunterResult:
     if os.environ.get("HUNTER_AUTO_DISCOVER", "1") != "0":
         run_auto_discovery(registry_dir)
-
     raw_candidates = collect_all(registry_dir)
     candidates, dead_paths, queue_diagnostics = select_live_candidates(
         raw_candidates,
@@ -101,7 +93,6 @@ def run_hunt(
     reports: list[FeedReport] = []
     configs_by_url: dict[str, list[str]] = {}
     errors: list[dict[str, str]] = []
-
     for c in candidates:
         try:
             report, configs = evaluate_candidate(c, tcp_sample_size=tcp_sample_size, timeout=fetch_timeout)
@@ -109,16 +100,16 @@ def run_hunt(
             configs_by_url[c.url] = configs
         except Exception as exc:
             errors.append({"url": c.url, "error": str(exc)})
-
     apply_redundancy_policy(reports, configs_by_url)
-
+    generated_rows = materialize_telegram_feeds(registry_dir, reports, configs_by_url)
     trusted = [r.to_dict() for r in reports if r.status == "trusted"]
     candidate_rows = [r.to_dict() for r in reports if r.status == "candidate"]
     experimental = [r.to_dict() for r in reports if r.status == "experimental"]
     redundant = [r.to_dict() for r in reports if r.status == "redundant"]
     rejected = [r.to_dict() for r in reports if r.status == "rejected"]
     dead_rows = [d.to_dict() for d in dead_paths]
-
+    queue_diagnostics = dict(queue_diagnostics)
+    queue_diagnostics["generated_telegram_feeds"] = len(generated_rows)
     result = HunterResult(
         generated_at=utc_now(),
         raw_candidates=len(raw_candidates),
@@ -131,7 +122,6 @@ def run_hunt(
         dead_paths=dead_rows,
         errors=errors,
     )
-
     write_json(registry_dir / "trusted_sources.json", trusted)
     write_json(registry_dir / "candidates.json", candidate_rows)
     write_json(registry_dir / "experimental.json", experimental)
