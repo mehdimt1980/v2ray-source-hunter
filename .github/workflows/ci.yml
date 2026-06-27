@@ -41,7 +41,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           HUNTER_AUTO_DISCOVER: "1"
-        run: source-hunter run --json | tee output.json
+        run: source-hunter run --max-candidates 120 --preflight-scan-limit 700 --json | tee output.json
 
       - name: Commit outputs
         run: |
