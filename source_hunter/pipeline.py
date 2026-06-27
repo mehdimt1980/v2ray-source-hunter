@@ -4,12 +4,12 @@ import os
 from pathlib import Path
 
 from .auto_discover import run_auto_discovery
+from .candidate_queue import select_live_candidates
 from .extractors import extract_all
 from .exporter import export_app_registry
 from .github_collect import collect_github_repo_candidates
 from .http_client import fetch_text
 from .models import FeedCandidate, FeedReport, HunterResult, utc_now
-from .preflight import preflight_candidates
 from .protocols import protocol_counts
 from .real_check import run_optional_real_check
 from .redundancy import apply_redundancy_policy
@@ -28,8 +28,12 @@ def collect_all(registry_dir: Path) -> list[FeedCandidate]:
     candidates.extend(collect_seed_candidates(registry_dir / "seeds.json"))
     candidates.extend(collect_github_repo_candidates(registry_dir / "repositories.json"))
     candidates.extend(collect_repo_tree_candidates(registry_dir / "repositories.json"))
-    candidates.extend(collect_github_repo_candidates(registry_dir / "discovered_repositories.json"))
-    candidates.extend(collect_repo_tree_candidates(registry_dir / "discovered_repositories.json"))
+
+    # Auto-discovered repositories should be inspected through their actual tree.
+    # Do not generate guessed common paths for them; that creates many 404s and
+    # starves better discovered candidates before validation.
+    candidates.extend(collect_repo_tree_candidates(registry_dir / "discovered_repositories.json", max_paths_per_repo=12))
+
     candidates.extend(collect_web_candidates(registry_dir / "web_pages.json"))
     candidates.extend(collect_telegram_candidates(registry_dir / "telegram_channels.json"))
     candidates.extend(collect_telegram_candidates(registry_dir / "discovered_telegram_channels.json"))
@@ -83,13 +87,17 @@ def run_hunt(
     max_candidates: int = 80,
     tcp_sample_size: int = 30,
     fetch_timeout: float = 20.0,
+    preflight_scan_limit: int | None = None,
 ) -> HunterResult:
     if os.environ.get("HUNTER_AUTO_DISCOVER", "1") != "0":
         run_auto_discovery(registry_dir)
 
     raw_candidates = collect_all(registry_dir)
-    preflighted, dead_paths = preflight_candidates(raw_candidates[:max_candidates])
-    candidates = preflighted[:max_candidates]
+    candidates, dead_paths, queue_diagnostics = select_live_candidates(
+        raw_candidates,
+        max_candidates=max_candidates,
+        scan_limit=preflight_scan_limit or max(max_candidates * 8, max_candidates),
+    )
     reports: list[FeedReport] = []
     configs_by_url: dict[str, list[str]] = {}
     errors: list[dict[str, str]] = []
@@ -130,6 +138,7 @@ def run_hunt(
     write_json(registry_dir / "redundant.json", redundant)
     write_json(registry_dir / "rejected.json", rejected)
     write_json(registry_dir / "dead_paths.json", dead_rows)
+    write_json(registry_dir / "candidate_queue.json", queue_diagnostics)
     write_json(registry_dir / "v2ray_finder_sources.json", export_app_registry(reports))
     write_json(registry_dir / "hunt_report.json", result.to_dict())
     return result
