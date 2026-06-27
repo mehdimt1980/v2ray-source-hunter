@@ -11,7 +11,7 @@ MIN_TRUSTED_UNIQUE = 30
 
 
 def score_report(report: FeedReport) -> FeedReport:
-    if not report.fetch_ok:
+    if not report.fetch_ok or report.unique_items == 0:
         report.score = 0.0
         report.status = "rejected"
         return report
@@ -23,9 +23,7 @@ def score_report(report: FeedReport) -> FeedReport:
     score += report.tcp_success_rate * 50
     report.score = round(score, 1)
 
-    if report.unique_items == 0:
-        report.status = "rejected"
-    elif report.tcp_success_rate < VERY_WEAK_TCP:
+    if report.tcp_success_rate < VERY_WEAK_TCP:
         report.status = "experimental"
         report.notes.append("very low TCP success rate")
     elif report.unique_items >= MIN_TRUSTED_UNIQUE and report.tcp_success_rate >= MIN_TRUSTED_TCP and report.score >= MIN_TRUSTED_SCORE:
