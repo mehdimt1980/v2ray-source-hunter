@@ -29,16 +29,37 @@ class RealCheckSummary:
 
 
 def run_optional_real_check(configs: list[str], *, max_items: int = 10) -> RealCheckSummary:
-    path = os.environ.get("XRAY_BINARY") or os.environ.get("SING_BOX_BINARY") or ""
-    if not path:
+    enabled = os.environ.get("HUNTER_REAL_CHECK", "").lower() in {"1", "true", "yes"}
+    path = os.environ.get("XRAY_BINARY") or ""
+    if not enabled:
         return RealCheckSummary(requested=False, available=False, note="disabled")
-    if not os.path.isfile(path):
-        return RealCheckSummary(requested=True, available=False, note="binary not found")
-    # Conservative placeholder: verify the binary can start and report version.
-    # Full per-config proxy probing can be enabled later using the app's xray adapter.
+    if not path or not os.path.isfile(path):
+        return RealCheckSummary(requested=True, available=False, note="XRAY_BINARY missing")
     try:
         proc = subprocess.run([path, "version"], capture_output=True, text=True, timeout=10)
-        available = proc.returncode == 0
-        return RealCheckSummary(requested=True, available=available, checked=0, ok=0, note="binary available" if available else proc.stderr[:200])
+        if proc.returncode != 0:
+            return RealCheckSummary(requested=True, available=False, note=proc.stderr[:200])
     except Exception as exc:
         return RealCheckSummary(requested=True, available=False, note=str(exc))
+
+    try:
+        from v2ray_finder.real_validation import check_real_validation_batch
+    except Exception as exc:
+        return RealCheckSummary(requested=True, available=False, note="v2ray_finder.real_validation unavailable: " + str(exc))
+
+    sample = configs[:max_items]
+    if not sample:
+        return RealCheckSummary(requested=True, available=True, checked=0, ok=0, note="no configs")
+    try:
+        rows = check_real_validation_batch(
+            sample,
+            max_workers=2,
+            timeout=8.0,
+            binary_path=path,
+            auto_download=False,
+            stability_attempts=1,
+        )
+        ok = sum(1 for row in rows if getattr(row, "validation_ok", False))
+        return RealCheckSummary(requested=True, available=True, checked=len(rows), ok=ok, note="real validation completed")
+    except Exception as exc:
+        return RealCheckSummary(requested=True, available=True, checked=0, ok=0, note="real validation failed: " + str(exc))
