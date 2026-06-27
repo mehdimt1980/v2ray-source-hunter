@@ -3,7 +3,7 @@ name: CI
 on:
   workflow_dispatch:
   schedule:
-    - cron: "17 */6 * * *"
+    - cron: "17 4 * * *"
 
 permissions:
   contents: write
@@ -52,11 +52,11 @@ jobs:
             git push
           fi
 
-      - name: Optional sync
+      - name: Sync Android registry
         env:
           TARGET_REPO_TOKEN: ${{ secrets.TARGET_REPO_TOKEN }}
-          TARGET_REPO: ${{ secrets.TARGET_REPO }}
-          TARGET_PATH: ${{ secrets.TARGET_PATH }}
+          TARGET_REPO: mehdimt1980/v2ray-finder
+          TARGET_PATH: registry/sources.json
         run: python -m source_hunter.sync_registry || true
 
       - uses: actions/upload-artifact@v4
