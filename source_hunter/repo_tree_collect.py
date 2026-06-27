@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 from pathlib import Path
 from urllib.parse import quote
 
@@ -10,7 +11,9 @@ from .models import FeedCandidate
 from .utils import read_json, stable_id
 
 INTERESTING_EXT = (".txt", ".yaml", ".yml")
-KEYWORDS = ("sub", "merge", "all", "config", "clash", "vless", "vmess", "trojan", "ss", "eternity")
+PREFERRED_KEYWORDS = ("all_configs", "all-configs", "sub_merge", "sub-merge", "eternity", "clash", "config")
+EXCLUDED_PARTS = (".github/", "workflow", "sub/list/", "readme", "license")
+GENERATED_CHUNK_RE = re.compile(r"(?:config list|sub)\d+[_\-]base64", re.IGNORECASE)
 
 
 def _tree_url(repo: str, branch: str) -> str:
@@ -22,7 +25,33 @@ def _raw_url(repo: str, branch: str, path: str) -> str:
     return "https://raw.githubusercontent.com/" + repo + "/" + branch + "/" + path
 
 
-def collect_repo_tree_candidates(path: Path, *, max_paths_per_repo: int = 20) -> list[FeedCandidate]:
+def _path_rank(path: str) -> int:
+    low = path.lower()
+    if "all_configs" in low or "all-configs" in low:
+        return 0
+    if "sub_merge" in low or "sub-merge" in low:
+        return 1
+    if "eternity" in low:
+        return 2
+    if low.endswith(("clash.yaml", "clash.yml")):
+        return 3
+    if "config" in low:
+        return 4
+    return 9
+
+
+def _keep_path(path: str) -> bool:
+    low = path.lower()
+    if not low.endswith(INTERESTING_EXT):
+        return False
+    if any(part in low for part in EXCLUDED_PARTS):
+        return False
+    if GENERATED_CHUNK_RE.search(low):
+        return False
+    return any(k in low for k in PREFERRED_KEYWORDS)
+
+
+def collect_repo_tree_candidates(path: Path, *, max_paths_per_repo: int = 8) -> list[FeedCandidate]:
     raw = read_json(path, [])
     out: list[FeedCandidate] = []
     for item in raw:
@@ -42,15 +71,9 @@ def collect_repo_tree_candidates(path: Path, *, max_paths_per_repo: int = 20) ->
         paths: list[str] = []
         for node in tree:
             rel = str(node.get("path") or "")
-            low = rel.lower()
-            if node.get("type") != "blob":
-                continue
-            if not low.endswith(INTERESTING_EXT):
-                continue
-            if not any(k in low for k in KEYWORDS):
-                continue
-            paths.append(rel)
-        for rel in paths[:max_paths_per_repo]:
+            if node.get("type") == "blob" and _keep_path(rel):
+                paths.append(rel)
+        for rel in sorted(set(paths), key=_path_rank)[:max_paths_per_repo]:
             url = _raw_url(repo, branch, rel)
             out.append(
                 FeedCandidate(
