@@ -47,7 +47,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add registry/*.json output.json
+          git add registry output.json
           if git diff --cached --quiet; then
             echo "No output changes."
           else
@@ -67,4 +67,4 @@ jobs:
           name: source-hunter-output
           path: |
             output.json
-            registry/*.json
+            registry
