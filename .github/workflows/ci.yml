@@ -14,4 +14,10 @@ jobs:
         with:
           python-version: "3.11"
       - run: python -m pip install -e .
-      - run: source-hunter run --json
+      - run: source-hunter run --json | tee output.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: source-hunter-output
+          path: |
+            output.json
+            registry/*.json
