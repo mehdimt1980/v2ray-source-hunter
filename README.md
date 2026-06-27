@@ -93,7 +93,7 @@ source-hunter run --max-candidates 80 --tcp-sample-size 30 --json
 ]
 ```
 
-The Telegram collector reads the public web view at `https://t.me/s/<channel>` only.
+The Telegram collector reads the public web view at `https://t.me/s/<channel>` only. It also performs one shallow crawl over links found in the public channel page so subscription files linked from Telegram posts, GitHub README pages, or raw text feeds can enter the normal scoring pipeline as `telegram_discovered_link` candidates. It does not log in, join channels, fetch private content, or bypass Telegram access controls.
 
 ## Optional sync to Android registry repo
 
