@@ -12,6 +12,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("command", nargs="?", default="run")
     parser.add_argument("--registry-dir", default="registry")
     parser.add_argument("--max-candidates", type=int, default=80)
+    parser.add_argument("--preflight-scan-limit", type=int, default=None)
     parser.add_argument("--tcp-sample-size", type=int, default=30)
     parser.add_argument("--fetch-timeout", type=float, default=20.0)
     parser.add_argument("--json", action="store_true")
@@ -20,6 +21,7 @@ def main(argv: list[str] | None = None) -> int:
     result = run_hunt(
         registry_dir=Path(args.registry_dir),
         max_candidates=args.max_candidates,
+        preflight_scan_limit=args.preflight_scan_limit,
         tcp_sample_size=args.tcp_sample_size,
         fetch_timeout=args.fetch_timeout,
     )
