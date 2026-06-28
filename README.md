@@ -30,6 +30,7 @@ This separation prevents two different discovery engines from mutating the same 
 - Keep the Android app small, registry-driven and free of global discovery logic.
 - Avoid relying only on GitHub Code Search.
 - Keep private, login-only, approval-only and access-controlled content out of the pipeline.
+- Improve multilingual discovery, including Chinese-language public repositories.
 
 ## Public-only policy
 
@@ -82,12 +83,57 @@ registry/discovery_report.json
 Discovery currently includes:
 
 - GitHub repository search for likely V2Ray/Xray subscription repositories.
+- Multilingual GitHub repository search, including Chinese-language query combinations.
 - Repository tree inspection through the GitHub tree API.
 - Public Telegram channel discovery from public GitHub README links.
 - Public Telegram web-view validation before a channel is accepted.
 - Link discovery from public Telegram pages and one shallow crawl over public linked pages.
 
 Manual seed files are still supported as curated hints, but the main direction is automatic source discovery.
+
+## Multilingual repository discovery
+
+The repository auto-discovery stage now includes both English and Chinese query families.
+
+Chinese-language repository discovery combines local public-source terms with protocol and client terms such as:
+
+```text
+v2ray
+xray
+vless
+vmess
+trojan
+clash
+mihomo
+sing-box
+Shadowrocket
+```
+
+It also combines Chinese discovery terms with high-signal filenames such as:
+
+```text
+clash.yaml
+sub.yaml
+subscribe.txt
+nodes.txt
+v2ray.txt
+```
+
+Repositories found through this path are tagged with metadata such as:
+
+```json
+{
+  "tags": ["auto", "github", "zh", "chinese", "github_zh_search"],
+  "metadata": {
+    "discovery_provider": "github_repository_search",
+    "language_hint": "zh",
+    "region_hint": "cn",
+    "discovery_query": "..."
+  }
+}
+```
+
+This keeps the discovery context visible during later scoring and registry review.
 
 ## Pipeline
 
