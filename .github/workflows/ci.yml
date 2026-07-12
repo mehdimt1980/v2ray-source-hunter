@@ -41,7 +41,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           HUNTER_AUTO_DISCOVER: "1"
-        run: source-hunter run --max-candidates 120 --preflight-scan-limit 700 --json | tee output.json
+        run: |
+          set -euxo pipefail
+          source-hunter run --max-candidates 120 --preflight-scan-limit 700 --json 2>&1 | tee output.json
+          python -c "import json, pathlib, sys; report=json.loads(pathlib.Path('registry/hunt_report.json').read_text(encoding='utf-8')); app=json.loads(pathlib.Path('registry/v2ray_finder_sources.json').read_text(encoding='utf-8')); assert report.get('generated_at') and app, 'source hunter did not regenerate app registry output'; print('app registry records:', len(app), 'generated_at:', report['generated_at'])"
 
       - name: Commit outputs
         run: |
