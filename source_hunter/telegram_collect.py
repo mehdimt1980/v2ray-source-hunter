@@ -3,11 +3,11 @@ from __future__ import annotations
 import html
 import re
 from pathlib import Path
-from urllib.parse import unquote, urljoin, urlparse
+from urllib.parse import unquote, urljoin
 
 from .http_client import fetch_text
 from .models import FeedCandidate
-from .utils import read_json, stable_id
+from .utils import is_valid_http_url, read_json, safe_urlparse, salvage_http_url, stable_id
 
 HREF_RE = re.compile(r"href=[\"']([^\"']+)[\"']", re.IGNORECASE)
 GITHUB_BLOB_RE = re.compile(r"^/([^/]+/[^/]+)/blob/([^/]+)/(.+)$")
@@ -47,9 +47,18 @@ def _normalize_url(url: str, *, base_url: str) -> str:
         value = "https:" + value
     elif value.startswith("/"):
         value = urljoin(base_url, value)
+    elif not value.startswith(("http://", "https://")):
+        value = salvage_http_url(value)
 
-    blob_match = GITHUB_BLOB_RE.match(urlparse(value).path)
-    if urlparse(value).netloc.lower() == "github.com" and blob_match:
+    parsed = safe_urlparse(value)
+    if parsed is None:
+        value = salvage_http_url(value)
+        parsed = safe_urlparse(value)
+        if parsed is None:
+            return ""
+
+    blob_match = GITHUB_BLOB_RE.match(parsed.path)
+    if parsed.netloc.lower() == "github.com" and blob_match:
         repo, ref, path = blob_match.groups()
         return f"https://raw.githubusercontent.com/{repo}/{ref}/{path}"
 
@@ -58,7 +67,7 @@ def _normalize_url(url: str, *, base_url: str) -> str:
         repo, ref, path = full_blob_match.groups()
         return f"https://raw.githubusercontent.com/{repo}/{ref}/{path}"
 
-    return value
+    return value if is_valid_http_url(value) else ""
 
 
 def _hrefs(text: str, *, base_url: str) -> list[str]:
@@ -71,7 +80,9 @@ def _hrefs(text: str, *, base_url: str) -> list[str]:
 
 
 def _looks_like_feed_url(url: str) -> bool:
-    parsed = urlparse(url)
+    parsed = safe_urlparse(url)
+    if parsed is None:
+        return False
     host = parsed.netloc.lower()
     path = parsed.path.lower()
     query = parsed.query.lower()
@@ -91,7 +102,9 @@ def _looks_like_feed_url(url: str) -> bool:
 
 
 def _looks_crawlable(url: str) -> bool:
-    parsed = urlparse(url)
+    parsed = safe_urlparse(url)
+    if parsed is None:
+        return False
     host = parsed.netloc.lower()
     if not host or TELEGRAM_MESSAGE_RE.match(url):
         return False
@@ -112,8 +125,11 @@ def _candidate_from_url(
     label_prefix: str,
     tags: list[str],
 ) -> FeedCandidate:
-    parsed = urlparse(url)
-    short = parsed.netloc + parsed.path
+    parsed = safe_urlparse(url)
+    if parsed is None:
+        short = url[:80]
+    else:
+        short = parsed.netloc + parsed.path
     if len(short) > 80:
         short = short[:77] + "..."
     return FeedCandidate(

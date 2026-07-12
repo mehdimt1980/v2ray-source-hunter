@@ -1,10 +1,10 @@
 from __future__ import annotations
 
 from datetime import datetime, timezone
-from urllib.parse import urlparse
 from typing import Any
 
 from .models import FeedReport
+from .utils import safe_urlparse
 
 
 def _real_check(report: FeedReport) -> dict[str, Any]:
@@ -50,7 +50,8 @@ def _group_key(report: FeedReport) -> str:
     channel = meta.get("channel")
     if channel:
         return f"telegram:{channel}"
-    host = urlparse(_record_url(report)).netloc
+    parsed = safe_urlparse(_record_url(report))
+    host = parsed.netloc if parsed is not None else ""
     return host or report.candidate.origin
 
 
