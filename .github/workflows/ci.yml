@@ -47,6 +47,7 @@ jobs:
           set -euxo pipefail
           source-hunter run --max-candidates 120 --preflight-scan-limit 700 --json 2>&1 | tee output.json
           python -c "import json, pathlib, sys; report=json.loads(pathlib.Path('registry/hunt_report.json').read_text(encoding='utf-8')); app=json.loads(pathlib.Path('registry/v2ray_finder_sources.json').read_text(encoding='utf-8')); checks=[r.get('diagnostics',{}).get('real_check',{}) for k in ('trusted','candidates','experimental','redundant','rejected') for r in report.get(k,[])]; assert report.get('generated_at') and app, 'source hunter did not regenerate app registry output'; assert any(c.get('available') for c in checks), 'real validation was requested but unavailable'; print('app registry records:', len(app), 'generated_at:', report['generated_at'], 'real checks:', sum(1 for c in checks if c.get('available')))"
+          python -m source_hunter.quality_gate
 
       - name: Commit outputs
         run: |
@@ -65,7 +66,7 @@ jobs:
           TARGET_REPO_TOKEN: ${{ secrets.TARGET_REPO_TOKEN }}
           TARGET_REPO: mehdimt1980/v2ray-finder
           TARGET_PATH: registry/sources.json
-        run: python -m source_hunter.sync_registry || true
+        run: python -m source_hunter.sync_registry
 
       - uses: actions/upload-artifact@v4
         with:

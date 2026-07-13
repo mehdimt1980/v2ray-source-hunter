@@ -8,6 +8,8 @@ from typing import Any
 
 import requests
 
+from .quality_gate import evaluate_quality_gate
+
 
 def _headers(token: str) -> dict[str, str]:
     return {
@@ -51,12 +53,22 @@ def sync_registry(
     target_repo: str | None = None,
     target_path: str = "registry/sources.json",
     token: str | None = None,
+    quality_gate: bool = True,
 ) -> dict:
     token = token or os.environ.get("TARGET_REPO_TOKEN") or os.environ.get("GH_PAT") or ""
     target_repo = target_repo or os.environ.get("TARGET_REPO") or "mehdimt1980/v2ray-finder"
     target_path = os.environ.get("TARGET_PATH") or target_path
     if not token or not target_repo:
         return {"ok": False, "message": "TARGET_REPO_TOKEN or TARGET_REPO missing"}
+
+    if quality_gate:
+        gate = evaluate_quality_gate(app_registry_path=source_path)
+        if not gate["ok"]:
+            return {
+                "ok": False,
+                "message": "quality gate failed; Android registry sync skipped",
+                "quality_gate": gate,
+            }
 
     hunter = json.loads(source_path.read_text(encoding="utf-8"))
     if not isinstance(hunter, list):
@@ -96,4 +108,6 @@ def sync_registry(
 
 
 if __name__ == "__main__":
-    print(json.dumps(sync_registry(), ensure_ascii=False, indent=2))
+    result = sync_registry()
+    print(json.dumps(result, ensure_ascii=False, indent=2))
+    raise SystemExit(0 if result.get("ok") else 1)
