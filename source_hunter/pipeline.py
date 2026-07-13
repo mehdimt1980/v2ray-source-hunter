@@ -12,7 +12,7 @@ from .generated_feeds import materialize_telegram_feeds
 from .github_collect import collect_github_repo_candidates
 from .http_client import fetch_text
 from .models import FeedCandidate, FeedReport, HunterResult, utc_now
-from .protocols import protocol_counts
+from .protocols import dedupe_by_normalized_identity, protocol_counts
 from .real_check import run_optional_real_check
 from .redundancy import apply_redundancy_policy
 from .repo_tree_collect import collect_repo_tree_candidates
@@ -63,12 +63,18 @@ def evaluate_candidate(
         report.notes.append("fetch failed")
         return score_report(report, history=history), []
     raw = extract_all(fetched.text)
-    unique = dedupe_keep_order(raw)
+    exact_unique = dedupe_keep_order(raw)
+    unique = dedupe_by_normalized_identity(exact_unique)
     report.raw_items = len(raw)
     report.unique_items = len(unique)
     report.duplicate_ratio = (
         0.0 if not raw else round(1.0 - (len(unique) / len(raw)), 4)
     )
+    report.diagnostics["dedupe"] = {
+        "exact_unique_items": len(exact_unique),
+        "normalized_unique_items": len(unique),
+        "normalized_removed": max(0, len(exact_unique) - len(unique)),
+    }
     report.protocols = protocol_counts(unique)
     tcp_items = stratified_sample(unique, requested=tcp_sample_size, seed=candidate.url)
     ok, checked = tcp_sample(tcp_items, sample_size=len(tcp_items), timeout=4.0)
