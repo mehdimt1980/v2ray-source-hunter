@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import os
 from pathlib import Path
+from typing import Any
 
 from .auto_discover import run_auto_discovery
 from .candidate_queue import select_live_candidates
@@ -18,7 +19,11 @@ from .repo_tree_collect import collect_repo_tree_candidates
 from .sampling import stratified_sample
 from .scoring import score_report
 from .seed_collect import collect_seed_candidates
-from .source_history import update_source_history
+from .source_history import (
+    estimate_config_churn,
+    load_source_history,
+    update_source_history,
+)
 from .tcp_check import tcp_sample
 from .telegram_collect import collect_telegram_candidates
 from .utils import dedupe_keep_order, write_json
@@ -45,17 +50,25 @@ def evaluate_candidate(
     *,
     tcp_sample_size: int,
     timeout: float,
+    history: dict[str, Any] | None = None,
 ) -> tuple[FeedReport, list[str]]:
     fetched = fetch_text(candidate.url, timeout=timeout)
-    report = FeedReport(candidate=candidate, fetch_ok=fetched.ok, http_status=fetched.status_code, error=fetched.error)
+    report = FeedReport(
+        candidate=candidate,
+        fetch_ok=fetched.ok,
+        http_status=fetched.status_code,
+        error=fetched.error,
+    )
     if not fetched.ok:
         report.notes.append("fetch failed")
-        return score_report(report), []
+        return score_report(report, history=history), []
     raw = extract_all(fetched.text)
     unique = dedupe_keep_order(raw)
     report.raw_items = len(raw)
     report.unique_items = len(unique)
-    report.duplicate_ratio = 0.0 if not raw else round(1.0 - (len(unique) / len(raw)), 4)
+    report.duplicate_ratio = (
+        0.0 if not raw else round(1.0 - (len(unique) / len(raw)), 4)
+    )
     report.protocols = protocol_counts(unique)
     tcp_items = stratified_sample(unique, requested=tcp_sample_size, seed=candidate.url)
     ok, checked = tcp_sample(tcp_items, sample_size=len(tcp_items), timeout=4.0)
@@ -64,7 +77,11 @@ def evaluate_candidate(
     report.tcp_success_rate = round(ok / checked, 4) if checked else 0.0
     real = run_optional_real_check(tcp_items[:10])
     report.diagnostics["real_check"] = real.to_dict()
-    report = score_report(report)
+    report = score_report(
+        report,
+        history=history,
+        config_churn_rate=estimate_config_churn(history, unique),
+    )
     if real.checked > 0:
         if real.success_rate < 0.20 and report.status == "trusted":
             report.status = "candidate"
@@ -94,9 +111,15 @@ def run_hunt(
     reports: list[FeedReport] = []
     configs_by_url: dict[str, list[str]] = {}
     errors: list[dict[str, str]] = []
+    history = load_source_history(registry_dir)
     for c in candidates:
         try:
-            report, configs = evaluate_candidate(c, tcp_sample_size=tcp_sample_size, timeout=fetch_timeout)
+            report, configs = evaluate_candidate(
+                c,
+                tcp_sample_size=tcp_sample_size,
+                timeout=fetch_timeout,
+                history=history.get(c.id),
+            )
             reports.append(report)
             configs_by_url[c.url] = configs
         except Exception as exc:
@@ -104,7 +127,12 @@ def run_hunt(
     apply_redundancy_policy(reports, configs_by_url)
     generated_rows = materialize_telegram_feeds(registry_dir, reports, configs_by_url)
     generated_at = utc_now()
-    history_rows = update_source_history(registry_dir, reports, configs_by_url, generated_at=generated_at)
+    history_rows = update_source_history(
+        registry_dir,
+        reports,
+        configs_by_url,
+        generated_at=generated_at,
+    )
     trusted = [r.to_dict() for r in reports if r.status == "trusted"]
     candidate_rows = [r.to_dict() for r in reports if r.status == "candidate"]
     experimental = [r.to_dict() for r in reports if r.status == "experimental"]

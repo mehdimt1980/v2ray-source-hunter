@@ -48,6 +48,20 @@ def update_source_history(
     return rows
 
 
+def load_source_history(registry_dir: Path) -> dict[str, dict[str, Any]]:
+    rows = read_json(registry_dir / HISTORY_FILE, [])
+    return {str(row.get("id") or ""): row for row in rows if row.get("id")}
+
+
+def estimate_config_churn(history_row: dict[str, Any] | None, configs: list[str]) -> float | None:
+    if not history_row:
+        return None
+    previous_hashes = set(history_row.get("last_config_hashes") or [])
+    if not previous_hashes:
+        return None
+    return _churn_rate(previous_hashes, _config_hashes(configs))
+
+
 def _update_row(
     row: dict[str, Any],
     report: FeedReport,
