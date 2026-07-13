@@ -11,7 +11,7 @@
         "auto",
         "github"
       ],
-      "discovered_at": "2026-07-13T07:44:30.933758+00:00",
+      "discovered_at": "2026-07-13T15:09:47.908406+00:00",
       "metadata": {
         "repository": "MrAbolfazlNorouzi/iran-configs",
         "branch": "main",
@@ -30,75 +30,47 @@
     "tcp_sample_size": 5,
     "tcp_ok_count": 0,
     "tcp_success_rate": 0.0,
-    "score": 17.8,
+    "score": 18.8,
     "status": "experimental",
     "notes": [
       "very low TCP success rate"
     ],
     "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 5,
+        "normalized_unique_items": 5,
+        "normalized_removed": 0
+      },
       "real_check": {
         "requested": true,
-        "available": false,
-        "checked": 0,
+        "available": true,
+        "checked": 5,
         "ok": 0,
         "success_rate": 0.0,
-        "note": "v2ray_finder.real_validation unavailable: No module named 'v2ray_finder'"
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": 1.0,
+        "config_churn_rate": null,
+        "history_available": false,
+        "reasons": [
+          "new source"
+        ]
+      },
+      "history": {
+        "times_seen": 1,
+        "failure_streak": 0,
+        "avg_tcp_success_rate": 0.0,
+        "avg_real_success_rate": 0.0,
+        "last_config_churn_rate": 1.0
       }
     }
   },
   {
     "candidate": {
-      "id": "https-raw-githubusercontent-com-elanski-proxy-preflight-main-configs-sub-5e082ca7",
-      "label": "elanski/proxy-preflight — configs/sub_ru.txt",
-      "url": "https://raw.githubusercontent.com/elanski/proxy-preflight/main/configs/sub_ru.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github",
-        "english"
-      ],
-      "discovered_at": "2026-07-13T07:44:34.392535+00:00",
-      "metadata": {
-        "repository": "elanski/proxy-preflight",
-        "branch": "main",
-        "path": "configs/sub_ru.txt"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 100,
-    "unique_items": 100,
-    "duplicate_ratio": 0.0,
-    "protocols": {
-      "vless": 100
-    },
-    "tcp_sample_size": 30,
-    "tcp_ok_count": 1,
-    "tcp_success_rate": 0.0333,
-    "score": 24.2,
-    "status": "experimental",
-    "notes": [
-      "very low TCP success rate"
-    ],
-    "diagnostics": {
-      "real_check": {
-        "requested": true,
-        "available": false,
-        "checked": 0,
-        "ok": 0,
-        "success_rate": 0.0,
-        "note": "v2ray_finder.real_validation unavailable: No module named 'v2ray_finder'"
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-soroushyasini-proxysmith-main-bash-manua-5c7b631d",
-      "label": "soroushyasini/proxysmith — bash/manualconfig.txt",
-      "url": "https://raw.githubusercontent.com/soroushyasini/proxysmith/main/bash/manualconfig.txt",
+      "id": "https-raw-githubusercontent-com-kort0881-vpn-vless-configs-russia-main-d-3218cf62",
+      "label": "kort0881/vpn-vless-configs-russia — data/githubmirror/new/by_protocol/trojan/trojan_005.txt",
+      "url": "https://raw.githubusercontent.com/kort0881/vpn-vless-configs-russia/main/data/githubmirror/new/by_protocol/trojan/trojan_005.txt",
       "origin": "repository_tree",
       "kind": "public_feed",
       "tags": [
@@ -106,48 +78,66 @@
         "auto",
         "github"
       ],
-      "discovered_at": "2026-07-13T07:44:29.093867+00:00",
+      "discovered_at": "2026-07-13T15:09:46.917272+00:00",
       "metadata": {
-        "repository": "soroushyasini/proxysmith",
+        "repository": "kort0881/vpn-vless-configs-russia",
         "branch": "main",
-        "path": "bash/manualconfig.txt"
+        "path": "data/githubmirror/new/by_protocol/trojan/trojan_005.txt"
       }
     },
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 3,
-    "unique_items": 3,
-    "duplicate_ratio": 0.0,
+    "raw_items": 543,
+    "unique_items": 415,
+    "duplicate_ratio": 0.2357,
     "protocols": {
-      "ss": 1,
-      "trojan": 1,
-      "vless": 1
+      "trojan": 415
     },
-    "tcp_sample_size": 3,
+    "tcp_sample_size": 60,
     "tcp_ok_count": 0,
     "tcp_success_rate": 0.0,
-    "score": 22.6,
+    "score": 35.7,
     "status": "experimental",
     "notes": [
       "very low TCP success rate"
     ],
     "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 543,
+        "normalized_unique_items": 415,
+        "normalized_removed": 128
+      },
       "real_check": {
         "requested": true,
-        "available": false,
-        "checked": 0,
+        "available": true,
+        "checked": 10,
         "ok": 0,
         "success_rate": 0.0,
-        "note": "v2ray_finder.real_validation unavailable: No module named 'v2ray_finder'"
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": 1.0,
+        "config_churn_rate": null,
+        "history_available": false,
+        "reasons": [
+          "new source"
+        ]
+      },
+      "history": {
+        "times_seen": 1,
+        "failure_streak": 0,
+        "avg_tcp_success_rate": 0.0,
+        "avg_real_success_rate": 0.0,
+        "last_config_churn_rate": 1.0
       }
     }
   },
   {
     "candidate": {
-      "id": "https-raw-githubusercontent-com-thealiiakbarii-ai-vcc-main-configs-shado-07fbb99c",
-      "label": "thealiiakbarii-ai/VCC — configs/shadowsocksr.txt",
-      "url": "https://raw.githubusercontent.com/thealiiakbarii-ai/VCC/main/configs/shadowsocksr.txt",
+      "id": "https-raw-githubusercontent-com-kort0881-vpn-vless-configs-russia-main-d-a6c6da60",
+      "label": "kort0881/vpn-vless-configs-russia — data/githubmirror/new/by_protocol/trojan/trojan_006.txt",
+      "url": "https://raw.githubusercontent.com/kort0881/vpn-vless-configs-russia/main/data/githubmirror/new/by_protocol/trojan/trojan_006.txt",
       "origin": "repository_tree",
       "kind": "public_feed",
       "tags": [
@@ -155,46 +145,66 @@
         "auto",
         "github"
       ],
-      "discovered_at": "2026-07-13T07:44:31.061358+00:00",
+      "discovered_at": "2026-07-13T15:09:46.917228+00:00",
       "metadata": {
-        "repository": "thealiiakbarii-ai/VCC",
+        "repository": "kort0881/vpn-vless-configs-russia",
         "branch": "main",
-        "path": "configs/shadowsocksr.txt"
+        "path": "data/githubmirror/new/by_protocol/trojan/trojan_006.txt"
       }
     },
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 32,
-    "unique_items": 32,
-    "duplicate_ratio": 0.0,
+    "raw_items": 544,
+    "unique_items": 351,
+    "duplicate_ratio": 0.3548,
     "protocols": {
-      "ssr": 32
+      "trojan": 351
     },
-    "tcp_sample_size": 30,
+    "tcp_sample_size": 60,
     "tcp_ok_count": 0,
     "tcp_success_rate": 0.0,
-    "score": 19.1,
+    "score": 30.7,
     "status": "experimental",
     "notes": [
       "very low TCP success rate"
     ],
     "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 544,
+        "normalized_unique_items": 351,
+        "normalized_removed": 193
+      },
       "real_check": {
         "requested": true,
-        "available": false,
-        "checked": 0,
+        "available": true,
+        "checked": 10,
         "ok": 0,
         "success_rate": 0.0,
-        "note": "v2ray_finder.real_validation unavailable: No module named 'v2ray_finder'"
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": 1.0,
+        "config_churn_rate": null,
+        "history_available": false,
+        "reasons": [
+          "new source"
+        ]
+      },
+      "history": {
+        "times_seen": 1,
+        "failure_streak": 0,
+        "avg_tcp_success_rate": 0.0,
+        "avg_real_success_rate": 0.0,
+        "last_config_churn_rate": 1.0
       }
     }
   },
   {
     "candidate": {
-      "id": "https-raw-githubusercontent-com-wenxig-dongtai-sub-main-data-clash-txt-232fdd38",
-      "label": "wenxig/dongtai-sub — data/clash.txt",
-      "url": "https://raw.githubusercontent.com/wenxig/dongtai-sub/main/data/clash.txt",
+      "id": "https-raw-githubusercontent-com-kort0881-vpn-vless-configs-russia-main-d-9e8ce329",
+      "label": "kort0881/vpn-vless-configs-russia — data/githubmirror/new/by_protocol/vmess/vmess_006.txt",
+      "url": "https://raw.githubusercontent.com/kort0881/vpn-vless-configs-russia/main/data/githubmirror/new/by_protocol/vmess/vmess_006.txt",
       "origin": "repository_tree",
       "kind": "public_feed",
       "tags": [
@@ -202,88 +212,58 @@
         "auto",
         "github"
       ],
-      "discovered_at": "2026-07-13T07:44:31.880978+00:00",
+      "discovered_at": "2026-07-13T15:09:46.917246+00:00",
       "metadata": {
-        "repository": "wenxig/dongtai-sub",
+        "repository": "kort0881/vpn-vless-configs-russia",
         "branch": "main",
-        "path": "data/clash.txt"
+        "path": "data/githubmirror/new/by_protocol/vmess/vmess_006.txt"
       }
     },
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 4,
-    "unique_items": 4,
-    "duplicate_ratio": 0.0,
+    "raw_items": 500,
+    "unique_items": 353,
+    "duplicate_ratio": 0.294,
     "protocols": {
-      "ss": 1,
-      "ssr": 1,
-      "vless": 1,
-      "vmess": 1
+      "vmess": 353
     },
-    "tcp_sample_size": 4,
-    "tcp_ok_count": 0,
-    "tcp_success_rate": 0.0,
-    "score": 25.2,
+    "tcp_sample_size": 60,
+    "tcp_ok_count": 5,
+    "tcp_success_rate": 0.0833,
+    "score": 35.9,
     "status": "experimental",
     "notes": [
       "very low TCP success rate"
     ],
     "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 500,
+        "normalized_unique_items": 353,
+        "normalized_removed": 147
+      },
       "real_check": {
         "requested": true,
-        "available": false,
-        "checked": 0,
+        "available": true,
+        "checked": 10,
         "ok": 0,
         "success_rate": 0.0,
-        "note": "v2ray_finder.real_validation unavailable: No module named 'v2ray_finder'"
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-t-me-abc-configs-17047-3bde39d0",
-      "label": "Telegram public channel abc_configs → t.me/abc_configs/17047",
-      "url": "https://t.me/abc_configs/17047",
-      "origin": "telegram_discovered_link",
-      "kind": "public_feed",
-      "tags": [
-        "telegram",
-        "discovered-link",
-        "auto"
-      ],
-      "discovered_at": "2026-07-13T07:44:41.174779+00:00",
-      "metadata": {
-        "channel": "abc_configs",
-        "parent_url": "https://t.me/s/abc_configs",
-        "source": "telegram_web_link"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 1,
-    "unique_items": 1,
-    "duplicate_ratio": 0.0,
-    "protocols": {
-      "ss": 1
-    },
-    "tcp_sample_size": 1,
-    "tcp_ok_count": 0,
-    "tcp_success_rate": 0.0,
-    "score": 17.6,
-    "status": "experimental",
-    "notes": [
-      "very low TCP success rate"
-    ],
-    "diagnostics": {
-      "real_check": {
-        "requested": true,
-        "available": false,
-        "checked": 0,
-        "ok": 0,
-        "success_rate": 0.0,
-        "note": "v2ray_finder.real_validation unavailable: No module named 'v2ray_finder'"
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": 1.0,
+        "config_churn_rate": null,
+        "history_available": false,
+        "reasons": [
+          "new source"
+        ]
+      },
+      "history": {
+        "times_seen": 1,
+        "failure_streak": 0,
+        "avg_tcp_success_rate": 0.0833,
+        "avg_real_success_rate": 0.0,
+        "last_config_churn_rate": 1.0
       }
     }
   }
