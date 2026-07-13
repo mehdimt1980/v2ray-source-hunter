@@ -8,8 +8,12 @@ from .utils import read_json, stable_id
 COMMON_PATHS = [
     "sub.txt",
     "all.txt",
+    "all_configs.txt",
     "All_Configs_Sub.txt",
     "Eternity.txt",
+    "subscribe.txt",
+    "subscription.txt",
+    "nodes.txt",
     "v2ray.txt",
     "vless.txt",
     "vmess.txt",
@@ -17,6 +21,11 @@ COMMON_PATHS = [
     "ss.txt",
     "clash.yaml",
     "clash.yml",
+    "mihomo.yaml",
+    "mihomo.yml",
+    "sing-box.json",
+    "singbox.json",
+    "shadowrocket.txt",
 ]
 
 

@@ -10,8 +10,29 @@ from .http_client import HEADERS
 from .models import FeedCandidate
 from .utils import read_json, stable_id
 
-INTERESTING_EXT = (".txt", ".yaml", ".yml")
-PREFERRED_KEYWORDS = ("all_configs", "all-configs", "sub_merge", "sub-merge", "eternity", "clash", "config")
+INTERESTING_EXT = (".txt", ".yaml", ".yml", ".json")
+PREFERRED_KEYWORDS = (
+    "all_configs",
+    "all-configs",
+    "sub_merge",
+    "sub-merge",
+    "subscribe",
+    "subscription",
+    "nodes",
+    "eternity",
+    "clash",
+    "mihomo",
+    "sing-box",
+    "singbox",
+    "shadowrocket",
+    "hiddify",
+    "v2ray",
+    "xray",
+    "vless",
+    "vmess",
+    "trojan",
+    "config",
+)
 EXCLUDED_PARTS = (".github/", "workflow", "sub/list/", "readme", "license")
 GENERATED_CHUNK_RE = re.compile(r"(?:config list|sub)\d+[_\-]base64", re.IGNORECASE)
 
@@ -33,10 +54,14 @@ def _path_rank(path: str) -> int:
         return 1
     if "eternity" in low:
         return 2
-    if low.endswith(("clash.yaml", "clash.yml")):
+    if low.endswith(("clash.yaml", "clash.yml", "mihomo.yaml", "mihomo.yml")):
         return 3
-    if "config" in low:
+    if low.endswith(("sing-box.json", "singbox.json")):
         return 4
+    if any(term in low for term in ("vless", "vmess", "trojan", "nodes", "subscribe")):
+        return 5
+    if "config" in low:
+        return 6
     return 9
 
 
