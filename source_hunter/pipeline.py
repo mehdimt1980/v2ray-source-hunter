@@ -18,6 +18,7 @@ from .repo_tree_collect import collect_repo_tree_candidates
 from .sampling import stratified_sample
 from .scoring import score_report
 from .seed_collect import collect_seed_candidates
+from .source_history import update_source_history
 from .tcp_check import tcp_sample
 from .telegram_collect import collect_telegram_candidates
 from .utils import dedupe_keep_order, write_json
@@ -102,6 +103,8 @@ def run_hunt(
             errors.append({"url": c.url, "error": str(exc)})
     apply_redundancy_policy(reports, configs_by_url)
     generated_rows = materialize_telegram_feeds(registry_dir, reports, configs_by_url)
+    generated_at = utc_now()
+    history_rows = update_source_history(registry_dir, reports, configs_by_url, generated_at=generated_at)
     trusted = [r.to_dict() for r in reports if r.status == "trusted"]
     candidate_rows = [r.to_dict() for r in reports if r.status == "candidate"]
     experimental = [r.to_dict() for r in reports if r.status == "experimental"]
@@ -110,8 +113,9 @@ def run_hunt(
     dead_rows = [d.to_dict() for d in dead_paths]
     queue_diagnostics = dict(queue_diagnostics)
     queue_diagnostics["generated_telegram_feeds"] = len(generated_rows)
+    queue_diagnostics["source_history_records"] = len(history_rows)
     result = HunterResult(
-        generated_at=utc_now(),
+        generated_at=generated_at,
         raw_candidates=len(raw_candidates),
         evaluated=len(reports),
         trusted=trusted,
