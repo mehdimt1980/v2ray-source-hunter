@@ -24,7 +24,9 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install -e .
-          python -m pip install "git+https://github.com/mehdimt1980/v2ray-finder.git" || true
+          git clone --depth 1 https://github.com/mehdimt1980/v2ray-finder.git "$RUNNER_TEMP/v2ray-finder"
+          echo "HUNTER_V2RAY_FINDER_PATH=$RUNNER_TEMP/v2ray-finder" >> "$GITHUB_ENV"
+          echo "PYTHONPATH=$RUNNER_TEMP/v2ray-finder:$PYTHONPATH" >> "$GITHUB_ENV"
 
       - name: Install Xray
         run: |
@@ -44,7 +46,7 @@ jobs:
         run: |
           set -euxo pipefail
           source-hunter run --max-candidates 120 --preflight-scan-limit 700 --json 2>&1 | tee output.json
-          python -c "import json, pathlib, sys; report=json.loads(pathlib.Path('registry/hunt_report.json').read_text(encoding='utf-8')); app=json.loads(pathlib.Path('registry/v2ray_finder_sources.json').read_text(encoding='utf-8')); assert report.get('generated_at') and app, 'source hunter did not regenerate app registry output'; print('app registry records:', len(app), 'generated_at:', report['generated_at'])"
+          python -c "import json, pathlib, sys; report=json.loads(pathlib.Path('registry/hunt_report.json').read_text(encoding='utf-8')); app=json.loads(pathlib.Path('registry/v2ray_finder_sources.json').read_text(encoding='utf-8')); checks=[r.get('diagnostics',{}).get('real_check',{}) for k in ('trusted','candidates','experimental','redundant','rejected') for r in report.get(k,[])]; assert report.get('generated_at') and app, 'source hunter did not regenerate app registry output'; assert any(c.get('available') for c in checks), 'real validation was requested but unavailable'; print('app registry records:', len(app), 'generated_at:', report['generated_at'], 'real checks:', sum(1 for c in checks if c.get('available')))"
 
       - name: Commit outputs
         run: |
