@@ -1,9 +1,9 @@
 [
   {
     "candidate": {
-      "id": "https-raw-githubusercontent-com-0xradikal-free-v2ray-configs-main-protoc-99267151",
-      "label": "0xRadikal/Free-v2ray-Configs — protocols/vless.txt",
-      "url": "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/protocols/vless.txt",
+      "id": "https-raw-githubusercontent-com-solispirit-v2ray-configs-main-all-config-698c9127",
+      "label": "SoliSpirit/v2ray-configs — all_configs.txt",
+      "url": "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/main/all_configs.txt",
       "origin": "repository_tree",
       "kind": "public_feed",
       "tags": [
@@ -11,35 +11,113 @@
         "auto",
         "github"
       ],
-      "discovered_at": "2026-07-13T15:09:38.115109+00:00",
+      "discovered_at": "2026-07-14T06:30:16.399887+00:00",
       "metadata": {
-        "repository": "0xRadikal/Free-v2ray-Configs",
+        "repository": "SoliSpirit/v2ray-configs",
         "branch": "main",
-        "path": "protocols/vless.txt"
+        "path": "all_configs.txt"
       }
     },
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 2158,
-    "unique_items": 2099,
-    "duplicate_ratio": 0.0273,
+    "raw_items": 7849,
+    "unique_items": 5768,
+    "duplicate_ratio": 0.2651,
     "protocols": {
-      "vless": 2099
+      "ss": 1151,
+      "trojan": 601,
+      "vless": 3710,
+      "vmess": 306
     },
     "tcp_sample_size": 100,
-    "tcp_ok_count": 80,
-    "tcp_success_rate": 0.8,
-    "score": 83.1,
+    "tcp_ok_count": 60,
+    "tcp_success_rate": 0.6,
+    "score": 87.0,
     "status": "candidate",
     "notes": [
       "demoted by low real-validation success"
     ],
     "diagnostics": {
       "dedupe": {
-        "exact_unique_items": 2158,
-        "normalized_unique_items": 2099,
-        "normalized_removed": 59
+        "exact_unique_items": 7849,
+        "normalized_unique_items": 5768,
+        "normalized_removed": 2081
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 10,
+        "ok": 1,
+        "success_rate": 0.1,
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": 11.0,
+        "config_churn_rate": 0.9367,
+        "history_available": true,
+        "reasons": [
+          "fresh config churn",
+          "strong historical TCP"
+        ]
+      },
+      "redundancy": {
+        "normalized_identity_count": 5768,
+        "threshold": 0.8
+      },
+      "history": {
+        "times_seen": 2,
+        "failure_streak": 0,
+        "avg_tcp_success_rate": 0.635,
+        "avg_real_success_rate": 0.15,
+        "last_config_churn_rate": 0.9367
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-solispirit-v2ray-configs-main-subscripti-d8ecf7a6",
+      "label": "SoliSpirit/v2ray-configs — Subscriptions/Sub8.txt",
+      "url": "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/main/Subscriptions/Sub8.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github"
+      ],
+      "discovered_at": "2026-07-14T06:30:16.399962+00:00",
+      "metadata": {
+        "repository": "SoliSpirit/v2ray-configs",
+        "branch": "main",
+        "path": "Subscriptions/Sub8.txt"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 192,
+    "unique_items": 187,
+    "duplicate_ratio": 0.026,
+    "protocols": {
+      "ss": 7,
+      "trojan": 25,
+      "vless": 152,
+      "vmess": 3
+    },
+    "tcp_sample_size": 30,
+    "tcp_ok_count": 16,
+    "tcp_success_rate": 0.5333,
+    "score": 61.6,
+    "status": "candidate",
+    "notes": [
+      "demoted by low real-validation success"
+    ],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 192,
+        "normalized_unique_items": 187,
+        "normalized_removed": 5
       },
       "real_check": {
         "requested": true,
@@ -58,13 +136,13 @@
         ]
       },
       "redundancy": {
-        "normalized_identity_count": 2099,
+        "normalized_identity_count": 187,
         "threshold": 0.8
       },
       "history": {
         "times_seen": 1,
         "failure_streak": 0,
-        "avg_tcp_success_rate": 0.8,
+        "avg_tcp_success_rate": 0.5333,
         "avg_real_success_rate": 0.0,
         "last_config_churn_rate": 1.0
       }
@@ -82,7 +160,7 @@
         "auto",
         "github"
       ],
-      "discovered_at": "2026-07-13T15:09:44.788192+00:00",
+      "discovered_at": "2026-07-14T06:30:11.174764+00:00",
       "metadata": {
         "repository": "Alirewa/V2ray-Configs",
         "branch": "main",
@@ -92,63 +170,135 @@
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 2000,
-    "unique_items": 2000,
-    "duplicate_ratio": 0.0,
+    "raw_items": 2020,
+    "unique_items": 1999,
+    "duplicate_ratio": 0.0104,
     "protocols": {
-      "ss": 241,
-      "trojan": 260,
-      "vless": 534,
-      "vmess": 965
+      "ss": 249,
+      "trojan": 302,
+      "vless": 516,
+      "vmess": 932
+    },
+    "tcp_sample_size": 60,
+    "tcp_ok_count": 26,
+    "tcp_success_rate": 0.4333,
+    "score": 79.5,
+    "status": "candidate",
+    "notes": [
+      "demoted by low real-validation success"
+    ],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 2020,
+        "normalized_unique_items": 1999,
+        "normalized_removed": 21
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 10,
+        "ok": 1,
+        "success_rate": 0.1,
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": 8.0,
+        "config_churn_rate": 1.0,
+        "history_available": true,
+        "reasons": [
+          "fresh config churn"
+        ]
+      },
+      "redundancy": {
+        "normalized_identity_count": 1999,
+        "threshold": 0.8
+      },
+      "history": {
+        "times_seen": 2,
+        "failure_streak": 0,
+        "avg_tcp_success_rate": 0.4266,
+        "avg_real_success_rate": 0.05,
+        "last_config_churn_rate": 1.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-firmfox-proxify-main-v2ray-configs-separ-92223ce1",
+      "label": "Firmfox/Proxify — v2ray_configs/separated_by_protocol/vless.txt",
+      "url": "https://raw.githubusercontent.com/Firmfox/Proxify/main/v2ray_configs/separated_by_protocol/vless.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github"
+      ],
+      "discovered_at": "2026-07-14T06:30:12.937521+00:00",
+      "metadata": {
+        "repository": "Firmfox/Proxify",
+        "branch": "main",
+        "path": "v2ray_configs/separated_by_protocol/vless.txt"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 4575,
+    "unique_items": 3297,
+    "duplicate_ratio": 0.2793,
+    "protocols": {
+      "vless": 3297
     },
     "tcp_sample_size": 100,
-    "tcp_ok_count": 42,
-    "tcp_success_rate": 0.42,
-    "score": 72.0,
+    "tcp_ok_count": 82,
+    "tcp_success_rate": 0.82,
+    "score": 90.3,
     "status": "candidate",
     "notes": [
       "demoted by low real-validation success"
     ],
     "diagnostics": {
       "dedupe": {
-        "exact_unique_items": 2000,
-        "normalized_unique_items": 2000,
-        "normalized_removed": 0
+        "exact_unique_items": 4575,
+        "normalized_unique_items": 3297,
+        "normalized_removed": 1278
       },
       "real_check": {
         "requested": true,
         "available": true,
         "checked": 10,
-        "ok": 0,
-        "success_rate": 0.0,
+        "ok": 1,
+        "success_rate": 0.1,
         "note": "real validation completed via v2ray_finder.xray_connectivity"
       },
       "freshness": {
-        "score_adjustment": 1.0,
-        "config_churn_rate": null,
-        "history_available": false,
+        "score_adjustment": 11.0,
+        "config_churn_rate": 0.8584,
+        "history_available": true,
         "reasons": [
-          "new source"
+          "fresh config churn",
+          "strong historical TCP"
         ]
       },
       "redundancy": {
-        "normalized_identity_count": 2000,
+        "normalized_identity_count": 3297,
         "threshold": 0.8
       },
       "history": {
-        "times_seen": 1,
+        "times_seen": 2,
         "failure_streak": 0,
-        "avg_tcp_success_rate": 0.42,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 1.0
+        "avg_tcp_success_rate": 0.805,
+        "avg_real_success_rate": 0.15,
+        "last_config_churn_rate": 0.8584
       }
     }
   },
   {
     "candidate": {
-      "id": "https-raw-githubusercontent-com-hidashimora-free-vpn-anti-rkn-main-confi-98bb09a3",
-      "label": "Hidashimora/free-vpn-anti-rkn — configs/1.23.txt",
-      "url": "https://raw.githubusercontent.com/Hidashimora/free-vpn-anti-rkn/main/configs/1.23.txt",
+      "id": "https-raw-githubusercontent-com-hidashimora-free-vpn-anti-rkn-main-confi-eb130242",
+      "label": "Hidashimora/free-vpn-anti-rkn — configs/1.9.txt",
+      "url": "https://raw.githubusercontent.com/Hidashimora/free-vpn-anti-rkn/main/configs/1.9.txt",
       "origin": "repository_tree",
       "kind": "public_feed",
       "tags": [
@@ -157,337 +307,40 @@
         "github",
         "english"
       ],
-      "discovered_at": "2026-07-13T15:09:53.667903+00:00",
+      "discovered_at": "2026-07-14T06:30:19.580659+00:00",
       "metadata": {
         "repository": "Hidashimora/free-vpn-anti-rkn",
         "branch": "main",
-        "path": "configs/1.23.txt"
+        "path": "configs/1.9.txt"
       }
     },
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 1060,
-    "unique_items": 1042,
-    "duplicate_ratio": 0.017,
+    "raw_items": 316,
+    "unique_items": 306,
+    "duplicate_ratio": 0.0316,
     "protocols": {
-      "ss": 447,
-      "trojan": 140,
-      "vless": 165,
-      "vmess": 290
+      "vless": 306
     },
     "tcp_sample_size": 60,
-    "tcp_ok_count": 28,
-    "tcp_success_rate": 0.4667,
-    "score": 74.1,
-    "status": "candidate",
-    "notes": [
-      "demoted by low real-validation success"
-    ],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 1060,
-        "normalized_unique_items": 1042,
-        "normalized_removed": 18
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 10,
-        "ok": 1,
-        "success_rate": 0.1,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": 1.0,
-        "config_churn_rate": null,
-        "history_available": false,
-        "reasons": [
-          "new source"
-        ]
-      },
-      "redundancy": {
-        "normalized_identity_count": 1042,
-        "threshold": 0.8
-      },
-      "history": {
-        "times_seen": 1,
-        "failure_streak": 0,
-        "avg_tcp_success_rate": 0.4667,
-        "avg_real_success_rate": 0.1,
-        "last_config_churn_rate": 1.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-hidashimora-free-vpn-anti-rkn-main-confi-a3ab4a9c",
-      "label": "Hidashimora/free-vpn-anti-rkn — configs/11.txt",
-      "url": "https://raw.githubusercontent.com/Hidashimora/free-vpn-anti-rkn/main/configs/11.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github",
-        "english"
-      ],
-      "discovered_at": "2026-07-13T15:09:53.667816+00:00",
-      "metadata": {
-        "repository": "Hidashimora/free-vpn-anti-rkn",
-        "branch": "main",
-        "path": "configs/11.txt"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 130,
-    "unique_items": 129,
-    "duplicate_ratio": 0.0077,
-    "protocols": {
-      "ss": 84,
-      "trojan": 8,
-      "vless": 27,
-      "vmess": 10
-    },
-    "tcp_sample_size": 30,
-    "tcp_ok_count": 8,
-    "tcp_success_rate": 0.2667,
-    "score": 45.7,
-    "status": "candidate",
-    "notes": [],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 130,
-        "normalized_unique_items": 129,
-        "normalized_removed": 1
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 10,
-        "ok": 1,
-        "success_rate": 0.1,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": 1.0,
-        "config_churn_rate": null,
-        "history_available": false,
-        "reasons": [
-          "new source"
-        ]
-      },
-      "redundancy": {
-        "normalized_identity_count": 129,
-        "threshold": 0.8
-      },
-      "history": {
-        "times_seen": 1,
-        "failure_streak": 0,
-        "avg_tcp_success_rate": 0.2667,
-        "avg_real_success_rate": 0.1,
-        "last_config_churn_rate": 1.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-hidashimora-free-vpn-anti-rkn-main-confi-cd7d4953",
-      "label": "Hidashimora/free-vpn-anti-rkn — configs/20.2.txt",
-      "url": "https://raw.githubusercontent.com/Hidashimora/free-vpn-anti-rkn/main/configs/20.2.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github",
-        "english"
-      ],
-      "discovered_at": "2026-07-13T15:09:53.667918+00:00",
-      "metadata": {
-        "repository": "Hidashimora/free-vpn-anti-rkn",
-        "branch": "main",
-        "path": "configs/20.2.txt"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 1906,
-    "unique_items": 1268,
-    "duplicate_ratio": 0.3347,
-    "protocols": {
-      "ss": 389,
-      "trojan": 525,
-      "vless": 262,
-      "vmess": 92
-    },
-    "tcp_sample_size": 60,
-    "tcp_ok_count": 36,
-    "tcp_success_rate": 0.6,
-    "score": 76.0,
-    "status": "candidate",
-    "notes": [
-      "demoted by low real-validation success"
-    ],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 1906,
-        "normalized_unique_items": 1268,
-        "normalized_removed": 638
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 10,
-        "ok": 1,
-        "success_rate": 0.1,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": 1.0,
-        "config_churn_rate": null,
-        "history_available": false,
-        "reasons": [
-          "new source"
-        ]
-      },
-      "redundancy": {
-        "normalized_identity_count": 1268,
-        "threshold": 0.8
-      },
-      "history": {
-        "times_seen": 1,
-        "failure_streak": 0,
-        "avg_tcp_success_rate": 0.6,
-        "avg_real_success_rate": 0.1,
-        "last_config_churn_rate": 1.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-hidashimora-free-vpn-anti-rkn-main-confi-4a2ab44c",
-      "label": "Hidashimora/free-vpn-anti-rkn — configs/22.txt",
-      "url": "https://raw.githubusercontent.com/Hidashimora/free-vpn-anti-rkn/main/configs/22.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github",
-        "english"
-      ],
-      "discovered_at": "2026-07-13T15:09:53.667911+00:00",
-      "metadata": {
-        "repository": "Hidashimora/free-vpn-anti-rkn",
-        "branch": "main",
-        "path": "configs/22.txt"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 120,
-    "unique_items": 117,
-    "duplicate_ratio": 0.025,
-    "protocols": {
-      "trojan": 1,
-      "vless": 83,
-      "vmess": 33
-    },
-    "tcp_sample_size": 30,
-    "tcp_ok_count": 9,
-    "tcp_success_rate": 0.3,
-    "score": 44.0,
-    "status": "candidate",
-    "notes": [],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 120,
-        "normalized_unique_items": 117,
-        "normalized_removed": 3
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 10,
-        "ok": 0,
-        "success_rate": 0.0,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": 1.0,
-        "config_churn_rate": null,
-        "history_available": false,
-        "reasons": [
-          "new source"
-        ]
-      },
-      "redundancy": {
-        "normalized_identity_count": 117,
-        "threshold": 0.8
-      },
-      "history": {
-        "times_seen": 1,
-        "failure_streak": 0,
-        "avg_tcp_success_rate": 0.3,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 1.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-hidashimora-free-vpn-anti-rkn-main-confi-a96c8ebc",
-      "label": "Hidashimora/free-vpn-anti-rkn — configs/25.2.txt",
-      "url": "https://raw.githubusercontent.com/Hidashimora/free-vpn-anti-rkn/main/configs/25.2.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github",
-        "english"
-      ],
-      "discovered_at": "2026-07-13T15:09:53.667888+00:00",
-      "metadata": {
-        "repository": "Hidashimora/free-vpn-anti-rkn",
-        "branch": "main",
-        "path": "configs/25.2.txt"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 244,
-    "unique_items": 200,
-    "duplicate_ratio": 0.1803,
-    "protocols": {
-      "vless": 200
-    },
-    "tcp_sample_size": 30,
     "tcp_ok_count": 22,
-    "tcp_success_rate": 0.7333,
-    "score": 62.5,
+    "tcp_success_rate": 0.3667,
+    "score": 51.7,
     "status": "candidate",
-    "notes": [
-      "demoted by low real-validation success"
-    ],
+    "notes": [],
     "diagnostics": {
       "dedupe": {
-        "exact_unique_items": 244,
-        "normalized_unique_items": 200,
-        "normalized_removed": 44
+        "exact_unique_items": 316,
+        "normalized_unique_items": 306,
+        "normalized_removed": 10
       },
       "real_check": {
         "requested": true,
         "available": true,
         "checked": 10,
-        "ok": 1,
-        "success_rate": 0.1,
+        "ok": 0,
+        "success_rate": 0.0,
         "note": "real validation completed via v2ray_finder.xray_connectivity"
       },
       "freshness": {
@@ -499,14 +352,84 @@
         ]
       },
       "redundancy": {
-        "normalized_identity_count": 200,
+        "normalized_identity_count": 306,
         "threshold": 0.8
       },
       "history": {
         "times_seen": 1,
         "failure_streak": 0,
-        "avg_tcp_success_rate": 0.7333,
-        "avg_real_success_rate": 0.1,
+        "avg_tcp_success_rate": 0.3667,
+        "avg_real_success_rate": 0.0,
+        "last_config_churn_rate": 1.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-hidashimora-free-vpn-anti-rkn-main-confi-6365cc15",
+      "label": "Hidashimora/free-vpn-anti-rkn — configs/2.txt",
+      "url": "https://raw.githubusercontent.com/Hidashimora/free-vpn-anti-rkn/main/configs/2.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github",
+        "english"
+      ],
+      "discovered_at": "2026-07-14T06:30:19.580634+00:00",
+      "metadata": {
+        "repository": "Hidashimora/free-vpn-anti-rkn",
+        "branch": "main",
+        "path": "configs/2.txt"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 304,
+    "unique_items": 291,
+    "duplicate_ratio": 0.0428,
+    "protocols": {
+      "vless": 291
+    },
+    "tcp_sample_size": 30,
+    "tcp_ok_count": 13,
+    "tcp_success_rate": 0.4333,
+    "score": 54.1,
+    "status": "candidate",
+    "notes": [],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 304,
+        "normalized_unique_items": 291,
+        "normalized_removed": 13
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 10,
+        "ok": 0,
+        "success_rate": 0.0,
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": 1.0,
+        "config_churn_rate": null,
+        "history_available": false,
+        "reasons": [
+          "new source"
+        ]
+      },
+      "redundancy": {
+        "normalized_identity_count": 291,
+        "threshold": 0.8
+      },
+      "history": {
+        "times_seen": 1,
+        "failure_streak": 0,
+        "avg_tcp_success_rate": 0.4333,
+        "avg_real_success_rate": 0.0,
         "last_config_churn_rate": 1.0
       }
     }
@@ -524,7 +447,7 @@
         "github",
         "english"
       ],
-      "discovered_at": "2026-07-13T15:09:53.667896+00:00",
+      "discovered_at": "2026-07-14T06:30:19.580626+00:00",
       "metadata": {
         "repository": "Hidashimora/free-vpn-anti-rkn",
         "branch": "main",
@@ -543,7 +466,7 @@
     "tcp_sample_size": 30,
     "tcp_ok_count": 9,
     "tcp_success_rate": 0.3,
-    "score": 40.9,
+    "score": 36.9,
     "status": "candidate",
     "notes": [],
     "diagnostics": {
@@ -561,11 +484,11 @@
         "note": "real validation completed via v2ray_finder.xray_connectivity"
       },
       "freshness": {
-        "score_adjustment": 1.0,
-        "config_churn_rate": null,
-        "history_available": false,
+        "score_adjustment": -3.0,
+        "config_churn_rate": 0.0,
+        "history_available": true,
         "reasons": [
-          "new source"
+          "unchanged configs"
         ]
       },
       "redundancy": {
@@ -573,81 +496,11 @@
         "threshold": 0.8
       },
       "history": {
-        "times_seen": 1,
+        "times_seen": 2,
         "failure_streak": 0,
         "avg_tcp_success_rate": 0.3,
         "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 1.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-hidashimora-free-vpn-anti-rkn-main-confi-be8b4d55",
-      "label": "Hidashimora/free-vpn-anti-rkn — configs/9.2.txt",
-      "url": "https://raw.githubusercontent.com/Hidashimora/free-vpn-anti-rkn/main/configs/9.2.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github",
-        "english"
-      ],
-      "discovered_at": "2026-07-13T15:09:53.667873+00:00",
-      "metadata": {
-        "repository": "Hidashimora/free-vpn-anti-rkn",
-        "branch": "main",
-        "path": "configs/9.2.txt"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 277,
-    "unique_items": 271,
-    "duplicate_ratio": 0.0217,
-    "protocols": {
-      "vless": 271
-    },
-    "tcp_sample_size": 30,
-    "tcp_ok_count": 16,
-    "tcp_success_rate": 0.5333,
-    "score": 58.4,
-    "status": "candidate",
-    "notes": [],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 277,
-        "normalized_unique_items": 271,
-        "normalized_removed": 6
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 10,
-        "ok": 2,
-        "success_rate": 0.2,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": 1.0,
-        "config_churn_rate": null,
-        "history_available": false,
-        "reasons": [
-          "new source"
-        ]
-      },
-      "redundancy": {
-        "normalized_identity_count": 271,
-        "threshold": 0.8
-      },
-      "history": {
-        "times_seen": 1,
-        "failure_streak": 0,
-        "avg_tcp_success_rate": 0.5333,
-        "avg_real_success_rate": 0.2,
-        "last_config_churn_rate": 1.0
+        "last_config_churn_rate": 0.0
       }
     }
   },
@@ -663,7 +516,7 @@
         "auto",
         "github"
       ],
-      "discovered_at": "2026-07-13T15:09:53.406996+00:00",
+      "discovered_at": "2026-07-14T06:30:19.349298+00:00",
       "metadata": {
         "repository": "HuangYurong123/p-configs",
         "branch": "main",
@@ -673,25 +526,25 @@
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 45,
-    "unique_items": 41,
-    "duplicate_ratio": 0.0889,
+    "raw_items": 40,
+    "unique_items": 37,
+    "duplicate_ratio": 0.075,
     "protocols": {
-      "vless": 41
+      "vless": 37
     },
     "tcp_sample_size": 30,
-    "tcp_ok_count": 30,
-    "tcp_success_rate": 1.0,
-    "score": 69.2,
+    "tcp_ok_count": 25,
+    "tcp_success_rate": 0.8333,
+    "score": 70.9,
     "status": "candidate",
     "notes": [
       "demoted by low real-validation success"
     ],
     "diagnostics": {
       "dedupe": {
-        "exact_unique_items": 45,
-        "normalized_unique_items": 41,
-        "normalized_removed": 4
+        "exact_unique_items": 40,
+        "normalized_unique_items": 37,
+        "normalized_removed": 3
       },
       "real_check": {
         "requested": true,
@@ -702,136 +555,69 @@
         "note": "real validation completed via v2ray_finder.xray_connectivity"
       },
       "freshness": {
-        "score_adjustment": 1.0,
-        "config_churn_rate": null,
-        "history_available": false,
+        "score_adjustment": 11.0,
+        "config_churn_rate": 0.7619,
+        "history_available": true,
         "reasons": [
-          "new source"
+          "fresh config churn",
+          "strong historical TCP"
         ]
       },
       "redundancy": {
-        "normalized_identity_count": 41,
+        "normalized_identity_count": 37,
         "threshold": 0.8
       },
       "history": {
-        "times_seen": 1,
+        "times_seen": 2,
         "failure_streak": 0,
-        "avg_tcp_success_rate": 1.0,
+        "avg_tcp_success_rate": 0.9166,
         "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 1.0
+        "last_config_churn_rate": 0.7619
       }
     }
   },
   {
     "candidate": {
-      "id": "https-raw-githubusercontent-com-kasesm-free-config-main-trojan-raw-txt-337a0866",
-      "label": "kasesm/Free-Config — trojan_raw.txt",
-      "url": "https://raw.githubusercontent.com/kasesm/Free-Config/main/trojan_raw.txt",
+      "id": "https-raw-githubusercontent-com-shatakvpn-configforge-v2ray-main-configs-4ced92ee",
+      "label": "ShatakVPN/ConfigForge-V2Ray — configs/cn/vless.txt",
+      "url": "https://raw.githubusercontent.com/ShatakVPN/ConfigForge-V2Ray/main/configs/cn/vless.txt",
       "origin": "repository_tree",
       "kind": "public_feed",
       "tags": [
         "repository-tree",
         "auto",
-        "github"
+        "github",
+        "english"
       ],
-      "discovered_at": "2026-07-13T15:09:47.175018+00:00",
+      "discovered_at": "2026-07-14T06:30:33.874218+00:00",
       "metadata": {
-        "repository": "kasesm/Free-Config",
+        "repository": "ShatakVPN/ConfigForge-V2Ray",
         "branch": "main",
-        "path": "trojan_raw.txt"
+        "path": "configs/cn/vless.txt"
       }
     },
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 1407,
-    "unique_items": 1391,
-    "duplicate_ratio": 0.0114,
+    "raw_items": 479,
+    "unique_items": 335,
+    "duplicate_ratio": 0.3006,
     "protocols": {
-      "trojan": 1391
+      "vless": 335
     },
     "tcp_sample_size": 60,
-    "tcp_ok_count": 57,
-    "tcp_success_rate": 0.95,
-    "score": 90.8,
+    "tcp_ok_count": 40,
+    "tcp_success_rate": 0.6667,
+    "score": 64.1,
     "status": "candidate",
     "notes": [
       "demoted by low real-validation success"
     ],
     "diagnostics": {
       "dedupe": {
-        "exact_unique_items": 1407,
-        "normalized_unique_items": 1391,
-        "normalized_removed": 16
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 10,
-        "ok": 1,
-        "success_rate": 0.1,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": 1.0,
-        "config_churn_rate": null,
-        "history_available": false,
-        "reasons": [
-          "new source"
-        ]
-      },
-      "redundancy": {
-        "normalized_identity_count": 1391,
-        "threshold": 0.8
-      },
-      "history": {
-        "times_seen": 1,
-        "failure_streak": 0,
-        "avg_tcp_success_rate": 0.95,
-        "avg_real_success_rate": 0.1,
-        "last_config_churn_rate": 1.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-kasesm-free-config-main-vless-sub-txt-139b93b2",
-      "label": "kasesm/Free-Config — vless_sub.txt",
-      "url": "https://raw.githubusercontent.com/kasesm/Free-Config/main/vless_sub.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-07-13T15:09:47.174978+00:00",
-      "metadata": {
-        "repository": "kasesm/Free-Config",
-        "branch": "main",
-        "path": "vless_sub.txt"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 637,
-    "unique_items": 578,
-    "duplicate_ratio": 0.0926,
-    "protocols": {
-      "vless": 578
-    },
-    "tcp_sample_size": 60,
-    "tcp_ok_count": 18,
-    "tcp_success_rate": 0.3,
-    "score": 57.1,
-    "status": "candidate",
-    "notes": [],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 637,
-        "normalized_unique_items": 578,
-        "normalized_removed": 59
+        "exact_unique_items": 479,
+        "normalized_unique_items": 335,
+        "normalized_removed": 144
       },
       "real_check": {
         "requested": true,
@@ -850,566 +636,13 @@
         ]
       },
       "redundancy": {
-        "normalized_identity_count": 578,
+        "normalized_identity_count": 335,
         "threshold": 0.8
       },
       "history": {
         "times_seen": 1,
         "failure_streak": 0,
-        "avg_tcp_success_rate": 0.3,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 1.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-kasesm-free-config-main-vmess-raw-txt-b46a049d",
-      "label": "kasesm/Free-Config — vmess_raw.txt",
-      "url": "https://raw.githubusercontent.com/kasesm/Free-Config/main/vmess_raw.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-07-13T15:09:47.175026+00:00",
-      "metadata": {
-        "repository": "kasesm/Free-Config",
-        "branch": "main",
-        "path": "vmess_raw.txt"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 61,
-    "unique_items": 56,
-    "duplicate_ratio": 0.082,
-    "protocols": {
-      "vmess": 56
-    },
-    "tcp_sample_size": 30,
-    "tcp_ok_count": 16,
-    "tcp_success_rate": 0.5333,
-    "score": 46.7,
-    "status": "candidate",
-    "notes": [],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 61,
-        "normalized_unique_items": 56,
-        "normalized_removed": 5
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 10,
-        "ok": 3,
-        "success_rate": 0.3,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": 1.0,
-        "config_churn_rate": null,
-        "history_available": false,
-        "reasons": [
-          "new source"
-        ]
-      },
-      "redundancy": {
-        "normalized_identity_count": 56,
-        "threshold": 0.8
-      },
-      "history": {
-        "times_seen": 1,
-        "failure_streak": 0,
-        "avg_tcp_success_rate": 0.5333,
-        "avg_real_success_rate": 0.3,
-        "last_config_churn_rate": 1.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-kasesm-free-config-main-vmess-sub-txt-a73dc371",
-      "label": "kasesm/Free-Config — vmess_sub.txt",
-      "url": "https://raw.githubusercontent.com/kasesm/Free-Config/main/vmess_sub.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-07-13T15:09:47.175000+00:00",
-      "metadata": {
-        "repository": "kasesm/Free-Config",
-        "branch": "main",
-        "path": "vmess_sub.txt"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 61,
-    "unique_items": 61,
-    "duplicate_ratio": 0.0,
-    "protocols": {
-      "vless": 4,
-      "vmess": 57
-    },
-    "tcp_sample_size": 30,
-    "tcp_ok_count": 10,
-    "tcp_success_rate": 0.3333,
-    "score": 40.7,
-    "status": "candidate",
-    "notes": [],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 61,
-        "normalized_unique_items": 61,
-        "normalized_removed": 0
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 10,
-        "ok": 0,
-        "success_rate": 0.0,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": 1.0,
-        "config_churn_rate": null,
-        "history_available": false,
-        "reasons": [
-          "new source"
-        ]
-      },
-      "redundancy": {
-        "normalized_identity_count": 61,
-        "threshold": 0.8
-      },
-      "history": {
-        "times_seen": 1,
-        "failure_streak": 0,
-        "avg_tcp_success_rate": 0.3333,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 1.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-kort0881-vpn-vless-configs-russia-main-d-38d66a47",
-      "label": "kort0881/vpn-vless-configs-russia — data/githubmirror/clean/trojan.txt",
-      "url": "https://raw.githubusercontent.com/kort0881/vpn-vless-configs-russia/main/data/githubmirror/clean/trojan.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-07-13T15:09:46.917218+00:00",
-      "metadata": {
-        "repository": "kort0881/vpn-vless-configs-russia",
-        "branch": "main",
-        "path": "data/githubmirror/clean/trojan.txt"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 1770,
-    "unique_items": 1768,
-    "duplicate_ratio": 0.0011,
-    "protocols": {
-      "trojan": 1768
-    },
-    "tcp_sample_size": 60,
-    "tcp_ok_count": 11,
-    "tcp_success_rate": 0.1833,
-    "score": 52.6,
-    "status": "candidate",
-    "notes": [],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 1770,
-        "normalized_unique_items": 1768,
-        "normalized_removed": 2
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 10,
-        "ok": 0,
-        "success_rate": 0.0,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": 1.0,
-        "config_churn_rate": null,
-        "history_available": false,
-        "reasons": [
-          "new source"
-        ]
-      },
-      "redundancy": {
-        "normalized_identity_count": 1768,
-        "threshold": 0.8
-      },
-      "history": {
-        "times_seen": 1,
-        "failure_streak": 0,
-        "avg_tcp_success_rate": 0.1833,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 1.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-kort0881-vpn-vless-configs-russia-main-d-db34f729",
-      "label": "kort0881/vpn-vless-configs-russia — data/githubmirror/clean/vmess.txt",
-      "url": "https://raw.githubusercontent.com/kort0881/vpn-vless-configs-russia/main/data/githubmirror/clean/vmess.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-07-13T15:09:46.917184+00:00",
-      "metadata": {
-        "repository": "kort0881/vpn-vless-configs-russia",
-        "branch": "main",
-        "path": "data/githubmirror/clean/vmess.txt"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 3096,
-    "unique_items": 2334,
-    "duplicate_ratio": 0.2461,
-    "protocols": {
-      "vmess": 2334
-    },
-    "tcp_sample_size": 100,
-    "tcp_ok_count": 33,
-    "tcp_success_rate": 0.33,
-    "score": 56.3,
-    "status": "candidate",
-    "notes": [],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 3096,
-        "normalized_unique_items": 2334,
-        "normalized_removed": 762
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 10,
-        "ok": 0,
-        "success_rate": 0.0,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": 1.0,
-        "config_churn_rate": null,
-        "history_available": false,
-        "reasons": [
-          "new source"
-        ]
-      },
-      "redundancy": {
-        "normalized_identity_count": 2334,
-        "threshold": 0.8
-      },
-      "history": {
-        "times_seen": 1,
-        "failure_streak": 0,
-        "avg_tcp_success_rate": 0.33,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 1.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-kort0881-vpn-vless-configs-russia-main-d-4b574155",
-      "label": "kort0881/vpn-vless-configs-russia — data/githubmirror/new/by_protocol/trojan/trojan_001.txt",
-      "url": "https://raw.githubusercontent.com/kort0881/vpn-vless-configs-russia/main/data/githubmirror/new/by_protocol/trojan/trojan_001.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-07-13T15:09:46.917288+00:00",
-      "metadata": {
-        "repository": "kort0881/vpn-vless-configs-russia",
-        "branch": "main",
-        "path": "data/githubmirror/new/by_protocol/trojan/trojan_001.txt"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 498,
-    "unique_items": 297,
-    "duplicate_ratio": 0.4036,
-    "protocols": {
-      "trojan": 297
-    },
-    "tcp_sample_size": 30,
-    "tcp_ok_count": 14,
-    "tcp_success_rate": 0.4667,
-    "score": 50.6,
-    "status": "candidate",
-    "notes": [],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 498,
-        "normalized_unique_items": 297,
-        "normalized_removed": 201
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 10,
-        "ok": 1,
-        "success_rate": 0.1,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": 1.0,
-        "config_churn_rate": null,
-        "history_available": false,
-        "reasons": [
-          "new source"
-        ]
-      },
-      "redundancy": {
-        "normalized_identity_count": 297,
-        "threshold": 0.8
-      },
-      "history": {
-        "times_seen": 1,
-        "failure_streak": 0,
-        "avg_tcp_success_rate": 0.4667,
-        "avg_real_success_rate": 0.1,
-        "last_config_churn_rate": 1.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-kort0881-vpn-vless-configs-russia-main-d-262a1ce6",
-      "label": "kort0881/vpn-vless-configs-russia — data/githubmirror/new/by_protocol/vless/vless_004.txt",
-      "url": "https://raw.githubusercontent.com/kort0881/vpn-vless-configs-russia/main/data/githubmirror/new/by_protocol/vless/vless_004.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-07-13T15:09:46.917263+00:00",
-      "metadata": {
-        "repository": "kort0881/vpn-vless-configs-russia",
-        "branch": "main",
-        "path": "data/githubmirror/new/by_protocol/vless/vless_004.txt"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 481,
-    "unique_items": 344,
-    "duplicate_ratio": 0.2848,
-    "protocols": {
-      "vless": 344
-    },
-    "tcp_sample_size": 60,
-    "tcp_ok_count": 34,
-    "tcp_success_rate": 0.5667,
-    "score": 59.8,
-    "status": "candidate",
-    "notes": [],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 481,
-        "normalized_unique_items": 344,
-        "normalized_removed": 137
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 10,
-        "ok": 1,
-        "success_rate": 0.1,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": 1.0,
-        "config_churn_rate": null,
-        "history_available": false,
-        "reasons": [
-          "new source"
-        ]
-      },
-      "redundancy": {
-        "normalized_identity_count": 344,
-        "threshold": 0.8
-      },
-      "history": {
-        "times_seen": 1,
-        "failure_streak": 0,
-        "avg_tcp_success_rate": 0.5667,
-        "avg_real_success_rate": 0.1,
-        "last_config_churn_rate": 1.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-kort0881-vpn-vless-configs-russia-main-d-dd8c73f8",
-      "label": "kort0881/vpn-vless-configs-russia — data/githubmirror/new/by_protocol/vmess/vmess_002.txt",
-      "url": "https://raw.githubusercontent.com/kort0881/vpn-vless-configs-russia/main/data/githubmirror/new/by_protocol/vmess/vmess_002.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-07-13T15:09:46.917237+00:00",
-      "metadata": {
-        "repository": "kort0881/vpn-vless-configs-russia",
-        "branch": "main",
-        "path": "data/githubmirror/new/by_protocol/vmess/vmess_002.txt"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 500,
-    "unique_items": 431,
-    "duplicate_ratio": 0.138,
-    "protocols": {
-      "vmess": 431
-    },
-    "tcp_sample_size": 60,
-    "tcp_ok_count": 12,
-    "tcp_success_rate": 0.2,
-    "score": 48.0,
-    "status": "candidate",
-    "notes": [],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 500,
-        "normalized_unique_items": 431,
-        "normalized_removed": 69
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 10,
-        "ok": 0,
-        "success_rate": 0.0,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": 1.0,
-        "config_churn_rate": null,
-        "history_available": false,
-        "reasons": [
-          "new source"
-        ]
-      },
-      "redundancy": {
-        "normalized_identity_count": 431,
-        "threshold": 0.8
-      },
-      "history": {
-        "times_seen": 1,
-        "failure_streak": 0,
-        "avg_tcp_success_rate": 0.2,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 1.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-kort0881-vpn-vless-configs-russia-main-d-834e5111",
-      "label": "kort0881/vpn-vless-configs-russia — data/githubmirror/new/by_protocol/vmess/vmess_003.txt",
-      "url": "https://raw.githubusercontent.com/kort0881/vpn-vless-configs-russia/main/data/githubmirror/new/by_protocol/vmess/vmess_003.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-07-13T15:09:46.917255+00:00",
-      "metadata": {
-        "repository": "kort0881/vpn-vless-configs-russia",
-        "branch": "main",
-        "path": "data/githubmirror/new/by_protocol/vmess/vmess_003.txt"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 500,
-    "unique_items": 424,
-    "duplicate_ratio": 0.152,
-    "protocols": {
-      "vmess": 424
-    },
-    "tcp_sample_size": 60,
-    "tcp_ok_count": 18,
-    "tcp_success_rate": 0.3,
-    "score": 52.4,
-    "status": "candidate",
-    "notes": [],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 500,
-        "normalized_unique_items": 424,
-        "normalized_removed": 76
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 10,
-        "ok": 0,
-        "success_rate": 0.0,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": 1.0,
-        "config_churn_rate": null,
-        "history_available": false,
-        "reasons": [
-          "new source"
-        ]
-      },
-      "redundancy": {
-        "normalized_identity_count": 424,
-        "threshold": 0.8
-      },
-      "history": {
-        "times_seen": 1,
-        "failure_streak": 0,
-        "avg_tcp_success_rate": 0.3,
+        "avg_tcp_success_rate": 0.6667,
         "avg_real_success_rate": 0.0,
         "last_config_churn_rate": 1.0
       }
