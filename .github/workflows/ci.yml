@@ -75,3 +75,17 @@ jobs:
           path: |
             output.json
             registry
+
+      - name: Send Telegram report
+        if: always()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          HUNTER_CI_STATUS: ${{ job.status }}
+        run: |
+          if [ -n "$TELEGRAM_BOT_TOKEN" ] && [ -n "$TELEGRAM_CHAT_ID" ]; then
+            python -m source_hunter.telegram_report --send --no-fail
+          else
+            echo "Telegram secrets missing; printing report preview only."
+            python -m source_hunter.telegram_report || true
+          fi
