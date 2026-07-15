@@ -27,6 +27,7 @@ from .source_history import (
 from .tcp_check import tcp_sample
 from .telegram_collect import collect_telegram_candidates
 from .utils import dedupe_keep_order, write_json
+from .validated_configs import export_validated_configs
 from .web_collect import collect_web_candidates
 
 
@@ -51,7 +52,7 @@ def evaluate_candidate(
     tcp_sample_size: int,
     timeout: float,
     history: dict[str, Any] | None = None,
-) -> tuple[FeedReport, list[str]]:
+) -> tuple[FeedReport, list[str], list[dict[str, Any]]]:
     fetched = fetch_text(candidate.url, timeout=timeout)
     report = FeedReport(
         candidate=candidate,
@@ -61,7 +62,7 @@ def evaluate_candidate(
     )
     if not fetched.ok:
         report.notes.append("fetch failed")
-        return score_report(report, history=history), []
+        return score_report(report, history=history), [], []
     raw = extract_all(fetched.text)
     exact_unique = dedupe_keep_order(raw)
     unique = dedupe_by_normalized_identity(exact_unique)
@@ -82,6 +83,7 @@ def evaluate_candidate(
     report.tcp_sample_size = checked
     report.tcp_success_rate = round(ok / checked, 4) if checked else 0.0
     real = run_optional_real_check(tcp_items)
+    validated_rows = real.validated_rows()
     report.diagnostics["real_check"] = real.to_dict()
     report = score_report(
         report,
@@ -95,7 +97,7 @@ def evaluate_candidate(
         elif real.success_rate >= 0.50 and report.status == "candidate":
             report.status = "trusted"
             report.notes.append("promoted by real-validation success")
-    return report, unique
+    return report, unique, validated_rows
 
 
 def run_hunt(
@@ -116,11 +118,12 @@ def run_hunt(
     )
     reports: list[FeedReport] = []
     configs_by_url: dict[str, list[str]] = {}
+    validated_by_source: dict[str, list[dict[str, Any]]] = {}
     errors: list[dict[str, str]] = []
     history = load_source_history(registry_dir)
     for c in candidates:
         try:
-            report, configs = evaluate_candidate(
+            report, configs, validated_rows = evaluate_candidate(
                 c,
                 tcp_sample_size=tcp_sample_size,
                 timeout=fetch_timeout,
@@ -128,6 +131,8 @@ def run_hunt(
             )
             reports.append(report)
             configs_by_url[c.url] = configs
+            if validated_rows:
+                validated_by_source[c.id] = validated_rows
         except Exception as exc:
             errors.append({"url": c.url, "error": str(exc)})
     apply_redundancy_policy(reports, configs_by_url)
@@ -139,6 +144,12 @@ def run_hunt(
         configs_by_url,
         generated_at=generated_at,
     )
+    validated_config_rows = export_validated_configs(
+        registry_dir,
+        reports,
+        validated_by_source,
+        generated_at=generated_at,
+    )
     trusted = [r.to_dict() for r in reports if r.status == "trusted"]
     candidate_rows = [r.to_dict() for r in reports if r.status == "candidate"]
     experimental = [r.to_dict() for r in reports if r.status == "experimental"]
@@ -148,6 +159,7 @@ def run_hunt(
     queue_diagnostics = dict(queue_diagnostics)
     queue_diagnostics["generated_telegram_feeds"] = len(generated_rows)
     queue_diagnostics["source_history_records"] = len(history_rows)
+    queue_diagnostics["validated_configs"] = len(validated_config_rows)
     result = HunterResult(
         generated_at=generated_at,
         raw_candidates=len(raw_candidates),

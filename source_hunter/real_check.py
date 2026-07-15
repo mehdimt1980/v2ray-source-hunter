@@ -5,7 +5,7 @@ import subprocess
 import sys
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Callable
+from typing import Any, Callable
 
 
 @dataclass
@@ -15,6 +15,7 @@ class RealCheckSummary:
     checked: int = 0
     ok: int = 0
     validation_location: str = ""
+    validated_configs: list[dict[str, Any]] | None = None
     note: str = ""
 
     @property
@@ -29,8 +30,12 @@ class RealCheckSummary:
             "ok": self.ok,
             "success_rate": self.success_rate,
             "validation_location": self.validation_location,
+            "validated_config_count": len(self.validated_configs or []),
             "note": self.note,
         }
+
+    def validated_rows(self) -> list[dict[str, Any]]:
+        return self.validated_configs or []
 
 
 def run_optional_real_check(configs: list[str], *, max_items: int = 30) -> RealCheckSummary:
@@ -91,12 +96,18 @@ def run_optional_real_check(configs: list[str], *, max_items: int = 30) -> RealC
             auto_download=False,
         )
         ok = sum(1 for row in rows if _real_row_ok(row))
+        passed = [
+            _real_row_to_dict(row, validation_location=validation_location)
+            for row in rows
+            if _real_row_ok(row)
+        ]
         return RealCheckSummary(
             requested=True,
             available=True,
             checked=len(rows),
             ok=ok,
             validation_location=validation_location,
+            validated_configs=passed,
             note=f"real validation completed via {backend}",
         )
     except Exception as exc:
@@ -145,3 +156,20 @@ def _real_row_ok(row: object) -> bool:
     if bool(getattr(row, "validation_ok", False)):
         return True
     return bool(getattr(row, "google_204_ok", False) or getattr(row, "reachable", False))
+
+
+def _real_row_to_dict(row: object, *, validation_location: str) -> dict[str, Any]:
+    config = str(getattr(row, "config", "") or "")
+    return {
+        "config": config,
+        "protocol": str(getattr(row, "protocol", "") or ""),
+        "validation_location": validation_location,
+        "xray_ok": _real_row_ok(row),
+        "google_204_ok": bool(getattr(row, "google_204_ok", False)),
+        "reachable": bool(getattr(row, "reachable", False)),
+        "latency_ms": getattr(row, "latency_ms", None),
+        "quality_score": getattr(row, "quality_score", None),
+        "error": getattr(row, "error", None),
+        "socks_port": getattr(row, "socks_port", None),
+        "retried": bool(getattr(row, "retried", False)),
+    }
