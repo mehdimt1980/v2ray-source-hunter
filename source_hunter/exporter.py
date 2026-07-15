@@ -208,9 +208,9 @@ def _pick_protocol_coverage(
 def export_app_registry(
     reports: list[FeedReport],
     *,
-    max_per_group: int = 3,
-    max_total: int = 50,
-    protocol_coverage_slots: int = 8,
+    max_per_group: int = 4,
+    max_total: int = 80,
+    protocol_coverage_slots: int = 12,
 ) -> list[dict[str, Any]]:
     trusted = [r for r in reports if r.status == "trusted"]
     trusted.sort(key=_export_sort_key)

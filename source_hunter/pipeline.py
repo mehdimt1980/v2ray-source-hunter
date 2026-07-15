@@ -81,7 +81,7 @@ def evaluate_candidate(
     report.tcp_ok_count = ok
     report.tcp_sample_size = checked
     report.tcp_success_rate = round(ok / checked, 4) if checked else 0.0
-    real = run_optional_real_check(tcp_items[:10])
+    real = run_optional_real_check(tcp_items)
     report.diagnostics["real_check"] = real.to_dict()
     report = score_report(
         report,

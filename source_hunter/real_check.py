@@ -14,6 +14,7 @@ class RealCheckSummary:
     available: bool = False
     checked: int = 0
     ok: int = 0
+    validation_location: str = ""
     note: str = ""
 
     @property
@@ -27,43 +28,86 @@ class RealCheckSummary:
             "checked": self.checked,
             "ok": self.ok,
             "success_rate": self.success_rate,
+            "validation_location": self.validation_location,
             "note": self.note,
         }
 
 
-def run_optional_real_check(configs: list[str], *, max_items: int = 10) -> RealCheckSummary:
+def run_optional_real_check(configs: list[str], *, max_items: int = 30) -> RealCheckSummary:
     enabled = os.environ.get("HUNTER_REAL_CHECK", "").lower() in {"1", "true", "yes"}
     path = os.environ.get("XRAY_BINARY") or ""
+    validation_location = os.environ.get("HUNTER_REAL_CHECK_LOCATION", "github_actions_eu")
     if not enabled:
         return RealCheckSummary(requested=False, available=False, note="disabled")
     if not path or not os.path.isfile(path):
-        return RealCheckSummary(requested=True, available=False, note="XRAY_BINARY missing")
+        return RealCheckSummary(
+            requested=True,
+            available=False,
+            validation_location=validation_location,
+            note="XRAY_BINARY missing",
+        )
     try:
         proc = subprocess.run([path, "version"], capture_output=True, text=True, timeout=10)
         if proc.returncode != 0:
-            return RealCheckSummary(requested=True, available=False, note=proc.stderr[:200])
+            return RealCheckSummary(
+                requested=True,
+                available=False,
+                validation_location=validation_location,
+                note=proc.stderr[:200],
+            )
     except Exception as exc:
-        return RealCheckSummary(requested=True, available=False, note=str(exc))
+        return RealCheckSummary(
+            requested=True,
+            available=False,
+            validation_location=validation_location,
+            note=str(exc),
+        )
 
     checker, backend, import_error = _load_real_checker()
     if checker is None:
-        return RealCheckSummary(requested=True, available=False, note=import_error)
+        return RealCheckSummary(
+            requested=True,
+            available=False,
+            validation_location=validation_location,
+            note=import_error,
+        )
 
     sample = configs[:max_items]
     if not sample:
-        return RealCheckSummary(requested=True, available=True, checked=0, ok=0, note="no configs")
+        return RealCheckSummary(
+            requested=True,
+            available=True,
+            checked=0,
+            ok=0,
+            validation_location=validation_location,
+            note="no configs",
+        )
     try:
         rows = checker(
             sample,
-            max_workers=2,
-            timeout=8.0,
+            max_workers=4,
+            timeout=12.0,
             binary_path=path,
             auto_download=False,
         )
         ok = sum(1 for row in rows if _real_row_ok(row))
-        return RealCheckSummary(requested=True, available=True, checked=len(rows), ok=ok, note=f"real validation completed via {backend}")
+        return RealCheckSummary(
+            requested=True,
+            available=True,
+            checked=len(rows),
+            ok=ok,
+            validation_location=validation_location,
+            note=f"real validation completed via {backend}",
+        )
     except Exception as exc:
-        return RealCheckSummary(requested=True, available=True, checked=0, ok=0, note="real validation failed: " + str(exc))
+        return RealCheckSummary(
+            requested=True,
+            available=True,
+            checked=0,
+            ok=0,
+            validation_location=validation_location,
+            note="real validation failed: " + str(exc),
+        )
 
 
 def _load_real_checker() -> tuple[Callable[..., list] | None, str, str]:

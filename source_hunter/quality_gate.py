@@ -8,6 +8,7 @@ from typing import Any
 
 DEFAULT_MIN_APP_RECORDS = 10
 DEFAULT_MIN_REAL_AVAILABLE = 1
+DEFAULT_MIN_REAL_CHECKED_CONFIGS = 30
 DEFAULT_MIN_MEDIAN_PRIORITY = 35
 DEFAULT_MIN_MEDIAN_TCP = 0.25
 DEFAULT_MAX_LOW_TRUST_RATIO = 0.70
@@ -19,6 +20,7 @@ def evaluate_quality_gate(
     app_registry_path: Path = Path("registry/v2ray_finder_sources.json"),
     min_app_records: int = DEFAULT_MIN_APP_RECORDS,
     min_real_available: int = DEFAULT_MIN_REAL_AVAILABLE,
+    min_real_checked_configs: int = DEFAULT_MIN_REAL_CHECKED_CONFIGS,
     min_median_priority: int = DEFAULT_MIN_MEDIAN_PRIORITY,
     min_median_tcp: float = DEFAULT_MIN_MEDIAN_TCP,
     max_low_trust_ratio: float = DEFAULT_MAX_LOW_TRUST_RATIO,
@@ -75,6 +77,10 @@ def evaluate_quality_gate(
     if real_available < min_real_available:
         failures.append(
             f"real validation unavailable: {real_available} reports < {min_real_available}"
+        )
+    if real_checked < min_real_checked_configs:
+        failures.append(
+            f"too few Xray-checked configs: {real_checked} < {min_real_checked_configs}"
         )
     if _median(priorities) < min_median_priority:
         failures.append(
@@ -135,8 +141,21 @@ def main(argv: list[str] | None = None) -> int:
         default="registry/v2ray_finder_sources.json",
     )
     parser.add_argument("--min-app-records", type=int, default=DEFAULT_MIN_APP_RECORDS)
-    parser.add_argument("--min-real-available", type=int, default=DEFAULT_MIN_REAL_AVAILABLE)
-    parser.add_argument("--min-median-priority", type=int, default=DEFAULT_MIN_MEDIAN_PRIORITY)
+    parser.add_argument(
+        "--min-real-available",
+        type=int,
+        default=DEFAULT_MIN_REAL_AVAILABLE,
+    )
+    parser.add_argument(
+        "--min-real-checked-configs",
+        type=int,
+        default=DEFAULT_MIN_REAL_CHECKED_CONFIGS,
+    )
+    parser.add_argument(
+        "--min-median-priority",
+        type=int,
+        default=DEFAULT_MIN_MEDIAN_PRIORITY,
+    )
     parser.add_argument("--min-median-tcp", type=float, default=DEFAULT_MIN_MEDIAN_TCP)
     parser.add_argument("--max-low-trust-ratio", type=float, default=DEFAULT_MAX_LOW_TRUST_RATIO)
     args = parser.parse_args(argv)
@@ -145,6 +164,7 @@ def main(argv: list[str] | None = None) -> int:
         app_registry_path=Path(args.app_registry_path),
         min_app_records=args.min_app_records,
         min_real_available=args.min_real_available,
+        min_real_checked_configs=args.min_real_checked_configs,
         min_median_priority=args.min_median_priority,
         min_median_tcp=args.min_median_tcp,
         max_low_trust_ratio=args.max_low_trust_ratio,
