@@ -56,6 +56,22 @@ def build_telegram_report(
     real_ok = sum(int(check.get("ok") or 0) for check in real_checks)
     real_available = sum(1 for check in real_checks if check.get("available"))
     discovery_added = int(discovery.get("accepted") or discovery.get("added") or 0)
+    endpoint_checked = sum(
+        int(row.get("http_endpoint_checked") or 0)
+        for row in validated_configs
+        if isinstance(row, dict)
+    )
+    endpoint_ok = sum(
+        int(row.get("http_endpoint_ok_count") or 0)
+        for row in validated_configs
+        if isinstance(row, dict)
+    )
+    stable_configs = sum(
+        1
+        for row in validated_configs
+        if isinstance(row, dict)
+        and int((row.get("stability") or {}).get("success_streak") or 0) >= 2
+    )
 
     metrics = gate.get("metrics", {})
     protocols = metrics.get("protocols") or _protocols(app_registry)
@@ -72,6 +88,8 @@ def build_telegram_report(
         f"Exported sources: <b>{len(app_registry)}</b>",
         f"Validated configs: <b>{len(validated_configs)}</b>",
         f"Xray checked: <b>{real_checked}</b> | passed: <b>{real_ok}</b> ({_percent(real_ok, real_checked)})",
+        f"HTTP endpoints: <b>{endpoint_ok}/{endpoint_checked}</b> ({_percent(endpoint_ok, endpoint_checked)})",
+        f"Stable configs: <b>{stable_configs}</b>",
         f"Real-check reports: <b>{real_available}</b>",
         f"Discovery accepted: <b>{discovery_added}</b>",
         "",
@@ -272,10 +290,12 @@ def _safe_protocol_name(protocol: str) -> str:
 
 
 def _config_sort_key(row: dict[str, Any]) -> tuple[float, float, str]:
+    stability = _float_or_zero((row.get("stability") or {}).get("stability_score"))
+    endpoint_rate = _float_or_zero(row.get("http_endpoint_success_rate"))
     quality = _float_or_zero(row.get("quality_score"))
     latency = _float_or_large(row.get("latency_ms"))
     config = str(row.get("config") or "")
-    return (-quality, latency, config)
+    return (-stability, -endpoint_rate, -quality, latency, config)
 
 
 def _multipart_form_data(

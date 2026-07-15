@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from typing import Any
 
+from .config_history import annotate_config_stability
 from .models import FeedReport
 from .protocols import normalized_config_identity, protocol_of
 from .utils import stable_id, write_json
@@ -29,8 +30,11 @@ def export_validated_configs(
                 continue
             seen.add(identity)
             rows.append(_to_validated_row(report, item, identity, generated_at))
+    rows = annotate_config_stability(registry_dir, rows, generated_at=generated_at)
     rows.sort(
         key=lambda row: (
+            -float((row.get("stability") or {}).get("stability_score") or 0.0),
+            -float(row.get("http_endpoint_success_rate") or 0.0),
             -float(row.get("quality_score") or 0.0),
             float(row.get("latency_ms") or 999999),
             row.get("source_label", ""),
@@ -63,6 +67,11 @@ def _to_validated_row(
         "xray_ok": bool(item.get("xray_ok")),
         "google_204_ok": bool(item.get("google_204_ok")),
         "reachable": bool(item.get("reachable")),
+        "http_endpoint_results": item.get("http_endpoint_results") or [],
+        "http_endpoint_ok_count": int(item.get("http_endpoint_ok_count") or 0),
+        "http_endpoint_checked": int(item.get("http_endpoint_checked") or 0),
+        "http_endpoint_success_rate": float(item.get("http_endpoint_success_rate") or 0.0),
+        "http_endpoint_note": item.get("http_endpoint_note") or "",
         "latency_ms": item.get("latency_ms"),
         "quality_score": item.get("quality_score"),
         "retried": bool(item.get("retried")),

@@ -1,11 +1,21 @@
 from __future__ import annotations
 
 import os
+import shutil
 import subprocess
 import sys
+import time
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Callable
+
+
+HTTP_ENDPOINTS = [
+    ("google_204", "https://www.gstatic.com/generate_204"),
+    ("cloudflare_trace", "https://www.cloudflare.com/cdn-cgi/trace"),
+    ("cloudflare_204", "https://cp.cloudflare.com/generate_204"),
+    ("apple_success", "https://www.apple.com/library/test/success.html"),
+]
 
 
 @dataclass
@@ -96,10 +106,15 @@ def run_optional_real_check(configs: list[str], *, max_items: int = 30) -> RealC
             auto_download=False,
         )
         ok = sum(1 for row in rows if _real_row_ok(row))
+        endpoint_limit = int(os.environ.get("HUNTER_HTTP_ENDPOINT_MAX_PER_SOURCE", "3"))
+        passed_rows = [row for row in rows if _real_row_ok(row)]
         passed = [
-            _real_row_to_dict(row, validation_location=validation_location)
-            for row in rows
-            if _real_row_ok(row)
+            _real_row_to_dict(
+                row,
+                validation_location=validation_location,
+                run_endpoint_checks=index < endpoint_limit,
+            )
+            for index, row in enumerate(passed_rows)
         ]
         return RealCheckSummary(
             requested=True,
@@ -158,8 +173,18 @@ def _real_row_ok(row: object) -> bool:
     return bool(getattr(row, "google_204_ok", False) or getattr(row, "reachable", False))
 
 
-def _real_row_to_dict(row: object, *, validation_location: str) -> dict[str, Any]:
+def _real_row_to_dict(
+    row: object,
+    *,
+    validation_location: str,
+    run_endpoint_checks: bool = True,
+) -> dict[str, Any]:
     config = str(getattr(row, "config", "") or "")
+    endpoint_result = (
+        _run_http_endpoint_checks(getattr(row, "socks_port", None))
+        if run_endpoint_checks
+        else _empty_endpoint_result("sample limit")
+    )
     return {
         "config": config,
         "protocol": str(getattr(row, "protocol", "") or ""),
@@ -167,9 +192,102 @@ def _real_row_to_dict(row: object, *, validation_location: str) -> dict[str, Any
         "xray_ok": _real_row_ok(row),
         "google_204_ok": bool(getattr(row, "google_204_ok", False)),
         "reachable": bool(getattr(row, "reachable", False)),
+        "http_endpoint_results": endpoint_result["results"],
+        "http_endpoint_ok_count": endpoint_result["ok_count"],
+        "http_endpoint_checked": endpoint_result["checked"],
+        "http_endpoint_success_rate": endpoint_result["success_rate"],
+        "http_endpoint_note": endpoint_result.get("note", ""),
         "latency_ms": getattr(row, "latency_ms", None),
         "quality_score": getattr(row, "quality_score", None),
         "error": getattr(row, "error", None),
         "socks_port": getattr(row, "socks_port", None),
         "retried": bool(getattr(row, "retried", False)),
+    }
+
+
+def _run_http_endpoint_checks(socks_port: Any) -> dict[str, Any]:
+    if os.environ.get("HUNTER_HTTP_ENDPOINT_CHECK", "1").lower() in {"0", "false", "no"}:
+        return _empty_endpoint_result("disabled")
+    curl = shutil.which("curl")
+    if not curl:
+        return _empty_endpoint_result("curl unavailable")
+    try:
+        port = int(socks_port)
+    except (TypeError, ValueError):
+        return _empty_endpoint_result("socks port unavailable")
+    if port <= 0:
+        return _empty_endpoint_result("socks port unavailable")
+
+    timeout = float(os.environ.get("HUNTER_HTTP_ENDPOINT_TIMEOUT", "3.0"))
+    results = [_check_http_endpoint(curl, port, name, url, timeout) for name, url in HTTP_ENDPOINTS]
+    checked = len(results)
+    ok_count = sum(1 for item in results if item["ok"])
+    return {
+        "results": results,
+        "ok_count": ok_count,
+        "checked": checked,
+        "success_rate": round(ok_count / checked, 4) if checked else 0.0,
+    }
+
+
+def _empty_endpoint_result(note: str) -> dict[str, Any]:
+    return {
+        "results": [],
+        "ok_count": 0,
+        "checked": 0,
+        "success_rate": 0.0,
+        "note": note,
+    }
+
+
+def _check_http_endpoint(
+    curl: str,
+    socks_port: int,
+    name: str,
+    url: str,
+    timeout: float,
+) -> dict[str, Any]:
+    started = time.monotonic()
+    try:
+        proc = subprocess.run(
+            [
+                curl,
+                "--silent",
+                "--show-error",
+                "--location",
+                "--max-time",
+                str(timeout),
+                "--socks5-hostname",
+                f"127.0.0.1:{socks_port}",
+                "--output",
+                os.devnull,
+                "--write-out",
+                "%{http_code}",
+                url,
+            ],
+            capture_output=True,
+            text=True,
+            timeout=timeout + 2.0,
+        )
+    except Exception as exc:
+        return {
+            "name": name,
+            "url": url,
+            "ok": False,
+            "status_code": None,
+            "latency_ms": round((time.monotonic() - started) * 1000, 1),
+            "error": str(exc)[:160],
+        }
+    status_text = (proc.stdout or "").strip()
+    try:
+        status_code = int(status_text[-3:])
+    except ValueError:
+        status_code = None
+    return {
+        "name": name,
+        "url": url,
+        "ok": proc.returncode == 0 and status_code is not None and 200 <= status_code < 400,
+        "status_code": status_code,
+        "latency_ms": round((time.monotonic() - started) * 1000, 1),
+        "error": (proc.stderr or "").strip()[:160],
     }

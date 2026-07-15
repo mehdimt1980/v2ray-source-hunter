@@ -40,6 +40,8 @@ jobs:
           echo "XRAY_BINARY=$RUNNER_TEMP/xray/xray" >> "$GITHUB_ENV"
           echo "HUNTER_REAL_CHECK=1" >> "$GITHUB_ENV"
           echo "HUNTER_REAL_CHECK_LOCATION=github_actions_eu" >> "$GITHUB_ENV"
+          echo "HUNTER_HTTP_ENDPOINT_MAX_PER_SOURCE=3" >> "$GITHUB_ENV"
+          echo "HUNTER_HTTP_ENDPOINT_TIMEOUT=3.0" >> "$GITHUB_ENV"
 
       - name: Run source hunter
         env:
