@@ -28,4 +28,4 @@ jobs:
             echo "Missing TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID secret."
             exit 1
           fi
-          python -m source_hunter.telegram_report --send
+          python -m source_hunter.telegram_report --send --send-validated-configs

@@ -5,9 +5,11 @@ import html
 import json
 import os
 import sys
+import tempfile
 import urllib.error
 import urllib.parse
 import urllib.request
+import uuid
 from pathlib import Path
 from typing import Any
 
@@ -139,6 +141,184 @@ def send_telegram_message(
     return data
 
 
+def send_validated_config_files(
+    *,
+    registry_dir: Path = Path("registry"),
+    token: str | None = None,
+    chat_id: str | None = None,
+) -> list[dict[str, Any]]:
+    validated_path = registry_dir / "validated_configs.json"
+    rows = _read_json(validated_path, [])
+    if not isinstance(rows, list) or not rows:
+        return []
+
+    responses: list[dict[str, Any]] = []
+    with tempfile.TemporaryDirectory(prefix="source-hunter-telegram-") as tmp:
+        output_dir = Path(tmp)
+        protocol_files = _write_protocol_config_files(rows, output_dir)
+        for protocol, path in protocol_files:
+            count = sum(1 for row in rows if _row_protocol(row) == protocol)
+            responses.append(
+                send_telegram_document(
+                    path,
+                    caption=(
+                        f"<b>{_escape(protocol.upper())} validated configs</b>\n"
+                        f"Exact Xray-passed configs: <b>{count}</b>"
+                    ),
+                    token=token,
+                    chat_id=chat_id,
+                )
+            )
+
+        responses.append(
+            send_telegram_document(
+                validated_path,
+                caption=(
+                    "<b>Full validated_configs.json</b>\n"
+                    f"All exact Xray-passed configs: <b>{len(rows)}</b>"
+                ),
+                token=token,
+                chat_id=chat_id,
+            )
+        )
+    return responses
+
+
+def send_telegram_document(
+    file_path: Path,
+    *,
+    caption: str,
+    token: str | None = None,
+    chat_id: str | None = None,
+    timeout: float = 60.0,
+) -> dict[str, Any]:
+    token = token or os.getenv("TELEGRAM_BOT_TOKEN")
+    chat_id = chat_id or os.getenv("TELEGRAM_CHAT_ID")
+    if not token:
+        raise RuntimeError("TELEGRAM_BOT_TOKEN is not set")
+    if not chat_id:
+        raise RuntimeError("TELEGRAM_CHAT_ID is not set")
+    if not file_path.exists():
+        raise RuntimeError(f"document does not exist: {file_path}")
+
+    boundary = "source-hunter-" + uuid.uuid4().hex
+    payload = _multipart_form_data(
+        boundary=boundary,
+        fields={
+            "chat_id": chat_id,
+            "caption": caption,
+            "parse_mode": "HTML",
+        },
+        files={"document": file_path},
+    )
+    request = urllib.request.Request(
+        f"https://api.telegram.org/bot{token}/sendDocument",
+        data=payload,
+        method="POST",
+        headers={"Content-Type": f"multipart/form-data; boundary={boundary}"},
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=timeout) as response:
+            body = response.read().decode("utf-8")
+    except urllib.error.HTTPError as exc:
+        body = exc.read().decode("utf-8", errors="replace")
+        raise RuntimeError(f"telegram API returned HTTP {exc.code}: {body[:500]}") from exc
+    except urllib.error.URLError as exc:
+        raise RuntimeError(f"telegram API request failed: {exc}") from exc
+
+    data = json.loads(body)
+    if not data.get("ok"):
+        raise RuntimeError(f"telegram API rejected document: {body[:500]}")
+    return data
+
+
+def _write_protocol_config_files(
+    rows: list[Any],
+    output_dir: Path,
+) -> list[tuple[str, Path]]:
+    grouped: dict[str, list[dict[str, Any]]] = {}
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+        config = str(row.get("config") or "").strip()
+        if not config:
+            continue
+        grouped.setdefault(_row_protocol(row), []).append(row)
+
+    files: list[tuple[str, Path]] = []
+    for protocol in sorted(grouped):
+        sorted_rows = sorted(grouped[protocol], key=_config_sort_key)
+        path = output_dir / f"validated_configs_{protocol}.txt"
+        lines = [str(row.get("config") or "").strip() for row in sorted_rows]
+        path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+        files.append((protocol, path))
+    return files
+
+
+def _row_protocol(row: Any) -> str:
+    if isinstance(row, dict):
+        protocol = str(row.get("protocol") or "").strip().lower()
+        if protocol:
+            return _safe_protocol_name(protocol)
+        config = str(row.get("config") or "").strip()
+        if "://" in config:
+            return _safe_protocol_name(config.split("://", 1)[0].lower())
+    return "unknown"
+
+
+def _safe_protocol_name(protocol: str) -> str:
+    value = "".join(ch for ch in protocol if ch.isalnum() or ch in ("-", "_"))
+    return value or "unknown"
+
+
+def _config_sort_key(row: dict[str, Any]) -> tuple[float, float, str]:
+    quality = _float_or_zero(row.get("quality_score"))
+    latency = _float_or_large(row.get("latency_ms"))
+    config = str(row.get("config") or "")
+    return (-quality, latency, config)
+
+
+def _multipart_form_data(
+    *,
+    boundary: str,
+    fields: dict[str, str],
+    files: dict[str, Path],
+) -> bytes:
+    chunks: list[bytes] = []
+    for name, value in fields.items():
+        chunks.extend(
+            [
+                f"--{boundary}\r\n".encode("utf-8"),
+                f'Content-Disposition: form-data; name="{name}"\r\n\r\n'.encode(
+                    "utf-8"
+                ),
+                value.encode("utf-8"),
+                b"\r\n",
+            ]
+        )
+    for name, path in files.items():
+        chunks.extend(
+            [
+                f"--{boundary}\r\n".encode("utf-8"),
+                (
+                    f'Content-Disposition: form-data; name="{name}"; '
+                    f'filename="{path.name}"\r\n'
+                ).encode("utf-8"),
+                f"Content-Type: {_content_type(path)}\r\n\r\n".encode("utf-8"),
+                path.read_bytes(),
+                b"\r\n",
+            ]
+        )
+    chunks.append(f"--{boundary}--\r\n".encode("utf-8"))
+    return b"".join(chunks)
+
+
+def _content_type(path: Path) -> str:
+    if path.suffix.lower() == ".json":
+        return "application/json"
+    return "text/plain; charset=utf-8"
+
+
 def _read_json(path: Path, default: Any) -> Any:
     if not path.exists():
         return default
@@ -210,6 +390,20 @@ def _percent_value(value: Any) -> str:
         return "0.0%"
 
 
+def _float_or_zero(value: Any) -> float:
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return 0.0
+
+
+def _float_or_large(value: Any) -> float:
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return 999999.0
+
+
 def _escape(value: Any) -> str:
     return html.escape(str(value), quote=False)
 
@@ -228,6 +422,11 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--ci-status", default=None)
     parser.add_argument("--send", action="store_true")
     parser.add_argument(
+        "--send-validated-configs",
+        action="store_true",
+        help="Upload validated configs grouped by protocol plus the full JSON file.",
+    )
+    parser.add_argument(
         "--no-fail",
         action="store_true",
         help="Print send errors but return success. Useful for optional CI notifications.",
@@ -244,6 +443,9 @@ def main(argv: list[str] | None = None) -> int:
 
     try:
         send_telegram_message(message)
+        if args.send_validated_configs:
+            responses = send_validated_config_files(registry_dir=Path(args.registry_dir))
+            print(f"Telegram validated config files sent: {len(responses)}")
     except Exception as exc:
         print(f"Telegram report failed: {exc}", file=sys.stderr)
         if not args.no_fail:

@@ -102,7 +102,7 @@ jobs:
           HUNTER_CI_STATUS: ${{ job.status }}
         run: |
           if [ -n "$TELEGRAM_BOT_TOKEN" ] && [ -n "$TELEGRAM_CHAT_ID" ]; then
-            python -m source_hunter.telegram_report --send --no-fail
+            python -m source_hunter.telegram_report --send --send-validated-configs --no-fail
           else
             echo "Telegram secrets missing; printing report preview only."
             python -m source_hunter.telegram_report || true
