@@ -220,6 +220,8 @@ def _run_http_endpoint_checks(socks_port: Any) -> dict[str, Any]:
 
     timeout = float(os.environ.get("HUNTER_HTTP_ENDPOINT_TIMEOUT", "3.0"))
     results = [_check_http_endpoint(curl, port, name, url, timeout) for name, url in HTTP_ENDPOINTS]
+    if results and all(_socks_port_closed(item) for item in results):
+        return _empty_endpoint_result("socks port closed before endpoint checks")
     checked = len(results)
     ok_count = sum(1 for item in results if item["ok"])
     return {
@@ -291,3 +293,11 @@ def _check_http_endpoint(
         "latency_ms": round((time.monotonic() - started) * 1000, 1),
         "error": (proc.stderr or "").strip()[:160],
     }
+
+
+def _socks_port_closed(result: dict[str, Any]) -> bool:
+    error = str(result.get("error") or "").lower()
+    return (
+        "failed to connect to 127.0.0.1" in error
+        or "couldn't connect to server" in error
+    )
