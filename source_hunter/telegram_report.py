@@ -18,6 +18,11 @@ from .quality_gate import evaluate_quality_gate
 
 TELEGRAM_MESSAGE_LIMIT = 4096
 SAFE_MESSAGE_LIMIT = 3900
+BEST_MIN_STABILITY_SCORE = 70
+BEST_MIN_QUALITY_SCORE = 70
+BEST_MAX_LATENCY_MS = 1000
+FRESH_MIN_QUALITY_SCORE = 90
+FRESH_MAX_LATENCY_MS = 500
 
 
 def build_telegram_report(
@@ -72,6 +77,7 @@ def build_telegram_report(
         if isinstance(row, dict)
         and int((row.get("stability") or {}).get("success_streak") or 0) >= 2
     )
+    best_configs = sum(1 for row in validated_configs if _is_best_config(row))
 
     metrics = gate.get("metrics", {})
     protocols = metrics.get("protocols") or _protocols(app_registry)
@@ -90,6 +96,7 @@ def build_telegram_report(
         f"Xray checked: <b>{real_checked}</b> | passed: <b>{real_ok}</b> ({_percent(real_ok, real_checked)})",
         f"HTTP endpoints: <b>{endpoint_ok}/{endpoint_checked}</b> ({_percent(endpoint_ok, endpoint_checked)})",
         f"Stable configs: <b>{stable_configs}</b>",
+        f"Best configs exposed: <b>{best_configs}</b>",
         f"Real-check reports: <b>{real_available}</b>",
         f"Discovery accepted: <b>{discovery_added}</b>",
         "",
@@ -169,19 +176,20 @@ def send_validated_config_files(
     rows = _read_json(validated_path, [])
     if not isinstance(rows, list) or not rows:
         return []
+    best_rows = [row for row in rows if _is_best_config(row)]
 
     responses: list[dict[str, Any]] = []
     with tempfile.TemporaryDirectory(prefix="source-hunter-telegram-") as tmp:
         output_dir = Path(tmp)
-        protocol_files = _write_protocol_config_files(rows, output_dir)
+        protocol_files = _write_protocol_config_files(best_rows, output_dir)
         for protocol, path in protocol_files:
-            count = sum(1 for row in rows if _row_protocol(row) == protocol)
+            count = sum(1 for row in best_rows if _row_protocol(row) == protocol)
             responses.append(
                 send_telegram_document(
                     path,
                     caption=(
-                        f"<b>{_escape(protocol.upper())} validated configs</b>\n"
-                        f"Exact Xray-passed configs: <b>{count}</b>"
+                        f"<b>{_escape(protocol.upper())} best configs</b>\n"
+                        f"Stable or high-quality Xray-passed configs: <b>{count}</b>"
                     ),
                     token=token,
                     chat_id=chat_id,
@@ -193,7 +201,7 @@ def send_validated_config_files(
                 validated_path,
                 caption=(
                     "<b>Full validated_configs.json</b>\n"
-                    f"All exact Xray-passed configs: <b>{len(rows)}</b>"
+                    f"Best exposed: <b>{len(best_rows)}</b> / all validated: <b>{len(rows)}</b>"
                 ),
                 token=token,
                 chat_id=chat_id,
@@ -266,11 +274,32 @@ def _write_protocol_config_files(
     files: list[tuple[str, Path]] = []
     for protocol in sorted(grouped):
         sorted_rows = sorted(grouped[protocol], key=_config_sort_key)
-        path = output_dir / f"validated_configs_{protocol}.txt"
+        path = output_dir / f"best_configs_{protocol}.txt"
         lines = [str(row.get("config") or "").strip() for row in sorted_rows]
         path.write_text("\n".join(lines) + "\n", encoding="utf-8")
         files.append((protocol, path))
     return files
+
+
+def _is_best_config(row: Any) -> bool:
+    if not isinstance(row, dict):
+        return False
+    if not row.get("xray_ok"):
+        return False
+    if not row.get("reachable"):
+        return False
+    if not row.get("google_204_ok"):
+        return False
+    quality = _float_or_zero(row.get("quality_score"))
+    latency = _float_or_large(row.get("latency_ms"))
+    stability = _float_or_zero((row.get("stability") or {}).get("stability_score"))
+    if quality < BEST_MIN_QUALITY_SCORE:
+        return False
+    if latency > BEST_MAX_LATENCY_MS:
+        return False
+    if stability >= BEST_MIN_STABILITY_SCORE:
+        return True
+    return quality >= FRESH_MIN_QUALITY_SCORE and latency <= FRESH_MAX_LATENCY_MS
 
 
 def _row_protocol(row: Any) -> str:
