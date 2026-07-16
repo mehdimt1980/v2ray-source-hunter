@@ -1,9 +1,79 @@
 [
   {
     "candidate": {
-      "id": "https-raw-githubusercontent-com-argh94-v2rayautoconfig-main-configs-nige-848a21e4",
-      "label": "Argh94/V2RayAutoConfig — configs/Nigeria.txt",
-      "url": "https://raw.githubusercontent.com/Argh94/V2RayAutoConfig/main/configs/Nigeria.txt",
+      "id": "https-raw-githubusercontent-com-mrabolfazlnorouzi-iran-configs-main-conf-7a0a3a05",
+      "label": "MrAbolfazlNorouzi/iran-configs — configs/working-configs.txt",
+      "url": "https://raw.githubusercontent.com/MrAbolfazlNorouzi/iran-configs/main/configs/working-configs.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github"
+      ],
+      "discovered_at": "2026-07-16T07:37:12.626866+00:00",
+      "metadata": {
+        "repository": "MrAbolfazlNorouzi/iran-configs",
+        "branch": "main",
+        "path": "configs/working-configs.txt"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 5,
+    "unique_items": 5,
+    "duplicate_ratio": 0.0,
+    "protocols": {
+      "vless": 5
+    },
+    "tcp_sample_size": 5,
+    "tcp_ok_count": 0,
+    "tcp_success_rate": 0.0,
+    "score": 4.8,
+    "status": "experimental",
+    "notes": [
+      "very low TCP success rate"
+    ],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 5,
+        "normalized_unique_items": 5,
+        "normalized_removed": 0
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 5,
+        "ok": 0,
+        "success_rate": 0.0,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 0,
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": -13.0,
+        "config_churn_rate": 0.0,
+        "history_available": true,
+        "reasons": [
+          "stale unchanged configs",
+          "weak historical TCP"
+        ]
+      },
+      "history": {
+        "times_seen": 8,
+        "failure_streak": 0,
+        "avg_tcp_success_rate": 0.0,
+        "avg_real_success_rate": 0.0,
+        "last_config_churn_rate": 0.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-elanski-proxy-preflight-main-configs-sub-5e082ca7",
+      "label": "elanski/proxy-preflight — configs/sub_ru.txt",
+      "url": "https://raw.githubusercontent.com/elanski/proxy-preflight/main/configs/sub_ru.txt",
       "origin": "repository_tree",
       "kind": "public_feed",
       "tags": [
@@ -12,40 +82,40 @@
         "github",
         "english"
       ],
-      "discovered_at": "2026-07-16T06:35:56.161929+00:00",
+      "discovered_at": "2026-07-16T07:37:19.549604+00:00",
       "metadata": {
-        "repository": "Argh94/V2RayAutoConfig",
+        "repository": "elanski/proxy-preflight",
         "branch": "main",
-        "path": "configs/Nigeria.txt"
+        "path": "configs/sub_ru.txt"
       }
     },
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 1,
-    "unique_items": 1,
-    "duplicate_ratio": 0.0,
+    "raw_items": 100,
+    "unique_items": 88,
+    "duplicate_ratio": 0.12,
     "protocols": {
-      "ss": 1
+      "vless": 88
     },
-    "tcp_sample_size": 1,
-    "tcp_ok_count": 0,
-    "tcp_success_rate": 0.0,
-    "score": 25.6,
+    "tcp_sample_size": 30,
+    "tcp_ok_count": 2,
+    "tcp_success_rate": 0.0667,
+    "score": 10.4,
     "status": "experimental",
     "notes": [
       "very low TCP success rate"
     ],
     "diagnostics": {
       "dedupe": {
-        "exact_unique_items": 1,
-        "normalized_unique_items": 1,
-        "normalized_removed": 0
+        "exact_unique_items": 100,
+        "normalized_unique_items": 88,
+        "normalized_removed": 12
       },
       "real_check": {
         "requested": true,
         "available": true,
-        "checked": 1,
+        "checked": 30,
         "ok": 0,
         "success_rate": 0.0,
         "validation_location": "github_actions_eu",
@@ -53,19 +123,90 @@
         "note": "real validation completed via v2ray_finder.xray_connectivity"
       },
       "freshness": {
-        "score_adjustment": 8.0,
-        "config_churn_rate": 1.0,
+        "score_adjustment": -13.0,
+        "config_churn_rate": 0.0,
         "history_available": true,
         "reasons": [
-          "fresh config churn"
+          "stale unchanged configs",
+          "weak historical TCP"
         ]
       },
       "history": {
-        "times_seen": 2,
+        "times_seen": 4,
         "failure_streak": 0,
-        "avg_tcp_success_rate": 0.0,
+        "avg_tcp_success_rate": 0.0667,
         "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 1.0
+        "last_config_churn_rate": 0.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-kort0881-vpn-vless-configs-russia-main-d-38d66a47",
+      "label": "kort0881/vpn-vless-configs-russia — data/githubmirror/clean/trojan.txt",
+      "url": "https://raw.githubusercontent.com/kort0881/vpn-vless-configs-russia/main/data/githubmirror/clean/trojan.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github"
+      ],
+      "discovered_at": "2026-07-16T07:37:11.608275+00:00",
+      "metadata": {
+        "repository": "kort0881/vpn-vless-configs-russia",
+        "branch": "main",
+        "path": "data/githubmirror/clean/trojan.txt"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 4936,
+    "unique_items": 4934,
+    "duplicate_ratio": 0.0004,
+    "protocols": {
+      "trojan": 4934
+    },
+    "tcp_sample_size": 100,
+    "tcp_ok_count": 3,
+    "tcp_success_rate": 0.03,
+    "score": 47.0,
+    "status": "experimental",
+    "notes": [
+      "very low TCP success rate"
+    ],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 4936,
+        "normalized_unique_items": 4934,
+        "normalized_removed": 2
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 30,
+        "ok": 0,
+        "success_rate": 0.0,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 0,
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": 3.0,
+        "config_churn_rate": 0.2921,
+        "history_available": true,
+        "reasons": [
+          "fresh config churn",
+          "weak historical TCP"
+        ]
+      },
+      "history": {
+        "times_seen": 3,
+        "failure_streak": 0,
+        "avg_tcp_success_rate": 0.0977,
+        "avg_real_success_rate": 0.0,
+        "last_config_churn_rate": 0.2921
       }
     }
   }
