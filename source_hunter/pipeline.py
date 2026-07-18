@@ -5,6 +5,7 @@ from pathlib import Path
 from typing import Any
 
 from .auto_discover import run_auto_discovery
+from .best_configs import export_best_config_feeds
 from .candidate_queue import select_live_candidates
 from .extractors import extract_all
 from .exporter import export_app_registry
@@ -150,6 +151,11 @@ def run_hunt(
         validated_by_source,
         generated_at=generated_at,
     )
+    best_config_index = export_best_config_feeds(
+        registry_dir,
+        validated_config_rows,
+        generated_at=generated_at,
+    )
     trusted = [r.to_dict() for r in reports if r.status == "trusted"]
     candidate_rows = [r.to_dict() for r in reports if r.status == "candidate"]
     experimental = [r.to_dict() for r in reports if r.status == "experimental"]
@@ -160,6 +166,10 @@ def run_hunt(
     queue_diagnostics["generated_telegram_feeds"] = len(generated_rows)
     queue_diagnostics["source_history_records"] = len(history_rows)
     queue_diagnostics["validated_configs"] = len(validated_config_rows)
+    queue_diagnostics["best_configs"] = {
+        tier: details["count"]
+        for tier, details in best_config_index["tiers"].items()
+    }
     result = HunterResult(
         generated_at=generated_at,
         raw_candidates=len(raw_candidates),

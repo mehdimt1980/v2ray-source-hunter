@@ -1,0 +1,76 @@
+{
+  "generated_at": "2026-07-18T13:02:50.442119+00:00",
+  "tiers": {
+    "fresh": {
+      "count": 111,
+      "json_file": "fresh.json",
+      "rule": {
+        "description": "Strong validation in the current run.",
+        "quality_score_min": 90,
+        "latency_ms_max": 500
+      },
+      "protocols": {
+        "ss": {
+          "count": 15,
+          "text_file": "fresh_ss.txt"
+        },
+        "vless": {
+          "count": 54,
+          "text_file": "fresh_vless.txt"
+        },
+        "vmess": {
+          "count": 42,
+          "text_file": "fresh_vmess.txt"
+        }
+      }
+    },
+    "stable": {
+      "count": 50,
+      "json_file": "stable.json",
+      "rule": {
+        "description": "Passed repeatedly across daily runs.",
+        "stability_score_min": 70,
+        "quality_score_min": 70,
+        "latency_ms_max": 1000
+      },
+      "protocols": {
+        "ss": {
+          "count": 35,
+          "text_file": "stable_ss.txt"
+        },
+        "vless": {
+          "count": 5,
+          "text_file": "stable_vless.txt"
+        },
+        "vmess": {
+          "count": 10,
+          "text_file": "stable_vmess.txt"
+        }
+      }
+    },
+    "elite": {
+      "count": 17,
+      "json_file": "elite.json",
+      "rule": {
+        "description": "Strong today and fully proven across daily runs.",
+        "stability_score_min": 100,
+        "quality_score_min": 90,
+        "latency_ms_max": 500
+      },
+      "protocols": {
+        "ss": {
+          "count": 10,
+          "text_file": "elite_ss.txt"
+        },
+        "vless": {
+          "count": 2,
+          "text_file": "elite_vless.txt"
+        },
+        "vmess": {
+          "count": 5,
+          "text_file": "elite_vmess.txt"
+        }
+      }
+    }
+  }
+}

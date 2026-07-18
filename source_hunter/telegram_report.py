@@ -13,16 +13,14 @@ import uuid
 from pathlib import Path
 from typing import Any
 
+from .best_configs import config_sort_key as _config_sort_key
+from .best_configs import is_best_config as _is_best_config
+from .best_configs import row_protocol as _row_protocol
 from .quality_gate import evaluate_quality_gate
 
 
 TELEGRAM_MESSAGE_LIMIT = 4096
 SAFE_MESSAGE_LIMIT = 3900
-BEST_MIN_STABILITY_SCORE = 70
-BEST_MIN_QUALITY_SCORE = 70
-BEST_MAX_LATENCY_MS = 1000
-FRESH_MIN_QUALITY_SCORE = 90
-FRESH_MAX_LATENCY_MS = 500
 
 
 def build_telegram_report(
@@ -279,52 +277,6 @@ def _write_protocol_config_files(
         path.write_text("\n".join(lines) + "\n", encoding="utf-8")
         files.append((protocol, path))
     return files
-
-
-def _is_best_config(row: Any) -> bool:
-    if not isinstance(row, dict):
-        return False
-    if not row.get("xray_ok"):
-        return False
-    if not row.get("reachable"):
-        return False
-    if not row.get("google_204_ok"):
-        return False
-    quality = _float_or_zero(row.get("quality_score"))
-    latency = _float_or_large(row.get("latency_ms"))
-    stability = _float_or_zero((row.get("stability") or {}).get("stability_score"))
-    if quality < BEST_MIN_QUALITY_SCORE:
-        return False
-    if latency > BEST_MAX_LATENCY_MS:
-        return False
-    if stability >= BEST_MIN_STABILITY_SCORE:
-        return True
-    return quality >= FRESH_MIN_QUALITY_SCORE and latency <= FRESH_MAX_LATENCY_MS
-
-
-def _row_protocol(row: Any) -> str:
-    if isinstance(row, dict):
-        protocol = str(row.get("protocol") or "").strip().lower()
-        if protocol:
-            return _safe_protocol_name(protocol)
-        config = str(row.get("config") or "").strip()
-        if "://" in config:
-            return _safe_protocol_name(config.split("://", 1)[0].lower())
-    return "unknown"
-
-
-def _safe_protocol_name(protocol: str) -> str:
-    value = "".join(ch for ch in protocol if ch.isalnum() or ch in ("-", "_"))
-    return value or "unknown"
-
-
-def _config_sort_key(row: dict[str, Any]) -> tuple[float, float, str]:
-    stability = _float_or_zero((row.get("stability") or {}).get("stability_score"))
-    endpoint_rate = _float_or_zero(row.get("http_endpoint_success_rate"))
-    quality = _float_or_zero(row.get("quality_score"))
-    latency = _float_or_large(row.get("latency_ms"))
-    config = str(row.get("config") or "")
-    return (-stability, -endpoint_rate, -quality, latency, config)
 
 
 def _multipart_form_data(

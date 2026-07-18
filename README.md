@@ -179,7 +179,27 @@ registry/validated_configs.json
 
 This file contains every deduplicated Xray-passed config plus metadata such as source, protocol, latency, quality, stability and validation location.
 
-For Telegram users, the hunter publishes a smaller "best configs" set instead of dumping everything. A config is exposed in the protocol `.txt` files only when:
+The hunter publishes permanent, smaller feeds under `registry/best/` instead of asking consumers to use every validated config:
+
+```text
+registry/best/index.json
+registry/best/fresh.json
+registry/best/stable.json
+registry/best/elite.json
+registry/best/fresh_vless.txt
+registry/best/stable_vless.txt
+registry/best/elite_vless.txt
+```
+
+Every tier requires `xray_ok`, `reachable`, and `google_204_ok`. The tiers are:
+
+- `fresh`: strong in the current run: quality at least 90 and latency no higher than 500 ms.
+- `stable`: repeatedly passed: stability at least 70, quality at least 70, and latency no higher than 1000 ms.
+- `elite`: strong and fully proven: stability 100, quality at least 90, and latency no higher than 500 ms.
+
+`index.json` gives consumers the generated time, rule, count, and protocol files for every tier. The `.json` files contain metadata-rich rows; the protocol `.txt` files contain raw config links only, one per line.
+
+Telegram sends the combined `fresh` plus `stable` set. This replaces the earlier temporary-only best-config rule:
 
 ```text
 xray_ok = true
@@ -260,6 +280,10 @@ registry/v2ray_finder_sources.json
 registry/validated_configs.json
 registry/config_history.json
 registry/source_history.json
+registry/best/index.json
+registry/best/fresh.json
+registry/best/stable.json
+registry/best/elite.json
 ```
 
 Discovery outputs:
