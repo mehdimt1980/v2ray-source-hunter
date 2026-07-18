@@ -1,9 +1,9 @@
 [
   {
     "candidate": {
-      "id": "https-raw-githubusercontent-com-soroushyasini-proxysmith-main-bash-manua-5c7b631d",
-      "label": "soroushyasini/proxysmith — bash/manualconfig.txt",
-      "url": "https://raw.githubusercontent.com/soroushyasini/proxysmith/main/bash/manualconfig.txt",
+      "id": "https-raw-githubusercontent-com-mrabolfazlnorouzi-iran-configs-main-conf-7a0a3a05",
+      "label": "MrAbolfazlNorouzi/iran-configs — configs/working-configs.txt",
+      "url": "https://raw.githubusercontent.com/MrAbolfazlNorouzi/iran-configs/main/configs/working-configs.txt",
       "origin": "repository_tree",
       "kind": "public_feed",
       "tags": [
@@ -11,42 +11,40 @@
         "auto",
         "github"
       ],
-      "discovered_at": "2026-07-17T06:31:43.684424+00:00",
+      "discovered_at": "2026-07-18T06:29:03.242176+00:00",
       "metadata": {
-        "repository": "soroushyasini/proxysmith",
+        "repository": "MrAbolfazlNorouzi/iran-configs",
         "branch": "main",
-        "path": "bash/manualconfig.txt"
+        "path": "configs/working-configs.txt"
       }
     },
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 3,
-    "unique_items": 3,
+    "raw_items": 5,
+    "unique_items": 5,
     "duplicate_ratio": 0.0,
     "protocols": {
-      "ss": 1,
-      "trojan": 1,
-      "vless": 1
+      "vless": 5
     },
-    "tcp_sample_size": 3,
+    "tcp_sample_size": 5,
     "tcp_ok_count": 0,
     "tcp_success_rate": 0.0,
-    "score": 23.6,
+    "score": 4.8,
     "status": "experimental",
     "notes": [
       "very low TCP success rate"
     ],
     "diagnostics": {
       "dedupe": {
-        "exact_unique_items": 3,
-        "normalized_unique_items": 3,
+        "exact_unique_items": 5,
+        "normalized_unique_items": 5,
         "normalized_removed": 0
       },
       "real_check": {
         "requested": true,
         "available": true,
-        "checked": 3,
+        "checked": 5,
         "ok": 0,
         "success_rate": 0.0,
         "validation_location": "github_actions_eu",
@@ -54,27 +52,99 @@
         "note": "real validation completed via v2ray_finder.xray_connectivity"
       },
       "freshness": {
-        "score_adjustment": 1.0,
-        "config_churn_rate": null,
-        "history_available": false,
+        "score_adjustment": -13.0,
+        "config_churn_rate": 0.0,
+        "history_available": true,
         "reasons": [
-          "new source"
+          "stale unchanged configs",
+          "weak historical TCP"
         ]
       },
       "history": {
-        "times_seen": 1,
+        "times_seen": 9,
         "failure_streak": 0,
         "avg_tcp_success_rate": 0.0,
         "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 1.0
+        "last_config_churn_rate": 0.0
       }
     }
   },
   {
     "candidate": {
-      "id": "https-raw-githubusercontent-com-romaxa55-megav-public-main-subs-vmess-tx-d3c456c0",
-      "label": "Romaxa55/MegaV_Public — subs/vmess.txt",
-      "url": "https://raw.githubusercontent.com/Romaxa55/MegaV_Public/main/subs/vmess.txt",
+      "id": "https-raw-githubusercontent-com-elanski-proxy-preflight-main-configs-sub-5e082ca7",
+      "label": "elanski/proxy-preflight — configs/sub_ru.txt",
+      "url": "https://raw.githubusercontent.com/elanski/proxy-preflight/main/configs/sub_ru.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github",
+        "english"
+      ],
+      "discovered_at": "2026-07-18T06:29:08.370828+00:00",
+      "metadata": {
+        "repository": "elanski/proxy-preflight",
+        "branch": "main",
+        "path": "configs/sub_ru.txt"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 100,
+    "unique_items": 88,
+    "duplicate_ratio": 0.12,
+    "protocols": {
+      "vless": 88
+    },
+    "tcp_sample_size": 30,
+    "tcp_ok_count": 2,
+    "tcp_success_rate": 0.0667,
+    "score": 10.4,
+    "status": "experimental",
+    "notes": [
+      "very low TCP success rate"
+    ],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 100,
+        "normalized_unique_items": 88,
+        "normalized_removed": 12
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 30,
+        "ok": 0,
+        "success_rate": 0.0,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 0,
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": -13.0,
+        "config_churn_rate": 0.0,
+        "history_available": true,
+        "reasons": [
+          "stale unchanged configs",
+          "weak historical TCP"
+        ]
+      },
+      "history": {
+        "times_seen": 5,
+        "failure_streak": 0,
+        "avg_tcp_success_rate": 0.0667,
+        "avg_real_success_rate": 0.0,
+        "last_config_churn_rate": 0.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-kort0881-vpn-vless-configs-russia-main-d-c0a4b9f5",
+      "label": "kort0881/vpn-vless-configs-russia — data/githubmirror/new/by_protocol/trojan/trojan_007.txt",
+      "url": "https://raw.githubusercontent.com/kort0881/vpn-vless-configs-russia/main/data/githubmirror/new/by_protocol/trojan/trojan_007.txt",
       "origin": "repository_tree",
       "kind": "public_feed",
       "tags": [
@@ -82,40 +152,40 @@
         "auto",
         "github"
       ],
-      "discovered_at": "2026-07-17T06:31:44.049877+00:00",
+      "discovered_at": "2026-07-18T06:29:02.411811+00:00",
       "metadata": {
-        "repository": "Romaxa55/MegaV_Public",
+        "repository": "kort0881/vpn-vless-configs-russia",
         "branch": "main",
-        "path": "subs/vmess.txt"
+        "path": "data/githubmirror/new/by_protocol/trojan/trojan_007.txt"
       }
     },
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 2,
-    "unique_items": 2,
-    "duplicate_ratio": 0.0,
+    "raw_items": 494,
+    "unique_items": 449,
+    "duplicate_ratio": 0.0911,
     "protocols": {
-      "vmess": 2
+      "trojan": 449
     },
-    "tcp_sample_size": 2,
+    "tcp_sample_size": 60,
     "tcp_ok_count": 0,
     "tcp_success_rate": 0.0,
-    "score": 18.6,
+    "score": 39.6,
     "status": "experimental",
     "notes": [
       "very low TCP success rate"
     ],
     "diagnostics": {
       "dedupe": {
-        "exact_unique_items": 2,
-        "normalized_unique_items": 2,
-        "normalized_removed": 0
+        "exact_unique_items": 494,
+        "normalized_unique_items": 449,
+        "normalized_removed": 45
       },
       "real_check": {
         "requested": true,
         "available": true,
-        "checked": 2,
+        "checked": 30,
         "ok": 0,
         "success_rate": 0.0,
         "validation_location": "github_actions_eu",
@@ -141,50 +211,50 @@
   },
   {
     "candidate": {
-      "id": "https-t-me-abc-configs-18460-371f0643",
-      "label": "Telegram public channel abc_configs → t.me/abc_configs/18460",
-      "url": "https://t.me/abc_configs/18460",
-      "origin": "telegram_discovered_link",
+      "id": "https-raw-githubusercontent-com-kort0881-vpn-vless-configs-russia-main-d-5e2dd53f",
+      "label": "kort0881/vpn-vless-configs-russia — data/githubmirror/new/by_protocol/trojan/trojan_013.txt",
+      "url": "https://raw.githubusercontent.com/kort0881/vpn-vless-configs-russia/main/data/githubmirror/new/by_protocol/trojan/trojan_013.txt",
+      "origin": "repository_tree",
       "kind": "public_feed",
       "tags": [
-        "telegram",
-        "discovered-link",
-        "auto"
+        "repository-tree",
+        "auto",
+        "github"
       ],
-      "discovered_at": "2026-07-17T06:31:54.053139+00:00",
+      "discovered_at": "2026-07-18T06:29:02.411722+00:00",
       "metadata": {
-        "channel": "abc_configs",
-        "parent_url": "https://t.me/s/abc_configs",
-        "source": "telegram_web_link"
+        "repository": "kort0881/vpn-vless-configs-russia",
+        "branch": "main",
+        "path": "data/githubmirror/new/by_protocol/trojan/trojan_013.txt"
       }
     },
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 1,
-    "unique_items": 1,
-    "duplicate_ratio": 0.0,
+    "raw_items": 510,
+    "unique_items": 427,
+    "duplicate_ratio": 0.1627,
     "protocols": {
-      "ss": 1
+      "trojan": 427
     },
-    "tcp_sample_size": 1,
+    "tcp_sample_size": 60,
     "tcp_ok_count": 0,
     "tcp_success_rate": 0.0,
-    "score": 18.6,
+    "score": 37.4,
     "status": "experimental",
     "notes": [
       "very low TCP success rate"
     ],
     "diagnostics": {
       "dedupe": {
-        "exact_unique_items": 1,
-        "normalized_unique_items": 1,
-        "normalized_removed": 0
+        "exact_unique_items": 510,
+        "normalized_unique_items": 427,
+        "normalized_removed": 83
       },
       "real_check": {
         "requested": true,
         "available": true,
-        "checked": 1,
+        "checked": 30,
         "ok": 0,
         "success_rate": 0.0,
         "validation_location": "github_actions_eu",
@@ -210,50 +280,50 @@
   },
   {
     "candidate": {
-      "id": "https-t-me-abc-configs-18471-43b0c6c3",
-      "label": "Telegram public channel abc_configs → t.me/abc_configs/18471",
-      "url": "https://t.me/abc_configs/18471",
-      "origin": "telegram_discovered_link",
+      "id": "https-raw-githubusercontent-com-kort0881-vpn-vless-configs-russia-main-d-8f7196ce",
+      "label": "kort0881/vpn-vless-configs-russia — data/githubmirror/new/by_protocol/trojan/trojan_017.txt",
+      "url": "https://raw.githubusercontent.com/kort0881/vpn-vless-configs-russia/main/data/githubmirror/new/by_protocol/trojan/trojan_017.txt",
+      "origin": "repository_tree",
       "kind": "public_feed",
       "tags": [
-        "telegram",
-        "discovered-link",
-        "auto"
+        "repository-tree",
+        "auto",
+        "github"
       ],
-      "discovered_at": "2026-07-17T06:31:54.053255+00:00",
+      "discovered_at": "2026-07-18T06:29:02.411835+00:00",
       "metadata": {
-        "channel": "abc_configs",
-        "parent_url": "https://t.me/s/abc_configs",
-        "source": "telegram_web_link"
+        "repository": "kort0881/vpn-vless-configs-russia",
+        "branch": "main",
+        "path": "data/githubmirror/new/by_protocol/trojan/trojan_017.txt"
       }
     },
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 1,
-    "unique_items": 1,
-    "duplicate_ratio": 0.0,
+    "raw_items": 265,
+    "unique_items": 189,
+    "duplicate_ratio": 0.2868,
     "protocols": {
-      "ss": 1
+      "trojan": 189
     },
-    "tcp_sample_size": 1,
-    "tcp_ok_count": 0,
-    "tcp_success_rate": 0.0,
-    "score": 18.6,
+    "tcp_sample_size": 30,
+    "tcp_ok_count": 1,
+    "tcp_success_rate": 0.0333,
+    "score": 25.3,
     "status": "experimental",
     "notes": [
       "very low TCP success rate"
     ],
     "diagnostics": {
       "dedupe": {
-        "exact_unique_items": 1,
-        "normalized_unique_items": 1,
-        "normalized_removed": 0
+        "exact_unique_items": 265,
+        "normalized_unique_items": 189,
+        "normalized_removed": 76
       },
       "real_check": {
         "requested": true,
         "available": true,
-        "checked": 1,
+        "checked": 30,
         "ok": 0,
         "success_rate": 0.0,
         "validation_location": "github_actions_eu",
@@ -271,697 +341,7 @@
       "history": {
         "times_seen": 1,
         "failure_streak": 0,
-        "avg_tcp_success_rate": 0.0,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 1.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-t-me-vlessconfig-20985-63da2b62",
-      "label": "Telegram public channel vlessconfig → t.me/VlessConfig/20985",
-      "url": "https://t.me/VlessConfig/20985",
-      "origin": "telegram_discovered_link",
-      "kind": "public_feed",
-      "tags": [
-        "telegram",
-        "discovered-link",
-        "auto"
-      ],
-      "discovered_at": "2026-07-17T06:32:06.790065+00:00",
-      "metadata": {
-        "channel": "vlessconfig",
-        "parent_url": "https://t.me/s/vlessconfig",
-        "source": "telegram_web_link"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 2,
-    "unique_items": 2,
-    "duplicate_ratio": 0.0,
-    "protocols": {
-      "vless": 2
-    },
-    "tcp_sample_size": 2,
-    "tcp_ok_count": 0,
-    "tcp_success_rate": 0.0,
-    "score": 18.6,
-    "status": "experimental",
-    "notes": [
-      "very low TCP success rate"
-    ],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 2,
-        "normalized_unique_items": 2,
-        "normalized_removed": 0
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 2,
-        "ok": 0,
-        "success_rate": 0.0,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 0,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": 1.0,
-        "config_churn_rate": null,
-        "history_available": false,
-        "reasons": [
-          "new source"
-        ]
-      },
-      "history": {
-        "times_seen": 1,
-        "failure_streak": 0,
-        "avg_tcp_success_rate": 0.0,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 1.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-t-me-vlessconfig-20986-e4e0ed6e",
-      "label": "Telegram public channel vlessconfig → t.me/VlessConfig/20986",
-      "url": "https://t.me/VlessConfig/20986",
-      "origin": "telegram_discovered_link",
-      "kind": "public_feed",
-      "tags": [
-        "telegram",
-        "discovered-link",
-        "auto"
-      ],
-      "discovered_at": "2026-07-17T06:32:06.790075+00:00",
-      "metadata": {
-        "channel": "vlessconfig",
-        "parent_url": "https://t.me/s/vlessconfig",
-        "source": "telegram_web_link"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 2,
-    "unique_items": 2,
-    "duplicate_ratio": 0.0,
-    "protocols": {
-      "vless": 2
-    },
-    "tcp_sample_size": 2,
-    "tcp_ok_count": 0,
-    "tcp_success_rate": 0.0,
-    "score": 18.6,
-    "status": "experimental",
-    "notes": [
-      "very low TCP success rate"
-    ],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 2,
-        "normalized_unique_items": 2,
-        "normalized_removed": 0
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 2,
-        "ok": 0,
-        "success_rate": 0.0,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 0,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": 1.0,
-        "config_churn_rate": null,
-        "history_available": false,
-        "reasons": [
-          "new source"
-        ]
-      },
-      "history": {
-        "times_seen": 1,
-        "failure_streak": 0,
-        "avg_tcp_success_rate": 0.0,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 1.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-t-me-vlessconfig-20987-5aa5399a",
-      "label": "Telegram public channel vlessconfig → t.me/VlessConfig/20987",
-      "url": "https://t.me/VlessConfig/20987",
-      "origin": "telegram_discovered_link",
-      "kind": "public_feed",
-      "tags": [
-        "telegram",
-        "discovered-link",
-        "auto"
-      ],
-      "discovered_at": "2026-07-17T06:32:06.790085+00:00",
-      "metadata": {
-        "channel": "vlessconfig",
-        "parent_url": "https://t.me/s/vlessconfig",
-        "source": "telegram_web_link"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 2,
-    "unique_items": 2,
-    "duplicate_ratio": 0.0,
-    "protocols": {
-      "vless": 2
-    },
-    "tcp_sample_size": 2,
-    "tcp_ok_count": 0,
-    "tcp_success_rate": 0.0,
-    "score": 18.6,
-    "status": "experimental",
-    "notes": [
-      "very low TCP success rate"
-    ],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 2,
-        "normalized_unique_items": 2,
-        "normalized_removed": 0
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 2,
-        "ok": 0,
-        "success_rate": 0.0,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 0,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": 1.0,
-        "config_churn_rate": null,
-        "history_available": false,
-        "reasons": [
-          "new source"
-        ]
-      },
-      "history": {
-        "times_seen": 1,
-        "failure_streak": 0,
-        "avg_tcp_success_rate": 0.0,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 1.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-t-me-vlessconfig-20988-9678c823",
-      "label": "Telegram public channel vlessconfig → t.me/VlessConfig/20988",
-      "url": "https://t.me/VlessConfig/20988",
-      "origin": "telegram_discovered_link",
-      "kind": "public_feed",
-      "tags": [
-        "telegram",
-        "discovered-link",
-        "auto"
-      ],
-      "discovered_at": "2026-07-17T06:32:06.790095+00:00",
-      "metadata": {
-        "channel": "vlessconfig",
-        "parent_url": "https://t.me/s/vlessconfig",
-        "source": "telegram_web_link"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 2,
-    "unique_items": 2,
-    "duplicate_ratio": 0.0,
-    "protocols": {
-      "vless": 2
-    },
-    "tcp_sample_size": 2,
-    "tcp_ok_count": 0,
-    "tcp_success_rate": 0.0,
-    "score": 18.6,
-    "status": "experimental",
-    "notes": [
-      "very low TCP success rate"
-    ],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 2,
-        "normalized_unique_items": 2,
-        "normalized_removed": 0
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 2,
-        "ok": 0,
-        "success_rate": 0.0,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 0,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": 1.0,
-        "config_churn_rate": null,
-        "history_available": false,
-        "reasons": [
-          "new source"
-        ]
-      },
-      "history": {
-        "times_seen": 1,
-        "failure_streak": 0,
-        "avg_tcp_success_rate": 0.0,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 1.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-t-me-vlessconfig-20989-26cddb92",
-      "label": "Telegram public channel vlessconfig → t.me/VlessConfig/20989",
-      "url": "https://t.me/VlessConfig/20989",
-      "origin": "telegram_discovered_link",
-      "kind": "public_feed",
-      "tags": [
-        "telegram",
-        "discovered-link",
-        "auto"
-      ],
-      "discovered_at": "2026-07-17T06:32:06.790104+00:00",
-      "metadata": {
-        "channel": "vlessconfig",
-        "parent_url": "https://t.me/s/vlessconfig",
-        "source": "telegram_web_link"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 2,
-    "unique_items": 2,
-    "duplicate_ratio": 0.0,
-    "protocols": {
-      "vless": 2
-    },
-    "tcp_sample_size": 2,
-    "tcp_ok_count": 0,
-    "tcp_success_rate": 0.0,
-    "score": 18.6,
-    "status": "experimental",
-    "notes": [
-      "very low TCP success rate"
-    ],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 2,
-        "normalized_unique_items": 2,
-        "normalized_removed": 0
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 2,
-        "ok": 0,
-        "success_rate": 0.0,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 0,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": 1.0,
-        "config_churn_rate": null,
-        "history_available": false,
-        "reasons": [
-          "new source"
-        ]
-      },
-      "history": {
-        "times_seen": 1,
-        "failure_streak": 0,
-        "avg_tcp_success_rate": 0.0,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 1.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-t-me-vlessconfig-20992-15205ded",
-      "label": "Telegram public channel vlessconfig → t.me/VlessConfig/20992",
-      "url": "https://t.me/VlessConfig/20992",
-      "origin": "telegram_discovered_link",
-      "kind": "public_feed",
-      "tags": [
-        "telegram",
-        "discovered-link",
-        "auto"
-      ],
-      "discovered_at": "2026-07-17T06:32:06.790114+00:00",
-      "metadata": {
-        "channel": "vlessconfig",
-        "parent_url": "https://t.me/s/vlessconfig",
-        "source": "telegram_web_link"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 2,
-    "unique_items": 2,
-    "duplicate_ratio": 0.0,
-    "protocols": {
-      "vless": 2
-    },
-    "tcp_sample_size": 2,
-    "tcp_ok_count": 0,
-    "tcp_success_rate": 0.0,
-    "score": 18.6,
-    "status": "experimental",
-    "notes": [
-      "very low TCP success rate"
-    ],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 2,
-        "normalized_unique_items": 2,
-        "normalized_removed": 0
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 2,
-        "ok": 0,
-        "success_rate": 0.0,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 0,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": 1.0,
-        "config_churn_rate": null,
-        "history_available": false,
-        "reasons": [
-          "new source"
-        ]
-      },
-      "history": {
-        "times_seen": 1,
-        "failure_streak": 0,
-        "avg_tcp_success_rate": 0.0,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 1.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-t-me-vlessconfig-20993-dd9a72a6",
-      "label": "Telegram public channel vlessconfig → t.me/VlessConfig/20993",
-      "url": "https://t.me/VlessConfig/20993",
-      "origin": "telegram_discovered_link",
-      "kind": "public_feed",
-      "tags": [
-        "telegram",
-        "discovered-link",
-        "auto"
-      ],
-      "discovered_at": "2026-07-17T06:32:06.790124+00:00",
-      "metadata": {
-        "channel": "vlessconfig",
-        "parent_url": "https://t.me/s/vlessconfig",
-        "source": "telegram_web_link"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 2,
-    "unique_items": 2,
-    "duplicate_ratio": 0.0,
-    "protocols": {
-      "vless": 2
-    },
-    "tcp_sample_size": 2,
-    "tcp_ok_count": 0,
-    "tcp_success_rate": 0.0,
-    "score": 18.6,
-    "status": "experimental",
-    "notes": [
-      "very low TCP success rate"
-    ],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 2,
-        "normalized_unique_items": 2,
-        "normalized_removed": 0
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 2,
-        "ok": 0,
-        "success_rate": 0.0,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 0,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": 1.0,
-        "config_churn_rate": null,
-        "history_available": false,
-        "reasons": [
-          "new source"
-        ]
-      },
-      "history": {
-        "times_seen": 1,
-        "failure_streak": 0,
-        "avg_tcp_success_rate": 0.0,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 1.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-t-me-vlessconfig-20996-cb762811",
-      "label": "Telegram public channel vlessconfig → t.me/VlessConfig/20996",
-      "url": "https://t.me/VlessConfig/20996",
-      "origin": "telegram_discovered_link",
-      "kind": "public_feed",
-      "tags": [
-        "telegram",
-        "discovered-link",
-        "auto"
-      ],
-      "discovered_at": "2026-07-17T06:32:06.790180+00:00",
-      "metadata": {
-        "channel": "vlessconfig",
-        "parent_url": "https://t.me/s/vlessconfig",
-        "source": "telegram_web_link"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 2,
-    "unique_items": 2,
-    "duplicate_ratio": 0.0,
-    "protocols": {
-      "vless": 2
-    },
-    "tcp_sample_size": 2,
-    "tcp_ok_count": 0,
-    "tcp_success_rate": 0.0,
-    "score": 18.6,
-    "status": "experimental",
-    "notes": [
-      "very low TCP success rate"
-    ],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 2,
-        "normalized_unique_items": 2,
-        "normalized_removed": 0
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 2,
-        "ok": 0,
-        "success_rate": 0.0,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 0,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": 1.0,
-        "config_churn_rate": null,
-        "history_available": false,
-        "reasons": [
-          "new source"
-        ]
-      },
-      "history": {
-        "times_seen": 1,
-        "failure_streak": 0,
-        "avg_tcp_success_rate": 0.0,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 1.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-t-me-vlessconfig-20997-edab609a",
-      "label": "Telegram public channel vlessconfig → t.me/VlessConfig/20997",
-      "url": "https://t.me/VlessConfig/20997",
-      "origin": "telegram_discovered_link",
-      "kind": "public_feed",
-      "tags": [
-        "telegram",
-        "discovered-link",
-        "auto"
-      ],
-      "discovered_at": "2026-07-17T06:32:06.790191+00:00",
-      "metadata": {
-        "channel": "vlessconfig",
-        "parent_url": "https://t.me/s/vlessconfig",
-        "source": "telegram_web_link"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 2,
-    "unique_items": 2,
-    "duplicate_ratio": 0.0,
-    "protocols": {
-      "vless": 2
-    },
-    "tcp_sample_size": 2,
-    "tcp_ok_count": 0,
-    "tcp_success_rate": 0.0,
-    "score": 18.6,
-    "status": "experimental",
-    "notes": [
-      "very low TCP success rate"
-    ],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 2,
-        "normalized_unique_items": 2,
-        "normalized_removed": 0
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 2,
-        "ok": 0,
-        "success_rate": 0.0,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 0,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": 1.0,
-        "config_churn_rate": null,
-        "history_available": false,
-        "reasons": [
-          "new source"
-        ]
-      },
-      "history": {
-        "times_seen": 1,
-        "failure_streak": 0,
-        "avg_tcp_success_rate": 0.0,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 1.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-t-me-vlessconfig-20998-bc8b57b1",
-      "label": "Telegram public channel vlessconfig → t.me/VlessConfig/20998",
-      "url": "https://t.me/VlessConfig/20998",
-      "origin": "telegram_discovered_link",
-      "kind": "public_feed",
-      "tags": [
-        "telegram",
-        "discovered-link",
-        "auto"
-      ],
-      "discovered_at": "2026-07-17T06:32:06.790201+00:00",
-      "metadata": {
-        "channel": "vlessconfig",
-        "parent_url": "https://t.me/s/vlessconfig",
-        "source": "telegram_web_link"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 2,
-    "unique_items": 2,
-    "duplicate_ratio": 0.0,
-    "protocols": {
-      "vless": 2
-    },
-    "tcp_sample_size": 2,
-    "tcp_ok_count": 0,
-    "tcp_success_rate": 0.0,
-    "score": 18.6,
-    "status": "experimental",
-    "notes": [
-      "very low TCP success rate"
-    ],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 2,
-        "normalized_unique_items": 2,
-        "normalized_removed": 0
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 2,
-        "ok": 0,
-        "success_rate": 0.0,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 0,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": 1.0,
-        "config_churn_rate": null,
-        "history_available": false,
-        "reasons": [
-          "new source"
-        ]
-      },
-      "history": {
-        "times_seen": 1,
-        "failure_streak": 0,
-        "avg_tcp_success_rate": 0.0,
+        "avg_tcp_success_rate": 0.0333,
         "avg_real_success_rate": 0.0,
         "last_config_churn_rate": 1.0
       }
