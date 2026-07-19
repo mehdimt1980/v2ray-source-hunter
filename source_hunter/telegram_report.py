@@ -16,6 +16,7 @@ from typing import Any
 from .best_configs import config_sort_key as _config_sort_key
 from .best_configs import is_best_config as _is_best_config
 from .best_configs import row_protocol as _row_protocol
+from .exporter import is_hunter_tier_feed
 from .quality_gate import evaluate_quality_gate
 
 
@@ -33,12 +34,14 @@ def build_telegram_report(
     discovery_path = registry_dir / "discovery_report.json"
     queue_path = registry_dir / "candidate_queue.json"
     validated_path = registry_dir / "validated_configs.json"
+    best_index_path = registry_dir / "best" / "index.json"
 
     report = _read_json(report_path, {})
     app_registry = _read_json(app_registry_path, [])
     discovery = _read_json(discovery_path, {})
     queue = _read_json(queue_path, {})
     validated_configs = _read_json(validated_path, [])
+    best_index = _read_json(best_index_path, {})
 
     if not isinstance(report, dict):
         report = {}
@@ -50,6 +53,8 @@ def build_telegram_report(
         queue = {}
     if not isinstance(validated_configs, list):
         validated_configs = []
+    if not isinstance(best_index, dict):
+        best_index = {}
 
     gate = evaluate_quality_gate(
         report_path=report_path,
@@ -84,6 +89,7 @@ def build_telegram_report(
     metrics = gate.get("metrics", {})
     protocols = metrics.get("protocols") or _protocols(app_registry)
     top_sources = _top_sources(app_registry, limit=5)
+    tier_counts = _tier_counts(best_index)
 
     lines = [
         "<b>V2Ray Source Hunter</b>",
@@ -94,6 +100,11 @@ def build_telegram_report(
         "<b>Summary</b>",
         f"Trusted sources: <b>{len(report.get('trusted', []))}</b>",
         f"Exported sources: <b>{len(app_registry)}</b>",
+        f"Upstream sources: <b>{metrics.get('upstream_app_records', len(app_registry))}</b>",
+        "Published tiers: "
+        f"Elite <b>{tier_counts['elite']}</b> | "
+        f"Stable <b>{tier_counts['stable']}</b> | "
+        f"Fresh <b>{tier_counts['fresh']}</b>",
         f"Validated configs: <b>{len(validated_configs)}</b>",
         f"Xray checked: <b>{real_checked}</b> | passed: <b>{real_ok}</b> ({_percent(real_ok, real_checked)})",
         f"HTTP endpoints: <b>{endpoint_ok}/{endpoint_checked}</b> ({_percent(endpoint_ok, endpoint_checked)})",
@@ -349,14 +360,18 @@ def _protocols(app_registry: list[Any]) -> list[str]:
     values = {
         str(protocol)
         for row in app_registry
-        if isinstance(row, dict)
+        if isinstance(row, dict) and not is_hunter_tier_feed(row)
         for protocol in row.get("protocols", [])
     }
     return sorted(values)
 
 
 def _top_sources(app_registry: list[Any], *, limit: int) -> list[dict[str, Any]]:
-    rows = [row for row in app_registry if isinstance(row, dict)]
+    rows = [
+        row
+        for row in app_registry
+        if isinstance(row, dict) and not is_hunter_tier_feed(row)
+    ]
     return sorted(
         rows,
         key=lambda row: (
@@ -365,6 +380,14 @@ def _top_sources(app_registry: list[Any], *, limit: int) -> list[dict[str, Any]]
         ),
         reverse=True,
     )[:limit]
+
+
+def _tier_counts(best_index: dict[str, Any]) -> dict[str, int]:
+    tiers = best_index.get("tiers") or {}
+    return {
+        tier: int((tiers.get(tier) or {}).get("count") or 0)
+        for tier in ("elite", "stable", "fresh")
+    }
 
 
 def _format_source(index: int, row: dict[str, Any]) -> str:

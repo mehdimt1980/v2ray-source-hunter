@@ -17,6 +17,15 @@ HUNTER_TIER_FEEDS = (
 )
 
 
+def is_hunter_tier_feed(row: Any) -> bool:
+    """Return whether an app registry row is a generated Hunter output feed."""
+    if not isinstance(row, dict):
+        return False
+    source_id = str(row.get("id") or "")
+    tags = row.get("tags") or []
+    return source_id.startswith("source-hunter-") or "hunter-tier" in tags
+
+
 def hunter_tier_feed_records() -> list[dict[str, Any]]:
     """Sources consumed by v2ray-finder before ordinary upstream feeds."""
     reviewed_at = datetime.now(timezone.utc).date().isoformat()

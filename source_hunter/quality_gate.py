@@ -5,6 +5,8 @@ import json
 from pathlib import Path
 from typing import Any
 
+from .exporter import is_hunter_tier_feed
+
 
 DEFAULT_MIN_APP_RECORDS = 10
 DEFAULT_MIN_REAL_AVAILABLE = 1
@@ -35,6 +37,12 @@ def evaluate_quality_gate(
     if not isinstance(app, list):
         failures.append("app registry output is not a JSON list")
         app = []
+    upstream_app = [
+        row
+        for row in app
+        if isinstance(row, dict) and not is_hunter_tier_feed(row)
+    ]
+    generated_tier_feeds = len(app) - len(upstream_app)
 
     real_checks = [
         row.get("diagnostics", {}).get("real_check", {})
@@ -47,32 +55,30 @@ def evaluate_quality_gate(
 
     priorities = sorted(
         int(row.get("app_priority") or 0)
-        for row in app
-        if isinstance(row, dict)
+        for row in upstream_app
     )
     tcp_rates = sorted(
         float((row.get("hunter_metrics") or {}).get("tcp_success_rate") or 0.0)
-        for row in app
-        if isinstance(row, dict)
+        for row in upstream_app
     )
     low_trust = sum(
         1
-        for row in app
-        if isinstance(row, dict) and row.get("trust") == "low"
+        for row in upstream_app
+        if row.get("trust") == "low"
     )
-    low_trust_ratio = round(low_trust / len(app), 4) if app else 1.0
+    low_trust_ratio = round(low_trust / len(upstream_app), 4) if upstream_app else 1.0
     protocols = sorted(
         {
             str(proto)
-            for row in app
-            if isinstance(row, dict)
+            for row in upstream_app
             for proto in row.get("protocols", [])
         }
     )
 
-    if len(app) < min_app_records:
+    if len(upstream_app) < min_app_records:
         failures.append(
-            f"app registry has too few records: {len(app)} < {min_app_records}"
+            "app registry has too few upstream records: "
+            f"{len(upstream_app)} < {min_app_records}"
         )
     if real_available < min_real_available:
         failures.append(
@@ -101,6 +107,8 @@ def evaluate_quality_gate(
         "warnings": warnings,
         "metrics": {
             "app_records": len(app),
+            "upstream_app_records": len(upstream_app),
+            "generated_tier_feeds": generated_tier_feeds,
             "real_available_reports": real_available,
             "real_checked_configs": real_checked,
             "median_app_priority": _median(priorities),
