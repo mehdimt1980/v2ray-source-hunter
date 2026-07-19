@@ -145,7 +145,7 @@ http_endpoint_success_rate
 http_endpoint_note
 ```
 
-If the validation backend closes the local SOCKS listener before the endpoint probe runs, the hunter records that as not checked instead of treating it as a real config failure.
+The Hunter passes a live-probe callback into `v2ray-finder`, so these endpoints are checked before the temporary Xray process closes its SOCKS listener. The four endpoint requests run concurrently, and only the configured number of validated configs per source receive the extra probe.
 
 ## Stability Tracking
 

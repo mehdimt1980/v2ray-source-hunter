@@ -1,10 +1,13 @@
 from __future__ import annotations
 
 import os
+import inspect
 import shutil
 import subprocess
 import sys
+import threading
 import time
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Callable
@@ -98,15 +101,26 @@ def run_optional_real_check(configs: list[str], *, max_items: int = 30) -> RealC
             note="no configs",
         )
     try:
+        endpoint_limit = int(os.environ.get("HUNTER_HTTP_ENDPOINT_MAX_PER_SOURCE", "3"))
+        endpoint_counter = [0]
+        endpoint_lock = threading.Lock()
+
+        def _live_endpoint_probe(socks_port: int) -> dict[str, Any]:
+            with endpoint_lock:
+                if endpoint_counter[0] >= endpoint_limit:
+                    return _empty_endpoint_result("sample limit")
+                endpoint_counter[0] += 1
+            return _run_http_endpoint_checks(socks_port)
+
         rows = checker(
             sample,
             max_workers=4,
             timeout=12.0,
             binary_path=path,
             auto_download=False,
+            live_probe=_live_endpoint_probe,
         )
         ok = sum(1 for row in rows if _real_row_ok(row))
-        endpoint_limit = int(os.environ.get("HUNTER_HTTP_ENDPOINT_MAX_PER_SOURCE", "3"))
         passed_rows = [row for row in rows if _real_row_ok(row)]
         passed = [
             _real_row_to_dict(
@@ -147,6 +161,8 @@ def _load_real_checker() -> tuple[Callable[..., list] | None, str, str]:
         from v2ray_finder.real_validation import check_real_validation_batch
 
         def _legacy_checker(configs: list[str], **kwargs) -> list:
+            if "live_probe" not in inspect.signature(check_real_validation_batch).parameters:
+                kwargs.pop("live_probe", None)
             return check_real_validation_batch(configs, stability_attempts=1, **kwargs)
 
         return _legacy_checker, "v2ray_finder.real_validation", ""
@@ -155,6 +171,8 @@ def _load_real_checker() -> tuple[Callable[..., list] | None, str, str]:
             from v2ray_finder.xray_connectivity import check_real_connectivity_batch
 
             def _connectivity_checker(configs: list[str], **kwargs) -> list:
+                if "live_probe" not in inspect.signature(check_real_connectivity_batch).parameters:
+                    kwargs.pop("live_probe", None)
                 return check_real_connectivity_batch(configs, **kwargs)
 
             return _connectivity_checker, "v2ray_finder.xray_connectivity", ""
@@ -180,11 +198,13 @@ def _real_row_to_dict(
     run_endpoint_checks: bool = True,
 ) -> dict[str, Any]:
     config = str(getattr(row, "config", "") or "")
-    endpoint_result = (
-        _run_http_endpoint_checks(getattr(row, "socks_port", None))
-        if run_endpoint_checks
-        else _empty_endpoint_result("sample limit")
-    )
+    captured_endpoint_result = getattr(row, "endpoint_probe", None)
+    if isinstance(captured_endpoint_result, dict):
+        endpoint_result = captured_endpoint_result
+    elif run_endpoint_checks:
+        endpoint_result = _empty_endpoint_result("live endpoint checks unavailable")
+    else:
+        endpoint_result = _empty_endpoint_result("sample limit")
     return {
         "config": config,
         "protocol": str(getattr(row, "protocol", "") or ""),
@@ -219,7 +239,19 @@ def _run_http_endpoint_checks(socks_port: Any) -> dict[str, Any]:
         return _empty_endpoint_result("socks port unavailable")
 
     timeout = float(os.environ.get("HUNTER_HTTP_ENDPOINT_TIMEOUT", "3.0"))
-    results = [_check_http_endpoint(curl, port, name, url, timeout) for name, url in HTTP_ENDPOINTS]
+    with ThreadPoolExecutor(max_workers=len(HTTP_ENDPOINTS)) as pool:
+        results = list(
+            pool.map(
+                lambda endpoint: _check_http_endpoint(
+                    curl,
+                    port,
+                    endpoint[0],
+                    endpoint[1],
+                    timeout,
+                ),
+                HTTP_ENDPOINTS,
+            )
+        )
     if results and all(_socks_port_closed(item) for item in results):
         return _empty_endpoint_result("socks port closed before endpoint checks")
     checked = len(results)
