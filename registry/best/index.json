@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-07-19T07:40:22.345444+00:00",
+  "generated_at": "2026-07-19T12:33:58.162586+00:00",
   "tiers": {
     "fresh": {
-      "count": 136,
+      "count": 80,
       "json_file": "fresh.json",
+      "text_file": "fresh.txt",
       "rule": {
         "description": "Strong validation in the current run.",
         "quality_score_min": 90,
@@ -14,24 +15,20 @@
           "count": 13,
           "text_file": "fresh_ss.txt"
         },
-        "trojan": {
-          "count": 5,
-          "text_file": "fresh_trojan.txt"
-        },
         "vless": {
-          "count": 81,
+          "count": 33,
           "text_file": "fresh_vless.txt"
         },
         "vmess": {
-          "count": 37,
+          "count": 34,
           "text_file": "fresh_vmess.txt"
         }
-      },
-      "text_file": "fresh.txt"
+      }
     },
     "stable": {
-      "count": 44,
+      "count": 77,
       "json_file": "stable.json",
+      "text_file": "stable.txt",
       "rule": {
         "description": "Passed repeatedly across daily runs.",
         "stability_score_min": 70,
@@ -40,27 +37,27 @@
       },
       "protocols": {
         "ss": {
-          "count": 11,
+          "count": 35,
           "text_file": "stable_ss.txt"
         },
         "trojan": {
-          "count": 2,
+          "count": 3,
           "text_file": "stable_trojan.txt"
         },
         "vless": {
-          "count": 11,
+          "count": 21,
           "text_file": "stable_vless.txt"
         },
         "vmess": {
-          "count": 20,
+          "count": 18,
           "text_file": "stable_vmess.txt"
         }
-      },
-      "text_file": "stable.txt"
+      }
     },
     "elite": {
-      "count": 15,
+      "count": 28,
       "json_file": "elite.json",
+      "text_file": "elite.txt",
       "rule": {
         "description": "Strong today and fully proven across daily runs.",
         "stability_score_min": 100,
@@ -69,19 +66,18 @@
       },
       "protocols": {
         "ss": {
-          "count": 7,
+          "count": 8,
           "text_file": "elite_ss.txt"
         },
         "vless": {
-          "count": 1,
+          "count": 5,
           "text_file": "elite_vless.txt"
         },
         "vmess": {
-          "count": 7,
+          "count": 15,
           "text_file": "elite_vmess.txt"
         }
-      },
-      "text_file": "elite.txt"
+      }
     }
   }
 }
