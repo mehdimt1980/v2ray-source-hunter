@@ -7,6 +7,53 @@ from .models import FeedReport
 from .utils import safe_urlparse
 
 
+HUNTER_TIER_FEED_BASE_URL = (
+    "https://raw.githubusercontent.com/mehdimt1980/v2ray-source-hunter/main/registry/best"
+)
+HUNTER_TIER_FEEDS = (
+    ("elite", 1000, "Fully proven Xray-validated configs."),
+    ("stable", 950, "Repeatedly validated Xray-passed configs."),
+    ("fresh", 900, "High-quality configs validated in the latest run."),
+)
+
+
+def hunter_tier_feed_records() -> list[dict[str, Any]]:
+    """Sources consumed by v2ray-finder before ordinary upstream feeds."""
+    reviewed_at = datetime.now(timezone.utc).date().isoformat()
+    records: list[dict[str, Any]] = []
+    for tier, priority, description in HUNTER_TIER_FEEDS:
+        records.append(
+            {
+                "id": f"source-hunter-{tier}",
+                "label": f"Source Hunter {tier.title()} (Xray-validated)",
+                "url": f"{HUNTER_TIER_FEED_BASE_URL}/{tier}.txt",
+                "source_type": "static_subscription",
+                "trust": "high",
+                "status": "trusted",
+                "enabled": True,
+                "region": "IR",
+                "recommended_regions": ["IR"],
+                "app_priority": priority,
+                "mobile_profile": "iran_fast",
+                "tags": [
+                    "hunter",
+                    "hunter-tier",
+                    tier,
+                    "xray-validated",
+                    "google-204",
+                    "mobile-optimized",
+                    "iran",
+                ],
+                "protocols": ["ss", "trojan", "vless", "vmess"],
+                "notes": f"{description} Published by v2ray-source-hunter.",
+                "hunter_metrics": {"tier": tier, "feed_priority": priority},
+                "added_at": reviewed_at,
+                "last_reviewed_at": reviewed_at,
+            }
+        )
+    return records
+
+
 def _real_check(report: FeedReport) -> dict[str, Any]:
     real = report.diagnostics.get("real_check") if report.diagnostics else None
     return real if isinstance(real, dict) else {}
@@ -240,4 +287,4 @@ def export_app_registry(
         if len(selected) >= max_total:
             break
     selected.sort(key=_export_sort_key)
-    return [to_app_record(r) for r in selected]
+    return hunter_tier_feed_records() + [to_app_record(r) for r in selected]

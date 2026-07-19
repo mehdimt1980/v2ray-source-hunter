@@ -186,6 +186,9 @@ registry/best/index.json
 registry/best/fresh.json
 registry/best/stable.json
 registry/best/elite.json
+registry/best/fresh.txt
+registry/best/stable.txt
+registry/best/elite.txt
 registry/best/fresh_vless.txt
 registry/best/stable_vless.txt
 registry/best/elite_vless.txt
@@ -197,7 +200,9 @@ Every tier requires `xray_ok`, `reachable`, and `google_204_ok`. The tiers are:
 - `stable`: repeatedly passed: stability at least 70, quality at least 70, and latency no higher than 1000 ms.
 - `elite`: strong and fully proven: stability 100, quality at least 90, and latency no higher than 500 ms.
 
-`index.json` gives consumers the generated time, rule, count, and protocol files for every tier. The `.json` files contain metadata-rich rows; the protocol `.txt` files contain raw config links only, one per line.
+`index.json` gives consumers the generated time, rule, count, and protocol files for every tier. The `.json` files contain metadata-rich rows; the combined and protocol `.txt` files contain raw config links only, one per line.
+
+`v2ray-finder` consumes the combined feeds as trusted built-in sources in this order: `elite`, `stable`, then `fresh`. They use priorities 1000, 950, and 900, so the normal curated source registry remains available as fallback.
 
 Telegram sends the combined `fresh` plus `stable` set. This replaces the earlier temporary-only best-config rule:
 
@@ -237,6 +242,8 @@ A feed must pass multiple checks before it becomes trusted:
 - Optional real validation runs when `HUNTER_REAL_CHECK=1` and `XRAY_BINARY` are configured.
 - Real validation can promote or demote feeds.
 - Cross-source overlap can demote highly redundant feeds to `redundant`.
+- Sources with three consecutive fetch/TCP failures enter a three-day quarantine and are automatically retried afterward.
+- Best-config tiers limit concentration to 25 configs per source and 8 configs per endpoint host.
 - App-compatible output includes only trusted feeds.
 - CI runs `python -m source_hunter.quality_gate` before syncing to the Android app.
 

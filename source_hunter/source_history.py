@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import hashlib
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
@@ -10,6 +11,8 @@ from .utils import read_json, write_json
 
 HISTORY_FILE = "source_history.json"
 CONFIG_HASH_LIMIT = 1000
+QUARANTINE_FAILURE_THRESHOLD = 3
+QUARANTINE_DAYS = 3
 
 
 def update_source_history(
@@ -86,6 +89,19 @@ def _update_row(
     else:
         failure_streak += 1
 
+    quarantine_failure_streak = int(row.get("quarantine_failure_streak") or 0)
+    if _counts_as_quarantine_success(report):
+        quarantine_failure_streak = 0
+        quarantine_until = None
+    else:
+        quarantine_failure_streak += 1
+        quarantine_until = row.get("quarantine_until")
+        if quarantine_failure_streak >= QUARANTINE_FAILURE_THRESHOLD:
+            quarantine_until = (
+                datetime.fromisoformat(generated_at.replace("Z", "+00:00"))
+                + timedelta(days=QUARANTINE_DAYS)
+            ).isoformat()
+
     first_seen_at = str(row.get("first_seen_at") or report.candidate.discovered_at or generated_at)
     last_success_at = row.get("last_success_at")
     if _counts_as_success(report):
@@ -110,6 +126,13 @@ def _update_row(
         "times_seen": times_seen,
         "status_counts": status_counts,
         "failure_streak": failure_streak,
+        "quarantine_failure_streak": quarantine_failure_streak,
+        "quarantine_until": quarantine_until,
+        "quarantine_reason": (
+            "repeated fetch/TCP failures"
+            if quarantine_until
+            else row.get("quarantine_reason")
+        ),
         "last_status": report.status,
         "last_fetch_ok": report.fetch_ok,
         "last_http_status": report.http_status,
@@ -150,6 +173,29 @@ def _counts_as_success(report: FeedReport) -> bool:
         "experimental",
         "redundant",
     }
+
+
+def _counts_as_quarantine_success(report: FeedReport) -> bool:
+    return (
+        report.fetch_ok
+        and report.status != "rejected"
+        and report.tcp_success_rate >= 0.10
+    )
+
+
+def is_quarantined(history_row: dict[str, Any] | None, *, now: str) -> bool:
+    if not history_row or not history_row.get("quarantine_until"):
+        return False
+    try:
+        until = datetime.fromisoformat(str(history_row["quarantine_until"]).replace("Z", "+00:00"))
+        current = datetime.fromisoformat(now.replace("Z", "+00:00"))
+    except (TypeError, ValueError):
+        return False
+    if until.tzinfo is None:
+        until = until.replace(tzinfo=timezone.utc)
+    if current.tzinfo is None:
+        current = current.replace(tzinfo=timezone.utc)
+    return until > current
 
 
 def _rolling_average(previous: Any, current: float | int, count: int) -> float:

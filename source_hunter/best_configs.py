@@ -3,6 +3,7 @@ from __future__ import annotations
 from collections import defaultdict
 from pathlib import Path
 from typing import Any
+from urllib.parse import urlparse
 
 from .utils import write_json
 
@@ -15,6 +16,8 @@ STABLE_MAX_LATENCY_MS = 1000
 ELITE_MIN_STABILITY_SCORE = 100
 ELITE_MIN_QUALITY_SCORE = 90
 ELITE_MAX_LATENCY_MS = 500
+DIVERSITY_MAX_PER_SOURCE = 25
+DIVERSITY_MAX_PER_ENDPOINT = 8
 
 TIER_RULES = {
     "fresh": {
@@ -86,8 +89,15 @@ def export_best_config_feeds(
 
     index: dict[str, Any] = {"generated_at": generated_at, "tiers": {}}
     for tier, tier_rows in grouped.items():
-        sorted_rows = sorted(tier_rows, key=config_sort_key)
+        sorted_rows = apply_diversity_limits(
+            sorted(tier_rows, key=config_sort_key),
+        )
         write_json(output_dir / f"{tier}.json", sorted_rows)
+        combined_text_path = output_dir / f"{tier}.txt"
+        combined_text_path.write_text(
+            "\n".join(str(row.get("config") or "").strip() for row in sorted_rows) + "\n",
+            encoding="utf-8",
+        )
         protocols: dict[str, list[dict[str, Any]]] = defaultdict(list)
         for row in sorted_rows:
             protocols[row_protocol(row)].append(row)
@@ -107,6 +117,7 @@ def export_best_config_feeds(
         index["tiers"][tier] = {
             "count": len(sorted_rows),
             "json_file": f"{tier}.json",
+            "text_file": combined_text_path.name,
             "rule": TIER_RULES[tier],
             "protocols": protocol_index,
         }
@@ -122,6 +133,39 @@ def config_sort_key(row: dict[str, Any]) -> tuple[float, float, float, float, st
     latency = _float_or_large(row.get("latency_ms"))
     config = str(row.get("config") or "")
     return (-stability, -endpoint_rate, -quality, latency, config)
+
+
+def apply_diversity_limits(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Keep top-ranked configs while limiting source and endpoint concentration."""
+    source_counts: dict[str, int] = defaultdict(int)
+    endpoint_counts: dict[str, int] = defaultdict(int)
+    selected: list[dict[str, Any]] = []
+    for row in rows:
+        source_key = str(row.get("source_id") or row.get("source_label") or "unknown")
+        endpoint_key = config_endpoint(row)
+        if source_counts[source_key] >= DIVERSITY_MAX_PER_SOURCE:
+            continue
+        if endpoint_key and endpoint_counts[endpoint_key] >= DIVERSITY_MAX_PER_ENDPOINT:
+            continue
+        selected.append(row)
+        source_counts[source_key] += 1
+        if endpoint_key:
+            endpoint_counts[endpoint_key] += 1
+    return selected
+
+
+def config_endpoint(row: Any) -> str:
+    config = str(row.get("config") or "") if isinstance(row, dict) else ""
+    if "://" not in config:
+        return ""
+    try:
+        parsed = urlparse(config)
+        host = parsed.hostname or ""
+        if host:
+            return host.lower()
+    except ValueError:
+        pass
+    return ""
 
 
 def row_protocol(row: Any) -> str:

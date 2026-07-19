@@ -22,6 +22,7 @@ from .scoring import score_report
 from .seed_collect import collect_seed_candidates
 from .source_history import (
     estimate_config_churn,
+    is_quarantined,
     load_source_history,
     update_source_history,
 )
@@ -112,6 +113,14 @@ def run_hunt(
     if os.environ.get("HUNTER_AUTO_DISCOVER", "1") != "0":
         run_auto_discovery(registry_dir)
     raw_candidates = collect_all(registry_dir)
+    generated_at = utc_now()
+    history = load_source_history(registry_dir)
+    candidates_before_quarantine = raw_candidates
+    raw_candidates = [
+        candidate
+        for candidate in candidates_before_quarantine
+        if not is_quarantined(history.get(candidate.id), now=generated_at)
+    ]
     candidates, dead_paths, queue_diagnostics = select_live_candidates(
         raw_candidates,
         max_candidates=max_candidates,
@@ -121,7 +130,6 @@ def run_hunt(
     configs_by_url: dict[str, list[str]] = {}
     validated_by_source: dict[str, list[dict[str, Any]]] = {}
     errors: list[dict[str, str]] = []
-    history = load_source_history(registry_dir)
     for c in candidates:
         try:
             report, configs, validated_rows = evaluate_candidate(
@@ -138,7 +146,6 @@ def run_hunt(
             errors.append({"url": c.url, "error": str(exc)})
     apply_redundancy_policy(reports, configs_by_url)
     generated_rows = materialize_telegram_feeds(registry_dir, reports, configs_by_url)
-    generated_at = utc_now()
     history_rows = update_source_history(
         registry_dir,
         reports,
@@ -170,6 +177,7 @@ def run_hunt(
         tier: details["count"]
         for tier, details in best_config_index["tiers"].items()
     }
+    queue_diagnostics["quarantined_sources"] = len(candidates_before_quarantine) - len(raw_candidates)
     result = HunterResult(
         generated_at=generated_at,
         raw_candidates=len(raw_candidates),

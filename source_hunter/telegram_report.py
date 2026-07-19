@@ -31,11 +31,13 @@ def build_telegram_report(
     report_path = registry_dir / "hunt_report.json"
     app_registry_path = registry_dir / "v2ray_finder_sources.json"
     discovery_path = registry_dir / "discovery_report.json"
+    queue_path = registry_dir / "candidate_queue.json"
     validated_path = registry_dir / "validated_configs.json"
 
     report = _read_json(report_path, {})
     app_registry = _read_json(app_registry_path, [])
     discovery = _read_json(discovery_path, {})
+    queue = _read_json(queue_path, {})
     validated_configs = _read_json(validated_path, [])
 
     if not isinstance(report, dict):
@@ -44,6 +46,8 @@ def build_telegram_report(
         app_registry = []
     if not isinstance(discovery, dict):
         discovery = {}
+    if not isinstance(queue, dict):
+        queue = {}
     if not isinstance(validated_configs, list):
         validated_configs = []
 
@@ -97,6 +101,7 @@ def build_telegram_report(
         f"Best configs exposed: <b>{best_configs}</b>",
         f"Real-check reports: <b>{real_available}</b>",
         f"Discovery accepted: <b>{discovery_added}</b>",
+        f"Quarantined sources: <b>{int(queue.get('quarantined_sources') or 0)}</b>",
         "",
         "<b>Quality Metrics</b>",
         f"Median priority: <b>{metrics.get('median_app_priority', 0)}</b>",
