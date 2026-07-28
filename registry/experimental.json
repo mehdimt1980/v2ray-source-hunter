@@ -1,9 +1,9 @@
 [
   {
     "candidate": {
-      "id": "https-raw-githubusercontent-com-wenxig-dongtai-sub-main-data-clash-txt-232fdd38",
-      "label": "wenxig/dongtai-sub — data/clash.txt",
-      "url": "https://raw.githubusercontent.com/wenxig/dongtai-sub/main/data/clash.txt",
+      "id": "https-raw-githubusercontent-com-mrabolfazlnorouzi-iran-configs-main-conf-7a0a3a05",
+      "label": "MrAbolfazlNorouzi/iran-configs — configs/working-configs.txt",
+      "url": "https://raw.githubusercontent.com/MrAbolfazlNorouzi/iran-configs/main/configs/working-configs.txt",
       "origin": "repository_tree",
       "kind": "public_feed",
       "tags": [
@@ -11,43 +11,40 @@
         "auto",
         "github"
       ],
-      "discovered_at": "2026-07-27T07:57:36.220182+00:00",
+      "discovered_at": "2026-07-28T06:45:38.801734+00:00",
       "metadata": {
-        "repository": "wenxig/dongtai-sub",
+        "repository": "MrAbolfazlNorouzi/iran-configs",
         "branch": "main",
-        "path": "data/clash.txt"
+        "path": "configs/working-configs.txt"
       }
     },
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 4,
-    "unique_items": 4,
+    "raw_items": 5,
+    "unique_items": 5,
     "duplicate_ratio": 0.0,
     "protocols": {
-      "ss": 1,
-      "ssr": 1,
-      "vless": 1,
-      "vmess": 1
+      "vless": 5
     },
-    "tcp_sample_size": 4,
+    "tcp_sample_size": 5,
     "tcp_ok_count": 0,
     "tcp_success_rate": 0.0,
-    "score": 22.2,
+    "score": 4.8,
     "status": "experimental",
     "notes": [
       "very low TCP success rate"
     ],
     "diagnostics": {
       "dedupe": {
-        "exact_unique_items": 4,
-        "normalized_unique_items": 4,
+        "exact_unique_items": 5,
+        "normalized_unique_items": 5,
         "normalized_removed": 0
       },
       "real_check": {
         "requested": true,
         "available": true,
-        "checked": 4,
+        "checked": 5,
         "ok": 0,
         "success_rate": 0.0,
         "validation_location": "github_actions_eu",
@@ -55,19 +52,158 @@
         "note": "real validation completed via v2ray_finder.xray_connectivity"
       },
       "freshness": {
-        "score_adjustment": -3.0,
+        "score_adjustment": -13.0,
         "config_churn_rate": 0.0,
         "history_available": true,
         "reasons": [
-          "unchanged configs"
+          "stale unchanged configs",
+          "weak historical TCP"
         ]
       },
       "history": {
-        "times_seen": 2,
+        "times_seen": 15,
         "failure_streak": 0,
         "avg_tcp_success_rate": 0.0,
         "avg_real_success_rate": 0.0,
         "last_config_churn_rate": 0.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-kort0881-vpn-vless-configs-russia-main-d-de08027a",
+      "label": "kort0881/vpn-vless-configs-russia — data/githubmirror/new/by_protocol/trojan/trojan_191.txt",
+      "url": "https://raw.githubusercontent.com/kort0881/vpn-vless-configs-russia/main/data/githubmirror/new/by_protocol/trojan/trojan_191.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github"
+      ],
+      "discovered_at": "2026-07-28T06:45:37.959217+00:00",
+      "metadata": {
+        "repository": "kort0881/vpn-vless-configs-russia",
+        "branch": "main",
+        "path": "data/githubmirror/new/by_protocol/trojan/trojan_191.txt"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 496,
+    "unique_items": 444,
+    "duplicate_ratio": 0.1048,
+    "protocols": {
+      "trojan": 444
+    },
+    "tcp_sample_size": 60,
+    "tcp_ok_count": 0,
+    "tcp_success_rate": 0.0,
+    "score": 39.1,
+    "status": "experimental",
+    "notes": [
+      "very low TCP success rate"
+    ],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 496,
+        "normalized_unique_items": 444,
+        "normalized_removed": 52
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 30,
+        "ok": 0,
+        "success_rate": 0.0,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 0,
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": 1.0,
+        "config_churn_rate": null,
+        "history_available": false,
+        "reasons": [
+          "new source"
+        ]
+      },
+      "history": {
+        "times_seen": 1,
+        "failure_streak": 0,
+        "avg_tcp_success_rate": 0.0,
+        "avg_real_success_rate": 0.0,
+        "last_config_churn_rate": 1.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-kort0881-vpn-vless-configs-russia-main-d-8d82a4b6",
+      "label": "kort0881/vpn-vless-configs-russia — data/githubmirror/new/by_protocol/trojan/trojan_193.txt",
+      "url": "https://raw.githubusercontent.com/kort0881/vpn-vless-configs-russia/main/data/githubmirror/new/by_protocol/trojan/trojan_193.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github"
+      ],
+      "discovered_at": "2026-07-28T06:45:37.959123+00:00",
+      "metadata": {
+        "repository": "kort0881/vpn-vless-configs-russia",
+        "branch": "main",
+        "path": "data/githubmirror/new/by_protocol/trojan/trojan_193.txt"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 496,
+    "unique_items": 427,
+    "duplicate_ratio": 0.1391,
+    "protocols": {
+      "trojan": 427
+    },
+    "tcp_sample_size": 60,
+    "tcp_ok_count": 0,
+    "tcp_success_rate": 0.0,
+    "score": 37.8,
+    "status": "experimental",
+    "notes": [
+      "very low TCP success rate"
+    ],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 496,
+        "normalized_unique_items": 427,
+        "normalized_removed": 69
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 30,
+        "ok": 0,
+        "success_rate": 0.0,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 0,
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": 1.0,
+        "config_churn_rate": null,
+        "history_available": false,
+        "reasons": [
+          "new source"
+        ]
+      },
+      "history": {
+        "times_seen": 1,
+        "failure_streak": 0,
+        "avg_tcp_success_rate": 0.0,
+        "avg_real_success_rate": 0.0,
+        "last_config_churn_rate": 1.0
       }
     }
   }
