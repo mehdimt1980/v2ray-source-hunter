@@ -1,62 +1,144 @@
 [
   {
     "candidate": {
-      "id": "https-raw-githubusercontent-com-firmfox-proxify-main-v2ray-configs-subsc-d45571a7",
-      "label": "Firmfox/Proxify — v2ray_configs/subscriptions/subscription-101.txt",
-      "url": "https://raw.githubusercontent.com/Firmfox/Proxify/main/v2ray_configs/subscriptions/subscription-101.txt",
+      "id": "https-raw-githubusercontent-com-nyeinkokoaung404-v2ray-configs-main-conf-8c5dfa92",
+      "label": "nyeinkokoaung404/V2ray-Configs — configs/proxy_configs_tested.txt",
+      "url": "https://raw.githubusercontent.com/nyeinkokoaung404/V2ray-Configs/main/configs/proxy_configs_tested.txt",
       "origin": "repository_tree",
       "kind": "public_feed",
       "tags": [
         "repository-tree",
-        "auto",
+        "seed",
         "github"
       ],
-      "discovered_at": "2026-08-11T05:33:21.242499+00:00",
+      "discovered_at": "2026-08-12T05:50:36.608698+00:00",
       "metadata": {
-        "repository": "Firmfox/Proxify",
+        "repository": "nyeinkokoaung404/V2ray-Configs",
         "branch": "main",
-        "path": "v2ray_configs/subscriptions/subscription-101.txt"
+        "path": "configs/proxy_configs_tested.txt"
       }
     },
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 97,
-    "unique_items": 95,
-    "duplicate_ratio": 0.0206,
+    "raw_items": 922,
+    "unique_items": 730,
+    "duplicate_ratio": 0.2082,
     "protocols": {
-      "ss": 7,
-      "trojan": 11,
-      "vless": 61,
-      "vmess": 16
+      "ss": 122,
+      "trojan": 296,
+      "vless": 212,
+      "vmess": 100
     },
-    "tcp_sample_size": 30,
-    "tcp_ok_count": 19,
-    "tcp_success_rate": 0.6333,
-    "score": 72.1,
+    "tcp_sample_size": 60,
+    "tcp_ok_count": 57,
+    "tcp_success_rate": 0.95,
+    "score": 100.0,
     "status": "redundant",
     "notes": [
-      "redundant with SoliSpirit/v2ray-configs — all_configs.txt; overlap=0.88"
+      "redundant with nyeinkokoaung404/V2ray-Configs — configs/proxy_configs.txt; overlap=1.00"
     ],
     "diagnostics": {
       "dedupe": {
-        "exact_unique_items": 97,
-        "normalized_unique_items": 95,
-        "normalized_removed": 2
+        "exact_unique_items": 922,
+        "normalized_unique_items": 730,
+        "normalized_removed": 192
       },
       "real_check": {
         "requested": true,
         "available": true,
         "checked": 30,
-        "ok": 9,
-        "success_rate": 0.3,
+        "ok": 25,
+        "success_rate": 0.8333,
         "validation_location": "github_actions_eu",
-        "validated_config_count": 9,
+        "validated_config_count": 25,
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": 15.0,
+        "config_churn_rate": 0.5495,
+        "history_available": true,
+        "reasons": [
+          "fresh config churn",
+          "strong historical real validation",
+          "strong historical TCP"
+        ]
+      },
+      "redundancy": {
+        "normalized_identity_count": 730,
+        "threshold": 0.8,
+        "redundant_with": "nyeinkokoaung404/V2ray-Configs — configs/proxy_configs.txt",
+        "overlap": 1.0,
+        "method": "normalized_config_identity"
+      },
+      "history": {
+        "times_seen": 30,
+        "failure_streak": 0,
+        "avg_tcp_success_rate": 0.9699,
+        "avg_real_success_rate": 0.8545,
+        "last_config_churn_rate": 0.5495
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-barry-far-v2ray-config-main-all-configs--fb1d5116",
+      "label": "barry-far/V2ray-Config — All_Configs_Sub.txt",
+      "url": "https://raw.githubusercontent.com/barry-far/V2ray-Config/main/All_Configs_Sub.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github",
+        "english"
+      ],
+      "discovered_at": "2026-08-12T05:50:46.630226+00:00",
+      "metadata": {
+        "repository": "barry-far/V2ray-Config",
+        "branch": "main",
+        "path": "All_Configs_Sub.txt"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 6072,
+    "unique_items": 3926,
+    "duplicate_ratio": 0.3534,
+    "protocols": {
+      "ss": 389,
+      "trojan": 352,
+      "vless": 3015,
+      "vmess": 170
+    },
+    "tcp_sample_size": 100,
+    "tcp_ok_count": 66,
+    "tcp_success_rate": 0.66,
+    "score": 88.7,
+    "status": "redundant",
+    "notes": [
+      "redundant with barry-far/V2ray-Config — All_Configs_base64_Sub.txt; overlap=1.00"
+    ],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 6072,
+        "normalized_unique_items": 3926,
+        "normalized_removed": 2146
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 30,
+        "ok": 14,
+        "success_rate": 0.4667,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 14,
         "note": "real validation completed via v2ray_finder.xray_connectivity"
       },
       "freshness": {
         "score_adjustment": 11.0,
-        "config_churn_rate": 1.0,
+        "config_churn_rate": 0.6014,
         "history_available": true,
         "reasons": [
           "fresh config churn",
@@ -64,26 +146,26 @@
         ]
       },
       "redundancy": {
-        "normalized_identity_count": 95,
+        "normalized_identity_count": 3926,
         "threshold": 0.8,
-        "redundant_with": "SoliSpirit/v2ray-configs — all_configs.txt",
-        "overlap": 0.8842,
+        "redundant_with": "barry-far/V2ray-Config — All_Configs_base64_Sub.txt",
+        "overlap": 1.0,
         "method": "normalized_config_identity"
       },
       "history": {
-        "times_seen": 2,
+        "times_seen": 28,
         "failure_streak": 0,
-        "avg_tcp_success_rate": 0.7229,
-        "avg_real_success_rate": 0.3063,
-        "last_config_churn_rate": 1.0
+        "avg_tcp_success_rate": 0.6932,
+        "avg_real_success_rate": 0.3513,
+        "last_config_churn_rate": 0.6014
       }
     }
   },
   {
     "candidate": {
-      "id": "https-raw-githubusercontent-com-firmfox-proxify-main-v2ray-configs-subsc-a159090e",
-      "label": "Firmfox/Proxify — v2ray_configs/subscriptions/subscription-103.txt",
-      "url": "https://raw.githubusercontent.com/Firmfox/Proxify/main/v2ray_configs/subscriptions/subscription-103.txt",
+      "id": "https-raw-githubusercontent-com-firmfox-proxify-main-v2ray-configs-subsc-d66cb786",
+      "label": "Firmfox/Proxify — v2ray_configs/subscriptions/subscription-10.txt",
+      "url": "https://raw.githubusercontent.com/Firmfox/Proxify/main/v2ray_configs/subscriptions/subscription-10.txt",
       "origin": "repository_tree",
       "kind": "public_feed",
       "tags": [
@@ -91,38 +173,118 @@
         "auto",
         "github"
       ],
-      "discovered_at": "2026-08-11T05:33:21.242492+00:00",
+      "discovered_at": "2026-08-12T05:50:41.513229+00:00",
       "metadata": {
         "repository": "Firmfox/Proxify",
         "branch": "main",
-        "path": "v2ray_configs/subscriptions/subscription-103.txt"
+        "path": "v2ray_configs/subscriptions/subscription-10.txt"
       }
     },
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 100,
-    "unique_items": 100,
-    "duplicate_ratio": 0.0,
+    "raw_items": 98,
+    "unique_items": 96,
+    "duplicate_ratio": 0.0204,
     "protocols": {
-      "ss": 3,
-      "trojan": 13,
-      "vless": 64,
-      "vmess": 20
+      "ss": 6,
+      "trojan": 11,
+      "vless": 63,
+      "vmess": 16
     },
     "tcp_sample_size": 30,
-    "tcp_ok_count": 24,
-    "tcp_success_rate": 0.8,
-    "score": 81.0,
+    "tcp_ok_count": 16,
+    "tcp_success_rate": 0.5333,
+    "score": 67.2,
     "status": "redundant",
     "notes": [
-      "redundant with SoliSpirit/v2ray-configs — all_configs.txt; overlap=0.81"
+      "redundant with SoliSpirit/v2ray-configs — all_configs.txt; overlap=0.86"
     ],
     "diagnostics": {
       "dedupe": {
-        "exact_unique_items": 100,
-        "normalized_unique_items": 100,
-        "normalized_removed": 0
+        "exact_unique_items": 98,
+        "normalized_unique_items": 96,
+        "normalized_removed": 2
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 30,
+        "ok": 11,
+        "success_rate": 0.3667,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 11,
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": 11.0,
+        "config_churn_rate": 0.9948,
+        "history_available": true,
+        "reasons": [
+          "fresh config churn",
+          "strong historical TCP"
+        ]
+      },
+      "redundancy": {
+        "normalized_identity_count": 96,
+        "threshold": 0.8,
+        "redundant_with": "SoliSpirit/v2ray-configs — all_configs.txt",
+        "overlap": 0.8646,
+        "method": "normalized_config_identity"
+      },
+      "history": {
+        "times_seen": 4,
+        "failure_streak": 0,
+        "avg_tcp_success_rate": 0.725,
+        "avg_real_success_rate": 0.3584,
+        "last_config_churn_rate": 0.9948
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-firmfox-proxify-main-v2ray-configs-subsc-6a868707",
+      "label": "Firmfox/Proxify — v2ray_configs/subscriptions/subscription-110.txt",
+      "url": "https://raw.githubusercontent.com/Firmfox/Proxify/main/v2ray_configs/subscriptions/subscription-110.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github"
+      ],
+      "discovered_at": "2026-08-12T05:50:41.513188+00:00",
+      "metadata": {
+        "repository": "Firmfox/Proxify",
+        "branch": "main",
+        "path": "v2ray_configs/subscriptions/subscription-110.txt"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 98,
+    "unique_items": 96,
+    "duplicate_ratio": 0.0204,
+    "protocols": {
+      "ss": 5,
+      "trojan": 9,
+      "vless": 59,
+      "vmess": 23
+    },
+    "tcp_sample_size": 30,
+    "tcp_ok_count": 19,
+    "tcp_success_rate": 0.6333,
+    "score": 72.2,
+    "status": "redundant",
+    "notes": [
+      "redundant with SoliSpirit/v2ray-configs — all_configs.txt; overlap=0.90"
+    ],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 98,
+        "normalized_unique_items": 96,
+        "normalized_removed": 2
       },
       "real_check": {
         "requested": true,
@@ -136,7 +298,7 @@
       },
       "freshness": {
         "score_adjustment": 11.0,
-        "config_churn_rate": 0.9845,
+        "config_churn_rate": 0.9896,
         "history_available": true,
         "reasons": [
           "fresh config churn",
@@ -144,26 +306,26 @@
         ]
       },
       "redundancy": {
-        "normalized_identity_count": 100,
+        "normalized_identity_count": 96,
         "threshold": 0.8,
         "redundant_with": "SoliSpirit/v2ray-configs — all_configs.txt",
-        "overlap": 0.81,
+        "overlap": 0.8958,
         "method": "normalized_config_identity"
       },
       "history": {
         "times_seen": 4,
         "failure_streak": 0,
-        "avg_tcp_success_rate": 0.7,
-        "avg_real_success_rate": 0.4,
-        "last_config_churn_rate": 0.9845
+        "avg_tcp_success_rate": 0.7597,
+        "avg_real_success_rate": 0.3328,
+        "last_config_churn_rate": 0.9896
       }
     }
   },
   {
     "candidate": {
-      "id": "https-raw-githubusercontent-com-firmfox-proxify-main-v2ray-configs-subsc-6a3baedb",
-      "label": "Firmfox/Proxify — v2ray_configs/subscriptions/subscription-108.txt",
-      "url": "https://raw.githubusercontent.com/Firmfox/Proxify/main/v2ray_configs/subscriptions/subscription-108.txt",
+      "id": "https-raw-githubusercontent-com-firmfox-proxify-main-v2ray-configs-subsc-d71ddc9f",
+      "label": "Firmfox/Proxify — v2ray_configs/subscriptions/subscription-113.txt",
+      "url": "https://raw.githubusercontent.com/Firmfox/Proxify/main/v2ray_configs/subscriptions/subscription-113.txt",
       "origin": "repository_tree",
       "kind": "public_feed",
       "tags": [
@@ -171,80 +333,79 @@
         "auto",
         "github"
       ],
-      "discovered_at": "2026-08-11T05:33:21.242462+00:00",
+      "discovered_at": "2026-08-12T05:50:41.513217+00:00",
       "metadata": {
         "repository": "Firmfox/Proxify",
         "branch": "main",
-        "path": "v2ray_configs/subscriptions/subscription-108.txt"
+        "path": "v2ray_configs/subscriptions/subscription-113.txt"
       }
     },
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 96,
+    "raw_items": 97,
     "unique_items": 96,
-    "duplicate_ratio": 0.0,
+    "duplicate_ratio": 0.0103,
     "protocols": {
-      "ss": 4,
-      "trojan": 13,
+      "ss": 6,
+      "trojan": 10,
       "vless": 57,
-      "vmess": 22
+      "vmess": 23
     },
     "tcp_sample_size": 30,
-    "tcp_ok_count": 22,
-    "tcp_success_rate": 0.7333,
-    "score": 71.5,
+    "tcp_ok_count": 21,
+    "tcp_success_rate": 0.7,
+    "score": 75.6,
     "status": "redundant",
     "notes": [
-      "redundant with SoliSpirit/v2ray-configs — all_configs.txt; overlap=0.83"
+      "redundant with SoliSpirit/v2ray-configs — all_configs.txt; overlap=0.89"
     ],
     "diagnostics": {
       "dedupe": {
-        "exact_unique_items": 96,
+        "exact_unique_items": 97,
         "normalized_unique_items": 96,
-        "normalized_removed": 0
+        "normalized_removed": 1
       },
       "real_check": {
         "requested": true,
         "available": true,
         "checked": 30,
-        "ok": 14,
-        "success_rate": 0.4667,
+        "ok": 10,
+        "success_rate": 0.3333,
         "validation_location": "github_actions_eu",
-        "validated_config_count": 14,
+        "validated_config_count": 10,
         "note": "real validation completed via v2ray_finder.xray_connectivity"
       },
       "freshness": {
-        "score_adjustment": 5.0,
-        "config_churn_rate": 0.9948,
+        "score_adjustment": 11.0,
+        "config_churn_rate": 0.9792,
         "history_available": true,
         "reasons": [
           "fresh config churn",
-          "strong historical TCP",
-          "last success older than 14 days"
+          "strong historical TCP"
         ]
       },
       "redundancy": {
         "normalized_identity_count": 96,
         "threshold": 0.8,
         "redundant_with": "SoliSpirit/v2ray-configs — all_configs.txt",
-        "overlap": 0.8333,
+        "overlap": 0.8854,
         "method": "normalized_config_identity"
       },
       "history": {
-        "times_seen": 2,
+        "times_seen": 4,
         "failure_streak": 0,
-        "avg_tcp_success_rate": 0.6333,
-        "avg_real_success_rate": 0.4167,
-        "last_config_churn_rate": 0.9948
+        "avg_tcp_success_rate": 0.6583,
+        "avg_real_success_rate": 0.3416,
+        "last_config_churn_rate": 0.9792
       }
     }
   },
   {
     "candidate": {
-      "id": "https-raw-githubusercontent-com-firmfox-proxify-main-v2ray-configs-subsc-c4782e08",
-      "label": "Firmfox/Proxify — v2ray_configs/subscriptions/subscription-112.txt",
-      "url": "https://raw.githubusercontent.com/Firmfox/Proxify/main/v2ray_configs/subscriptions/subscription-112.txt",
+      "id": "https-raw-githubusercontent-com-firmfox-proxify-main-v2ray-configs-subsc-ddbba201",
+      "label": "Firmfox/Proxify — v2ray_configs/subscriptions/subscription-32.txt",
+      "url": "https://raw.githubusercontent.com/Firmfox/Proxify/main/v2ray_configs/subscriptions/subscription-32.txt",
       "origin": "repository_tree",
       "kind": "public_feed",
       "tags": [
@@ -252,47 +413,47 @@
         "auto",
         "github"
       ],
-      "discovered_at": "2026-08-11T05:33:21.242507+00:00",
+      "discovered_at": "2026-08-12T05:50:41.513193+00:00",
       "metadata": {
         "repository": "Firmfox/Proxify",
         "branch": "main",
-        "path": "v2ray_configs/subscriptions/subscription-112.txt"
+        "path": "v2ray_configs/subscriptions/subscription-32.txt"
       }
     },
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 99,
+    "raw_items": 96,
     "unique_items": 95,
-    "duplicate_ratio": 0.0404,
+    "duplicate_ratio": 0.0104,
     "protocols": {
-      "ss": 12,
-      "trojan": 15,
-      "vless": 56,
-      "vmess": 12
+      "ss": 8,
+      "trojan": 11,
+      "vless": 59,
+      "vmess": 17
     },
     "tcp_sample_size": 30,
-    "tcp_ok_count": 22,
-    "tcp_success_rate": 0.7333,
-    "score": 66.8,
+    "tcp_ok_count": 18,
+    "tcp_success_rate": 0.6,
+    "score": 60.6,
     "status": "redundant",
     "notes": [
-      "redundant with SoliSpirit/v2ray-configs — all_configs.txt; overlap=0.83"
+      "redundant with SoliSpirit/v2ray-configs — all_configs.txt; overlap=0.87"
     ],
     "diagnostics": {
       "dedupe": {
-        "exact_unique_items": 99,
+        "exact_unique_items": 96,
         "normalized_unique_items": 95,
-        "normalized_removed": 4
+        "normalized_removed": 1
       },
       "real_check": {
         "requested": true,
         "available": true,
         "checked": 30,
-        "ok": 13,
-        "success_rate": 0.4333,
+        "ok": 9,
+        "success_rate": 0.3,
         "validation_location": "github_actions_eu",
-        "validated_config_count": 13,
+        "validated_config_count": 9,
         "note": "real validation completed via v2ray_finder.xray_connectivity"
       },
       "freshness": {
@@ -307,23 +468,23 @@
         "normalized_identity_count": 95,
         "threshold": 0.8,
         "redundant_with": "SoliSpirit/v2ray-configs — all_configs.txt",
-        "overlap": 0.8316,
+        "overlap": 0.8737,
         "method": "normalized_config_identity"
       },
       "history": {
         "times_seen": 1,
         "failure_streak": 0,
-        "avg_tcp_success_rate": 0.7333,
-        "avg_real_success_rate": 0.4333,
+        "avg_tcp_success_rate": 0.6,
+        "avg_real_success_rate": 0.3,
         "last_config_churn_rate": 1.0
       }
     }
   },
   {
     "candidate": {
-      "id": "https-raw-githubusercontent-com-firmfox-proxify-main-v2ray-configs-subsc-f24fad8b",
-      "label": "Firmfox/Proxify — v2ray_configs/subscriptions/subscription-17.txt",
-      "url": "https://raw.githubusercontent.com/Firmfox/Proxify/main/v2ray_configs/subscriptions/subscription-17.txt",
+      "id": "https-raw-githubusercontent-com-firmfox-proxify-main-v2ray-configs-subsc-0bd43915",
+      "label": "Firmfox/Proxify — v2ray_configs/subscriptions/subscription-48.txt",
+      "url": "https://raw.githubusercontent.com/Firmfox/Proxify/main/v2ray_configs/subscriptions/subscription-48.txt",
       "origin": "repository_tree",
       "kind": "public_feed",
       "tags": [
@@ -331,52 +492,52 @@
         "auto",
         "github"
       ],
-      "discovered_at": "2026-08-11T05:33:21.242470+00:00",
+      "discovered_at": "2026-08-12T05:50:41.513200+00:00",
       "metadata": {
         "repository": "Firmfox/Proxify",
         "branch": "main",
-        "path": "v2ray_configs/subscriptions/subscription-17.txt"
+        "path": "v2ray_configs/subscriptions/subscription-48.txt"
       }
     },
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 98,
-    "unique_items": 96,
-    "duplicate_ratio": 0.0204,
+    "raw_items": 99,
+    "unique_items": 98,
+    "duplicate_ratio": 0.0101,
     "protocols": {
-      "ss": 3,
-      "trojan": 7,
-      "vless": 66,
+      "ss": 5,
+      "trojan": 6,
+      "vless": 67,
       "vmess": 20
     },
     "tcp_sample_size": 30,
     "tcp_ok_count": 20,
     "tcp_success_rate": 0.6667,
-    "score": 73.8,
+    "score": 74.1,
     "status": "redundant",
     "notes": [
-      "redundant with SoliSpirit/v2ray-configs — all_configs.txt; overlap=0.82"
+      "redundant with SoliSpirit/v2ray-configs — all_configs.txt; overlap=0.85"
     ],
     "diagnostics": {
       "dedupe": {
-        "exact_unique_items": 98,
-        "normalized_unique_items": 96,
-        "normalized_removed": 2
+        "exact_unique_items": 99,
+        "normalized_unique_items": 98,
+        "normalized_removed": 1
       },
       "real_check": {
         "requested": true,
         "available": true,
         "checked": 30,
-        "ok": 7,
-        "success_rate": 0.2333,
+        "ok": 10,
+        "success_rate": 0.3333,
         "validation_location": "github_actions_eu",
-        "validated_config_count": 7,
+        "validated_config_count": 10,
         "note": "real validation completed via v2ray_finder.xray_connectivity"
       },
       "freshness": {
         "score_adjustment": 11.0,
-        "config_churn_rate": 0.9897,
+        "config_churn_rate": 1.0,
         "history_available": true,
         "reasons": [
           "fresh config churn",
@@ -384,26 +545,26 @@
         ]
       },
       "redundancy": {
-        "normalized_identity_count": 96,
+        "normalized_identity_count": 98,
         "threshold": 0.8,
         "redundant_with": "SoliSpirit/v2ray-configs — all_configs.txt",
-        "overlap": 0.8229,
+        "overlap": 0.8469,
         "method": "normalized_config_identity"
       },
       "history": {
-        "times_seen": 5,
+        "times_seen": 3,
         "failure_streak": 0,
-        "avg_tcp_success_rate": 0.6466,
-        "avg_real_success_rate": 0.3334,
-        "last_config_churn_rate": 0.9897
+        "avg_tcp_success_rate": 0.6,
+        "avg_real_success_rate": 0.3111,
+        "last_config_churn_rate": 1.0
       }
     }
   },
   {
     "candidate": {
-      "id": "https-raw-githubusercontent-com-firmfox-proxify-main-v2ray-configs-subsc-90a8bb68",
-      "label": "Firmfox/Proxify — v2ray_configs/subscriptions/subscription-39.txt",
-      "url": "https://raw.githubusercontent.com/Firmfox/Proxify/main/v2ray_configs/subscriptions/subscription-39.txt",
+      "id": "https-raw-githubusercontent-com-firmfox-proxify-main-v2ray-configs-subsc-2d60ceee",
+      "label": "Firmfox/Proxify — v2ray_configs/subscriptions/subscription-53.txt",
+      "url": "https://raw.githubusercontent.com/Firmfox/Proxify/main/v2ray_configs/subscriptions/subscription-53.txt",
       "origin": "repository_tree",
       "kind": "public_feed",
       "tags": [
@@ -411,37 +572,118 @@
         "auto",
         "github"
       ],
-      "discovered_at": "2026-08-11T05:33:21.242484+00:00",
+      "discovered_at": "2026-08-12T05:50:41.513205+00:00",
       "metadata": {
         "repository": "Firmfox/Proxify",
         "branch": "main",
-        "path": "v2ray_configs/subscriptions/subscription-39.txt"
+        "path": "v2ray_configs/subscriptions/subscription-53.txt"
       }
     },
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 95,
-    "unique_items": 94,
-    "duplicate_ratio": 0.0105,
+    "raw_items": 101,
+    "unique_items": 100,
+    "duplicate_ratio": 0.0099,
     "protocols": {
-      "ss": 7,
-      "trojan": 14,
-      "vless": 56,
-      "vmess": 17
+      "ss": 2,
+      "trojan": 11,
+      "vless": 63,
+      "vmess": 24
     },
     "tcp_sample_size": 30,
-    "tcp_ok_count": 21,
-    "tcp_success_rate": 0.7,
-    "score": 75.5,
+    "tcp_ok_count": 24,
+    "tcp_success_rate": 0.8,
+    "score": 74.9,
     "status": "redundant",
     "notes": [
-      "redundant with SoliSpirit/v2ray-configs — all_configs.txt; overlap=0.85"
+      "redundant with SoliSpirit/v2ray-configs — all_configs.txt; overlap=0.88"
     ],
     "diagnostics": {
       "dedupe": {
-        "exact_unique_items": 95,
-        "normalized_unique_items": 94,
+        "exact_unique_items": 101,
+        "normalized_unique_items": 100,
+        "normalized_removed": 1
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 30,
+        "ok": 11,
+        "success_rate": 0.3667,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 11,
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": 5.0,
+        "config_churn_rate": 1.0,
+        "history_available": true,
+        "reasons": [
+          "fresh config churn",
+          "strong historical TCP",
+          "last success older than 14 days"
+        ]
+      },
+      "redundancy": {
+        "normalized_identity_count": 100,
+        "threshold": 0.8,
+        "redundant_with": "SoliSpirit/v2ray-configs — all_configs.txt",
+        "overlap": 0.88,
+        "method": "normalized_config_identity"
+      },
+      "history": {
+        "times_seen": 3,
+        "failure_streak": 0,
+        "avg_tcp_success_rate": 0.7333,
+        "avg_real_success_rate": 0.3778,
+        "last_config_churn_rate": 1.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-firmfox-proxify-main-v2ray-configs-subsc-822f626f",
+      "label": "Firmfox/Proxify — v2ray_configs/subscriptions/subscription-60.txt",
+      "url": "https://raw.githubusercontent.com/Firmfox/Proxify/main/v2ray_configs/subscriptions/subscription-60.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github"
+      ],
+      "discovered_at": "2026-08-12T05:50:41.513211+00:00",
+      "metadata": {
+        "repository": "Firmfox/Proxify",
+        "branch": "main",
+        "path": "v2ray_configs/subscriptions/subscription-60.txt"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 99,
+    "unique_items": 98,
+    "duplicate_ratio": 0.0101,
+    "protocols": {
+      "ss": 8,
+      "trojan": 20,
+      "vless": 54,
+      "vmess": 16
+    },
+    "tcp_sample_size": 30,
+    "tcp_ok_count": 22,
+    "tcp_success_rate": 0.7333,
+    "score": 67.4,
+    "status": "redundant",
+    "notes": [
+      "redundant with SoliSpirit/v2ray-configs — all_configs.txt; overlap=0.88"
+    ],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 99,
+        "normalized_unique_items": 98,
         "normalized_removed": 1
       },
       "real_check": {
@@ -455,35 +697,34 @@
         "note": "real validation completed via v2ray_finder.xray_connectivity"
       },
       "freshness": {
-        "score_adjustment": 11.0,
-        "config_churn_rate": 0.9948,
-        "history_available": true,
+        "score_adjustment": 1.0,
+        "config_churn_rate": null,
+        "history_available": false,
         "reasons": [
-          "fresh config churn",
-          "strong historical TCP"
+          "new source"
         ]
       },
       "redundancy": {
-        "normalized_identity_count": 94,
+        "normalized_identity_count": 98,
         "threshold": 0.8,
         "redundant_with": "SoliSpirit/v2ray-configs — all_configs.txt",
-        "overlap": 0.8511,
+        "overlap": 0.8776,
         "method": "normalized_config_identity"
       },
       "history": {
-        "times_seen": 5,
+        "times_seen": 1,
         "failure_streak": 0,
-        "avg_tcp_success_rate": 0.6534,
-        "avg_real_success_rate": 0.3467,
-        "last_config_churn_rate": 0.9948
+        "avg_tcp_success_rate": 0.7333,
+        "avg_real_success_rate": 0.5,
+        "last_config_churn_rate": 1.0
       }
     }
   },
   {
     "candidate": {
-      "id": "https-raw-githubusercontent-com-firmfox-proxify-main-v2ray-configs-subsc-3a49296b",
-      "label": "Firmfox/Proxify — v2ray_configs/subscriptions/subscription-59.txt",
-      "url": "https://raw.githubusercontent.com/Firmfox/Proxify/main/v2ray_configs/subscriptions/subscription-59.txt",
+      "id": "https-raw-githubusercontent-com-firmfox-proxify-main-v2ray-configs-subsc-ac6ff947",
+      "label": "Firmfox/Proxify — v2ray_configs/subscriptions/subscription-89.txt",
+      "url": "https://raw.githubusercontent.com/Firmfox/Proxify/main/v2ray_configs/subscriptions/subscription-89.txt",
       "origin": "repository_tree",
       "kind": "public_feed",
       "tags": [
@@ -491,47 +732,127 @@
         "auto",
         "github"
       ],
-      "discovered_at": "2026-08-11T05:33:21.242477+00:00",
+      "discovered_at": "2026-08-12T05:50:41.513222+00:00",
       "metadata": {
         "repository": "Firmfox/Proxify",
         "branch": "main",
-        "path": "v2ray_configs/subscriptions/subscription-59.txt"
+        "path": "v2ray_configs/subscriptions/subscription-89.txt"
       }
     },
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 97,
+    "raw_items": 98,
     "unique_items": 96,
-    "duplicate_ratio": 0.0103,
+    "duplicate_ratio": 0.0204,
     "protocols": {
       "ss": 6,
       "trojan": 8,
-      "vless": 65,
-      "vmess": 17
+      "vless": 62,
+      "vmess": 20
     },
     "tcp_sample_size": 30,
-    "tcp_ok_count": 25,
-    "tcp_success_rate": 0.8333,
-    "score": 82.3,
+    "tcp_ok_count": 20,
+    "tcp_success_rate": 0.6667,
+    "score": 73.8,
     "status": "redundant",
     "notes": [
-      "redundant with SoliSpirit/v2ray-configs — all_configs.txt; overlap=0.82"
+      "redundant with SoliSpirit/v2ray-configs — all_configs.txt; overlap=0.88"
     ],
     "diagnostics": {
       "dedupe": {
-        "exact_unique_items": 97,
+        "exact_unique_items": 98,
         "normalized_unique_items": 96,
-        "normalized_removed": 1
+        "normalized_removed": 2
       },
       "real_check": {
         "requested": true,
         "available": true,
         "checked": 30,
-        "ok": 12,
-        "success_rate": 0.4,
+        "ok": 8,
+        "success_rate": 0.2667,
         "validation_location": "github_actions_eu",
-        "validated_config_count": 12,
+        "validated_config_count": 8,
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": 11.0,
+        "config_churn_rate": 0.9895,
+        "history_available": true,
+        "reasons": [
+          "fresh config churn",
+          "strong historical TCP"
+        ]
+      },
+      "redundancy": {
+        "normalized_identity_count": 96,
+        "threshold": 0.8,
+        "redundant_with": "SoliSpirit/v2ray-configs — all_configs.txt",
+        "overlap": 0.875,
+        "method": "normalized_config_identity"
+      },
+      "history": {
+        "times_seen": 3,
+        "failure_streak": 0,
+        "avg_tcp_success_rate": 0.7334,
+        "avg_real_success_rate": 0.3666,
+        "last_config_churn_rate": 0.9895
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-solispirit-v2ray-configs-main-subscripti-46bbc327",
+      "label": "SoliSpirit/v2ray-configs — Subscriptions/Sub2.txt",
+      "url": "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/main/Subscriptions/Sub2.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github"
+      ],
+      "discovered_at": "2026-08-12T05:50:44.025834+00:00",
+      "metadata": {
+        "repository": "SoliSpirit/v2ray-configs",
+        "branch": "main",
+        "path": "Subscriptions/Sub2.txt"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 198,
+    "unique_items": 185,
+    "duplicate_ratio": 0.0657,
+    "protocols": {
+      "ss": 8,
+      "trojan": 12,
+      "vless": 160,
+      "vmess": 5
+    },
+    "tcp_sample_size": 30,
+    "tcp_ok_count": 24,
+    "tcp_success_rate": 0.8,
+    "score": 84.3,
+    "status": "redundant",
+    "notes": [
+      "redundant with barry-far/V2ray-Config — All_Configs_base64_Sub.txt; overlap=0.88"
+    ],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 198,
+        "normalized_unique_items": 185,
+        "normalized_removed": 13
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 30,
+        "ok": 13,
+        "success_rate": 0.4333,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 13,
         "note": "real validation completed via v2ray_finder.xray_connectivity"
       },
       "freshness": {
@@ -544,26 +865,26 @@
         ]
       },
       "redundancy": {
-        "normalized_identity_count": 96,
+        "normalized_identity_count": 185,
         "threshold": 0.8,
-        "redundant_with": "SoliSpirit/v2ray-configs — all_configs.txt",
-        "overlap": 0.8229,
+        "redundant_with": "barry-far/V2ray-Config — All_Configs_base64_Sub.txt",
+        "overlap": 0.8811,
         "method": "normalized_config_identity"
       },
       "history": {
-        "times_seen": 4,
+        "times_seen": 12,
         "failure_streak": 0,
-        "avg_tcp_success_rate": 0.7167,
-        "avg_real_success_rate": 0.4334,
+        "avg_tcp_success_rate": 0.6139,
+        "avg_real_success_rate": 0.2722,
         "last_config_churn_rate": 1.0
       }
     }
   },
   {
     "candidate": {
-      "id": "https-raw-githubusercontent-com-solispirit-v2ray-configs-main-subscripti-66d6fece",
-      "label": "SoliSpirit/v2ray-configs — Subscriptions/Sub12.txt",
-      "url": "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/main/Subscriptions/Sub12.txt",
+      "id": "https-raw-githubusercontent-com-solispirit-v2ray-configs-main-subscripti-75843291",
+      "label": "SoliSpirit/v2ray-configs — Subscriptions/Sub22.txt",
+      "url": "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/main/Subscriptions/Sub22.txt",
       "origin": "repository_tree",
       "kind": "public_feed",
       "tags": [
@@ -571,347 +892,28 @@
         "auto",
         "github"
       ],
-      "discovered_at": "2026-08-11T05:33:25.192246+00:00",
+      "discovered_at": "2026-08-12T05:50:44.025851+00:00",
       "metadata": {
         "repository": "SoliSpirit/v2ray-configs",
         "branch": "main",
-        "path": "Subscriptions/Sub12.txt"
+        "path": "Subscriptions/Sub22.txt"
       }
     },
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 283,
-    "unique_items": 257,
-    "duplicate_ratio": 0.0919,
-    "protocols": {
-      "ss": 67,
-      "trojan": 51,
-      "vless": 69,
-      "vmess": 70
-    },
-    "tcp_sample_size": 30,
-    "tcp_ok_count": 20,
-    "tcp_success_rate": 0.6667,
-    "score": 80.8,
-    "status": "redundant",
-    "notes": [
-      "redundant with SoliSpirit/v2ray-configs — all_configs.txt; overlap=1.00"
-    ],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 283,
-        "normalized_unique_items": 257,
-        "normalized_removed": 26
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 30,
-        "ok": 7,
-        "success_rate": 0.2333,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 7,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": 11.0,
-        "config_churn_rate": 0.6649,
-        "history_available": true,
-        "reasons": [
-          "fresh config churn",
-          "strong historical TCP"
-        ]
-      },
-      "redundancy": {
-        "normalized_identity_count": 257,
-        "threshold": 0.8,
-        "redundant_with": "SoliSpirit/v2ray-configs — all_configs.txt",
-        "overlap": 1.0,
-        "method": "normalized_config_identity"
-      },
-      "history": {
-        "times_seen": 11,
-        "failure_streak": 0,
-        "avg_tcp_success_rate": 0.6,
-        "avg_real_success_rate": 0.3181,
-        "last_config_churn_rate": 0.6649
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-solispirit-v2ray-configs-main-subscripti-3ebb9b31",
-      "label": "SoliSpirit/v2ray-configs — Subscriptions/Sub14.txt",
-      "url": "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/main/Subscriptions/Sub14.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-08-11T05:33:25.192253+00:00",
-      "metadata": {
-        "repository": "SoliSpirit/v2ray-configs",
-        "branch": "main",
-        "path": "Subscriptions/Sub14.txt"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 280,
-    "unique_items": 275,
-    "duplicate_ratio": 0.0179,
-    "protocols": {
-      "ss": 67,
-      "trojan": 70,
-      "vless": 70,
-      "vmess": 68
-    },
-    "tcp_sample_size": 30,
-    "tcp_ok_count": 21,
-    "tcp_success_rate": 0.7,
-    "score": 84.5,
-    "status": "redundant",
-    "notes": [
-      "redundant with SoliSpirit/v2ray-configs — all_configs.txt; overlap=1.00"
-    ],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 280,
-        "normalized_unique_items": 275,
-        "normalized_removed": 5
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 30,
-        "ok": 14,
-        "success_rate": 0.4667,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 14,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": 11.0,
-        "config_churn_rate": 0.5642,
-        "history_available": true,
-        "reasons": [
-          "fresh config churn",
-          "strong historical TCP"
-        ]
-      },
-      "redundancy": {
-        "normalized_identity_count": 275,
-        "threshold": 0.8,
-        "redundant_with": "SoliSpirit/v2ray-configs — all_configs.txt",
-        "overlap": 1.0,
-        "method": "normalized_config_identity"
-      },
-      "history": {
-        "times_seen": 8,
-        "failure_streak": 0,
-        "avg_tcp_success_rate": 0.6958,
-        "avg_real_success_rate": 0.4459,
-        "last_config_churn_rate": 0.5642
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-solispirit-v2ray-configs-main-subscripti-e51c58f3",
-      "label": "SoliSpirit/v2ray-configs — Subscriptions/Sub16.txt",
-      "url": "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/main/Subscriptions/Sub16.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-08-11T05:33:25.192231+00:00",
-      "metadata": {
-        "repository": "SoliSpirit/v2ray-configs",
-        "branch": "main",
-        "path": "Subscriptions/Sub16.txt"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 307,
-    "unique_items": 295,
-    "duplicate_ratio": 0.0391,
+    "raw_items": 277,
+    "unique_items": 183,
+    "duplicate_ratio": 0.3394,
     "protocols": {
       "ss": 70,
-      "trojan": 94,
-      "vless": 64,
-      "vmess": 67
-    },
-    "tcp_sample_size": 30,
-    "tcp_ok_count": 16,
-    "tcp_success_rate": 0.5333,
-    "score": 76.8,
-    "status": "redundant",
-    "notes": [
-      "redundant with SoliSpirit/v2ray-configs — all_configs.txt; overlap=1.00"
-    ],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 307,
-        "normalized_unique_items": 295,
-        "normalized_removed": 12
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 30,
-        "ok": 6,
-        "success_rate": 0.2,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 6,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": 11.0,
-        "config_churn_rate": 0.9244,
-        "history_available": true,
-        "reasons": [
-          "fresh config churn",
-          "strong historical TCP"
-        ]
-      },
-      "redundancy": {
-        "normalized_identity_count": 295,
-        "threshold": 0.8,
-        "redundant_with": "SoliSpirit/v2ray-configs — all_configs.txt",
-        "overlap": 1.0,
-        "method": "normalized_config_identity"
-      },
-      "history": {
-        "times_seen": 6,
-        "failure_streak": 0,
-        "avg_tcp_success_rate": 0.6889,
-        "avg_real_success_rate": 0.3833,
-        "last_config_churn_rate": 0.9244
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-solispirit-v2ray-configs-main-subscripti-e834c3c1",
-      "label": "SoliSpirit/v2ray-configs — Subscriptions/Sub26.txt",
-      "url": "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/main/Subscriptions/Sub26.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-08-11T05:33:25.192267+00:00",
-      "metadata": {
-        "repository": "SoliSpirit/v2ray-configs",
-        "branch": "main",
-        "path": "Subscriptions/Sub26.txt"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 251,
-    "unique_items": 177,
-    "duplicate_ratio": 0.2948,
-    "protocols": {
-      "ss": 53,
-      "vless": 60,
+      "vless": 49,
       "vmess": 64
     },
     "tcp_sample_size": 30,
-    "tcp_ok_count": 20,
-    "tcp_success_rate": 0.6667,
-    "score": 71.3,
-    "status": "redundant",
-    "notes": [
-      "redundant with SoliSpirit/v2ray-configs — all_configs.txt; overlap=1.00"
-    ],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 251,
-        "normalized_unique_items": 177,
-        "normalized_removed": 74
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 30,
-        "ok": 9,
-        "success_rate": 0.3,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 9,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": 11.0,
-        "config_churn_rate": 0.9936,
-        "history_available": true,
-        "reasons": [
-          "fresh config churn",
-          "strong historical TCP"
-        ]
-      },
-      "redundancy": {
-        "normalized_identity_count": 177,
-        "threshold": 0.8,
-        "redundant_with": "SoliSpirit/v2ray-configs — all_configs.txt",
-        "overlap": 1.0,
-        "method": "normalized_config_identity"
-      },
-      "history": {
-        "times_seen": 8,
-        "failure_streak": 0,
-        "avg_tcp_success_rate": 0.65,
-        "avg_real_success_rate": 0.3249,
-        "last_config_churn_rate": 0.9936
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-solispirit-v2ray-configs-main-subscripti-85a4ed83",
-      "label": "SoliSpirit/v2ray-configs — Subscriptions/Sub27.txt",
-      "url": "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/main/Subscriptions/Sub27.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-08-11T05:33:25.192239+00:00",
-      "metadata": {
-        "repository": "SoliSpirit/v2ray-configs",
-        "branch": "main",
-        "path": "Subscriptions/Sub27.txt"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 261,
-    "unique_items": 163,
-    "duplicate_ratio": 0.3755,
-    "protocols": {
-      "ss": 47,
-      "vless": 61,
-      "vmess": 55
-    },
-    "tcp_sample_size": 30,
-    "tcp_ok_count": 17,
-    "tcp_success_rate": 0.5667,
-    "score": 64.4,
+    "tcp_ok_count": 15,
+    "tcp_success_rate": 0.5,
+    "score": 62.6,
     "status": "redundant",
     "notes": [
       "demoted by low real-validation success",
@@ -919,23 +921,23 @@
     ],
     "diagnostics": {
       "dedupe": {
-        "exact_unique_items": 261,
-        "normalized_unique_items": 163,
-        "normalized_removed": 98
+        "exact_unique_items": 277,
+        "normalized_unique_items": 183,
+        "normalized_removed": 94
       },
       "real_check": {
         "requested": true,
         "available": true,
         "checked": 30,
-        "ok": 1,
-        "success_rate": 0.0333,
+        "ok": 2,
+        "success_rate": 0.0667,
         "validation_location": "github_actions_eu",
-        "validated_config_count": 1,
+        "validated_config_count": 2,
         "note": "real validation completed via v2ray_finder.xray_connectivity"
       },
       "freshness": {
         "score_adjustment": 11.0,
-        "config_churn_rate": 0.966,
+        "config_churn_rate": 1.0,
         "history_available": true,
         "reasons": [
           "fresh config churn",
@@ -943,7 +945,7 @@
         ]
       },
       "redundancy": {
-        "normalized_identity_count": 163,
+        "normalized_identity_count": 183,
         "threshold": 0.8,
         "redundant_with": "SoliSpirit/v2ray-configs — all_configs.txt",
         "overlap": 1.0,
@@ -952,9 +954,88 @@
       "history": {
         "times_seen": 8,
         "failure_streak": 0,
-        "avg_tcp_success_rate": 0.6293,
-        "avg_real_success_rate": 0.2208,
-        "last_config_churn_rate": 0.966
+        "avg_tcp_success_rate": 0.5167,
+        "avg_real_success_rate": 0.1916,
+        "last_config_churn_rate": 1.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-solispirit-v2ray-configs-main-subscripti-14d348c6",
+      "label": "SoliSpirit/v2ray-configs — Subscriptions/Sub30.txt",
+      "url": "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/main/Subscriptions/Sub30.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github"
+      ],
+      "discovered_at": "2026-08-12T05:50:44.025839+00:00",
+      "metadata": {
+        "repository": "SoliSpirit/v2ray-configs",
+        "branch": "main",
+        "path": "Subscriptions/Sub30.txt"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 148,
+    "unique_items": 143,
+    "duplicate_ratio": 0.0338,
+    "protocols": {
+      "vless": 69,
+      "vmess": 74
+    },
+    "tcp_sample_size": 30,
+    "tcp_ok_count": 15,
+    "tcp_success_rate": 0.5,
+    "score": 58.6,
+    "status": "redundant",
+    "notes": [
+      "redundant with SoliSpirit/v2ray-configs — all_configs.txt; overlap=1.00"
+    ],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 148,
+        "normalized_unique_items": 143,
+        "normalized_removed": 5
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 30,
+        "ok": 4,
+        "success_rate": 0.1333,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 4,
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": 7.0,
+        "config_churn_rate": 1.0,
+        "history_available": true,
+        "reasons": [
+          "fresh config churn",
+          "weak historical real validation",
+          "strong historical TCP"
+        ]
+      },
+      "redundancy": {
+        "normalized_identity_count": 143,
+        "threshold": 0.8,
+        "redundant_with": "SoliSpirit/v2ray-configs — all_configs.txt",
+        "overlap": 1.0,
+        "method": "normalized_config_identity"
+      },
+      "history": {
+        "times_seen": 9,
+        "failure_streak": 0,
+        "avg_tcp_success_rate": 0.5185,
+        "avg_real_success_rate": 0.1666,
+        "last_config_churn_rate": 1.0
       }
     }
   },
@@ -970,7 +1051,7 @@
         "discovered-link",
         "auto"
       ],
-      "discovered_at": "2026-08-11T05:33:44.110272+00:00",
+      "discovered_at": "2026-08-12T05:51:03.289280+00:00",
       "metadata": {
         "channel": "daily_free_vpn",
         "parent_url": "https://t.me/s/daily_free_vpn",
@@ -980,18 +1061,18 @@
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 2528,
-    "unique_items": 2249,
-    "duplicate_ratio": 0.1104,
+    "raw_items": 1939,
+    "unique_items": 1760,
+    "duplicate_ratio": 0.0923,
     "protocols": {
-      "ss": 170,
-      "trojan": 257,
-      "vless": 1627,
-      "vmess": 195
+      "ss": 133,
+      "trojan": 202,
+      "vless": 1280,
+      "vmess": 145
     },
-    "tcp_sample_size": 100,
-    "tcp_ok_count": 98,
-    "tcp_success_rate": 0.98,
+    "tcp_sample_size": 60,
+    "tcp_ok_count": 60,
+    "tcp_success_rate": 1.0,
     "score": 100.0,
     "status": "redundant",
     "notes": [
@@ -999,23 +1080,23 @@
     ],
     "diagnostics": {
       "dedupe": {
-        "exact_unique_items": 2528,
-        "normalized_unique_items": 2249,
-        "normalized_removed": 279
+        "exact_unique_items": 1939,
+        "normalized_unique_items": 1760,
+        "normalized_removed": 179
       },
       "real_check": {
         "requested": true,
         "available": true,
         "checked": 30,
-        "ok": 20,
-        "success_rate": 0.6667,
+        "ok": 22,
+        "success_rate": 0.7333,
         "validation_location": "github_actions_eu",
-        "validated_config_count": 20,
+        "validated_config_count": 22,
         "note": "real validation completed via v2ray_finder.xray_connectivity"
       },
       "freshness": {
         "score_adjustment": 15.0,
-        "config_churn_rate": 0.9995,
+        "config_churn_rate": 1.0,
         "history_available": true,
         "reasons": [
           "fresh config churn",
@@ -1024,18 +1105,18 @@
         ]
       },
       "redundancy": {
-        "normalized_identity_count": 2249,
+        "normalized_identity_count": 1760,
         "threshold": 0.8,
         "redundant_with": "Telegram public channel daily_free_vpn → gh-proxy.org/https://raw.githubusercontent.com/cbusifabcap/daily_free_vpn/ref...",
         "overlap": 1.0,
         "method": "normalized_config_identity"
       },
       "history": {
-        "times_seen": 31,
+        "times_seen": 32,
         "failure_streak": 0,
-        "avg_tcp_success_rate": 0.9843,
-        "avg_real_success_rate": 0.685,
-        "last_config_churn_rate": 0.9995
+        "avg_tcp_success_rate": 0.9848,
+        "avg_real_success_rate": 0.6865,
+        "last_config_churn_rate": 1.0
       }
     }
   },
@@ -1051,7 +1132,7 @@
         "auto",
         "github"
       ],
-      "discovered_at": "2026-08-11T05:33:15.338773+00:00",
+      "discovered_at": "2026-08-12T05:50:36.947528+00:00",
       "metadata": {
         "repository": "0xRadikal/Free-v2ray-Configs",
         "branch": "main",
@@ -1061,43 +1142,43 @@
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 11102,
-    "unique_items": 10236,
-    "duplicate_ratio": 0.078,
+    "raw_items": 10985,
+    "unique_items": 10168,
+    "duplicate_ratio": 0.0744,
     "protocols": {
-      "ss": 2132,
-      "trojan": 916,
-      "vless": 3668,
-      "vmess": 3520
+      "ss": 2100,
+      "trojan": 895,
+      "vless": 3615,
+      "vmess": 3558
     },
     "tcp_sample_size": 100,
-    "tcp_ok_count": 50,
-    "tcp_success_rate": 0.5,
-    "score": 77.8,
+    "tcp_ok_count": 42,
+    "tcp_success_rate": 0.42,
+    "score": 73.9,
     "status": "redundant",
     "notes": [
       "demoted by low real-validation success",
-      "redundant with 0xRadikal/Free-v2ray-Configs — heavy/clash.yaml; overlap=0.86"
+      "redundant with 0xRadikal/Free-v2ray-Configs — heavy/clash.yaml; overlap=0.85"
     ],
     "diagnostics": {
       "dedupe": {
-        "exact_unique_items": 11102,
-        "normalized_unique_items": 10236,
-        "normalized_removed": 866
+        "exact_unique_items": 10985,
+        "normalized_unique_items": 10168,
+        "normalized_removed": 817
       },
       "real_check": {
         "requested": true,
         "available": true,
         "checked": 30,
-        "ok": 4,
-        "success_rate": 0.1333,
+        "ok": 2,
+        "success_rate": 0.0667,
         "validation_location": "github_actions_eu",
-        "validated_config_count": 4,
+        "validated_config_count": 2,
         "note": "real validation completed via v2ray_finder.xray_connectivity"
       },
       "freshness": {
         "score_adjustment": 4.0,
-        "config_churn_rate": 0.0469,
+        "config_churn_rate": 0.0392,
         "history_available": true,
         "reasons": [
           "small config churn",
@@ -1105,18 +1186,18 @@
         ]
       },
       "redundancy": {
-        "normalized_identity_count": 10236,
+        "normalized_identity_count": 10168,
         "threshold": 0.8,
         "redundant_with": "0xRadikal/Free-v2ray-Configs — heavy/clash.yaml",
-        "overlap": 0.8562,
+        "overlap": 0.85,
         "method": "normalized_config_identity"
       },
       "history": {
-        "times_seen": 34,
+        "times_seen": 35,
         "failure_streak": 0,
-        "avg_tcp_success_rate": 0.6571,
-        "avg_real_success_rate": 0.3255,
-        "last_config_churn_rate": 0.0469
+        "avg_tcp_success_rate": 0.6503,
+        "avg_real_success_rate": 0.3181,
+        "last_config_churn_rate": 0.0392
       }
     }
   },
@@ -1132,7 +1213,7 @@
         "auto",
         "github"
       ],
-      "discovered_at": "2026-08-11T05:33:15.338765+00:00",
+      "discovered_at": "2026-08-12T05:50:36.947540+00:00",
       "metadata": {
         "repository": "0xRadikal/Free-v2ray-Configs",
         "branch": "main",
@@ -1142,14 +1223,14 @@
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 927,
-    "unique_items": 653,
-    "duplicate_ratio": 0.2956,
+    "raw_items": 882,
+    "unique_items": 637,
+    "duplicate_ratio": 0.2778,
     "protocols": {
-      "ss": 124,
-      "trojan": 174,
-      "vless": 292,
-      "vmess": 63
+      "ss": 110,
+      "trojan": 137,
+      "vless": 317,
+      "vmess": 73
     },
     "tcp_sample_size": 60,
     "tcp_ok_count": 60,
@@ -1161,9 +1242,9 @@
     ],
     "diagnostics": {
       "dedupe": {
-        "exact_unique_items": 927,
-        "normalized_unique_items": 653,
-        "normalized_removed": 274
+        "exact_unique_items": 882,
+        "normalized_unique_items": 637,
+        "normalized_removed": 245
       },
       "real_check": {
         "requested": true,
@@ -1177,7 +1258,7 @@
       },
       "freshness": {
         "score_adjustment": 15.0,
-        "config_churn_rate": 0.708,
+        "config_churn_rate": 0.659,
         "history_available": true,
         "reasons": [
           "fresh config churn",
@@ -1186,18 +1267,18 @@
         ]
       },
       "redundancy": {
-        "normalized_identity_count": 653,
+        "normalized_identity_count": 637,
         "threshold": 0.8,
         "redundant_with": "0xRadikal/Free-v2ray-Configs — verified/clash.yaml",
         "overlap": 1.0,
         "method": "normalized_config_identity"
       },
       "history": {
-        "times_seen": 13,
+        "times_seen": 14,
         "failure_streak": 0,
-        "avg_tcp_success_rate": 0.9935,
-        "avg_real_success_rate": 0.7155,
-        "last_config_churn_rate": 0.708
+        "avg_tcp_success_rate": 0.994,
+        "avg_real_success_rate": 0.7192,
+        "last_config_churn_rate": 0.659
       }
     }
   },
@@ -1213,7 +1294,7 @@
         "auto",
         "github"
       ],
-      "discovered_at": "2026-08-11T05:33:15.338781+00:00",
+      "discovered_at": "2026-08-12T05:50:36.947514+00:00",
       "metadata": {
         "repository": "0xRadikal/Free-v2ray-Configs",
         "branch": "main",
@@ -1223,13 +1304,13 @@
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 839,
-    "unique_items": 564,
-    "duplicate_ratio": 0.3278,
+    "raw_items": 751,
+    "unique_items": 541,
+    "duplicate_ratio": 0.2796,
     "protocols": {
-      "trojan": 181,
-      "vless": 356,
-      "vmess": 27
+      "trojan": 147,
+      "vless": 382,
+      "vmess": 12
     },
     "tcp_sample_size": 60,
     "tcp_ok_count": 60,
@@ -1241,23 +1322,23 @@
     ],
     "diagnostics": {
       "dedupe": {
-        "exact_unique_items": 839,
-        "normalized_unique_items": 564,
-        "normalized_removed": 275
+        "exact_unique_items": 751,
+        "normalized_unique_items": 541,
+        "normalized_removed": 210
       },
       "real_check": {
         "requested": true,
         "available": true,
         "checked": 30,
-        "ok": 19,
-        "success_rate": 0.6333,
+        "ok": 18,
+        "success_rate": 0.6,
         "validation_location": "github_actions_eu",
-        "validated_config_count": 19,
+        "validated_config_count": 18,
         "note": "real validation completed via v2ray_finder.xray_connectivity"
       },
       "freshness": {
         "score_adjustment": 15.0,
-        "config_churn_rate": 0.8054,
+        "config_churn_rate": 0.7514,
         "history_available": true,
         "reasons": [
           "fresh config churn",
@@ -1266,18 +1347,18 @@
         ]
       },
       "redundancy": {
-        "normalized_identity_count": 564,
+        "normalized_identity_count": 541,
         "threshold": 0.8,
         "redundant_with": "0xRadikal/Free-v2ray-Configs — verified/clash.yaml",
         "overlap": 1.0,
         "method": "normalized_config_identity"
       },
       "history": {
-        "times_seen": 13,
+        "times_seen": 14,
         "failure_streak": 0,
         "avg_tcp_success_rate": 1.0,
-        "avg_real_success_rate": 0.6154,
-        "last_config_churn_rate": 0.8054
+        "avg_real_success_rate": 0.6143,
+        "last_config_churn_rate": 0.7514
       }
     }
   },
@@ -1293,7 +1374,7 @@
         "auto",
         "github"
       ],
-      "discovered_at": "2026-08-11T05:33:21.242424+00:00",
+      "discovered_at": "2026-08-12T05:50:41.513168+00:00",
       "metadata": {
         "repository": "Firmfox/Proxify",
         "branch": "main",
@@ -1303,39 +1384,39 @@
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 4966,
-    "unique_items": 3818,
-    "duplicate_ratio": 0.2312,
+    "raw_items": 5008,
+    "unique_items": 3812,
+    "duplicate_ratio": 0.2388,
     "protocols": {
-      "vless": 3818
+      "vless": 3812
     },
     "tcp_sample_size": 100,
-    "tcp_ok_count": 70,
-    "tcp_success_rate": 0.7,
-    "score": 81.0,
+    "tcp_ok_count": 73,
+    "tcp_success_rate": 0.73,
+    "score": 82.4,
     "status": "redundant",
     "notes": [
-      "redundant with SoliSpirit/v2ray-configs — all_configs.txt; overlap=0.86"
+      "redundant with SoliSpirit/v2ray-configs — all_configs.txt; overlap=0.82"
     ],
     "diagnostics": {
       "dedupe": {
-        "exact_unique_items": 4966,
-        "normalized_unique_items": 3818,
-        "normalized_removed": 1148
+        "exact_unique_items": 5008,
+        "normalized_unique_items": 3812,
+        "normalized_removed": 1196
       },
       "real_check": {
         "requested": true,
         "available": true,
         "checked": 30,
-        "ok": 8,
-        "success_rate": 0.2667,
+        "ok": 6,
+        "success_rate": 0.2,
         "validation_location": "github_actions_eu",
-        "validated_config_count": 8,
+        "validated_config_count": 6,
         "note": "real validation completed via v2ray_finder.xray_connectivity"
       },
       "freshness": {
         "score_adjustment": 7.0,
-        "config_churn_rate": 0.895,
+        "config_churn_rate": 0.8975,
         "history_available": true,
         "reasons": [
           "fresh config churn",
@@ -1344,18 +1425,18 @@
         ]
       },
       "redundancy": {
-        "normalized_identity_count": 3818,
+        "normalized_identity_count": 3812,
         "threshold": 0.8,
         "redundant_with": "SoliSpirit/v2ray-configs — all_configs.txt",
-        "overlap": 0.8641,
+        "overlap": 0.8221,
         "method": "normalized_config_identity"
       },
       "history": {
-        "times_seen": 35,
+        "times_seen": 36,
         "failure_streak": 0,
-        "avg_tcp_success_rate": 0.7482,
-        "avg_real_success_rate": 0.1895,
-        "last_config_churn_rate": 0.895
+        "avg_tcp_success_rate": 0.7477,
+        "avg_real_success_rate": 0.1898,
+        "last_config_churn_rate": 0.8975
       }
     }
   },
@@ -1371,7 +1452,7 @@
         "auto",
         "github"
       ],
-      "discovered_at": "2026-08-11T05:33:21.242454+00:00",
+      "discovered_at": "2026-08-12T05:50:41.513175+00:00",
       "metadata": {
         "repository": "Firmfox/Proxify",
         "branch": "main",
@@ -1381,26 +1462,26 @@
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 1801,
-    "unique_items": 1326,
-    "duplicate_ratio": 0.2637,
+    "raw_items": 1843,
+    "unique_items": 1371,
+    "duplicate_ratio": 0.2561,
     "protocols": {
-      "vmess": 1326
+      "vmess": 1371
     },
     "tcp_sample_size": 60,
-    "tcp_ok_count": 30,
-    "tcp_success_rate": 0.5,
-    "score": 67.5,
+    "tcp_ok_count": 31,
+    "tcp_success_rate": 0.5167,
+    "score": 68.5,
     "status": "redundant",
     "notes": [
       "demoted by low real-validation success",
-      "redundant with SoliSpirit/v2ray-configs — all_configs.txt; overlap=0.81"
+      "redundant with SoliSpirit/v2ray-configs — all_configs.txt; overlap=0.82"
     ],
     "diagnostics": {
       "dedupe": {
-        "exact_unique_items": 1801,
-        "normalized_unique_items": 1326,
-        "normalized_removed": 475
+        "exact_unique_items": 1843,
+        "normalized_unique_items": 1371,
+        "normalized_removed": 472
       },
       "real_check": {
         "requested": true,
@@ -1414,7 +1495,7 @@
       },
       "freshness": {
         "score_adjustment": 4.0,
-        "config_churn_rate": 0.5846,
+        "config_churn_rate": 0.6043,
         "history_available": true,
         "reasons": [
           "fresh config churn",
@@ -1422,18 +1503,98 @@
         ]
       },
       "redundancy": {
-        "normalized_identity_count": 1326,
+        "normalized_identity_count": 1371,
         "threshold": 0.8,
         "redundant_with": "SoliSpirit/v2ray-configs — all_configs.txt",
-        "overlap": 0.8115,
+        "overlap": 0.8169,
         "method": "normalized_config_identity"
       },
       "history": {
-        "times_seen": 35,
+        "times_seen": 36,
         "failure_streak": 0,
-        "avg_tcp_success_rate": 0.4643,
-        "avg_real_success_rate": 0.1324,
-        "last_config_churn_rate": 0.5846
+        "avg_tcp_success_rate": 0.4658,
+        "avg_real_success_rate": 0.1306,
+        "last_config_churn_rate": 0.6043
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-hidashimora-free-vpn-anti-rkn-main-confi-197a887a",
+      "label": "Hidashimora/free-vpn-anti-rkn — configs/31.txt",
+      "url": "https://raw.githubusercontent.com/Hidashimora/free-vpn-anti-rkn/main/configs/31.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github",
+        "english"
+      ],
+      "discovered_at": "2026-08-12T05:50:46.339550+00:00",
+      "metadata": {
+        "repository": "Hidashimora/free-vpn-anti-rkn",
+        "branch": "main",
+        "path": "configs/31.txt"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 70,
+    "unique_items": 14,
+    "duplicate_ratio": 0.8,
+    "protocols": {
+      "vless": 14
+    },
+    "tcp_sample_size": 14,
+    "tcp_ok_count": 13,
+    "tcp_success_rate": 0.9286,
+    "score": 67.6,
+    "status": "redundant",
+    "notes": [
+      "promoted by real-validation success",
+      "redundant with kasesm/Free-Config — vless_raw.txt; overlap=0.86"
+    ],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 70,
+        "normalized_unique_items": 14,
+        "normalized_removed": 56
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 14,
+        "ok": 9,
+        "success_rate": 0.6429,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 9,
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": 15.0,
+        "config_churn_rate": 1.0,
+        "history_available": true,
+        "reasons": [
+          "fresh config churn",
+          "strong historical real validation",
+          "strong historical TCP"
+        ]
+      },
+      "redundancy": {
+        "normalized_identity_count": 14,
+        "threshold": 0.8,
+        "redundant_with": "kasesm/Free-Config — vless_raw.txt",
+        "overlap": 0.8571,
+        "method": "normalized_config_identity"
+      },
+      "history": {
+        "times_seen": 7,
+        "failure_streak": 0,
+        "avg_tcp_success_rate": 0.9514,
+        "avg_real_success_rate": 0.5242,
+        "last_config_churn_rate": 1.0
       }
     }
   },
@@ -1449,7 +1610,7 @@
         "auto",
         "github"
       ],
-      "discovered_at": "2026-08-11T05:33:15.579635+00:00",
+      "discovered_at": "2026-08-12T05:50:37.113248+00:00",
       "metadata": {
         "repository": "R3ZARAHIMI/tg-v2ray-configs-every2h",
         "branch": "main",
@@ -1459,42 +1620,42 @@
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 171,
-    "unique_items": 157,
-    "duplicate_ratio": 0.0819,
+    "raw_items": 160,
+    "unique_items": 153,
+    "duplicate_ratio": 0.0437,
     "protocols": {
       "ss": 13,
-      "trojan": 5,
-      "vless": 131,
-      "vmess": 8
+      "trojan": 12,
+      "vless": 121,
+      "vmess": 7
     },
     "tcp_sample_size": 30,
-    "tcp_ok_count": 28,
-    "tcp_success_rate": 0.9333,
-    "score": 89.3,
+    "tcp_ok_count": 26,
+    "tcp_success_rate": 0.8667,
+    "score": 86.3,
     "status": "redundant",
     "notes": [
       "redundant with R3ZARAHIMI/tg-v2ray-configs-every2h — Original-Configs.txt; overlap=1.00"
     ],
     "diagnostics": {
       "dedupe": {
-        "exact_unique_items": 171,
-        "normalized_unique_items": 157,
-        "normalized_removed": 14
+        "exact_unique_items": 160,
+        "normalized_unique_items": 153,
+        "normalized_removed": 7
       },
       "real_check": {
         "requested": true,
         "available": true,
         "checked": 30,
-        "ok": 10,
-        "success_rate": 0.3333,
+        "ok": 11,
+        "success_rate": 0.3667,
         "validation_location": "github_actions_eu",
-        "validated_config_count": 10,
+        "validated_config_count": 11,
         "note": "real validation completed via v2ray_finder.xray_connectivity"
       },
       "freshness": {
         "score_adjustment": 11.0,
-        "config_churn_rate": 0.8033,
+        "config_churn_rate": 0.7747,
         "history_available": true,
         "reasons": [
           "fresh config churn",
@@ -1502,95 +1663,18 @@
         ]
       },
       "redundancy": {
-        "normalized_identity_count": 157,
+        "normalized_identity_count": 153,
         "threshold": 0.8,
         "redundant_with": "R3ZARAHIMI/tg-v2ray-configs-every2h — Original-Configs.txt",
         "overlap": 1.0,
         "method": "normalized_config_identity"
       },
       "history": {
-        "times_seen": 35,
+        "times_seen": 36,
         "failure_streak": 0,
-        "avg_tcp_success_rate": 0.8161,
-        "avg_real_success_rate": 0.4751,
-        "last_config_churn_rate": 0.8033
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-solispirit-v2ray-configs-main-protocols--6c0828c8",
-      "label": "SoliSpirit/v2ray-configs — Protocols/trojan.txt",
-      "url": "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/main/Protocols/trojan.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-08-11T05:33:25.192209+00:00",
-      "metadata": {
-        "repository": "SoliSpirit/v2ray-configs",
-        "branch": "main",
-        "path": "Protocols/trojan.txt"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 558,
-    "unique_items": 465,
-    "duplicate_ratio": 0.1667,
-    "protocols": {
-      "trojan": 465
-    },
-    "tcp_sample_size": 60,
-    "tcp_ok_count": 49,
-    "tcp_success_rate": 0.8167,
-    "score": 90.1,
-    "status": "redundant",
-    "notes": [
-      "redundant with Firmfox/Proxify — v2ray_configs/separated_by_protocol/trojan.txt; overlap=0.87"
-    ],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 558,
-        "normalized_unique_items": 465,
-        "normalized_removed": 93
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 30,
-        "ok": 16,
-        "success_rate": 0.5333,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 16,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": 11.0,
-        "config_churn_rate": 0.4236,
-        "history_available": true,
-        "reasons": [
-          "fresh config churn",
-          "strong historical TCP"
-        ]
-      },
-      "redundancy": {
-        "normalized_identity_count": 465,
-        "threshold": 0.8,
-        "redundant_with": "Firmfox/Proxify — v2ray_configs/separated_by_protocol/trojan.txt",
-        "overlap": 0.8667,
-        "method": "normalized_config_identity"
-      },
-      "history": {
-        "times_seen": 32,
-        "failure_streak": 0,
-        "avg_tcp_success_rate": 0.7296,
-        "avg_real_success_rate": 0.4011,
-        "last_config_churn_rate": 0.4236
+        "avg_tcp_success_rate": 0.8175,
+        "avg_real_success_rate": 0.4721,
+        "last_config_churn_rate": 0.7747
       }
     }
   },
@@ -1606,7 +1690,7 @@
         "auto",
         "github"
       ],
-      "discovered_at": "2026-08-11T05:33:25.192191+00:00",
+      "discovered_at": "2026-08-12T05:50:44.025806+00:00",
       "metadata": {
         "repository": "SoliSpirit/v2ray-configs",
         "branch": "main",
@@ -1616,35 +1700,34 @@
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 5055,
-    "unique_items": 4046,
-    "duplicate_ratio": 0.1996,
+    "raw_items": 4969,
+    "unique_items": 3941,
+    "duplicate_ratio": 0.2069,
     "protocols": {
-      "vless": 4046
+      "vless": 3941
     },
     "tcp_sample_size": 100,
-    "tcp_ok_count": 71,
-    "tcp_success_rate": 0.71,
-    "score": 82.0,
+    "tcp_ok_count": 67,
+    "tcp_success_rate": 0.67,
+    "score": 79.9,
     "status": "redundant",
     "notes": [
-      "demoted by low real-validation success",
       "redundant with SoliSpirit/v2ray-configs — all_configs.txt; overlap=0.99"
     ],
     "diagnostics": {
       "dedupe": {
-        "exact_unique_items": 5055,
-        "normalized_unique_items": 4046,
-        "normalized_removed": 1009
+        "exact_unique_items": 4969,
+        "normalized_unique_items": 3941,
+        "normalized_removed": 1028
       },
       "real_check": {
         "requested": true,
         "available": true,
         "checked": 30,
-        "ok": 5,
-        "success_rate": 0.1667,
+        "ok": 6,
+        "success_rate": 0.2,
         "validation_location": "github_actions_eu",
-        "validated_config_count": 5,
+        "validated_config_count": 6,
         "note": "real validation completed via v2ray_finder.xray_connectivity"
       },
       "freshness": {
@@ -1658,17 +1741,17 @@
         ]
       },
       "redundancy": {
-        "normalized_identity_count": 4046,
+        "normalized_identity_count": 3941,
         "threshold": 0.8,
         "redundant_with": "SoliSpirit/v2ray-configs — all_configs.txt",
-        "overlap": 0.9901,
+        "overlap": 0.9868,
         "method": "normalized_config_identity"
       },
       "history": {
-        "times_seen": 32,
+        "times_seen": 33,
         "failure_streak": 0,
-        "avg_tcp_success_rate": 0.7463,
-        "avg_real_success_rate": 0.1749,
+        "avg_tcp_success_rate": 0.744,
+        "avg_real_success_rate": 0.1757,
         "last_config_churn_rate": 0.9083
       }
     }
@@ -1685,7 +1768,7 @@
         "auto",
         "github"
       ],
-      "discovered_at": "2026-08-11T05:33:25.192200+00:00",
+      "discovered_at": "2026-08-12T05:50:44.025793+00:00",
       "metadata": {
         "repository": "SoliSpirit/v2ray-configs",
         "branch": "main",
@@ -1695,16 +1778,16 @@
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 1477,
-    "unique_items": 1137,
-    "duplicate_ratio": 0.2302,
+    "raw_items": 1500,
+    "unique_items": 1179,
+    "duplicate_ratio": 0.214,
     "protocols": {
-      "vmess": 1137
+      "vmess": 1179
     },
     "tcp_sample_size": 60,
-    "tcp_ok_count": 30,
-    "tcp_success_rate": 0.5,
-    "score": 75.0,
+    "tcp_ok_count": 36,
+    "tcp_success_rate": 0.6,
+    "score": 80.3,
     "status": "redundant",
     "notes": [
       "demoted by low real-validation success",
@@ -1712,9 +1795,166 @@
     ],
     "diagnostics": {
       "dedupe": {
-        "exact_unique_items": 1477,
-        "normalized_unique_items": 1137,
-        "normalized_removed": 340
+        "exact_unique_items": 1500,
+        "normalized_unique_items": 1179,
+        "normalized_removed": 321
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 30,
+        "ok": 1,
+        "success_rate": 0.0333,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 1,
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": 11.0,
+        "config_churn_rate": 0.5218,
+        "history_available": true,
+        "reasons": [
+          "fresh config churn",
+          "strong historical TCP"
+        ]
+      },
+      "redundancy": {
+        "normalized_identity_count": 1179,
+        "threshold": 0.8,
+        "redundant_with": "SoliSpirit/v2ray-configs — all_configs.txt",
+        "overlap": 1.0,
+        "method": "normalized_config_identity"
+      },
+      "history": {
+        "times_seen": 33,
+        "failure_streak": 0,
+        "avg_tcp_success_rate": 0.5369,
+        "avg_real_success_rate": 0.2061,
+        "last_config_churn_rate": 0.5218
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-barry-far-v2ray-config-main-splitted-by--eef4c5f1",
+      "label": "barry-far/V2ray-Config — Splitted-By-Protocol/trojan.txt",
+      "url": "https://raw.githubusercontent.com/barry-far/V2ray-Config/main/Splitted-By-Protocol/trojan.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github",
+        "english"
+      ],
+      "discovered_at": "2026-08-12T05:50:46.630260+00:00",
+      "metadata": {
+        "repository": "barry-far/V2ray-Config",
+        "branch": "main",
+        "path": "Splitted-By-Protocol/trojan.txt"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 450,
+    "unique_items": 352,
+    "duplicate_ratio": 0.2178,
+    "protocols": {
+      "trojan": 352
+    },
+    "tcp_sample_size": 60,
+    "tcp_ok_count": 50,
+    "tcp_success_rate": 0.8333,
+    "score": 84.5,
+    "status": "redundant",
+    "notes": [
+      "redundant with Firmfox/Proxify — v2ray_configs/separated_by_protocol/trojan.txt; overlap=0.93"
+    ],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 450,
+        "normalized_unique_items": 352,
+        "normalized_removed": 98
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 30,
+        "ok": 20,
+        "success_rate": 0.6667,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 20,
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": 11.0,
+        "config_churn_rate": 0.6807,
+        "history_available": true,
+        "reasons": [
+          "fresh config churn",
+          "strong historical TCP"
+        ]
+      },
+      "redundancy": {
+        "normalized_identity_count": 352,
+        "threshold": 0.8,
+        "redundant_with": "Firmfox/Proxify — v2ray_configs/separated_by_protocol/trojan.txt",
+        "overlap": 0.9347,
+        "method": "normalized_config_identity"
+      },
+      "history": {
+        "times_seen": 24,
+        "failure_streak": 0,
+        "avg_tcp_success_rate": 0.8138,
+        "avg_real_success_rate": 0.4529,
+        "last_config_churn_rate": 0.6807
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-barry-far-v2ray-config-main-splitted-by--d101eb1a",
+      "label": "barry-far/V2ray-Config — Splitted-By-Protocol/vless.txt",
+      "url": "https://raw.githubusercontent.com/barry-far/V2ray-Config/main/Splitted-By-Protocol/vless.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github",
+        "english"
+      ],
+      "discovered_at": "2026-08-12T05:50:46.630267+00:00",
+      "metadata": {
+        "repository": "barry-far/V2ray-Config",
+        "branch": "main",
+        "path": "Splitted-By-Protocol/vless.txt"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 4787,
+    "unique_items": 3021,
+    "duplicate_ratio": 0.3689,
+    "protocols": {
+      "vless": 3021
+    },
+    "tcp_sample_size": 100,
+    "tcp_ok_count": 78,
+    "tcp_success_rate": 0.78,
+    "score": 87.0,
+    "status": "redundant",
+    "notes": [
+      "demoted by low real-validation success",
+      "redundant with barry-far/V2ray-Config — All_Configs_base64_Sub.txt; overlap=0.99"
+    ],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 4787,
+        "normalized_unique_items": 3021,
+        "normalized_removed": 1766
       },
       "real_check": {
         "requested": true,
@@ -1728,7 +1968,7 @@
       },
       "freshness": {
         "score_adjustment": 11.0,
-        "config_churn_rate": 0.4917,
+        "config_churn_rate": 0.5724,
         "history_available": true,
         "reasons": [
           "fresh config churn",
@@ -1736,18 +1976,250 @@
         ]
       },
       "redundancy": {
-        "normalized_identity_count": 1137,
+        "normalized_identity_count": 3021,
         "threshold": 0.8,
-        "redundant_with": "SoliSpirit/v2ray-configs — all_configs.txt",
+        "redundant_with": "barry-far/V2ray-Config — All_Configs_base64_Sub.txt",
+        "overlap": 0.9921,
+        "method": "normalized_config_identity"
+      },
+      "history": {
+        "times_seen": 24,
+        "failure_streak": 0,
+        "avg_tcp_success_rate": 0.7487,
+        "avg_real_success_rate": 0.2569,
+        "last_config_churn_rate": 0.5724
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-barry-far-v2ray-config-main-splitted-by--9eecf412",
+      "label": "barry-far/V2ray-Config — Splitted-By-Protocol/vmess.txt",
+      "url": "https://raw.githubusercontent.com/barry-far/V2ray-Config/main/Splitted-By-Protocol/vmess.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github",
+        "english"
+      ],
+      "discovered_at": "2026-08-12T05:50:46.630254+00:00",
+      "metadata": {
+        "repository": "barry-far/V2ray-Config",
+        "branch": "main",
+        "path": "Splitted-By-Protocol/vmess.txt"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 234,
+    "unique_items": 171,
+    "duplicate_ratio": 0.2692,
+    "protocols": {
+      "vmess": 171
+    },
+    "tcp_sample_size": 30,
+    "tcp_ok_count": 20,
+    "tcp_success_rate": 0.6667,
+    "score": 66.3,
+    "status": "redundant",
+    "notes": [
+      "redundant with barry-far/V2ray-Config — All_Configs_base64_Sub.txt; overlap=0.99"
+    ],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 234,
+        "normalized_unique_items": 171,
+        "normalized_removed": 63
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 30,
+        "ok": 10,
+        "success_rate": 0.3333,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 10,
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": 11.0,
+        "config_churn_rate": 0.6223,
+        "history_available": true,
+        "reasons": [
+          "fresh config churn",
+          "strong historical TCP"
+        ]
+      },
+      "redundancy": {
+        "normalized_identity_count": 171,
+        "threshold": 0.8,
+        "redundant_with": "barry-far/V2ray-Config — All_Configs_base64_Sub.txt",
+        "overlap": 0.9942,
+        "method": "normalized_config_identity"
+      },
+      "history": {
+        "times_seen": 24,
+        "failure_streak": 0,
+        "avg_tcp_success_rate": 0.6347,
+        "avg_real_success_rate": 0.2889,
+        "last_config_churn_rate": 0.6223
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-kort0881-vpn-vless-configs-russia-main-d-d41ffa74",
+      "label": "kort0881/vpn-vless-configs-russia — data/githubmirror/new/by_protocol/trojan/trojan_024.txt",
+      "url": "https://raw.githubusercontent.com/kort0881/vpn-vless-configs-russia/main/data/githubmirror/new/by_protocol/trojan/trojan_024.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github"
+      ],
+      "discovered_at": "2026-08-12T05:50:41.726259+00:00",
+      "metadata": {
+        "repository": "kort0881/vpn-vless-configs-russia",
+        "branch": "main",
+        "path": "data/githubmirror/new/by_protocol/trojan/trojan_024.txt"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 250,
+    "unique_items": 230,
+    "duplicate_ratio": 0.08,
+    "protocols": {
+      "trojan": 230
+    },
+    "tcp_sample_size": 30,
+    "tcp_ok_count": 21,
+    "tcp_success_rate": 0.7,
+    "score": 66.8,
+    "status": "redundant",
+    "notes": [
+      "demoted by low real-validation success",
+      "redundant with ebrasha/free-v2ray-public-list — separated-protocols/trojan_configs.txt; overlap=1.00"
+    ],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 250,
+        "normalized_unique_items": 230,
+        "normalized_removed": 20
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 30,
+        "ok": 0,
+        "success_rate": 0.0,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 0,
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": 4.0,
+        "config_churn_rate": 1.0,
+        "history_available": true,
+        "reasons": [
+          "fresh config churn",
+          "failure streak 1"
+        ]
+      },
+      "redundancy": {
+        "normalized_identity_count": 230,
+        "threshold": 0.8,
+        "redundant_with": "ebrasha/free-v2ray-public-list — separated-protocols/trojan_configs.txt",
         "overlap": 1.0,
         "method": "normalized_config_identity"
       },
       "history": {
-        "times_seen": 32,
+        "times_seen": 2,
         "failure_streak": 0,
-        "avg_tcp_success_rate": 0.5349,
-        "avg_real_success_rate": 0.2115,
-        "last_config_churn_rate": 0.4917
+        "avg_tcp_success_rate": 0.45,
+        "avg_real_success_rate": 0.0,
+        "last_config_churn_rate": 1.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-kort0881-vpn-vless-configs-russia-main-d-41cc4ed8",
+      "label": "kort0881/vpn-vless-configs-russia — data/githubmirror/new/by_protocol/vmess/vmess_009.txt",
+      "url": "https://raw.githubusercontent.com/kort0881/vpn-vless-configs-russia/main/data/githubmirror/new/by_protocol/vmess/vmess_009.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github"
+      ],
+      "discovered_at": "2026-08-12T05:50:41.726271+00:00",
+      "metadata": {
+        "repository": "kort0881/vpn-vless-configs-russia",
+        "branch": "main",
+        "path": "data/githubmirror/new/by_protocol/vmess/vmess_009.txt"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 500,
+    "unique_items": 360,
+    "duplicate_ratio": 0.28,
+    "protocols": {
+      "vmess": 360
+    },
+    "tcp_sample_size": 60,
+    "tcp_ok_count": 11,
+    "tcp_success_rate": 0.1833,
+    "score": 41.5,
+    "status": "redundant",
+    "notes": [
+      "redundant with 0xRadikal/Free-v2ray-Configs — heavy/clash.yaml; overlap=0.93"
+    ],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 500,
+        "normalized_unique_items": 360,
+        "normalized_removed": 140
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 30,
+        "ok": 1,
+        "success_rate": 0.0333,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 1,
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": 1.0,
+        "config_churn_rate": null,
+        "history_available": false,
+        "reasons": [
+          "new source"
+        ]
+      },
+      "redundancy": {
+        "normalized_identity_count": 360,
+        "threshold": 0.8,
+        "redundant_with": "0xRadikal/Free-v2ray-Configs — heavy/clash.yaml",
+        "overlap": 0.925,
+        "method": "normalized_config_identity"
+      },
+      "history": {
+        "times_seen": 1,
+        "failure_streak": 0,
+        "avg_tcp_success_rate": 0.1833,
+        "avg_real_success_rate": 0.0333,
+        "last_config_churn_rate": 1.0
       }
     }
   },
@@ -1763,7 +2235,7 @@
         "auto",
         "github"
       ],
-      "discovered_at": "2026-08-11T05:33:23.214283+00:00",
+      "discovered_at": "2026-08-12T05:50:42.573499+00:00",
       "metadata": {
         "repository": "thealiiakbarii-ai/VCC",
         "branch": "main",
@@ -1773,40 +2245,41 @@
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 90,
-    "unique_items": 90,
+    "raw_items": 223,
+    "unique_items": 223,
     "duplicate_ratio": 0.0,
     "protocols": {
-      "trojan": 10,
-      "vless": 80
+      "trojan": 13,
+      "vless": 210
     },
     "tcp_sample_size": 30,
     "tcp_ok_count": 30,
     "tcp_success_rate": 1.0,
-    "score": 85.5,
+    "score": 92.2,
     "status": "redundant",
     "notes": [
-      "redundant with thealiiakbarii-ai/VCC — configs/vless.txt; overlap=0.89"
+      "demoted by low real-validation success",
+      "redundant with thealiiakbarii-ai/VCC — configs/all.txt; overlap=1.00"
     ],
     "diagnostics": {
       "dedupe": {
-        "exact_unique_items": 90,
-        "normalized_unique_items": 90,
+        "exact_unique_items": 223,
+        "normalized_unique_items": 223,
         "normalized_removed": 0
       },
       "real_check": {
         "requested": true,
         "available": true,
         "checked": 30,
-        "ok": 6,
-        "success_rate": 0.2,
+        "ok": 4,
+        "success_rate": 0.1333,
         "validation_location": "github_actions_eu",
-        "validated_config_count": 6,
+        "validated_config_count": 4,
         "note": "real validation completed via v2ray_finder.xray_connectivity"
       },
       "freshness": {
         "score_adjustment": 11.0,
-        "config_churn_rate": 0.9386,
+        "config_churn_rate": 0.9636,
         "history_available": true,
         "reasons": [
           "fresh config churn",
@@ -1814,18 +2287,99 @@
         ]
       },
       "redundancy": {
-        "normalized_identity_count": 90,
+        "normalized_identity_count": 223,
         "threshold": 0.8,
-        "redundant_with": "thealiiakbarii-ai/VCC — configs/vless.txt",
-        "overlap": 0.8889,
+        "redundant_with": "thealiiakbarii-ai/VCC — configs/all.txt",
+        "overlap": 1.0,
         "method": "normalized_config_identity"
       },
       "history": {
-        "times_seen": 13,
+        "times_seen": 14,
         "failure_streak": 0,
-        "avg_tcp_success_rate": 0.9846,
-        "avg_real_success_rate": 0.2846,
-        "last_config_churn_rate": 0.9386
+        "avg_tcp_success_rate": 0.9857,
+        "avg_real_success_rate": 0.2738,
+        "last_config_churn_rate": 0.9636
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-thealiiakbarii-ai-vcc-main-configs-lite--a777b290",
+      "label": "thealiiakbarii-ai/VCC — configs/lite.txt",
+      "url": "https://raw.githubusercontent.com/thealiiakbarii-ai/VCC/main/configs/lite.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github"
+      ],
+      "discovered_at": "2026-08-12T05:50:42.573466+00:00",
+      "metadata": {
+        "repository": "thealiiakbarii-ai/VCC",
+        "branch": "main",
+        "path": "configs/lite.txt"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 114,
+    "unique_items": 114,
+    "duplicate_ratio": 0.0,
+    "protocols": {
+      "ss": 25,
+      "ssr": 14,
+      "trojan": 25,
+      "vless": 25,
+      "vmess": 25
+    },
+    "tcp_sample_size": 30,
+    "tcp_ok_count": 24,
+    "tcp_success_rate": 0.8,
+    "score": 81.7,
+    "status": "redundant",
+    "notes": [
+      "redundant with thealiiakbarii-ai/VCC — configs/all.txt; overlap=1.00"
+    ],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 114,
+        "normalized_unique_items": 114,
+        "normalized_removed": 0
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 30,
+        "ok": 10,
+        "success_rate": 0.3333,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 10,
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": 11.0,
+        "config_churn_rate": 0.9577,
+        "history_available": true,
+        "reasons": [
+          "fresh config churn",
+          "strong historical TCP"
+        ]
+      },
+      "redundancy": {
+        "normalized_identity_count": 114,
+        "threshold": 0.8,
+        "redundant_with": "thealiiakbarii-ai/VCC — configs/all.txt",
+        "overlap": 1.0,
+        "method": "normalized_config_identity"
+      },
+      "history": {
+        "times_seen": 10,
+        "failure_streak": 0,
+        "avg_tcp_success_rate": 0.8401,
+        "avg_real_success_rate": 0.2667,
+        "last_config_churn_rate": 0.9577
       }
     }
   },
@@ -1841,7 +2395,7 @@
         "auto",
         "github"
       ],
-      "discovered_at": "2026-08-11T05:33:23.214239+00:00",
+      "discovered_at": "2026-08-12T05:50:42.573488+00:00",
       "metadata": {
         "repository": "thealiiakbarii-ai/VCC",
         "branch": "main",
@@ -1851,40 +2405,40 @@
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 830,
-    "unique_items": 830,
+    "raw_items": 1557,
+    "unique_items": 1557,
     "duplicate_ratio": 0.0,
     "protocols": {
-      "trojan": 2,
-      "vless": 828
+      "trojan": 3,
+      "vless": 1554
     },
     "tcp_sample_size": 60,
-    "tcp_ok_count": 59,
-    "tcp_success_rate": 0.9833,
+    "tcp_ok_count": 60,
+    "tcp_success_rate": 1.0,
     "score": 100.0,
     "status": "redundant",
     "notes": [
-      "redundant with thealiiakbarii-ai/VCC — configs/vless.txt; overlap=1.00"
+      "redundant with thealiiakbarii-ai/VCC — configs/all.txt; overlap=1.00"
     ],
     "diagnostics": {
       "dedupe": {
-        "exact_unique_items": 830,
-        "normalized_unique_items": 830,
+        "exact_unique_items": 1557,
+        "normalized_unique_items": 1557,
         "normalized_removed": 0
       },
       "real_check": {
         "requested": true,
         "available": true,
         "checked": 30,
-        "ok": 11,
-        "success_rate": 0.3667,
+        "ok": 12,
+        "success_rate": 0.4,
         "validation_location": "github_actions_eu",
-        "validated_config_count": 11,
+        "validated_config_count": 12,
         "note": "real validation completed via v2ray_finder.xray_connectivity"
       },
       "freshness": {
         "score_adjustment": 11.0,
-        "config_churn_rate": 0.9373,
+        "config_churn_rate": 0.9655,
         "history_available": true,
         "reasons": [
           "fresh config churn",
@@ -1892,18 +2446,251 @@
         ]
       },
       "redundancy": {
-        "normalized_identity_count": 830,
+        "normalized_identity_count": 1557,
         "threshold": 0.8,
-        "redundant_with": "thealiiakbarii-ai/VCC — configs/vless.txt",
-        "overlap": 0.9976,
+        "redundant_with": "thealiiakbarii-ai/VCC — configs/all.txt",
+        "overlap": 1.0,
         "method": "normalized_config_identity"
       },
       "history": {
-        "times_seen": 11,
+        "times_seen": 12,
         "failure_streak": 0,
-        "avg_tcp_success_rate": 0.9908,
-        "avg_real_success_rate": 0.3667,
-        "last_config_churn_rate": 0.9373
+        "avg_tcp_success_rate": 0.9916,
+        "avg_real_success_rate": 0.3695,
+        "last_config_churn_rate": 0.9655
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-thealiiakbarii-ai-vcc-main-configs-shado-b4715ade",
+      "label": "thealiiakbarii-ai/VCC — configs/shadowsocks.txt",
+      "url": "https://raw.githubusercontent.com/thealiiakbarii-ai/VCC/main/configs/shadowsocks.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github"
+      ],
+      "discovered_at": "2026-08-12T05:50:42.573504+00:00",
+      "metadata": {
+        "repository": "thealiiakbarii-ai/VCC",
+        "branch": "main",
+        "path": "configs/shadowsocks.txt"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 329,
+    "unique_items": 329,
+    "duplicate_ratio": 0.0,
+    "protocols": {
+      "ss": 329
+    },
+    "tcp_sample_size": 60,
+    "tcp_ok_count": 59,
+    "tcp_success_rate": 0.9833,
+    "score": 98.1,
+    "status": "redundant",
+    "notes": [
+      "redundant with thealiiakbarii-ai/VCC — configs/all.txt; overlap=1.00"
+    ],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 329,
+        "normalized_unique_items": 329,
+        "normalized_removed": 0
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 30,
+        "ok": 8,
+        "success_rate": 0.2667,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 8,
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": 15.0,
+        "config_churn_rate": 0.5958,
+        "history_available": true,
+        "reasons": [
+          "fresh config churn",
+          "strong historical real validation",
+          "strong historical TCP"
+        ]
+      },
+      "redundancy": {
+        "normalized_identity_count": 329,
+        "threshold": 0.8,
+        "redundant_with": "thealiiakbarii-ai/VCC — configs/all.txt",
+        "overlap": 1.0,
+        "method": "normalized_config_identity"
+      },
+      "history": {
+        "times_seen": 10,
+        "failure_streak": 0,
+        "avg_tcp_success_rate": 0.9284,
+        "avg_real_success_rate": 0.5266,
+        "last_config_churn_rate": 0.5958
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-thealiiakbarii-ai-vcc-main-configs-troja-bb1d07b5",
+      "label": "thealiiakbarii-ai/VCC — configs/trojan.txt",
+      "url": "https://raw.githubusercontent.com/thealiiakbarii-ai/VCC/main/configs/trojan.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github"
+      ],
+      "discovered_at": "2026-08-12T05:50:42.573447+00:00",
+      "metadata": {
+        "repository": "thealiiakbarii-ai/VCC",
+        "branch": "main",
+        "path": "configs/trojan.txt"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 691,
+    "unique_items": 689,
+    "duplicate_ratio": 0.0029,
+    "protocols": {
+      "trojan": 689
+    },
+    "tcp_sample_size": 60,
+    "tcp_ok_count": 60,
+    "tcp_success_rate": 1.0,
+    "score": 100.0,
+    "status": "redundant",
+    "notes": [
+      "redundant with thealiiakbarii-ai/VCC — configs/all.txt; overlap=1.00"
+    ],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 691,
+        "normalized_unique_items": 689,
+        "normalized_removed": 2
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 30,
+        "ok": 13,
+        "success_rate": 0.4333,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 13,
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": 15.0,
+        "config_churn_rate": 0.7162,
+        "history_available": true,
+        "reasons": [
+          "fresh config churn",
+          "strong historical real validation",
+          "strong historical TCP"
+        ]
+      },
+      "redundancy": {
+        "normalized_identity_count": 689,
+        "threshold": 0.8,
+        "redundant_with": "thealiiakbarii-ai/VCC — configs/all.txt",
+        "overlap": 1.0,
+        "method": "normalized_config_identity"
+      },
+      "history": {
+        "times_seen": 15,
+        "failure_streak": 0,
+        "avg_tcp_success_rate": 0.9989,
+        "avg_real_success_rate": 0.5845,
+        "last_config_churn_rate": 0.7162
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-thealiiakbarii-ai-vcc-main-configs-vless-05f87d28",
+      "label": "thealiiakbarii-ai/VCC — configs/vless.txt",
+      "url": "https://raw.githubusercontent.com/thealiiakbarii-ai/VCC/main/configs/vless.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github"
+      ],
+      "discovered_at": "2026-08-12T05:50:42.573412+00:00",
+      "metadata": {
+        "repository": "thealiiakbarii-ai/VCC",
+        "branch": "main",
+        "path": "configs/vless.txt"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 3868,
+    "unique_items": 3868,
+    "duplicate_ratio": 0.0,
+    "protocols": {
+      "vless": 3868
+    },
+    "tcp_sample_size": 100,
+    "tcp_ok_count": 100,
+    "tcp_success_rate": 1.0,
+    "score": 100.0,
+    "status": "redundant",
+    "notes": [
+      "redundant with thealiiakbarii-ai/VCC — configs/all.txt; overlap=1.00"
+    ],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 3868,
+        "normalized_unique_items": 3868,
+        "normalized_removed": 0
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 30,
+        "ok": 12,
+        "success_rate": 0.4,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 12,
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": 11.0,
+        "config_churn_rate": 0.9738,
+        "history_available": true,
+        "reasons": [
+          "fresh config churn",
+          "strong historical TCP"
+        ]
+      },
+      "redundancy": {
+        "normalized_identity_count": 3868,
+        "threshold": 0.8,
+        "redundant_with": "thealiiakbarii-ai/VCC — configs/all.txt",
+        "overlap": 1.0,
+        "method": "normalized_config_identity"
+      },
+      "history": {
+        "times_seen": 15,
+        "failure_streak": 0,
+        "avg_tcp_success_rate": 0.9903,
+        "avg_real_success_rate": 0.3244,
+        "last_config_churn_rate": 0.9738
       }
     }
   },
@@ -1919,7 +2706,7 @@
         "auto",
         "github"
       ],
-      "discovered_at": "2026-08-11T05:33:23.214222+00:00",
+      "discovered_at": "2026-08-12T05:50:42.573455+00:00",
       "metadata": {
         "repository": "thealiiakbarii-ai/VCC",
         "branch": "main",
@@ -1929,39 +2716,39 @@
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 120,
-    "unique_items": 120,
+    "raw_items": 115,
+    "unique_items": 115,
     "duplicate_ratio": 0.0,
     "protocols": {
-      "vmess": 120
+      "vmess": 115
     },
     "tcp_sample_size": 30,
     "tcp_ok_count": 30,
     "tcp_success_rate": 1.0,
-    "score": 88.5,
+    "score": 88.2,
     "status": "redundant",
     "notes": [
-      "redundant with SoliSpirit/v2ray-configs — all_configs.txt; overlap=0.98"
+      "redundant with thealiiakbarii-ai/VCC — configs/all.txt; overlap=1.00"
     ],
     "diagnostics": {
       "dedupe": {
-        "exact_unique_items": 120,
-        "normalized_unique_items": 120,
+        "exact_unique_items": 115,
+        "normalized_unique_items": 115,
         "normalized_removed": 0
       },
       "real_check": {
         "requested": true,
         "available": true,
         "checked": 30,
-        "ok": 18,
-        "success_rate": 0.6,
+        "ok": 25,
+        "success_rate": 0.8333,
         "validation_location": "github_actions_eu",
-        "validated_config_count": 18,
+        "validated_config_count": 25,
         "note": "real validation completed via v2ray_finder.xray_connectivity"
       },
       "freshness": {
         "score_adjustment": 15.0,
-        "config_churn_rate": 0.8919,
+        "config_churn_rate": 0.9871,
         "history_available": true,
         "reasons": [
           "fresh config churn",
@@ -1970,18 +2757,18 @@
         ]
       },
       "redundancy": {
-        "normalized_identity_count": 120,
+        "normalized_identity_count": 115,
         "threshold": 0.8,
-        "redundant_with": "SoliSpirit/v2ray-configs — all_configs.txt",
-        "overlap": 0.9833,
+        "redundant_with": "thealiiakbarii-ai/VCC — configs/all.txt",
+        "overlap": 1.0,
         "method": "normalized_config_identity"
       },
       "history": {
-        "times_seen": 14,
+        "times_seen": 15,
         "failure_streak": 0,
-        "avg_tcp_success_rate": 0.9857,
-        "avg_real_success_rate": 0.5119,
-        "last_config_churn_rate": 0.8919
+        "avg_tcp_success_rate": 0.9867,
+        "avg_real_success_rate": 0.5333,
+        "last_config_churn_rate": 0.9871
       }
     }
   },
@@ -1997,7 +2784,7 @@
         "auto",
         "github"
       ],
-      "discovered_at": "2026-08-11T05:33:23.214262+00:00",
+      "discovered_at": "2026-08-12T05:50:42.573494+00:00",
       "metadata": {
         "repository": "thealiiakbarii-ai/VCC",
         "branch": "main",
@@ -2007,41 +2794,41 @@
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 1626,
-    "unique_items": 1612,
-    "duplicate_ratio": 0.0086,
+    "raw_items": 2285,
+    "unique_items": 2284,
+    "duplicate_ratio": 0.0004,
     "protocols": {
-      "trojan": 140,
-      "vless": 1402,
-      "vmess": 70
+      "trojan": 263,
+      "vless": 1942,
+      "vmess": 79
     },
-    "tcp_sample_size": 60,
-    "tcp_ok_count": 59,
-    "tcp_success_rate": 0.9833,
+    "tcp_sample_size": 100,
+    "tcp_ok_count": 100,
+    "tcp_success_rate": 1.0,
     "score": 100.0,
     "status": "redundant",
     "notes": [
-      "redundant with thealiiakbarii-ai/VCC — configs/vless.txt; overlap=0.87"
+      "redundant with thealiiakbarii-ai/VCC — configs/all.txt; overlap=1.00"
     ],
     "diagnostics": {
       "dedupe": {
-        "exact_unique_items": 1626,
-        "normalized_unique_items": 1612,
-        "normalized_removed": 14
+        "exact_unique_items": 2285,
+        "normalized_unique_items": 2284,
+        "normalized_removed": 1
       },
       "real_check": {
         "requested": true,
         "available": true,
         "checked": 30,
-        "ok": 12,
-        "success_rate": 0.4,
+        "ok": 13,
+        "success_rate": 0.4333,
         "validation_location": "github_actions_eu",
-        "validated_config_count": 12,
+        "validated_config_count": 13,
         "note": "real validation completed via v2ray_finder.xray_connectivity"
       },
       "freshness": {
         "score_adjustment": 11.0,
-        "config_churn_rate": 0.9648,
+        "config_churn_rate": 0.9696,
         "history_available": true,
         "reasons": [
           "fresh config churn",
@@ -2049,18 +2836,18 @@
         ]
       },
       "redundancy": {
-        "normalized_identity_count": 1612,
+        "normalized_identity_count": 2284,
         "threshold": 0.8,
-        "redundant_with": "thealiiakbarii-ai/VCC — configs/vless.txt",
-        "overlap": 0.8697,
+        "redundant_with": "thealiiakbarii-ai/VCC — configs/all.txt",
+        "overlap": 1.0,
         "method": "normalized_config_identity"
       },
       "history": {
-        "times_seen": 7,
+        "times_seen": 8,
         "failure_streak": 0,
-        "avg_tcp_success_rate": 0.9881,
-        "avg_real_success_rate": 0.2953,
-        "last_config_churn_rate": 0.9648
+        "avg_tcp_success_rate": 0.9896,
+        "avg_real_success_rate": 0.3125,
+        "last_config_churn_rate": 0.9696
       }
     }
   },
@@ -2076,7 +2863,7 @@
         "auto",
         "github"
       ],
-      "discovered_at": "2026-08-11T05:33:20.995918+00:00",
+      "discovered_at": "2026-08-12T05:50:41.284457+00:00",
       "metadata": {
         "repository": "cbusifabcap/daily_free_vpn",
         "branch": "main",
@@ -2086,18 +2873,18 @@
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 2528,
-    "unique_items": 2249,
-    "duplicate_ratio": 0.1104,
+    "raw_items": 1939,
+    "unique_items": 1760,
+    "duplicate_ratio": 0.0923,
     "protocols": {
-      "ss": 170,
-      "trojan": 257,
-      "vless": 1627,
-      "vmess": 195
+      "ss": 133,
+      "trojan": 202,
+      "vless": 1280,
+      "vmess": 145
     },
-    "tcp_sample_size": 100,
-    "tcp_ok_count": 99,
-    "tcp_success_rate": 0.99,
+    "tcp_sample_size": 60,
+    "tcp_ok_count": 60,
+    "tcp_success_rate": 1.0,
     "score": 100.0,
     "status": "redundant",
     "notes": [
@@ -2105,23 +2892,23 @@
     ],
     "diagnostics": {
       "dedupe": {
-        "exact_unique_items": 2528,
-        "normalized_unique_items": 2249,
-        "normalized_removed": 279
+        "exact_unique_items": 1939,
+        "normalized_unique_items": 1760,
+        "normalized_removed": 179
       },
       "real_check": {
         "requested": true,
         "available": true,
         "checked": 30,
-        "ok": 22,
-        "success_rate": 0.7333,
+        "ok": 20,
+        "success_rate": 0.6667,
         "validation_location": "github_actions_eu",
-        "validated_config_count": 22,
+        "validated_config_count": 20,
         "note": "real validation completed via v2ray_finder.xray_connectivity"
       },
       "freshness": {
         "score_adjustment": 15.0,
-        "config_churn_rate": 0.9995,
+        "config_churn_rate": 1.0,
         "history_available": true,
         "reasons": [
           "fresh config churn",
@@ -2130,18 +2917,18 @@
         ]
       },
       "redundancy": {
-        "normalized_identity_count": 2249,
+        "normalized_identity_count": 1760,
         "threshold": 0.8,
         "redundant_with": "Telegram public channel daily_free_vpn → gh-proxy.org/https://raw.githubusercontent.com/cbusifabcap/daily_free_vpn/ref...",
         "overlap": 1.0,
         "method": "normalized_config_identity"
       },
       "history": {
-        "times_seen": 11,
+        "times_seen": 12,
         "failure_streak": 0,
-        "avg_tcp_success_rate": 0.9745,
-        "avg_real_success_rate": 0.6758,
-        "last_config_churn_rate": 0.9995
+        "avg_tcp_success_rate": 0.9766,
+        "avg_real_success_rate": 0.675,
+        "last_config_churn_rate": 1.0
       }
     }
   },
@@ -2157,7 +2944,7 @@
         "auto",
         "github"
       ],
-      "discovered_at": "2026-08-11T05:33:20.995958+00:00",
+      "discovered_at": "2026-08-12T05:50:41.284491+00:00",
       "metadata": {
         "repository": "cbusifabcap/daily_free_vpn",
         "branch": "main",
@@ -2167,18 +2954,18 @@
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 3237,
-    "unique_items": 2796,
-    "duplicate_ratio": 0.1362,
+    "raw_items": 2466,
+    "unique_items": 2202,
+    "duplicate_ratio": 0.1071,
     "protocols": {
-      "ss": 173,
-      "trojan": 257,
-      "vless": 2171,
-      "vmess": 195
+      "ss": 138,
+      "trojan": 202,
+      "vless": 1717,
+      "vmess": 145
     },
     "tcp_sample_size": 100,
-    "tcp_ok_count": 97,
-    "tcp_success_rate": 0.97,
+    "tcp_ok_count": 100,
+    "tcp_success_rate": 1.0,
     "score": 100.0,
     "status": "redundant",
     "notes": [
@@ -2186,96 +2973,18 @@
     ],
     "diagnostics": {
       "dedupe": {
-        "exact_unique_items": 3237,
-        "normalized_unique_items": 2796,
-        "normalized_removed": 441
+        "exact_unique_items": 2466,
+        "normalized_unique_items": 2202,
+        "normalized_removed": 264
       },
       "real_check": {
         "requested": true,
         "available": true,
         "checked": 30,
-        "ok": 19,
-        "success_rate": 0.6333,
+        "ok": 21,
+        "success_rate": 0.7,
         "validation_location": "github_actions_eu",
-        "validated_config_count": 19,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": 15.0,
-        "config_churn_rate": 0.999,
-        "history_available": true,
-        "reasons": [
-          "fresh config churn",
-          "strong historical real validation",
-          "strong historical TCP"
-        ]
-      },
-      "redundancy": {
-        "normalized_identity_count": 2796,
-        "threshold": 0.8,
-        "redundant_with": "Telegram public channel daily_free_vpn → gh-proxy.org/https://raw.githubusercontent.com/cbusifabcap/daily_free_vpn/ref...",
-        "overlap": 1.0,
-        "method": "normalized_config_identity"
-      },
-      "history": {
-        "times_seen": 11,
-        "failure_streak": 0,
-        "avg_tcp_success_rate": 0.9809,
-        "avg_real_success_rate": 0.6969,
-        "last_config_churn_rate": 0.999
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-leilaomi-automergepublicnodes-optimized--9929dad8",
-      "label": "LeilaoMi/AutoMergePublicNodes-Optimized — output/by_protocol/verified_vless.txt",
-      "url": "https://raw.githubusercontent.com/LeilaoMi/AutoMergePublicNodes-Optimized/main/output/by_protocol/verified_vless.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-08-11T05:33:27.330627+00:00",
-      "metadata": {
-        "repository": "LeilaoMi/AutoMergePublicNodes-Optimized",
-        "branch": "main",
-        "path": "output/by_protocol/verified_vless.txt"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 53,
-    "unique_items": 53,
-    "duplicate_ratio": 0.0,
-    "protocols": {
-      "vless": 53
-    },
-    "tcp_sample_size": 30,
-    "tcp_ok_count": 29,
-    "tcp_success_rate": 0.9667,
-    "score": 83.5,
-    "status": "redundant",
-    "notes": [
-      "redundant with LeilaoMi/AutoMergePublicNodes-Optimized — output/by_protocol/global_vless.txt; overlap=0.94"
-    ],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 53,
-        "normalized_unique_items": 53,
-        "normalized_removed": 0
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 30,
-        "ok": 29,
-        "success_rate": 0.9667,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 29,
+        "validated_config_count": 21,
         "note": "real validation completed via v2ray_finder.xray_connectivity"
       },
       "freshness": {
@@ -2289,406 +2998,18 @@
         ]
       },
       "redundancy": {
-        "normalized_identity_count": 53,
+        "normalized_identity_count": 2202,
         "threshold": 0.8,
-        "redundant_with": "LeilaoMi/AutoMergePublicNodes-Optimized — output/by_protocol/global_vless.txt",
-        "overlap": 0.9434,
+        "redundant_with": "Telegram public channel daily_free_vpn → gh-proxy.org/https://raw.githubusercontent.com/cbusifabcap/daily_free_vpn/ref...",
+        "overlap": 1.0,
         "method": "normalized_config_identity"
       },
       "history": {
-        "times_seen": 6,
+        "times_seen": 12,
         "failure_streak": 0,
-        "avg_tcp_success_rate": 0.9778,
-        "avg_real_success_rate": 0.9333,
+        "avg_tcp_success_rate": 0.9825,
+        "avg_real_success_rate": 0.6972,
         "last_config_churn_rate": 1.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-mohammadbahemmat-v2ray-collector-main-se-3a7fc61a",
-      "label": "MohammadBahemmat/V2ray-Collector — servers/vless_servers.txt",
-      "url": "https://raw.githubusercontent.com/MohammadBahemmat/V2ray-Collector/main/servers/vless_servers.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-08-11T05:33:27.894235+00:00",
-      "metadata": {
-        "repository": "MohammadBahemmat/V2ray-Collector",
-        "branch": "main",
-        "path": "servers/vless_servers.txt"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 918,
-    "unique_items": 888,
-    "duplicate_ratio": 0.0327,
-    "protocols": {
-      "vless": 888
-    },
-    "tcp_sample_size": 60,
-    "tcp_ok_count": 39,
-    "tcp_success_rate": 0.65,
-    "score": 65.5,
-    "status": "redundant",
-    "notes": [
-      "demoted by low real-validation success",
-      "redundant with ebrasha/free-v2ray-public-list — separated-protocols/vless_configs.txt; overlap=1.00"
-    ],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 918,
-        "normalized_unique_items": 888,
-        "normalized_removed": 30
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 30,
-        "ok": 4,
-        "success_rate": 0.1333,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 4,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": -9.0,
-        "config_churn_rate": 0.0,
-        "history_available": true,
-        "reasons": [
-          "stale unchanged configs",
-          "weak historical real validation",
-          "strong historical TCP"
-        ]
-      },
-      "redundancy": {
-        "normalized_identity_count": 888,
-        "threshold": 0.8,
-        "redundant_with": "ebrasha/free-v2ray-public-list — separated-protocols/vless_configs.txt",
-        "overlap": 1.0,
-        "method": "normalized_config_identity"
-      },
-      "history": {
-        "times_seen": 5,
-        "failure_streak": 0,
-        "avg_tcp_success_rate": 0.7234,
-        "avg_real_success_rate": 0.1533,
-        "last_config_churn_rate": 0.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-solispirit-solvpn-main-protocols-vless-t-3079501c",
-      "label": "SoliSpirit/SolVPN — Protocols/vless.txt",
-      "url": "https://raw.githubusercontent.com/SoliSpirit/SolVPN/main/Protocols/vless.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-08-11T05:33:22.435740+00:00",
-      "metadata": {
-        "repository": "SoliSpirit/SolVPN",
-        "branch": "main",
-        "path": "Protocols/vless.txt"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 384,
-    "unique_items": 370,
-    "duplicate_ratio": 0.0365,
-    "protocols": {
-      "trojan": 3,
-      "vless": 367
-    },
-    "tcp_sample_size": 60,
-    "tcp_ok_count": 49,
-    "tcp_success_rate": 0.8167,
-    "score": 93.8,
-    "status": "redundant",
-    "notes": [
-      "redundant with SoliSpirit/SolVPN — all_configs.txt; overlap=1.00"
-    ],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 384,
-        "normalized_unique_items": 370,
-        "normalized_removed": 14
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 30,
-        "ok": 16,
-        "success_rate": 0.5333,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 16,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": 15.0,
-        "config_churn_rate": 0.2785,
-        "history_available": true,
-        "reasons": [
-          "fresh config churn",
-          "strong historical real validation",
-          "strong historical TCP"
-        ]
-      },
-      "redundancy": {
-        "normalized_identity_count": 370,
-        "threshold": 0.8,
-        "redundant_with": "SoliSpirit/SolVPN — all_configs.txt",
-        "overlap": 0.9973,
-        "method": "normalized_config_identity"
-      },
-      "history": {
-        "times_seen": 2,
-        "failure_streak": 0,
-        "avg_tcp_success_rate": 0.8334,
-        "avg_real_success_rate": 0.5333,
-        "last_config_churn_rate": 0.2785
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-ebrasha-free-v2ray-public-list-main-sepa-94109945",
-      "label": "ebrasha/free-v2ray-public-list — separated-protocols-chunks/vless/EbraSha-Protocol-Chunks-vless-008.txt",
-      "url": "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/main/separated-protocols-chunks/vless/EbraSha-Protocol-Chunks-vless-008.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-08-11T05:33:23.978732+00:00",
-      "metadata": {
-        "repository": "ebrasha/free-v2ray-public-list",
-        "branch": "main",
-        "path": "separated-protocols-chunks/vless/EbraSha-Protocol-Chunks-vless-008.txt"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 1013,
-    "unique_items": 789,
-    "duplicate_ratio": 0.2211,
-    "protocols": {
-      "vless": 789
-    },
-    "tcp_sample_size": 60,
-    "tcp_ok_count": 30,
-    "tcp_success_rate": 0.5,
-    "score": 65.2,
-    "status": "redundant",
-    "notes": [
-      "demoted by low real-validation success",
-      "redundant with ebrasha/free-v2ray-public-list — separated-protocols/vless_configs.txt; overlap=1.00"
-    ],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 1013,
-        "normalized_unique_items": 789,
-        "normalized_removed": 224
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 30,
-        "ok": 2,
-        "success_rate": 0.0667,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 2,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": 1.0,
-        "config_churn_rate": null,
-        "history_available": false,
-        "reasons": [
-          "new source"
-        ]
-      },
-      "redundancy": {
-        "normalized_identity_count": 789,
-        "threshold": 0.8,
-        "redundant_with": "ebrasha/free-v2ray-public-list — separated-protocols/vless_configs.txt",
-        "overlap": 1.0,
-        "method": "normalized_config_identity"
-      },
-      "history": {
-        "times_seen": 1,
-        "failure_streak": 0,
-        "avg_tcp_success_rate": 0.5,
-        "avg_real_success_rate": 0.0667,
-        "last_config_churn_rate": 1.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-ebrasha-free-v2ray-public-list-main-sepa-2f646900",
-      "label": "ebrasha/free-v2ray-public-list — separated-protocols-chunks/vless/EbraSha-Protocol-Chunks-vless-014.txt",
-      "url": "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/main/separated-protocols-chunks/vless/EbraSha-Protocol-Chunks-vless-014.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-08-11T05:33:23.978707+00:00",
-      "metadata": {
-        "repository": "ebrasha/free-v2ray-public-list",
-        "branch": "main",
-        "path": "separated-protocols-chunks/vless/EbraSha-Protocol-Chunks-vless-014.txt"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 1032,
-    "unique_items": 829,
-    "duplicate_ratio": 0.1967,
-    "protocols": {
-      "vless": 829
-    },
-    "tcp_sample_size": 60,
-    "tcp_ok_count": 40,
-    "tcp_success_rate": 0.6667,
-    "score": 73.9,
-    "status": "redundant",
-    "notes": [
-      "redundant with ebrasha/free-v2ray-public-list — separated-protocols/vless_configs.txt; overlap=1.00"
-    ],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 1032,
-        "normalized_unique_items": 829,
-        "normalized_removed": 203
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 30,
-        "ok": 7,
-        "success_rate": 0.2333,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 7,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": 1.0,
-        "config_churn_rate": null,
-        "history_available": false,
-        "reasons": [
-          "new source"
-        ]
-      },
-      "redundancy": {
-        "normalized_identity_count": 829,
-        "threshold": 0.8,
-        "redundant_with": "ebrasha/free-v2ray-public-list — separated-protocols/vless_configs.txt",
-        "overlap": 1.0,
-        "method": "normalized_config_identity"
-      },
-      "history": {
-        "times_seen": 1,
-        "failure_streak": 0,
-        "avg_tcp_success_rate": 0.6667,
-        "avg_real_success_rate": 0.2333,
-        "last_config_churn_rate": 1.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-iboxz-free-v2ray-collector-main-main-vle-31f771d2",
-      "label": "iboxz/free-v2ray-collector — main/vless.txt",
-      "url": "https://raw.githubusercontent.com/iboxz/free-v2ray-collector/main/main/vless.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-08-11T05:33:23.447089+00:00",
-      "metadata": {
-        "repository": "iboxz/free-v2ray-collector",
-        "branch": "main",
-        "path": "main/vless.txt"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 299,
-    "unique_items": 291,
-    "duplicate_ratio": 0.0268,
-    "protocols": {
-      "vless": 291
-    },
-    "tcp_sample_size": 30,
-    "tcp_ok_count": 13,
-    "tcp_success_rate": 0.4333,
-    "score": 57.3,
-    "status": "redundant",
-    "notes": [
-      "redundant with ebrasha/free-v2ray-public-list — separated-protocols/vless_configs.txt; overlap=1.00"
-    ],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 299,
-        "normalized_unique_items": 291,
-        "normalized_removed": 8
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 30,
-        "ok": 1,
-        "success_rate": 0.0333,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 1,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": 4.0,
-        "config_churn_rate": 0.4472,
-        "history_available": true,
-        "reasons": [
-          "fresh config churn",
-          "weak historical real validation"
-        ]
-      },
-      "redundancy": {
-        "normalized_identity_count": 291,
-        "threshold": 0.8,
-        "redundant_with": "ebrasha/free-v2ray-public-list — separated-protocols/vless_configs.txt",
-        "overlap": 1.0,
-        "method": "normalized_config_identity"
-      },
-      "history": {
-        "times_seen": 5,
-        "failure_streak": 0,
-        "avg_tcp_success_rate": 0.4667,
-        "avg_real_success_rate": 0.12,
-        "last_config_churn_rate": 0.4472
       }
     }
   }
