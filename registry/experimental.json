@@ -1,9 +1,9 @@
 [
   {
     "candidate": {
-      "id": "https-raw-githubusercontent-com-idolvpn-automate-v2ray-config-collector--83493ccb",
-      "label": "Idolvpn/Automate-V2ray-Config-Collector — configs/country_VG.txt",
-      "url": "https://raw.githubusercontent.com/Idolvpn/Automate-V2ray-Config-Collector/main/configs/country_VG.txt",
+      "id": "https-raw-githubusercontent-com-elanski-proxy-preflight-main-configs-sub-5e082ca7",
+      "label": "elanski/proxy-preflight — configs/sub_ru.txt",
+      "url": "https://raw.githubusercontent.com/elanski/proxy-preflight/main/configs/sub_ru.txt",
       "origin": "repository_tree",
       "kind": "public_feed",
       "tags": [
@@ -12,11 +12,221 @@
         "github",
         "english"
       ],
-      "discovered_at": "2026-09-01T09:29:29.069094+00:00",
+      "discovered_at": "2026-09-02T08:52:18.060420+00:00",
       "metadata": {
-        "repository": "Idolvpn/Automate-V2ray-Config-Collector",
+        "repository": "elanski/proxy-preflight",
         "branch": "main",
-        "path": "configs/country_VG.txt"
+        "path": "configs/sub_ru.txt"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 100,
+    "unique_items": 88,
+    "duplicate_ratio": 0.12,
+    "protocols": {
+      "vless": 88
+    },
+    "tcp_sample_size": 30,
+    "tcp_ok_count": 1,
+    "tcp_success_rate": 0.0333,
+    "score": 8.8,
+    "status": "experimental",
+    "notes": [
+      "very low TCP success rate"
+    ],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 100,
+        "normalized_unique_items": 88,
+        "normalized_removed": 12
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 30,
+        "ok": 0,
+        "success_rate": 0.0,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 0,
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": -13.0,
+        "config_churn_rate": 0.0,
+        "history_available": true,
+        "reasons": [
+          "stale unchanged configs",
+          "weak historical TCP"
+        ]
+      },
+      "history": {
+        "times_seen": 17,
+        "failure_streak": 0,
+        "avg_tcp_success_rate": 0.0666,
+        "avg_real_success_rate": 0.0,
+        "last_config_churn_rate": 0.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-kort0881-vpn-vless-configs-russia-main-a-4fd34e33",
+      "label": "kort0881/vpn-vless-configs-russia — archive/my_sources/generated/vless.txt",
+      "url": "https://raw.githubusercontent.com/kort0881/vpn-vless-configs-russia/main/archive/my_sources/generated/vless.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github"
+      ],
+      "discovered_at": "2026-09-02T08:52:09.135129+00:00",
+      "metadata": {
+        "repository": "kort0881/vpn-vless-configs-russia",
+        "branch": "main",
+        "path": "archive/my_sources/generated/vless.txt"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 50,
+    "unique_items": 50,
+    "duplicate_ratio": 0.0,
+    "protocols": {
+      "vless": 50
+    },
+    "tcp_sample_size": 30,
+    "tcp_ok_count": 0,
+    "tcp_success_rate": 0.0,
+    "score": 2.0,
+    "status": "experimental",
+    "notes": [
+      "very low TCP success rate"
+    ],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 50,
+        "normalized_unique_items": 50,
+        "normalized_removed": 0
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 30,
+        "ok": 0,
+        "success_rate": 0.0,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 0,
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": -18.0,
+        "config_churn_rate": 0.0,
+        "history_available": true,
+        "reasons": [
+          "unchanged configs",
+          "weak historical TCP",
+          "last success older than 30 days"
+        ]
+      },
+      "history": {
+        "times_seen": 3,
+        "failure_streak": 0,
+        "avg_tcp_success_rate": 0.0,
+        "avg_real_success_rate": 0.0,
+        "last_config_churn_rate": 0.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-kort0881-vpn-vless-configs-russia-main-d-3962da94",
+      "label": "kort0881/vpn-vless-configs-russia — data/githubmirror/new/by_protocol/vmess/vmess_169.txt",
+      "url": "https://raw.githubusercontent.com/kort0881/vpn-vless-configs-russia/main/data/githubmirror/new/by_protocol/vmess/vmess_169.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github"
+      ],
+      "discovered_at": "2026-09-02T08:52:09.135121+00:00",
+      "metadata": {
+        "repository": "kort0881/vpn-vless-configs-russia",
+        "branch": "main",
+        "path": "data/githubmirror/new/by_protocol/vmess/vmess_169.txt"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 500,
+    "unique_items": 317,
+    "duplicate_ratio": 0.366,
+    "protocols": {
+      "vmess": 317
+    },
+    "tcp_sample_size": 60,
+    "tcp_ok_count": 3,
+    "tcp_success_rate": 0.05,
+    "score": 31.4,
+    "status": "experimental",
+    "notes": [
+      "very low TCP success rate"
+    ],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 500,
+        "normalized_unique_items": 317,
+        "normalized_removed": 183
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 30,
+        "ok": 0,
+        "success_rate": 0.0,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 0,
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": 1.0,
+        "config_churn_rate": null,
+        "history_available": false,
+        "reasons": [
+          "new source"
+        ]
+      },
+      "history": {
+        "times_seen": 1,
+        "failure_streak": 0,
+        "avg_tcp_success_rate": 0.05,
+        "avg_real_success_rate": 0.0,
+        "last_config_churn_rate": 1.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-soroushyasini-proxysmith-main-bash-manua-5c7b631d",
+      "label": "soroushyasini/proxysmith — bash/manualconfig.txt",
+      "url": "https://raw.githubusercontent.com/soroushyasini/proxysmith/main/bash/manualconfig.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github"
+      ],
+      "discovered_at": "2026-09-02T08:52:06.246819+00:00",
+      "metadata": {
+        "repository": "soroushyasini/proxysmith",
+        "branch": "main",
+        "path": "bash/manualconfig.txt"
       }
     },
     "fetch_ok": true,
@@ -26,12 +236,14 @@
     "unique_items": 3,
     "duplicate_ratio": 0.0,
     "protocols": {
-      "vmess": 3
+      "ss": 1,
+      "trojan": 1,
+      "vless": 1
     },
     "tcp_sample_size": 3,
     "tcp_ok_count": 0,
     "tcp_success_rate": 0.0,
-    "score": 18.6,
+    "score": 9.6,
     "status": "experimental",
     "notes": [
       "very low TCP success rate"
@@ -53,19 +265,90 @@
         "note": "real validation completed via v2ray_finder.xray_connectivity"
       },
       "freshness": {
-        "score_adjustment": 1.0,
-        "config_churn_rate": null,
-        "history_available": false,
+        "score_adjustment": -13.0,
+        "config_churn_rate": 0.0,
+        "history_available": true,
         "reasons": [
-          "new source"
+          "stale unchanged configs",
+          "weak historical TCP"
         ]
       },
       "history": {
-        "times_seen": 1,
+        "times_seen": 15,
         "failure_streak": 0,
         "avg_tcp_success_rate": 0.0,
         "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 1.0
+        "last_config_churn_rate": 0.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-thealiiakbarii-ai-vcc-main-configs-shado-07fbb99c",
+      "label": "thealiiakbarii-ai/VCC — configs/shadowsocksr.txt",
+      "url": "https://raw.githubusercontent.com/thealiiakbarii-ai/VCC/main/configs/shadowsocksr.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github"
+      ],
+      "discovered_at": "2026-09-02T08:52:10.719478+00:00",
+      "metadata": {
+        "repository": "thealiiakbarii-ai/VCC",
+        "branch": "main",
+        "path": "configs/shadowsocksr.txt"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 18,
+    "unique_items": 18,
+    "duplicate_ratio": 0.0,
+    "protocols": {
+      "ssr": 18
+    },
+    "tcp_sample_size": 18,
+    "tcp_ok_count": 0,
+    "tcp_success_rate": 0.0,
+    "score": 21.4,
+    "status": "experimental",
+    "notes": [
+      "very low TCP success rate"
+    ],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 18,
+        "normalized_unique_items": 18,
+        "normalized_removed": 0
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 18,
+        "ok": 0,
+        "success_rate": 0.0,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 0,
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": 3.0,
+        "config_churn_rate": 0.3684,
+        "history_available": true,
+        "reasons": [
+          "fresh config churn",
+          "weak historical TCP"
+        ]
+      },
+      "history": {
+        "times_seen": 12,
+        "failure_streak": 0,
+        "avg_tcp_success_rate": 0.0,
+        "avg_real_success_rate": 0.0,
+        "last_config_churn_rate": 0.3684
       }
     }
   }
