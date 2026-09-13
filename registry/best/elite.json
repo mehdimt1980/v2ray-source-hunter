@@ -1,5 +1,74 @@
 [
   {
+    "id": "ss-156-146-38-167-443-aes-128-gcm-shadowsocks-3a8b3ee3",
+    "config": "ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@156.146.38.167:443#",
+    "normalized_identity": "ss|156.146.38.167|443|aes-128-gcm|shadowsocks",
+    "source_id": "https-raw-githubusercontent-com-yawstar-proxy-hunter-main-configs-proxy--56462658",
+    "source_label": "YawStar/Proxy-Hunter — configs/proxy_configs_tested.txt",
+    "source_url": "https://raw.githubusercontent.com/YawStar/Proxy-Hunter/main/configs/proxy_configs_tested.txt",
+    "source_origin": "repository_tree",
+    "source_status": "redundant",
+    "protocol": "ss",
+    "validated_at": "2026-09-13T09:39:08.681497+00:00",
+    "validation_location": "github_actions_eu",
+    "xray_ok": true,
+    "google_204_ok": true,
+    "reachable": true,
+    "http_endpoint_results": [
+      {
+        "name": "google_204",
+        "url": "https://www.gstatic.com/generate_204",
+        "ok": true,
+        "status_code": 204,
+        "latency_ms": 72.0,
+        "error": ""
+      },
+      {
+        "name": "cloudflare_trace",
+        "url": "https://www.cloudflare.com/cdn-cgi/trace",
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 76.7,
+        "error": ""
+      },
+      {
+        "name": "cloudflare_204",
+        "url": "https://cp.cloudflare.com/generate_204",
+        "ok": true,
+        "status_code": 204,
+        "latency_ms": 83.1,
+        "error": ""
+      },
+      {
+        "name": "apple_success",
+        "url": "https://www.apple.com/library/test/success.html",
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 72.6,
+        "error": ""
+      }
+    ],
+    "http_endpoint_ok_count": 4,
+    "http_endpoint_checked": 4,
+    "http_endpoint_success_rate": 1.0,
+    "http_endpoint_note": "",
+    "latency_ms": 38.14644200002704,
+    "quality_score": 100.0,
+    "retried": false,
+    "source_metrics": {
+      "score": 97.5,
+      "tcp_success_rate": 1.0,
+      "real_success_rate": 0.7667
+    },
+    "stability": {
+      "times_validated": 59,
+      "success_streak": 29,
+      "first_validated_at": "2026-07-15T18:37:13.659260+00:00",
+      "last_validated_at": "2026-09-13T09:39:08.681497+00:00",
+      "stability_score": 100
+    }
+  },
+  {
     "id": "ss-156-146-38-170-443-aes-128-gcm-shadowsocks-4ccd9c58",
     "config": "ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@156.146.38.170:443#",
     "normalized_identity": "ss|156.146.38.170|443|aes-128-gcm|shadowsocks",
@@ -9,7 +78,7 @@
     "source_origin": "repository_tree",
     "source_status": "trusted",
     "protocol": "ss",
-    "validated_at": "2026-09-12T08:44:13.502640+00:00",
+    "validated_at": "2026-09-13T09:39:08.681497+00:00",
     "validation_location": "github_actions_eu",
     "xray_ok": true,
     "google_204_ok": true,
@@ -20,7 +89,7 @@
         "url": "https://www.gstatic.com/generate_204",
         "ok": true,
         "status_code": 204,
-        "latency_ms": 70.9,
+        "latency_ms": 75.6,
         "error": ""
       },
       {
@@ -28,7 +97,7 @@
         "url": "https://www.cloudflare.com/cdn-cgi/trace",
         "ok": true,
         "status_code": 200,
-        "latency_ms": 80.1,
+        "latency_ms": 84.2,
         "error": ""
       },
       {
@@ -36,7 +105,7 @@
         "url": "https://cp.cloudflare.com/generate_204",
         "ok": true,
         "status_code": 204,
-        "latency_ms": 77.1,
+        "latency_ms": 79.8,
         "error": ""
       },
       {
@@ -44,7 +113,7 @@
         "url": "https://www.apple.com/library/test/success.html",
         "ok": true,
         "status_code": 200,
-        "latency_ms": 72.0,
+        "latency_ms": 77.2,
         "error": ""
       }
     ],
@@ -52,33 +121,33 @@
     "http_endpoint_checked": 4,
     "http_endpoint_success_rate": 1.0,
     "http_endpoint_note": "",
-    "latency_ms": 39.604787000143915,
+    "latency_ms": 39.20379400005913,
     "quality_score": 100.0,
     "retried": false,
     "source_metrics": {
       "score": 64.1,
       "tcp_success_rate": 0.7667,
-      "real_success_rate": 0.3667
+      "real_success_rate": 0.4
     },
     "stability": {
-      "times_validated": 60,
-      "success_streak": 25,
+      "times_validated": 61,
+      "success_streak": 26,
       "first_validated_at": "2026-07-15T18:37:13.659260+00:00",
-      "last_validated_at": "2026-09-12T08:44:13.502640+00:00",
+      "last_validated_at": "2026-09-13T09:39:08.681497+00:00",
       "stability_score": 100
     }
   },
   {
-    "id": "vmess-82-198-246-233-180-d13fc2f5-3e05-4795-81eb-44143a09e552-tcp-fra34--cc0f2177",
-    "config": "vmess://eyJ2IjpudWxsLCJwcyI6IlVTIPCfh7rwn4e4IHwgQFJheWRpa2FseCB8IDFERkFCOCIsImFkZCI6IjgyLjE5OC4yNDYuMjMzIiwicG9ydCI6MTgwLCJpZCI6ImQxM2ZjMmY1LTNlMDUtNDc5NS04MWViLTQ0MTQzYTA5ZTU1MiIsImFpZCI6IjAiLCJzY3kiOm51bGwsIm5ldCI6InRjcCIsInR5cGUiOm51bGwsImhvc3QiOiJmcmEzNC5jaGFzZW0yMDI2c3VkLmNvbSIsImFscG4iOm51bGwsInBhdGgiOiIvIiwidGxzIjoiIiwic25pIjpudWxsLCJmcCI6bnVsbH0=#",
-    "normalized_identity": "vmess|82.198.246.233|180|d13fc2f5-3e05-4795-81eb-44143a09e552|tcp||fra34.chasem2026sud.com|/",
-    "source_id": "https-raw-githubusercontent-com-firmfox-proxify-main-v2ray-configs-separ-2846e228",
-    "source_label": "Firmfox/Proxify — v2ray_configs/separated_by_protocol/vmess.txt",
-    "source_url": "https://raw.githubusercontent.com/Firmfox/Proxify/main/v2ray_configs/separated_by_protocol/vmess.txt",
+    "id": "vmess-82-198-246-250-180-d13fc2f5-3e05-4795-81eb-44143a09e552-tcp-ads-x5-5cf151fe",
+    "config": "vmess://eyJ2IjogIjIiLCAicHMiOiAiXHVkODNkXHVkZDI1Sm9pbitUZWxlZ3JhbTpARmFyYWhfVlBOXHVkODNkXHVkZmUzIiwgImFkZCI6ICI4Mi4xOTguMjQ2LjI1MCIsICJwb3J0IjogIjE4MCIsICJ0eXBlIjogIm5vbmUiLCAiaWQiOiAiZDEzZmMyZjUtM2UwNS00Nzk1LTgxZWItNDQxNDNhMDllNTUyIiwgImFpZCI6ICIwIiwgIm5ldCI6ICJ0Y3AiLCAicGF0aCI6ICIvIiwgImhvc3QiOiAiYWRzLng1LnJ1IiwgInRscyI6ICIifQ==",
+    "normalized_identity": "vmess|82.198.246.250|180|d13fc2f5-3e05-4795-81eb-44143a09e552|tcp||ads.x5.ru|/",
+    "source_id": "https-raw-githubusercontent-com-solispirit-v2ray-configs-main-subscripti-f135a4f0",
+    "source_label": "SoliSpirit/v2ray-configs — Subscriptions/Sub19.txt",
+    "source_url": "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/main/Subscriptions/Sub19.txt",
     "source_origin": "repository_tree",
     "source_status": "redundant",
     "protocol": "vmess",
-    "validated_at": "2026-09-12T08:44:13.502640+00:00",
+    "validated_at": "2026-09-13T09:39:08.681497+00:00",
     "validation_location": "github_actions_eu",
     "xray_ok": true,
     "google_204_ok": true,
@@ -89,7 +158,7 @@
         "url": "https://www.gstatic.com/generate_204",
         "ok": true,
         "status_code": 204,
-        "latency_ms": 111.8,
+        "latency_ms": 104.1,
         "error": ""
       },
       {
@@ -97,7 +166,7 @@
         "url": "https://www.cloudflare.com/cdn-cgi/trace",
         "ok": true,
         "status_code": 200,
-        "latency_ms": 110.4,
+        "latency_ms": 101.3,
         "error": ""
       },
       {
@@ -105,7 +174,7 @@
         "url": "https://cp.cloudflare.com/generate_204",
         "ok": true,
         "status_code": 204,
-        "latency_ms": 101.0,
+        "latency_ms": 100.6,
         "error": ""
       },
       {
@@ -113,7 +182,7 @@
         "url": "https://www.apple.com/library/test/success.html",
         "ok": true,
         "status_code": 200,
-        "latency_ms": 127.4,
+        "latency_ms": 101.9,
         "error": ""
       }
     ],
@@ -121,585 +190,33 @@
     "http_endpoint_checked": 4,
     "http_endpoint_success_rate": 1.0,
     "http_endpoint_note": "",
-    "latency_ms": 55.73519400013538,
+    "latency_ms": 54.22873999987132,
     "quality_score": 100.0,
     "retried": false,
     "source_metrics": {
-      "score": 71.9,
-      "tcp_success_rate": 0.5833,
-      "real_success_rate": 0.1
-    },
-    "stability": {
-      "times_validated": 7,
-      "success_streak": 2,
-      "first_validated_at": "2026-08-09T05:27:47.204281+00:00",
-      "last_validated_at": "2026-09-12T08:44:13.502640+00:00",
-      "stability_score": 100
-    }
-  },
-  {
-    "id": "vmess-82-198-246-233-180-d13fc2f5-3e05-4795-81eb-44143a09e552-tcp-fra34--ccdcd92c",
-    "config": "vmess://eyJ2IjoiMiIsInBzIjoiVVMg8J-HuvCfh7ggfCBAUmF5ZGlrYWx4IHwgMURGQUI4IiwiYWRkIjoiODIuMTk4LjI0Ni4yMzMiLCJwb3J0IjoiMTgwIiwiaWQiOiJkMTNmYzJmNS0zZTA1LTQ3OTUtODFlYi00NDE0M2EwOWU1NTIiLCJhaWQiOiIwIiwibmV0IjoidGNwIiwidHlwZSI6InZtZXNzIiwiaG9zdCI6ImZyYTM0LmNoYXNlbTIwMjZzdWQuY29tIiwicGF0aCI6IiIsInRscyI6IiJ9",
-    "normalized_identity": "vmess|82.198.246.233|180|d13fc2f5-3e05-4795-81eb-44143a09e552|tcp||fra34.chasem2026sud.com|",
-    "source_id": "https-raw-githubusercontent-com-0xradikal-free-v2ray-configs-main-fast-c-f34cf74a",
-    "source_label": "0xRadikal/Free-v2ray-Configs — fast/clash.yaml",
-    "source_url": "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/fast/clash.yaml",
-    "source_origin": "repository_tree",
-    "source_status": "redundant",
-    "protocol": "vmess",
-    "validated_at": "2026-09-12T08:44:13.502640+00:00",
-    "validation_location": "github_actions_eu",
-    "xray_ok": true,
-    "google_204_ok": true,
-    "reachable": true,
-    "http_endpoint_results": [
-      {
-        "name": "google_204",
-        "url": "https://www.gstatic.com/generate_204",
-        "ok": true,
-        "status_code": 204,
-        "latency_ms": 105.0,
-        "error": ""
-      },
-      {
-        "name": "cloudflare_trace",
-        "url": "https://www.cloudflare.com/cdn-cgi/trace",
-        "ok": true,
-        "status_code": 200,
-        "latency_ms": 109.4,
-        "error": ""
-      },
-      {
-        "name": "cloudflare_204",
-        "url": "https://cp.cloudflare.com/generate_204",
-        "ok": true,
-        "status_code": 204,
-        "latency_ms": 112.2,
-        "error": ""
-      },
-      {
-        "name": "apple_success",
-        "url": "https://www.apple.com/library/test/success.html",
-        "ok": true,
-        "status_code": 200,
-        "latency_ms": 121.0,
-        "error": ""
-      }
-    ],
-    "http_endpoint_ok_count": 4,
-    "http_endpoint_checked": 4,
-    "http_endpoint_success_rate": 1.0,
-    "http_endpoint_note": "",
-    "latency_ms": 56.871608000165,
-    "quality_score": 100.0,
-    "retried": false,
-    "source_metrics": {
-      "score": 100.0,
-      "tcp_success_rate": 1.0,
-      "real_success_rate": 0.7333
-    },
-    "stability": {
-      "times_validated": 9,
-      "success_streak": 2,
-      "first_validated_at": "2026-08-11T05:34:06.910587+00:00",
-      "last_validated_at": "2026-09-12T08:44:13.502640+00:00",
-      "stability_score": 100
-    }
-  },
-  {
-    "id": "ss-15-235-75-71-8388-chacha20-ietf-poly1305-fd3rcuosxoay-1d6f7b64",
-    "config": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpGRDNyQ3VPc3hPYXk@15.235.75.71:8388#",
-    "normalized_identity": "ss|15.235.75.71|8388|chacha20-ietf-poly1305|FD3rCuOsxOay",
-    "source_id": "https-raw-githubusercontent-com-firmfox-proxify-main-v2ray-configs-subsc-33e66673",
-    "source_label": "Firmfox/Proxify — v2ray_configs/subscriptions/subscription-16.txt",
-    "source_url": "https://raw.githubusercontent.com/Firmfox/Proxify/main/v2ray_configs/subscriptions/subscription-16.txt",
-    "source_origin": "repository_tree",
-    "source_status": "redundant",
-    "protocol": "ss",
-    "validated_at": "2026-09-12T08:44:13.502640+00:00",
-    "validation_location": "github_actions_eu",
-    "xray_ok": true,
-    "google_204_ok": true,
-    "reachable": true,
-    "http_endpoint_results": [
-      {
-        "name": "google_204",
-        "url": "https://www.gstatic.com/generate_204",
-        "ok": true,
-        "status_code": 204,
-        "latency_ms": 231.9,
-        "error": ""
-      },
-      {
-        "name": "cloudflare_trace",
-        "url": "https://www.cloudflare.com/cdn-cgi/trace",
-        "ok": true,
-        "status_code": 200,
-        "latency_ms": 295.7,
-        "error": ""
-      },
-      {
-        "name": "cloudflare_204",
-        "url": "https://cp.cloudflare.com/generate_204",
-        "ok": true,
-        "status_code": 204,
-        "latency_ms": 222.0,
-        "error": ""
-      },
-      {
-        "name": "apple_success",
-        "url": "https://www.apple.com/library/test/success.html",
-        "ok": true,
-        "status_code": 200,
-        "latency_ms": 567.9,
-        "error": ""
-      }
-    ],
-    "http_endpoint_ok_count": 4,
-    "http_endpoint_checked": 4,
-    "http_endpoint_success_rate": 1.0,
-    "http_endpoint_note": "",
-    "latency_ms": 101.04673099999673,
-    "quality_score": 99.8,
-    "retried": false,
-    "source_metrics": {
-      "score": 70.5,
-      "tcp_success_rate": 0.6,
-      "real_success_rate": 0.1667
-    },
-    "stability": {
-      "times_validated": 26,
-      "success_streak": 3,
-      "first_validated_at": "2026-08-13T05:54:26.410183+00:00",
-      "last_validated_at": "2026-09-12T08:44:13.502640+00:00",
-      "stability_score": 100
-    }
-  },
-  {
-    "id": "ss-140-82-63-79-8388-chacha20-ietf-poly1305-zoztfpoyvvmkarun-ee32f112",
-    "config": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpab1p0ZlBPeVZ2bUtBUlVO@140.82.63.79:8388#",
-    "normalized_identity": "ss|140.82.63.79|8388|chacha20-ietf-poly1305|ZoZtfPOyVvmKARUN",
-    "source_id": "https-raw-githubusercontent-com-hidashimora-free-vpn-anti-rkn-main-confi-7fa67692",
-    "source_label": "Hidashimora/free-vpn-anti-rkn — configs/3.2.txt",
-    "source_url": "https://raw.githubusercontent.com/Hidashimora/free-vpn-anti-rkn/main/configs/3.2.txt",
-    "source_origin": "repository_tree",
-    "source_status": "trusted",
-    "protocol": "ss",
-    "validated_at": "2026-09-12T08:44:13.502640+00:00",
-    "validation_location": "github_actions_eu",
-    "xray_ok": true,
-    "google_204_ok": true,
-    "reachable": true,
-    "http_endpoint_results": [
-      {
-        "name": "google_204",
-        "url": "https://www.gstatic.com/generate_204",
-        "ok": true,
-        "status_code": 204,
-        "latency_ms": 225.6,
-        "error": ""
-      },
-      {
-        "name": "cloudflare_trace",
-        "url": "https://www.cloudflare.com/cdn-cgi/trace",
-        "ok": true,
-        "status_code": 200,
-        "latency_ms": 224.3,
-        "error": ""
-      },
-      {
-        "name": "cloudflare_204",
-        "url": "https://cp.cloudflare.com/generate_204",
-        "ok": true,
-        "status_code": 204,
-        "latency_ms": 220.6,
-        "error": ""
-      },
-      {
-        "name": "apple_success",
-        "url": "https://www.apple.com/library/test/success.html",
-        "ok": true,
-        "status_code": 200,
-        "latency_ms": 254.8,
-        "error": ""
-      }
-    ],
-    "http_endpoint_ok_count": 4,
-    "http_endpoint_checked": 4,
-    "http_endpoint_success_rate": 1.0,
-    "http_endpoint_note": "",
-    "latency_ms": 105.20866899969405,
-    "quality_score": 99.2,
-    "retried": false,
-    "source_metrics": {
-      "score": 77.0,
-      "tcp_success_rate": 0.42,
-      "real_success_rate": 0.2
-    },
-    "stability": {
-      "times_validated": 4,
-      "success_streak": 3,
-      "first_validated_at": "2026-08-23T05:01:19.435358+00:00",
-      "last_validated_at": "2026-09-12T08:44:13.502640+00:00",
-      "stability_score": 100
-    }
-  },
-  {
-    "id": "vmess-165-140-216-142-443-b65a2d69-5634-42a2-e4be-54e8a6176900-tcp-levik-9b7647d7",
-    "config": "vmess://eyJ2IjogIjIiLCAicHMiOiAi8J+HuvCfh7ggMTAzIC0gVVMgLSBWTWVzcyAtIDQ0MyIsICJhZGQiOiAiMTY1LjE0MC4yMTYuMTQyIiwgInBvcnQiOiA0NDMsICJpZCI6ICJiNjVhMmQ2OS01NjM0LTQyYTItZTRiZS01NGU4YTYxNzY5MDAiLCAiYWlkIjogIjAiLCAic2N5IjogImF1dG8iLCAibmV0IjogInRjcCIsICJ0eXBlIjogIm5vbmUiLCAiaG9zdCI6ICIiLCAicGF0aCI6ICIvTGV2aWtvQ29uZmlnIiwgInRscyI6ICIiLCAic25pIjogIiIsICJ0ZXN0X25hbWUiOiAiVVMxMyIsICJuYW1lIjogIvCflKVKb2luK1RlbGVncmFtOkBGYXJhaF9WUE7wn5+jIn0=",
-    "normalized_identity": "vmess|165.140.216.142|443|b65a2d69-5634-42a2-e4be-54e8a6176900|tcp|||/LevikoConfig",
-    "source_id": "https-raw-githubusercontent-com-nyeinkokoaung404-v2ray-configs-main-conf-c94a99a0",
-    "source_label": "nyeinkokoaung404/V2ray-Configs — configs/proxy_configs.txt",
-    "source_url": "https://raw.githubusercontent.com/nyeinkokoaung404/V2ray-Configs/main/configs/proxy_configs.txt",
-    "source_origin": "repository_tree",
-    "source_status": "redundant",
-    "protocol": "vmess",
-    "validated_at": "2026-09-12T08:44:13.502640+00:00",
-    "validation_location": "github_actions_eu",
-    "xray_ok": true,
-    "google_204_ok": true,
-    "reachable": true,
-    "http_endpoint_results": [
-      {
-        "name": "google_204",
-        "url": "https://www.gstatic.com/generate_204",
-        "ok": true,
-        "status_code": 204,
-        "latency_ms": 169.4,
-        "error": ""
-      },
-      {
-        "name": "cloudflare_trace",
-        "url": "https://www.cloudflare.com/cdn-cgi/trace",
-        "ok": true,
-        "status_code": 200,
-        "latency_ms": 151.7,
-        "error": ""
-      },
-      {
-        "name": "cloudflare_204",
-        "url": "https://cp.cloudflare.com/generate_204",
-        "ok": true,
-        "status_code": 204,
-        "latency_ms": 157.5,
-        "error": ""
-      },
-      {
-        "name": "apple_success",
-        "url": "https://www.apple.com/library/test/success.html",
-        "ok": true,
-        "status_code": 200,
-        "latency_ms": 170.6,
-        "error": ""
-      }
-    ],
-    "http_endpoint_ok_count": 4,
-    "http_endpoint_checked": 4,
-    "http_endpoint_success_rate": 1.0,
-    "http_endpoint_note": "",
-    "latency_ms": 109.99508500003685,
-    "quality_score": 98.5,
-    "retried": false,
-    "source_metrics": {
-      "score": 96.6,
-      "tcp_success_rate": 0.9333,
-      "real_success_rate": 0.8333
-    },
-    "stability": {
-      "times_validated": 36,
-      "success_streak": 5,
-      "first_validated_at": "2026-07-19T07:40:22.345444+00:00",
-      "last_validated_at": "2026-09-12T08:44:13.502640+00:00",
-      "stability_score": 100
-    }
-  },
-  {
-    "id": "ss-51-222-12-127-445-aes-256-gcm-zdnvedrfpqexg9v-192c4502",
-    "config": "ss://YWVzLTI1Ni1nY206ekROVmVkUkZQUWV4Rzl2@51.222.12.127:445#",
-    "normalized_identity": "ss|51.222.12.127|445|aes-256-gcm|zDNVedRFPQexG9v",
-    "source_id": "https-raw-githubusercontent-com-r3zarahimi-tg-v2ray-configs-every2h-main-d347190f",
-    "source_label": "R3ZARAHIMI/tg-v2ray-configs-every2h — Config_no_cf.txt",
-    "source_url": "https://raw.githubusercontent.com/R3ZARAHIMI/tg-v2ray-configs-every2h/main/Config_no_cf.txt",
-    "source_origin": "repository_tree",
-    "source_status": "trusted",
-    "protocol": "ss",
-    "validated_at": "2026-09-12T08:44:13.502640+00:00",
-    "validation_location": "github_actions_eu",
-    "xray_ok": true,
-    "google_204_ok": true,
-    "reachable": true,
-    "http_endpoint_results": [
-      {
-        "name": "google_204",
-        "url": "https://www.gstatic.com/generate_204",
-        "ok": true,
-        "status_code": 204,
-        "latency_ms": 233.7,
-        "error": ""
-      },
-      {
-        "name": "cloudflare_trace",
-        "url": "https://www.cloudflare.com/cdn-cgi/trace",
-        "ok": true,
-        "status_code": 200,
-        "latency_ms": 248.2,
-        "error": ""
-      },
-      {
-        "name": "cloudflare_204",
-        "url": "https://cp.cloudflare.com/generate_204",
-        "ok": true,
-        "status_code": 204,
-        "latency_ms": 226.6,
-        "error": ""
-      },
-      {
-        "name": "apple_success",
-        "url": "https://www.apple.com/library/test/success.html",
-        "ok": true,
-        "status_code": 200,
-        "latency_ms": 256.1,
-        "error": ""
-      }
-    ],
-    "http_endpoint_ok_count": 4,
-    "http_endpoint_checked": 4,
-    "http_endpoint_success_rate": 1.0,
-    "http_endpoint_note": "",
-    "latency_ms": 113.42226000033406,
-    "quality_score": 98.0,
-    "retried": false,
-    "source_metrics": {
-      "score": 76.3,
-      "tcp_success_rate": 0.6333,
-      "real_success_rate": 0.3
-    },
-    "stability": {
-      "times_validated": 19,
-      "success_streak": 3,
-      "first_validated_at": "2026-08-16T04:55:42.035074+00:00",
-      "last_validated_at": "2026-09-12T08:44:13.502640+00:00",
-      "stability_score": 100
-    }
-  },
-  {
-    "id": "ss-149-22-95-183-443-aes-128-gcm-shadowsocks-a70ab9db",
-    "config": "ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@149.22.95.183:443#",
-    "normalized_identity": "ss|149.22.95.183|443|aes-128-gcm|shadowsocks",
-    "source_id": "https-raw-githubusercontent-com-solispirit-v2ray-configs-main-all-config-698c9127",
-    "source_label": "SoliSpirit/v2ray-configs — all_configs.txt",
-    "source_url": "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/main/all_configs.txt",
-    "source_origin": "repository_tree",
-    "source_status": "candidate",
-    "protocol": "ss",
-    "validated_at": "2026-09-12T08:44:13.502640+00:00",
-    "validation_location": "github_actions_eu",
-    "xray_ok": true,
-    "google_204_ok": true,
-    "reachable": true,
-    "http_endpoint_results": [
-      {
-        "name": "google_204",
-        "url": "https://www.gstatic.com/generate_204",
-        "ok": true,
-        "status_code": 204,
-        "latency_ms": 216.5,
-        "error": ""
-      },
-      {
-        "name": "cloudflare_trace",
-        "url": "https://www.cloudflare.com/cdn-cgi/trace",
-        "ok": true,
-        "status_code": 200,
-        "latency_ms": 203.3,
-        "error": ""
-      },
-      {
-        "name": "cloudflare_204",
-        "url": "https://cp.cloudflare.com/generate_204",
-        "ok": true,
-        "status_code": 204,
-        "latency_ms": 191.0,
-        "error": ""
-      },
-      {
-        "name": "apple_success",
-        "url": "https://www.apple.com/library/test/success.html",
-        "ok": true,
-        "status_code": 200,
-        "latency_ms": 200.6,
-        "error": ""
-      }
-    ],
-    "http_endpoint_ok_count": 4,
-    "http_endpoint_checked": 4,
-    "http_endpoint_success_rate": 1.0,
-    "http_endpoint_note": "",
-    "latency_ms": 120.8150329999853,
-    "quality_score": 96.9,
-    "retried": false,
-    "source_metrics": {
-      "score": 81.3,
-      "tcp_success_rate": 0.48,
-      "real_success_rate": 0.1333
-    },
-    "stability": {
-      "times_validated": 58,
-      "success_streak": 43,
-      "first_validated_at": "2026-07-15T18:37:13.659260+00:00",
-      "last_validated_at": "2026-09-12T08:44:13.502640+00:00",
-      "stability_score": 100
-    }
-  },
-  {
-    "id": "vmess-165-140-217-2-443-b65a2d69-5634-42a2-e4be-54e8a6176900-tcp-a3684426",
-    "config": "vmess://eyJhZGQiOiAiMTY1LjE0MC4yMTcuMiIsICJhaWQiOiAiMCIsICJhbHBuIjogIiIsICJmcCI6ICIiLCAiaG9zdCI6ICIiLCAiaWQiOiAiYjY1YTJkNjktNTYzNC00MmEyLWU0YmUtNTRlOGE2MTc2OTAwIiwgImluc2VjdXJlIjogIjAiLCAibmV0IjogInRjcCIsICJwYXRoIjogIiIsICJwY3MiOiAiIiwgInBvcnQiOiAiNDQzIiwgInBzIjogIvCUkrDigI4g77yz77yl77yn77yh77yy77yvIiwgInNjeSI6ICJhdXRvIiwgInNuaSI6ICIiLCAidGxzIjogIiIsICJ0eXBlIjogIm5vbmUiLCAidiI6ICIyIiwgInZjbiI6ICIifQ==",
-    "normalized_identity": "vmess|165.140.217.2|443|b65a2d69-5634-42a2-e4be-54e8a6176900|tcp|||",
-    "source_id": "https-raw-githubusercontent-com-thealiiakbarii-ai-vcc-main-configs-vmess-58737c44",
-    "source_label": "thealiiakbarii-ai/VCC — configs/vmess.txt",
-    "source_url": "https://raw.githubusercontent.com/thealiiakbarii-ai/VCC/main/configs/vmess.txt",
-    "source_origin": "repository_tree",
-    "source_status": "trusted",
-    "protocol": "vmess",
-    "validated_at": "2026-09-12T08:44:13.502640+00:00",
-    "validation_location": "github_actions_eu",
-    "xray_ok": true,
-    "google_204_ok": true,
-    "reachable": true,
-    "http_endpoint_results": [
-      {
-        "name": "google_204",
-        "url": "https://www.gstatic.com/generate_204",
-        "ok": true,
-        "status_code": 204,
-        "latency_ms": 166.8,
-        "error": ""
-      },
-      {
-        "name": "cloudflare_trace",
-        "url": "https://www.cloudflare.com/cdn-cgi/trace",
-        "ok": true,
-        "status_code": 200,
-        "latency_ms": 160.9,
-        "error": ""
-      },
-      {
-        "name": "cloudflare_204",
-        "url": "https://cp.cloudflare.com/generate_204",
-        "ok": true,
-        "status_code": 204,
-        "latency_ms": 161.8,
-        "error": ""
-      },
-      {
-        "name": "apple_success",
-        "url": "https://www.apple.com/library/test/success.html",
-        "ok": true,
-        "status_code": 200,
-        "latency_ms": 161.0,
-        "error": ""
-      }
-    ],
-    "http_endpoint_ok_count": 4,
-    "http_endpoint_checked": 4,
-    "http_endpoint_success_rate": 1.0,
-    "http_endpoint_note": "",
-    "latency_ms": 122.94789199950173,
-    "quality_score": 96.6,
-    "retried": false,
-    "source_metrics": {
-      "score": 86.8,
-      "tcp_success_rate": 1.0,
-      "real_success_rate": 0.3667
-    },
-    "stability": {
-      "times_validated": 3,
-      "success_streak": 3,
-      "first_validated_at": "2026-09-10T09:02:03.377307+00:00",
-      "last_validated_at": "2026-09-12T08:44:13.502640+00:00",
-      "stability_score": 100
-    }
-  },
-  {
-    "id": "vless-47-89-186-170-55861-d51ed55c-d6dd-400b-aaf6-017c33969bfe-tcp-reali-2c52223f",
-    "config": "vless://d51ed55c-d6dd-400b-aaf6-017c33969bfe@47.89.186.170:55861?security=reality&encryption=none&pbk=t2ndf6SeVxinFCo5bcemnW_ZZhAtmHWiAkllks5qPWs&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=www.intel.com&sid=7551ed1b#",
-    "normalized_identity": "vless|47.89.186.170|55861|d51ed55c-d6dd-400b-aaf6-017c33969bfe|tcp|reality|www.intel.com|",
-    "source_id": "https-raw-githubusercontent-com-r3zarahimi-tg-v2ray-configs-every2h-main-d347190f",
-    "source_label": "R3ZARAHIMI/tg-v2ray-configs-every2h — Config_no_cf.txt",
-    "source_url": "https://raw.githubusercontent.com/R3ZARAHIMI/tg-v2ray-configs-every2h/main/Config_no_cf.txt",
-    "source_origin": "repository_tree",
-    "source_status": "trusted",
-    "protocol": "vless",
-    "validated_at": "2026-09-12T08:44:13.502640+00:00",
-    "validation_location": "github_actions_eu",
-    "xray_ok": true,
-    "google_204_ok": true,
-    "reachable": true,
-    "http_endpoint_results": [
-      {
-        "name": "google_204",
-        "url": "https://www.gstatic.com/generate_204",
-        "ok": true,
-        "status_code": 204,
-        "latency_ms": 220.4,
-        "error": ""
-      },
-      {
-        "name": "cloudflare_trace",
-        "url": "https://www.cloudflare.com/cdn-cgi/trace",
-        "ok": true,
-        "status_code": 200,
-        "latency_ms": 209.2,
-        "error": ""
-      },
-      {
-        "name": "cloudflare_204",
-        "url": "https://cp.cloudflare.com/generate_204",
-        "ok": true,
-        "status_code": 204,
-        "latency_ms": 505.2,
-        "error": ""
-      },
-      {
-        "name": "apple_success",
-        "url": "https://www.apple.com/library/test/success.html",
-        "ok": true,
-        "status_code": 200,
-        "latency_ms": 513.5,
-        "error": ""
-      }
-    ],
-    "http_endpoint_ok_count": 4,
-    "http_endpoint_checked": 4,
-    "http_endpoint_success_rate": 1.0,
-    "http_endpoint_note": "",
-    "latency_ms": 145.11066199975176,
-    "quality_score": 93.2,
-    "retried": false,
-    "source_metrics": {
-      "score": 76.3,
-      "tcp_success_rate": 0.6333,
-      "real_success_rate": 0.3
+      "score": 73.5,
+      "tcp_success_rate": 0.7,
+      "real_success_rate": 0.2667
     },
     "stability": {
       "times_validated": 28,
-      "success_streak": 3,
-      "first_validated_at": "2026-07-15T18:37:13.659260+00:00",
-      "last_validated_at": "2026-09-12T08:44:13.502640+00:00",
+      "success_streak": 4,
+      "first_validated_at": "2026-07-18T07:25:48.820398+00:00",
+      "last_validated_at": "2026-09-13T09:39:08.681497+00:00",
       "stability_score": 100
     }
   },
   {
-    "id": "vless-172-64-150-28-2082-e5cc16a6-ea42-46b2-82ae-ad2157e1641b-ws-none-hh-1c5ca2c2",
-    "config": "vless://e5cc16a6-ea42-46b2-82ae-ad2157e1641b@172.64.150.28:2082?path=%2Ffp&security=none&encryption=none&host=hhlfy.twiladaphne.ndjp.net&fp=chrome&type=ws&sni=hhlfy.twiladaphne.ndjp.net#",
-    "normalized_identity": "vless|172.64.150.28|2082|e5cc16a6-ea42-46b2-82ae-ad2157e1641b|ws|none|hhlfy.twiladaphne.ndjp.net|/fp",
-    "source_id": "https-raw-githubusercontent-com-firmfox-proxify-main-v2ray-configs-separ-92223ce1",
-    "source_label": "Firmfox/Proxify — v2ray_configs/separated_by_protocol/vless.txt",
-    "source_url": "https://raw.githubusercontent.com/Firmfox/Proxify/main/v2ray_configs/separated_by_protocol/vless.txt",
+    "id": "vmess-129-146-143-80-48111-d4603cc2-e0ee-4651-83f5-1db5b7168177-tcp-129--78e8f31f",
+    "config": "vmess://eyJhZGQiOiIxMjkuMTQ2LjE0My44MCIsImFpZCI6MCwiaG9zdCI6IiIsImlkIjoiZDQ2MDNjYzItZTBlZS00NjUxLTgzZjUtMWRiNWI3MTY4MTc3IiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiI0ODExMSIsInBzIjoiXHVkODNjXHVkZGZhXHVkODNjXHVkZGY4IEpvaW4rVGVsZWdyYW06QEZhcmFoX1ZQTiBcdWQ4M2NcdWRkZmFcdWQ4M2NcdWRkZjgiLCJzbmkiOiIxMjkuMTQ2LjE0My44MCIsInRscyI6IiIsInR5cGUiOiJub25lIiwidiI6IjIiLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlfQ==",
+    "normalized_identity": "vmess|129.146.143.80|48111|d4603cc2-e0ee-4651-83f5-1db5b7168177|tcp||129.146.143.80|",
+    "source_id": "https-raw-githubusercontent-com-barry-far-v2ray-config-main-all-configs--fb1d5116",
+    "source_label": "barry-far/V2ray-Config — All_Configs_Sub.txt",
+    "source_url": "https://raw.githubusercontent.com/barry-far/V2ray-Config/main/All_Configs_Sub.txt",
     "source_origin": "repository_tree",
     "source_status": "redundant",
-    "protocol": "vless",
-    "validated_at": "2026-09-12T08:44:13.502640+00:00",
+    "protocol": "vmess",
+    "validated_at": "2026-09-13T09:39:08.681497+00:00",
     "validation_location": "github_actions_eu",
     "xray_ok": true,
     "google_204_ok": true,
@@ -710,7 +227,7 @@
         "url": "https://www.gstatic.com/generate_204",
         "ok": true,
         "status_code": 204,
-        "latency_ms": 121.8,
+        "latency_ms": 132.6,
         "error": ""
       },
       {
@@ -718,43 +235,250 @@
         "url": "https://www.cloudflare.com/cdn-cgi/trace",
         "ok": true,
         "status_code": 200,
-        "latency_ms": 1365.2,
+        "latency_ms": 164.2,
         "error": ""
       },
       {
         "name": "cloudflare_204",
         "url": "https://cp.cloudflare.com/generate_204",
-        "ok": false,
-        "status_code": 0,
-        "latency_ms": 3009.6,
-        "error": "curl: (28) Connection timed out after 3002 milliseconds"
+        "ok": true,
+        "status_code": 204,
+        "latency_ms": 156.9,
+        "error": ""
       },
       {
         "name": "apple_success",
         "url": "https://www.apple.com/library/test/success.html",
         "ok": true,
         "status_code": 200,
-        "latency_ms": 131.7,
+        "latency_ms": 159.6,
         "error": ""
       }
     ],
-    "http_endpoint_ok_count": 3,
+    "http_endpoint_ok_count": 4,
     "http_endpoint_checked": 4,
-    "http_endpoint_success_rate": 0.75,
+    "http_endpoint_success_rate": 1.0,
     "http_endpoint_note": "",
-    "latency_ms": 98.42100200012283,
+    "latency_ms": 82.94024700001046,
     "quality_score": 100.0,
     "retried": false,
     "source_metrics": {
-      "score": 77.6,
-      "tcp_success_rate": 0.63,
-      "real_success_rate": 0.0667
+      "score": 84.9,
+      "tcp_success_rate": 0.59,
+      "real_success_rate": 0.2
     },
     "stability": {
-      "times_validated": 10,
-      "success_streak": 3,
-      "first_validated_at": "2026-08-24T05:08:24.112255+00:00",
-      "last_validated_at": "2026-09-12T08:44:13.502640+00:00",
+      "times_validated": 8,
+      "success_streak": 2,
+      "first_validated_at": "2026-08-21T04:58:57.555208+00:00",
+      "last_validated_at": "2026-09-13T09:39:08.681497+00:00",
+      "stability_score": 100
+    }
+  },
+  {
+    "id": "ss-37-19-198-236-443-aes-128-gcm-shadowsocks-f0d72e62",
+    "config": "ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@37.19.198.236:443#",
+    "normalized_identity": "ss|37.19.198.236|443|aes-128-gcm|shadowsocks",
+    "source_id": "https-raw-githubusercontent-com-firmfox-proxify-main-v2ray-configs-subsc-7e532850",
+    "source_label": "Firmfox/Proxify — v2ray_configs/subscriptions/subscription-142.txt",
+    "source_url": "https://raw.githubusercontent.com/Firmfox/Proxify/main/v2ray_configs/subscriptions/subscription-142.txt",
+    "source_origin": "repository_tree",
+    "source_status": "trusted",
+    "protocol": "ss",
+    "validated_at": "2026-09-13T09:39:08.681497+00:00",
+    "validation_location": "github_actions_eu",
+    "xray_ok": true,
+    "google_204_ok": true,
+    "reachable": true,
+    "http_endpoint_results": [
+      {
+        "name": "google_204",
+        "url": "https://www.gstatic.com/generate_204",
+        "ok": true,
+        "status_code": 204,
+        "latency_ms": 175.8,
+        "error": ""
+      },
+      {
+        "name": "cloudflare_trace",
+        "url": "https://www.cloudflare.com/cdn-cgi/trace",
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 172.5,
+        "error": ""
+      },
+      {
+        "name": "cloudflare_204",
+        "url": "https://cp.cloudflare.com/generate_204",
+        "ok": true,
+        "status_code": 204,
+        "latency_ms": 172.9,
+        "error": ""
+      },
+      {
+        "name": "apple_success",
+        "url": "https://www.apple.com/library/test/success.html",
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 169.7,
+        "error": ""
+      }
+    ],
+    "http_endpoint_ok_count": 4,
+    "http_endpoint_checked": 4,
+    "http_endpoint_success_rate": 1.0,
+    "http_endpoint_note": "",
+    "latency_ms": 112.85258700002032,
+    "quality_score": 98.1,
+    "retried": false,
+    "source_metrics": {
+      "score": 62.8,
+      "tcp_success_rate": 0.6667,
+      "real_success_rate": 0.2333
+    },
+    "stability": {
+      "times_validated": 34,
+      "success_streak": 2,
+      "first_validated_at": "2026-07-15T18:37:13.659260+00:00",
+      "last_validated_at": "2026-09-13T09:39:08.681497+00:00",
+      "stability_score": 100
+    }
+  },
+  {
+    "id": "ss-37-19-198-243-443-aes-128-gcm-shadowsocks-22c4eb5f",
+    "config": "ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@37.19.198.243:443#%F0%9F%87%BA%F0%9F%87%B8US_463%7C1.6MB%2Fs",
+    "normalized_identity": "ss|37.19.198.243|443|aes-128-gcm|shadowsocks",
+    "source_id": "https-raw-githubusercontent-com-hidashimora-free-vpn-anti-rkn-main-confi-da2a4108",
+    "source_label": "Hidashimora/free-vpn-anti-rkn — configs/13.2.txt",
+    "source_url": "https://raw.githubusercontent.com/Hidashimora/free-vpn-anti-rkn/main/configs/13.2.txt",
+    "source_origin": "repository_tree",
+    "source_status": "trusted",
+    "protocol": "ss",
+    "validated_at": "2026-09-13T09:39:08.681497+00:00",
+    "validation_location": "github_actions_eu",
+    "xray_ok": true,
+    "google_204_ok": true,
+    "reachable": true,
+    "http_endpoint_results": [
+      {
+        "name": "google_204",
+        "url": "https://www.gstatic.com/generate_204",
+        "ok": true,
+        "status_code": 204,
+        "latency_ms": 179.1,
+        "error": ""
+      },
+      {
+        "name": "cloudflare_trace",
+        "url": "https://www.cloudflare.com/cdn-cgi/trace",
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 174.8,
+        "error": ""
+      },
+      {
+        "name": "cloudflare_204",
+        "url": "https://cp.cloudflare.com/generate_204",
+        "ok": true,
+        "status_code": 204,
+        "latency_ms": 179.0,
+        "error": ""
+      },
+      {
+        "name": "apple_success",
+        "url": "https://www.apple.com/library/test/success.html",
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 173.4,
+        "error": ""
+      }
+    ],
+    "http_endpoint_ok_count": 4,
+    "http_endpoint_checked": 4,
+    "http_endpoint_success_rate": 1.0,
+    "http_endpoint_note": "",
+    "latency_ms": 118.32979900009377,
+    "quality_score": 97.3,
+    "retried": false,
+    "source_metrics": {
+      "score": 100.0,
+      "tcp_success_rate": 0.95,
+      "real_success_rate": 0.4333
+    },
+    "stability": {
+      "times_validated": 45,
+      "success_streak": 2,
+      "first_validated_at": "2026-07-15T18:37:13.659260+00:00",
+      "last_validated_at": "2026-09-13T09:39:08.681497+00:00",
+      "stability_score": 100
+    }
+  },
+  {
+    "id": "trojan-188-114-98-0-443-1710442808-ws-tls-subb-nrshop198-workers-dev-ed--070050f5",
+    "config": "trojan://1710442808@188.114.98.0:443?path=/?ed=2560&security=tls&host=subb.nrshop198.workers.dev&fp=random&type=ws&sni=subb.nrshop198.workers.dev#",
+    "normalized_identity": "trojan|188.114.98.0|443|1710442808|ws|tls|subb.nrshop198.workers.dev|/?ed=2560",
+    "source_id": "https-raw-githubusercontent-com-yawstar-proxy-hunter-main-configs-proxy--56462658",
+    "source_label": "YawStar/Proxy-Hunter — configs/proxy_configs_tested.txt",
+    "source_url": "https://raw.githubusercontent.com/YawStar/Proxy-Hunter/main/configs/proxy_configs_tested.txt",
+    "source_origin": "repository_tree",
+    "source_status": "redundant",
+    "protocol": "trojan",
+    "validated_at": "2026-09-13T09:39:08.681497+00:00",
+    "validation_location": "github_actions_eu",
+    "xray_ok": true,
+    "google_204_ok": true,
+    "reachable": true,
+    "http_endpoint_results": [
+      {
+        "name": "google_204",
+        "url": "https://www.gstatic.com/generate_204",
+        "ok": true,
+        "status_code": 204,
+        "latency_ms": 170.4,
+        "error": ""
+      },
+      {
+        "name": "cloudflare_trace",
+        "url": "https://www.cloudflare.com/cdn-cgi/trace",
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 321.4,
+        "error": ""
+      },
+      {
+        "name": "cloudflare_204",
+        "url": "https://cp.cloudflare.com/generate_204",
+        "ok": true,
+        "status_code": 204,
+        "latency_ms": 488.8,
+        "error": ""
+      },
+      {
+        "name": "apple_success",
+        "url": "https://www.apple.com/library/test/success.html",
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 161.1,
+        "error": ""
+      }
+    ],
+    "http_endpoint_ok_count": 4,
+    "http_endpoint_checked": 4,
+    "http_endpoint_success_rate": 1.0,
+    "http_endpoint_note": "",
+    "latency_ms": 131.87264799995546,
+    "quality_score": 95.2,
+    "retried": false,
+    "source_metrics": {
+      "score": 97.5,
+      "tcp_success_rate": 1.0,
+      "real_success_rate": 0.7667
+    },
+    "stability": {
+      "times_validated": 5,
+      "success_streak": 4,
+      "first_validated_at": "2026-09-08T08:57:35.992638+00:00",
+      "last_validated_at": "2026-09-13T09:39:08.681497+00:00",
       "stability_score": 100
     }
   },
@@ -768,7 +492,7 @@
     "source_origin": "repository_tree",
     "source_status": "candidate",
     "protocol": "ss",
-    "validated_at": "2026-09-12T08:44:13.502640+00:00",
+    "validated_at": "2026-09-13T09:39:08.681497+00:00",
     "validation_location": "github_actions_eu",
     "xray_ok": true,
     "google_204_ok": true,
@@ -778,7 +502,7 @@
     "http_endpoint_checked": 0,
     "http_endpoint_success_rate": 0.0,
     "http_endpoint_note": "sample limit",
-    "latency_ms": 39.2843960000846,
+    "latency_ms": 39.36789299996235,
     "quality_score": 100.0,
     "retried": false,
     "source_metrics": {
@@ -787,10 +511,10 @@
       "real_success_rate": 0.3667
     },
     "stability": {
-      "times_validated": 60,
-      "success_streak": 56,
+      "times_validated": 61,
+      "success_streak": 57,
       "first_validated_at": "2026-07-15T18:37:13.659260+00:00",
-      "last_validated_at": "2026-09-12T08:44:13.502640+00:00",
+      "last_validated_at": "2026-09-13T09:39:08.681497+00:00",
       "stability_score": 100
     }
   },
@@ -804,7 +528,7 @@
     "source_origin": "repository_tree",
     "source_status": "candidate",
     "protocol": "ss",
-    "validated_at": "2026-09-12T08:44:13.502640+00:00",
+    "validated_at": "2026-09-13T09:39:08.681497+00:00",
     "validation_location": "github_actions_eu",
     "xray_ok": true,
     "google_204_ok": true,
@@ -814,7 +538,7 @@
     "http_endpoint_checked": 0,
     "http_endpoint_success_rate": 0.0,
     "http_endpoint_note": "sample limit",
-    "latency_ms": 41.69215899992196,
+    "latency_ms": 39.6787280000126,
     "quality_score": 100.0,
     "retried": false,
     "source_metrics": {
@@ -823,168 +547,24 @@
       "real_success_rate": 0.3667
     },
     "stability": {
-      "times_validated": 57,
-      "success_streak": 50,
-      "first_validated_at": "2026-07-15T18:37:13.659260+00:00",
-      "last_validated_at": "2026-09-12T08:44:13.502640+00:00",
-      "stability_score": 100
-    }
-  },
-  {
-    "id": "ss-156-146-38-167-443-aes-128-gcm-shadowsocks-3a8b3ee3",
-    "config": "ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@156.146.38.167:443#",
-    "normalized_identity": "ss|156.146.38.167|443|aes-128-gcm|shadowsocks",
-    "source_id": "https-raw-githubusercontent-com-nyeinkokoaung404-v2ray-configs-main-conf-8c5dfa92",
-    "source_label": "nyeinkokoaung404/V2ray-Configs — configs/proxy_configs_tested.txt",
-    "source_url": "https://raw.githubusercontent.com/nyeinkokoaung404/V2ray-Configs/main/configs/proxy_configs_tested.txt",
-    "source_origin": "repository_tree",
-    "source_status": "trusted",
-    "protocol": "ss",
-    "validated_at": "2026-09-12T08:44:13.502640+00:00",
-    "validation_location": "github_actions_eu",
-    "xray_ok": true,
-    "google_204_ok": true,
-    "reachable": true,
-    "http_endpoint_results": [],
-    "http_endpoint_ok_count": 0,
-    "http_endpoint_checked": 0,
-    "http_endpoint_success_rate": 0.0,
-    "http_endpoint_note": "sample limit",
-    "latency_ms": 44.836755000005724,
-    "quality_score": 100.0,
-    "retried": false,
-    "source_metrics": {
-      "score": 98.3,
-      "tcp_success_rate": 0.9667,
-      "real_success_rate": 0.8333
-    },
-    "stability": {
       "times_validated": 58,
-      "success_streak": 28,
+      "success_streak": 51,
       "first_validated_at": "2026-07-15T18:37:13.659260+00:00",
-      "last_validated_at": "2026-09-12T08:44:13.502640+00:00",
+      "last_validated_at": "2026-09-13T09:39:08.681497+00:00",
       "stability_score": 100
     }
   },
   {
-    "id": "vmess-82-198-246-97-180-d13fc2f5-3e05-4795-81eb-44143a09e552-tcp-sni-111-231b1733",
-    "config": "vmess://eyJ2IjoiMiIsInBzIjoiVVMg8J-HuvCfh7ggfCBAUmF5ZGlrYWx4IHwgRjUyREQ2IiwiYWRkIjoiODIuMTk4LjI0Ni45NyIsInBvcnQiOiIxODAiLCJpZCI6ImQxM2ZjMmY1LTNlMDUtNDc5NS04MWViLTQ0MTQzYTA5ZTU1MiIsImFpZCI6IjAiLCJuZXQiOiJ0Y3AiLCJ0eXBlIjoidm1lc3MiLCJob3N0Ijoic25pLjExMTAwMC5pbmRldnMuaW4iLCJwYXRoIjoiIiwidGxzIjoiIn0",
-    "normalized_identity": "vmess|82.198.246.97|180|d13fc2f5-3e05-4795-81eb-44143a09e552|tcp||sni.111000.indevs.in|",
-    "source_id": "https-raw-githubusercontent-com-0xradikal-free-v2ray-configs-main-verifi-b1823561",
-    "source_label": "0xRadikal/Free-v2ray-Configs — verified/clash.yaml",
-    "source_url": "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/clash.yaml",
-    "source_origin": "repository_tree",
-    "source_status": "trusted",
-    "protocol": "vmess",
-    "validated_at": "2026-09-12T08:44:13.502640+00:00",
-    "validation_location": "github_actions_eu",
-    "xray_ok": true,
-    "google_204_ok": true,
-    "reachable": true,
-    "http_endpoint_results": [],
-    "http_endpoint_ok_count": 0,
-    "http_endpoint_checked": 0,
-    "http_endpoint_success_rate": 0.0,
-    "http_endpoint_note": "sample limit",
-    "latency_ms": 52.776876000280026,
-    "quality_score": 100.0,
-    "retried": false,
-    "source_metrics": {
-      "score": 100.0,
-      "tcp_success_rate": 1.0,
-      "real_success_rate": 0.7667
-    },
-    "stability": {
-      "times_validated": 13,
-      "success_streak": 2,
-      "first_validated_at": "2026-07-26T07:09:35.641361+00:00",
-      "last_validated_at": "2026-09-12T08:44:13.502640+00:00",
-      "stability_score": 100
-    }
-  },
-  {
-    "id": "vmess-82-198-246-97-180-d13fc2f5-3e05-4795-81eb-44143a09e552-tcp-test-ap-99f43983",
-    "config": "vmess://eyJ2IjoiMiIsInBzIjoiVVMg8J-HuvCfh7ggfCBAUmF5ZGlrYWx4IHwgQURENDlDIiwiYWRkIjoiODIuMTk4LjI0Ni45NyIsInBvcnQiOiIxODAiLCJpZCI6ImQxM2ZjMmY1LTNlMDUtNDc5NS04MWViLTQ0MTQzYTA5ZTU1MiIsImFpZCI6IjAiLCJuZXQiOiJ0Y3AiLCJ0eXBlIjoidm1lc3MiLCJob3N0IjoidGVzdC5hcGktYXdzLmNvbSIsInBhdGgiOiIiLCJ0bHMiOiIifQ",
-    "normalized_identity": "vmess|82.198.246.97|180|d13fc2f5-3e05-4795-81eb-44143a09e552|tcp||test.api-aws.com|",
-    "source_id": "https-raw-githubusercontent-com-0xradikal-free-v2ray-configs-main-verifi-b1823561",
-    "source_label": "0xRadikal/Free-v2ray-Configs — verified/clash.yaml",
-    "source_url": "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/clash.yaml",
-    "source_origin": "repository_tree",
-    "source_status": "trusted",
-    "protocol": "vmess",
-    "validated_at": "2026-09-12T08:44:13.502640+00:00",
-    "validation_location": "github_actions_eu",
-    "xray_ok": true,
-    "google_204_ok": true,
-    "reachable": true,
-    "http_endpoint_results": [],
-    "http_endpoint_ok_count": 0,
-    "http_endpoint_checked": 0,
-    "http_endpoint_success_rate": 0.0,
-    "http_endpoint_note": "sample limit",
-    "latency_ms": 54.174482000235,
-    "quality_score": 100.0,
-    "retried": false,
-    "source_metrics": {
-      "score": 100.0,
-      "tcp_success_rate": 1.0,
-      "real_success_rate": 0.7667
-    },
-    "stability": {
-      "times_validated": 9,
-      "success_streak": 2,
-      "first_validated_at": "2026-08-06T07:08:37.892640+00:00",
-      "last_validated_at": "2026-09-12T08:44:13.502640+00:00",
-      "stability_score": 100
-    }
-  },
-  {
-    "id": "vmess-82-198-246-250-180-d13fc2f5-3e05-4795-81eb-44143a09e552-tcp-jflsjl-333bc1d0",
-    "config": "vmess://eyJ2IjoiMiIsInBzIjoiVVMg8J-HuvCfh7ggfCBAUmF5ZGlrYWx4IHwgRjI1MTk2IiwiYWRkIjoiODIuMTk4LjI0Ni4yNTAiLCJwb3J0IjoiMTgwIiwiaWQiOiJkMTNmYzJmNS0zZTA1LTQ3OTUtODFlYi00NDE0M2EwOWU1NTIiLCJhaWQiOiIwIiwibmV0IjoidGNwIiwidHlwZSI6InZtZXNzIiwiaG9zdCI6ImpmbHNqbGFmLnBhZ2VzLmRldiIsInBhdGgiOiIiLCJ0bHMiOiIifQ",
-    "normalized_identity": "vmess|82.198.246.250|180|d13fc2f5-3e05-4795-81eb-44143a09e552|tcp||jflsjlaf.pages.dev|",
-    "source_id": "https-raw-githubusercontent-com-0xradikal-free-v2ray-configs-main-fast-c-f34cf74a",
-    "source_label": "0xRadikal/Free-v2ray-Configs — fast/clash.yaml",
-    "source_url": "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/fast/clash.yaml",
-    "source_origin": "repository_tree",
-    "source_status": "redundant",
-    "protocol": "vmess",
-    "validated_at": "2026-09-12T08:44:13.502640+00:00",
-    "validation_location": "github_actions_eu",
-    "xray_ok": true,
-    "google_204_ok": true,
-    "reachable": true,
-    "http_endpoint_results": [],
-    "http_endpoint_ok_count": 0,
-    "http_endpoint_checked": 0,
-    "http_endpoint_success_rate": 0.0,
-    "http_endpoint_note": "sample limit",
-    "latency_ms": 54.44213999999192,
-    "quality_score": 100.0,
-    "retried": false,
-    "source_metrics": {
-      "score": 100.0,
-      "tcp_success_rate": 1.0,
-      "real_success_rate": 0.7333
-    },
-    "stability": {
-      "times_validated": 16,
-      "success_streak": 2,
-      "first_validated_at": "2026-07-16T07:01:41.882547+00:00",
-      "last_validated_at": "2026-09-12T08:44:13.502640+00:00",
-      "stability_score": 100
-    }
-  },
-  {
-    "id": "vmess-82-198-246-250-180-d13fc2f5-3e05-4795-81eb-44143a09e552-tcp-ads-x5-5cf151fe",
-    "config": "vmess://eyJ2IjogIjIiLCAicHMiOiAi8J+HqPCfh78gNjggLSBDWiAtIFZNZXNzIC0gMTgwIiwgImFkZCI6ICI4Mi4xOTguMjQ2LjI1MCIsICJwb3J0IjogMTgwLCAiaWQiOiAiZDEzZmMyZjUtM2UwNS00Nzk1LTgxZWItNDQxNDNhMDllNTUyIiwgImFpZCI6ICIwIiwgInNjeSI6ICJhdXRvIiwgIm5ldCI6ICJ0Y3AiLCAidHlwZSI6ICJub25lIiwgImhvc3QiOiAiYWRzLng1LnJ1IiwgInBhdGgiOiAiLyIsICJ0bHMiOiAiIiwgInNuaSI6ICIiLCAiYWxwbiI6ICIiLCAiZnAiOiAiIiwgImluc2VjdXJlIjogIjAiLCAibmFtZSI6ICLoi7HlnIvnr4Dpu54ifQ==",
-    "normalized_identity": "vmess|82.198.246.250|180|d13fc2f5-3e05-4795-81eb-44143a09e552|tcp||ads.x5.ru|/",
+    "id": "vmess-82-198-246-250-180-d13fc2f5-3e05-4795-81eb-44143a09e552-tcp-auto-358fff22",
+    "config": "vmess://eyJ2IjogIjIiLCAicHMiOiAi8J+HqPCfh78gODMgLSBDWiAtIFZNZXNzL1VUTFMgLSAxODAiLCAiYWRkIjogIjgyLjE5OC4yNDYuMjUwIiwgInBvcnQiOiAxODAsICJpZCI6ICJkMTNmYzJmNS0zZTA1LTQ3OTUtODFlYi00NDE0M2EwOWU1NTIiLCAiYWlkIjogMCwgInNjeSI6ICJhdXRvIiwgIm5ldCI6ICJ0Y3AiLCAidHlwZSI6ICJub25lIiwgImhvc3QiOiAiIiwgInBhdGgiOiAiIiwgInRscyI6ICJhdXRvIiwgInNuaSI6ICIiLCAiYWxwbiI6ICIiLCAiZnAiOiAiY2hyb21lIiwgIm5hbWUiOiAi8J+UpUpvaW4rVGVsZWdyYW06QEZhcmFoX1ZQTvCfn6MifQ==",
+    "normalized_identity": "vmess|82.198.246.250|180|d13fc2f5-3e05-4795-81eb-44143a09e552|tcp|auto||",
     "source_id": "https-raw-githubusercontent-com-nyeinkokoaung404-v2ray-configs-main-conf-8c5dfa92",
     "source_label": "nyeinkokoaung404/V2ray-Configs — configs/proxy_configs_tested.txt",
     "source_url": "https://raw.githubusercontent.com/nyeinkokoaung404/V2ray-Configs/main/configs/proxy_configs_tested.txt",
     "source_origin": "repository_tree",
     "source_status": "trusted",
     "protocol": "vmess",
-    "validated_at": "2026-09-12T08:44:13.502640+00:00",
+    "validated_at": "2026-09-13T09:39:08.681497+00:00",
     "validation_location": "github_actions_eu",
     "xray_ok": true,
     "google_204_ok": true,
@@ -994,55 +574,19 @@
     "http_endpoint_checked": 0,
     "http_endpoint_success_rate": 0.0,
     "http_endpoint_note": "sample limit",
-    "latency_ms": 54.78160400002707,
+    "latency_ms": 53.48243699995692,
     "quality_score": 100.0,
     "retried": false,
     "source_metrics": {
-      "score": 98.3,
-      "tcp_success_rate": 0.9667,
-      "real_success_rate": 0.8333
+      "score": 100.0,
+      "tcp_success_rate": 1.0,
+      "real_success_rate": 0.9
     },
     "stability": {
-      "times_validated": 27,
+      "times_validated": 11,
       "success_streak": 3,
-      "first_validated_at": "2026-07-18T07:25:48.820398+00:00",
-      "last_validated_at": "2026-09-12T08:44:13.502640+00:00",
-      "stability_score": 100
-    }
-  },
-  {
-    "id": "vmess-82-198-246-37-180-d13fc2f5-3e05-4795-81eb-44143a09e552-tcp-fra5-ch-5a1bbde2",
-    "config": "vmess://eyJhZGQiOiI4Mi4xOTguMjQ2LjM3IiwiYWlkIjoiMCIsImFscG4iOiIiLCJmcCI6IiIsImhvc3QiOiJmcmE1LmNoYXNlbTIwMjZzdWQuY29tIiwiaWQiOiJkMTNmYzJmNS0zZTA1LTQ3OTUtODFlYi00NDE0M2EwOWU1NTIiLCJpbnNlY3VyZSI6IjAiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiLyIsInBjcyI6IiIsInBvcnQiOiIxODAiLCJwcyI6IkBpMTBWUE7wn4y/Iiwic2N5IjoiYXV0byIsInNuaSI6ImZyYTUuY2hhc2VtMjAyNnN1ZC5jb20iLCJ0bHMiOiIiLCJ0eXBlIjoibm9uZSIsInYiOiIyIiwidmNuIjoiIn0=#",
-    "normalized_identity": "vmess|82.198.246.37|180|d13fc2f5-3e05-4795-81eb-44143a09e552|tcp||fra5.chasem2026sud.com|/",
-    "source_id": "https-raw-githubusercontent-com-firmfox-proxify-main-v2ray-configs-subsc-646ac6f2",
-    "source_label": "Firmfox/Proxify — v2ray_configs/subscriptions/subscription-139.txt",
-    "source_url": "https://raw.githubusercontent.com/Firmfox/Proxify/main/v2ray_configs/subscriptions/subscription-139.txt",
-    "source_origin": "repository_tree",
-    "source_status": "trusted",
-    "protocol": "vmess",
-    "validated_at": "2026-09-12T08:44:13.502640+00:00",
-    "validation_location": "github_actions_eu",
-    "xray_ok": true,
-    "google_204_ok": true,
-    "reachable": true,
-    "http_endpoint_results": [],
-    "http_endpoint_ok_count": 0,
-    "http_endpoint_checked": 0,
-    "http_endpoint_success_rate": 0.0,
-    "http_endpoint_note": "sample limit",
-    "latency_ms": 55.044618000010814,
-    "quality_score": 100.0,
-    "retried": false,
-    "source_metrics": {
-      "score": 69.3,
-      "tcp_success_rate": 0.7667,
-      "real_success_rate": 0.4667
-    },
-    "stability": {
-      "times_validated": 34,
-      "success_streak": 4,
-      "first_validated_at": "2026-07-16T08:35:22.363489+00:00",
-      "last_validated_at": "2026-09-12T08:44:13.502640+00:00",
+      "first_validated_at": "2026-07-15T18:37:13.659260+00:00",
+      "last_validated_at": "2026-09-13T09:39:08.681497+00:00",
       "stability_score": 100
     }
   },
@@ -1056,7 +600,7 @@
     "source_origin": "repository_tree",
     "source_status": "redundant",
     "protocol": "vmess",
-    "validated_at": "2026-09-12T08:44:13.502640+00:00",
+    "validated_at": "2026-09-13T09:39:08.681497+00:00",
     "validation_location": "github_actions_eu",
     "xray_ok": true,
     "google_204_ok": true,
@@ -1066,69 +610,213 @@
     "http_endpoint_checked": 0,
     "http_endpoint_success_rate": 0.0,
     "http_endpoint_note": "sample limit",
-    "latency_ms": 56.442874999902415,
+    "latency_ms": 53.94547899982172,
     "quality_score": 100.0,
     "retried": false,
     "source_metrics": {
       "score": 100.0,
       "tcp_success_rate": 1.0,
-      "real_success_rate": 0.7333
+      "real_success_rate": 0.6333
+    },
+    "stability": {
+      "times_validated": 12,
+      "success_streak": 3,
+      "first_validated_at": "2026-07-17T06:56:28.841104+00:00",
+      "last_validated_at": "2026-09-13T09:39:08.681497+00:00",
+      "stability_score": 100
+    }
+  },
+  {
+    "id": "vmess-82-198-246-250-180-d13fc2f5-3e05-4795-81eb-44143a09e552-tcp-91af9414",
+    "config": "vmess://eyJ2IjogIjIiLCAicHMiOiAi8J+HqPCfh78gMzAgLSBDWiAtIFZNZXNzIC0gMTgwIiwgImFkZCI6ICI4Mi4xOTguMjQ2LjI1MCIsICJwb3J0IjogMTgwLCAiaWQiOiAiZDEzZmMyZjUtM2UwNS00Nzk1LTgxZWItNDQxNDNhMDllNTUyIiwgImFpZCI6ICIwIiwgInNjeSI6ICJhdXRvIiwgIm5ldCI6ICJ0Y3AiLCAidHlwZSI6ICJub25lIiwgImhvc3QiOiAiIiwgInBhdGgiOiAiIiwgInRscyI6ICIiLCAic25pIjogIiIsICJhbHBuIjogIiIsICJuYW1lIjogIue+juWbvSh5dWRvdTc4OS50b3Ag546J6LGG5YWN6LS56IqC54K5KSJ9",
+    "normalized_identity": "vmess|82.198.246.250|180|d13fc2f5-3e05-4795-81eb-44143a09e552|tcp|||",
+    "source_id": "https-raw-githubusercontent-com-yawstar-proxy-hunter-main-configs-proxy--56462658",
+    "source_label": "YawStar/Proxy-Hunter — configs/proxy_configs_tested.txt",
+    "source_url": "https://raw.githubusercontent.com/YawStar/Proxy-Hunter/main/configs/proxy_configs_tested.txt",
+    "source_origin": "repository_tree",
+    "source_status": "redundant",
+    "protocol": "vmess",
+    "validated_at": "2026-09-13T09:39:08.681497+00:00",
+    "validation_location": "github_actions_eu",
+    "xray_ok": true,
+    "google_204_ok": true,
+    "reachable": true,
+    "http_endpoint_results": [],
+    "http_endpoint_ok_count": 0,
+    "http_endpoint_checked": 0,
+    "http_endpoint_success_rate": 0.0,
+    "http_endpoint_note": "sample limit",
+    "latency_ms": 54.19809800002895,
+    "quality_score": 100.0,
+    "retried": false,
+    "source_metrics": {
+      "score": 97.5,
+      "tcp_success_rate": 1.0,
+      "real_success_rate": 0.7667
+    },
+    "stability": {
+      "times_validated": 37,
+      "success_streak": 2,
+      "first_validated_at": "2026-07-15T18:37:13.659260+00:00",
+      "last_validated_at": "2026-09-13T09:39:08.681497+00:00",
+      "stability_score": 100
+    }
+  },
+  {
+    "id": "vmess-82-198-246-37-180-d13fc2f5-3e05-4795-81eb-44143a09e552-tcp-2e8d2bcd",
+    "config": "vmess://eyJ2IjoiMiIsInBzIjoiVVMg8J-HuvCfh7ggfCBAUmF5ZGlrYWx4IHwgOUI2QTE3IiwiYWRkIjoiODIuMTk4LjI0Ni4zNyIsInBvcnQiOiIxODAiLCJpZCI6ImQxM2ZjMmY1LTNlMDUtNDc5NS04MWViLTQ0MTQzYTA5ZTU1MiIsImFpZCI6IjAiLCJuZXQiOiJ0Y3AiLCJ0eXBlIjoidm1lc3MiLCJob3N0IjoiIiwicGF0aCI6IiIsInRscyI6IiJ9",
+    "normalized_identity": "vmess|82.198.246.37|180|d13fc2f5-3e05-4795-81eb-44143a09e552|tcp|||",
+    "source_id": "https-raw-githubusercontent-com-0xradikal-free-v2ray-configs-main-fast-c-f34cf74a",
+    "source_label": "0xRadikal/Free-v2ray-Configs — fast/clash.yaml",
+    "source_url": "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/fast/clash.yaml",
+    "source_origin": "repository_tree",
+    "source_status": "redundant",
+    "protocol": "vmess",
+    "validated_at": "2026-09-13T09:39:08.681497+00:00",
+    "validation_location": "github_actions_eu",
+    "xray_ok": true,
+    "google_204_ok": true,
+    "reachable": true,
+    "http_endpoint_results": [],
+    "http_endpoint_ok_count": 0,
+    "http_endpoint_checked": 0,
+    "http_endpoint_success_rate": 0.0,
+    "http_endpoint_note": "sample limit",
+    "latency_ms": 55.05441000013889,
+    "quality_score": 100.0,
+    "retried": false,
+    "source_metrics": {
+      "score": 100.0,
+      "tcp_success_rate": 1.0,
+      "real_success_rate": 0.6333
+    },
+    "stability": {
+      "times_validated": 47,
+      "success_streak": 2,
+      "first_validated_at": "2026-07-16T08:35:22.363489+00:00",
+      "last_validated_at": "2026-09-13T09:39:08.681497+00:00",
+      "stability_score": 100
+    }
+  },
+  {
+    "id": "vmess-82-198-246-250-180-d13fc2f5-3e05-4795-81eb-44143a09e552-tcp-usaapp-59e93a5d",
+    "config": "vmess://eyJhZGQiOiAiODIuMTk4LjI0Ni4yNTAiLCAiYWlkIjogMCwgImhvc3QiOiAiIiwgImlkIjogImQxM2ZjMmY1LTNlMDUtNDc5NS04MWViLTQ0MTQzYTA5ZTU1MiIsICJuZXQiOiAidGNwIiwgInBhdGgiOiAiIiwgInBvcnQiOiAiMTgwIiwgInBzIjogIlx1ZDgzZFx1ZGQyNUpvaW4rVGVsZWdyYW06QEZhcmFoX1ZQTlx1ZDgzZFx1ZGZlMyIsICJzbmkiOiAidXNhYXBwMi5qaXN1eXVuLnRvcCIsICJ0bHMiOiAiIiwgInR5cGUiOiAibm9uZSIsICJ2IjogIjIifQ==",
+    "normalized_identity": "vmess|82.198.246.250|180|d13fc2f5-3e05-4795-81eb-44143a09e552|tcp||usaapp2.jisuyun.top|",
+    "source_id": "https-raw-githubusercontent-com-solispirit-v2ray-configs-main-subscripti-f135a4f0",
+    "source_label": "SoliSpirit/v2ray-configs — Subscriptions/Sub19.txt",
+    "source_url": "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/main/Subscriptions/Sub19.txt",
+    "source_origin": "repository_tree",
+    "source_status": "redundant",
+    "protocol": "vmess",
+    "validated_at": "2026-09-13T09:39:08.681497+00:00",
+    "validation_location": "github_actions_eu",
+    "xray_ok": true,
+    "google_204_ok": true,
+    "reachable": true,
+    "http_endpoint_results": [],
+    "http_endpoint_ok_count": 0,
+    "http_endpoint_checked": 0,
+    "http_endpoint_success_rate": 0.0,
+    "http_endpoint_note": "sample limit",
+    "latency_ms": 55.22463200009042,
+    "quality_score": 100.0,
+    "retried": false,
+    "source_metrics": {
+      "score": 73.5,
+      "tcp_success_rate": 0.7,
+      "real_success_rate": 0.2667
+    },
+    "stability": {
+      "times_validated": 18,
+      "success_streak": 2,
+      "first_validated_at": "2026-07-19T07:40:22.345444+00:00",
+      "last_validated_at": "2026-09-13T09:39:08.681497+00:00",
+      "stability_score": 100
+    }
+  },
+  {
+    "id": "vmess-82-198-246-250-180-d13fc2f5-3e05-4795-81eb-44143a09e552-tcp-jflsjl-333bc1d0",
+    "config": "vmess://eyJ2IjoiMiIsInBzIjoiVVMg8J-HuvCfh7ggfCBAUmF5ZGlrYWx4IHwgRjI1MTk2IiwiYWRkIjoiODIuMTk4LjI0Ni4yNTAiLCJwb3J0IjoiMTgwIiwiaWQiOiJkMTNmYzJmNS0zZTA1LTQ3OTUtODFlYi00NDE0M2EwOWU1NTIiLCJhaWQiOiIwIiwibmV0IjoidGNwIiwidHlwZSI6InZtZXNzIiwiaG9zdCI6ImpmbHNqbGFmLnBhZ2VzLmRldiIsInBhdGgiOiIiLCJ0bHMiOiIifQ",
+    "normalized_identity": "vmess|82.198.246.250|180|d13fc2f5-3e05-4795-81eb-44143a09e552|tcp||jflsjlaf.pages.dev|",
+    "source_id": "https-raw-githubusercontent-com-0xradikal-free-v2ray-configs-main-fast-c-f34cf74a",
+    "source_label": "0xRadikal/Free-v2ray-Configs — fast/clash.yaml",
+    "source_url": "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/fast/clash.yaml",
+    "source_origin": "repository_tree",
+    "source_status": "redundant",
+    "protocol": "vmess",
+    "validated_at": "2026-09-13T09:39:08.681497+00:00",
+    "validation_location": "github_actions_eu",
+    "xray_ok": true,
+    "google_204_ok": true,
+    "reachable": true,
+    "http_endpoint_results": [],
+    "http_endpoint_ok_count": 0,
+    "http_endpoint_checked": 0,
+    "http_endpoint_success_rate": 0.0,
+    "http_endpoint_note": "sample limit",
+    "latency_ms": 55.38855499980855,
+    "quality_score": 100.0,
+    "retried": false,
+    "source_metrics": {
+      "score": 100.0,
+      "tcp_success_rate": 1.0,
+      "real_success_rate": 0.6333
+    },
+    "stability": {
+      "times_validated": 17,
+      "success_streak": 3,
+      "first_validated_at": "2026-07-16T07:01:41.882547+00:00",
+      "last_validated_at": "2026-09-13T09:39:08.681497+00:00",
+      "stability_score": 100
+    }
+  },
+  {
+    "id": "vmess-82-198-246-250-180-d13fc2f5-3e05-4795-81eb-44143a09e552-tcp-fra34--545533a0",
+    "config": "vmess://eyJ2IjoiMiIsInBzIjoiVVMg8J-HuvCfh7ggfCBAUmF5ZGlrYWx4IHwgMzRDQUMxIiwiYWRkIjoiODIuMTk4LjI0Ni4yNTAiLCJwb3J0IjoiMTgwIiwiaWQiOiJkMTNmYzJmNS0zZTA1LTQ3OTUtODFlYi00NDE0M2EwOWU1NTIiLCJhaWQiOiIwIiwibmV0IjoidGNwIiwidHlwZSI6InZtZXNzIiwiaG9zdCI6ImZyYTM0LmNoYXNlbTIwMjZzdWQuY29tIiwicGF0aCI6IiIsInRscyI6IiJ9",
+    "normalized_identity": "vmess|82.198.246.250|180|d13fc2f5-3e05-4795-81eb-44143a09e552|tcp||fra34.chasem2026sud.com|",
+    "source_id": "https-raw-githubusercontent-com-0xradikal-free-v2ray-configs-main-verifi-b1823561",
+    "source_label": "0xRadikal/Free-v2ray-Configs — verified/clash.yaml",
+    "source_url": "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/clash.yaml",
+    "source_origin": "repository_tree",
+    "source_status": "trusted",
+    "protocol": "vmess",
+    "validated_at": "2026-09-13T09:39:08.681497+00:00",
+    "validation_location": "github_actions_eu",
+    "xray_ok": true,
+    "google_204_ok": true,
+    "reachable": true,
+    "http_endpoint_results": [],
+    "http_endpoint_ok_count": 0,
+    "http_endpoint_checked": 0,
+    "http_endpoint_success_rate": 0.0,
+    "http_endpoint_note": "sample limit",
+    "latency_ms": 55.450816999837116,
+    "quality_score": 100.0,
+    "retried": false,
+    "source_metrics": {
+      "score": 100.0,
+      "tcp_success_rate": 1.0,
+      "real_success_rate": 0.7667
     },
     "stability": {
       "times_validated": 11,
       "success_streak": 2,
-      "first_validated_at": "2026-07-17T06:56:28.841104+00:00",
-      "last_validated_at": "2026-09-12T08:44:13.502640+00:00",
-      "stability_score": 100
-    }
-  },
-  {
-    "id": "vmess-82-198-246-250-180-d13fc2f5-3e05-4795-81eb-44143a09e552-tcp-auto-358fff22",
-    "config": "vmess://eyJ2IjogIjIiLCAicHMiOiAi8J+HqPCfh78gOTIgLSBDWiAtIFZNZXNzL1VUTFMgLSAxODAiLCAiYWRkIjogIjgyLjE5OC4yNDYuMjUwIiwgInBvcnQiOiAxODAsICJpZCI6ICJkMTNmYzJmNS0zZTA1LTQ3OTUtODFlYi00NDE0M2EwOWU1NTIiLCAiYWlkIjogMCwgInNjeSI6ICJhdXRvIiwgIm5ldCI6ICJ0Y3AiLCAidHlwZSI6ICJub25lIiwgImhvc3QiOiAiIiwgInBhdGgiOiAiIiwgInRscyI6ICJhdXRvIiwgInNuaSI6ICIiLCAiYWxwbiI6ICIiLCAiZnAiOiAiY2hyb21lIiwgIm5hbWUiOiAi8J+UpUpvaW4rVGVsZWdyYW06QEZhcmFoX1ZQTvCfn6MifQ==",
-    "normalized_identity": "vmess|82.198.246.250|180|d13fc2f5-3e05-4795-81eb-44143a09e552|tcp|auto||",
-    "source_id": "https-raw-githubusercontent-com-nyeinkokoaung404-v2ray-configs-main-conf-8c5dfa92",
-    "source_label": "nyeinkokoaung404/V2ray-Configs — configs/proxy_configs_tested.txt",
-    "source_url": "https://raw.githubusercontent.com/nyeinkokoaung404/V2ray-Configs/main/configs/proxy_configs_tested.txt",
-    "source_origin": "repository_tree",
-    "source_status": "trusted",
-    "protocol": "vmess",
-    "validated_at": "2026-09-12T08:44:13.502640+00:00",
-    "validation_location": "github_actions_eu",
-    "xray_ok": true,
-    "google_204_ok": true,
-    "reachable": true,
-    "http_endpoint_results": [],
-    "http_endpoint_ok_count": 0,
-    "http_endpoint_checked": 0,
-    "http_endpoint_success_rate": 0.0,
-    "http_endpoint_note": "sample limit",
-    "latency_ms": 59.284892999983185,
-    "quality_score": 100.0,
-    "retried": false,
-    "source_metrics": {
-      "score": 98.3,
-      "tcp_success_rate": 0.9667,
-      "real_success_rate": 0.8333
-    },
-    "stability": {
-      "times_validated": 10,
-      "success_streak": 2,
       "first_validated_at": "2026-07-15T18:37:13.659260+00:00",
-      "last_validated_at": "2026-09-12T08:44:13.502640+00:00",
+      "last_validated_at": "2026-09-13T09:39:08.681497+00:00",
       "stability_score": 100
     }
   },
   {
-    "id": "vmess-82-198-246-97-180-d13fc2f5-3e05-4795-81eb-44143a09e552-tcp-one-cf--da211007",
-    "config": "vmess://eyJhZGQiOiI4Mi4xOTguMjQ2Ljk3IiwiYWlkIjoiMCIsImFscG4iOiIiLCJmcCI6IiIsImhvc3QiOiJvbmUuY2YuY2RuLmh5bGkueHl6IiwiaWQiOiJkMTNmYzJmNS0zZTA1LTQ3OTUtODFlYi00NDE0M2EwOWU1NTIiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiLyIsInBvcnQiOiIxODAiLCJwcyI6Ilx1ZDgzY1x1ZGRmYVx1ZDgzY1x1ZGRmOCBKb2luK1RlbGVncmFtOkBGYXJhaF9WUE4gXHVkODNjXHVkZGZhXHVkODNjXHVkZGY4Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJub25lIiwidiI6IjIiLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlfQ==#",
-    "normalized_identity": "vmess|82.198.246.97|180|d13fc2f5-3e05-4795-81eb-44143a09e552|tcp||one.cf.cdn.hyli.xyz|/",
-    "source_id": "https-raw-githubusercontent-com-firmfox-proxify-main-v2ray-configs-subsc-d66cb786",
-    "source_label": "Firmfox/Proxify — v2ray_configs/subscriptions/subscription-10.txt",
-    "source_url": "https://raw.githubusercontent.com/Firmfox/Proxify/main/v2ray_configs/subscriptions/subscription-10.txt",
+    "id": "vmess-82-198-246-97-180-d13fc2f5-3e05-4795-81eb-44143a09e552-tcp-test-ap-99f43983",
+    "config": "vmess://eyJhZGQiOiAiODIuMTk4LjI0Ni45NyIsICJhaWQiOiAwLCAiaG9zdCI6ICIiLCAiaWQiOiAiZDEzZmMyZjUtM2UwNS00Nzk1LTgxZWItNDQxNDNhMDllNTUyIiwgIm5ldCI6ICJ0Y3AiLCAicGF0aCI6ICIiLCAicG9ydCI6ICIxODAiLCAicHMiOiAiXHVkODNkXHVkZDI1Sm9pbitUZWxlZ3JhbTpARmFyYWhfVlBOXHVkODNkXHVkZmUzIiwgInNuaSI6ICJ0ZXN0LmFwaS1hd3MuY29tIiwgInRscyI6ICIiLCAidHlwZSI6ICJub25lIiwgInYiOiAiMiJ9",
+    "normalized_identity": "vmess|82.198.246.97|180|d13fc2f5-3e05-4795-81eb-44143a09e552|tcp||test.api-aws.com|",
+    "source_id": "https-raw-githubusercontent-com-solispirit-v2ray-configs-main-subscripti-f135a4f0",
+    "source_label": "SoliSpirit/v2ray-configs — Subscriptions/Sub19.txt",
+    "source_url": "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/main/Subscriptions/Sub19.txt",
     "source_origin": "repository_tree",
     "source_status": "redundant",
     "protocol": "vmess",
-    "validated_at": "2026-09-12T08:44:13.502640+00:00",
+    "validated_at": "2026-09-13T09:39:08.681497+00:00",
     "validation_location": "github_actions_eu",
     "xray_ok": true,
     "google_204_ok": true,
@@ -1138,55 +826,19 @@
     "http_endpoint_checked": 0,
     "http_endpoint_success_rate": 0.0,
     "http_endpoint_note": "sample limit",
-    "latency_ms": 60.19235299993397,
+    "latency_ms": 56.75332500004515,
     "quality_score": 100.0,
     "retried": false,
     "source_metrics": {
-      "score": 72.2,
-      "tcp_success_rate": 0.6333,
+      "score": 73.5,
+      "tcp_success_rate": 0.7,
       "real_success_rate": 0.2667
     },
     "stability": {
-      "times_validated": 43,
-      "success_streak": 6,
-      "first_validated_at": "2026-07-19T07:40:22.345444+00:00",
-      "last_validated_at": "2026-09-12T08:44:13.502640+00:00",
-      "stability_score": 100
-    }
-  },
-  {
-    "id": "vmess-82-198-246-233-180-d13fc2f5-3e05-4795-81eb-44143a09e552-tcp-c22ad9c8",
-    "config": "vmess://eyJ2IjoiMiIsInBzIjoi8J+HuvCfh7hVU18yMjF8OTk2S0Ivc3xNMDAyLTI2MDYxOCIsImFkZCI6IjgyLjE5OC4yNDYuMjMzIiwicG9ydCI6IjE4MCIsImlkIjoiZDEzZmMyZjUtM2UwNS00Nzk1LTgxZWItNDQxNDNhMDllNTUyIiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ0Y3AiLCJ0eXBlIjoiIiwidGxzIjoiIn0=",
-    "normalized_identity": "vmess|82.198.246.233|180|d13fc2f5-3e05-4795-81eb-44143a09e552|tcp|||",
-    "source_id": "https-raw-githubusercontent-com-hidashimora-free-vpn-anti-rkn-main-confi-7fb408f3",
-    "source_label": "Hidashimora/free-vpn-anti-rkn — configs/13.1.txt",
-    "source_url": "https://raw.githubusercontent.com/Hidashimora/free-vpn-anti-rkn/main/configs/13.1.txt",
-    "source_origin": "repository_tree",
-    "source_status": "redundant",
-    "protocol": "vmess",
-    "validated_at": "2026-09-12T08:44:13.502640+00:00",
-    "validation_location": "github_actions_eu",
-    "xray_ok": true,
-    "google_204_ok": true,
-    "reachable": true,
-    "http_endpoint_results": [],
-    "http_endpoint_ok_count": 0,
-    "http_endpoint_checked": 0,
-    "http_endpoint_success_rate": 0.0,
-    "http_endpoint_note": "sample limit",
-    "latency_ms": 64.00556800008417,
-    "quality_score": 100.0,
-    "retried": false,
-    "source_metrics": {
-      "score": 91.0,
-      "tcp_success_rate": 0.8667,
-      "real_success_rate": 0.5
-    },
-    "stability": {
-      "times_validated": 42,
-      "success_streak": 4,
-      "first_validated_at": "2026-07-20T07:36:39.219129+00:00",
-      "last_validated_at": "2026-09-12T08:44:13.502640+00:00",
+      "times_validated": 10,
+      "success_streak": 3,
+      "first_validated_at": "2026-08-06T07:08:37.892640+00:00",
+      "last_validated_at": "2026-09-13T09:39:08.681497+00:00",
       "stability_score": 100
     }
   },
@@ -1200,7 +852,7 @@
     "source_origin": "repository_tree",
     "source_status": "trusted",
     "protocol": "ss",
-    "validated_at": "2026-09-12T08:44:13.502640+00:00",
+    "validated_at": "2026-09-13T09:39:08.681497+00:00",
     "validation_location": "github_actions_eu",
     "xray_ok": true,
     "google_204_ok": true,
@@ -1210,19 +862,19 @@
     "http_endpoint_checked": 0,
     "http_endpoint_success_rate": 0.0,
     "http_endpoint_note": "sample limit",
-    "latency_ms": 77.70306599991272,
+    "latency_ms": 74.81690099996285,
     "quality_score": 100.0,
     "retried": false,
     "source_metrics": {
       "score": 64.1,
       "tcp_success_rate": 0.7667,
-      "real_success_rate": 0.3667
+      "real_success_rate": 0.4
     },
     "stability": {
-      "times_validated": 62,
-      "success_streak": 62,
+      "times_validated": 63,
+      "success_streak": 63,
       "first_validated_at": "2026-07-15T18:37:13.659260+00:00",
-      "last_validated_at": "2026-09-12T08:44:13.502640+00:00",
+      "last_validated_at": "2026-09-13T09:39:08.681497+00:00",
       "stability_score": 100
     }
   },
@@ -1236,7 +888,7 @@
     "source_origin": "repository_tree",
     "source_status": "candidate",
     "protocol": "ss",
-    "validated_at": "2026-09-12T08:44:13.502640+00:00",
+    "validated_at": "2026-09-13T09:39:08.681497+00:00",
     "validation_location": "github_actions_eu",
     "xray_ok": true,
     "google_204_ok": true,
@@ -1246,7 +898,7 @@
     "http_endpoint_checked": 0,
     "http_endpoint_success_rate": 0.0,
     "http_endpoint_note": "sample limit",
-    "latency_ms": 78.3908700000211,
+    "latency_ms": 79.74523500001851,
     "quality_score": 100.0,
     "retried": false,
     "source_metrics": {
@@ -1255,10 +907,10 @@
       "real_success_rate": 0.3667
     },
     "stability": {
-      "times_validated": 59,
-      "success_streak": 53,
+      "times_validated": 60,
+      "success_streak": 54,
       "first_validated_at": "2026-07-15T18:37:13.659260+00:00",
-      "last_validated_at": "2026-09-12T08:44:13.502640+00:00",
+      "last_validated_at": "2026-09-13T09:39:08.681497+00:00",
       "stability_score": 100
     }
   },
@@ -1272,7 +924,7 @@
     "source_origin": "repository_tree",
     "source_status": "candidate",
     "protocol": "ss",
-    "validated_at": "2026-09-12T08:44:13.502640+00:00",
+    "validated_at": "2026-09-13T09:39:08.681497+00:00",
     "validation_location": "github_actions_eu",
     "xray_ok": true,
     "google_204_ok": true,
@@ -1282,7 +934,7 @@
     "http_endpoint_checked": 0,
     "http_endpoint_success_rate": 0.0,
     "http_endpoint_note": "sample limit",
-    "latency_ms": 87.58532099977856,
+    "latency_ms": 86.1256890000277,
     "quality_score": 100.0,
     "retried": false,
     "source_metrics": {
@@ -1291,82 +943,10 @@
       "real_success_rate": 0.3667
     },
     "stability": {
-      "times_validated": 60,
-      "success_streak": 41,
+      "times_validated": 61,
+      "success_streak": 42,
       "first_validated_at": "2026-07-15T18:37:13.659260+00:00",
-      "last_validated_at": "2026-09-12T08:44:13.502640+00:00",
-      "stability_score": 100
-    }
-  },
-  {
-    "id": "ss-51-222-141-125-445-aes-256-gcm-zdnvedrfpqexg9v-747ed1f9",
-    "config": "ss://YWVzLTI1Ni1nY206ekROVmVkUkZQUWV4Rzl2@51.222.141.125:445#CA%20%F0%9F%87%A8%F0%9F%87%A6%20%7C%20%40Raydikalx%20%7C%20A1531D",
-    "normalized_identity": "ss|51.222.141.125|445|aes-256-gcm|zDNVedRFPQexG9v",
-    "source_id": "https-raw-githubusercontent-com-0xradikal-free-v2ray-configs-main-verifi-b1823561",
-    "source_label": "0xRadikal/Free-v2ray-Configs — verified/clash.yaml",
-    "source_url": "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/clash.yaml",
-    "source_origin": "repository_tree",
-    "source_status": "trusted",
-    "protocol": "ss",
-    "validated_at": "2026-09-12T08:44:13.502640+00:00",
-    "validation_location": "github_actions_eu",
-    "xray_ok": true,
-    "google_204_ok": true,
-    "reachable": true,
-    "http_endpoint_results": [],
-    "http_endpoint_ok_count": 0,
-    "http_endpoint_checked": 0,
-    "http_endpoint_success_rate": 0.0,
-    "http_endpoint_note": "sample limit",
-    "latency_ms": 99.62157600011778,
-    "quality_score": 100.0,
-    "retried": false,
-    "source_metrics": {
-      "score": 100.0,
-      "tcp_success_rate": 1.0,
-      "real_success_rate": 0.7667
-    },
-    "stability": {
-      "times_validated": 5,
-      "success_streak": 5,
-      "first_validated_at": "2026-09-08T08:57:35.992638+00:00",
-      "last_validated_at": "2026-09-12T08:44:13.502640+00:00",
-      "stability_score": 100
-    }
-  },
-  {
-    "id": "ss-51-79-64-198-8119-aes-256-gcm-cdbidv42dcwnfin-4d196817",
-    "config": "ss://YWVzLTI1Ni1nY206Y2RCSURWNDJEQ3duZklO@51.79.64.198:8119#",
-    "normalized_identity": "ss|51.79.64.198|8119|aes-256-gcm|cdBIDV42DCwnfIN",
-    "source_id": "https-raw-githubusercontent-com-solispirit-v2ray-configs-main-subscripti-66d6fece",
-    "source_label": "SoliSpirit/v2ray-configs — Subscriptions/Sub12.txt",
-    "source_url": "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/main/Subscriptions/Sub12.txt",
-    "source_origin": "repository_tree",
-    "source_status": "trusted",
-    "protocol": "ss",
-    "validated_at": "2026-09-12T08:44:13.502640+00:00",
-    "validation_location": "github_actions_eu",
-    "xray_ok": true,
-    "google_204_ok": true,
-    "reachable": true,
-    "http_endpoint_results": [],
-    "http_endpoint_ok_count": 0,
-    "http_endpoint_checked": 0,
-    "http_endpoint_success_rate": 0.0,
-    "http_endpoint_note": "sample limit",
-    "latency_ms": 104.23601200000121,
-    "quality_score": 99.4,
-    "retried": false,
-    "source_metrics": {
-      "score": 82.9,
-      "tcp_success_rate": 0.6167,
-      "real_success_rate": 0.2333
-    },
-    "stability": {
-      "times_validated": 12,
-      "success_streak": 6,
-      "first_validated_at": "2026-08-23T05:01:19.435358+00:00",
-      "last_validated_at": "2026-09-12T08:44:13.502640+00:00",
+      "last_validated_at": "2026-09-13T09:39:08.681497+00:00",
       "stability_score": 100
     }
   },
@@ -1380,7 +960,7 @@
     "source_origin": "repository_tree",
     "source_status": "candidate",
     "protocol": "ss",
-    "validated_at": "2026-09-12T08:44:13.502640+00:00",
+    "validated_at": "2026-09-13T09:39:08.681497+00:00",
     "validation_location": "github_actions_eu",
     "xray_ok": true,
     "google_204_ok": true,
@@ -1390,8 +970,8 @@
     "http_endpoint_checked": 0,
     "http_endpoint_success_rate": 0.0,
     "http_endpoint_note": "sample limit",
-    "latency_ms": 105.20703100019091,
-    "quality_score": 99.2,
+    "latency_ms": 88.77924099999746,
+    "quality_score": 100.0,
     "retried": false,
     "source_metrics": {
       "score": 54.2,
@@ -1399,82 +979,10 @@
       "real_success_rate": 0.3667
     },
     "stability": {
-      "times_validated": 59,
-      "success_streak": 42,
+      "times_validated": 60,
+      "success_streak": 43,
       "first_validated_at": "2026-07-15T18:37:13.659260+00:00",
-      "last_validated_at": "2026-09-12T08:44:13.502640+00:00",
-      "stability_score": 100
-    }
-  },
-  {
-    "id": "trojan-188-114-98-0-443-1710442808-ws-tls-subb-nrshop198-workers-dev-ed--070050f5",
-    "config": "trojan://1710442808@188.114.98.0:443?path=/?ed=2560&security=tls&host=subb.nrshop198.workers.dev&fp=random&type=ws&sni=subb.nrshop198.workers.dev#",
-    "normalized_identity": "trojan|188.114.98.0|443|1710442808|ws|tls|subb.nrshop198.workers.dev|/?ed=2560",
-    "source_id": "https-raw-githubusercontent-com-nyeinkokoaung404-v2ray-configs-main-conf-8c5dfa92",
-    "source_label": "nyeinkokoaung404/V2ray-Configs — configs/proxy_configs_tested.txt",
-    "source_url": "https://raw.githubusercontent.com/nyeinkokoaung404/V2ray-Configs/main/configs/proxy_configs_tested.txt",
-    "source_origin": "repository_tree",
-    "source_status": "trusted",
-    "protocol": "trojan",
-    "validated_at": "2026-09-12T08:44:13.502640+00:00",
-    "validation_location": "github_actions_eu",
-    "xray_ok": true,
-    "google_204_ok": true,
-    "reachable": true,
-    "http_endpoint_results": [],
-    "http_endpoint_ok_count": 0,
-    "http_endpoint_checked": 0,
-    "http_endpoint_success_rate": 0.0,
-    "http_endpoint_note": "sample limit",
-    "latency_ms": 106.4137340000002,
-    "quality_score": 99.0,
-    "retried": false,
-    "source_metrics": {
-      "score": 98.3,
-      "tcp_success_rate": 0.9667,
-      "real_success_rate": 0.8333
-    },
-    "stability": {
-      "times_validated": 4,
-      "success_streak": 3,
-      "first_validated_at": "2026-09-08T08:57:35.992638+00:00",
-      "last_validated_at": "2026-09-12T08:44:13.502640+00:00",
-      "stability_score": 100
-    }
-  },
-  {
-    "id": "trojan-104-17-122-10-2083-123444-ws-tls-northrendserver-sherekontop-work-197d7b1c",
-    "config": "trojan://123444@104.17.122.10:2083?path=/?ed=2560&security=tls&host=northrendserver.sherekontop.workers.dev&fp=random&type=ws&sni=northrendserver.sherekontop.workers.dev#",
-    "normalized_identity": "trojan|104.17.122.10|2083|123444|ws|tls|northrendserver.sherekontop.workers.dev|/?ed=2560",
-    "source_id": "https-raw-githubusercontent-com-nyeinkokoaung404-v2ray-configs-main-conf-c94a99a0",
-    "source_label": "nyeinkokoaung404/V2ray-Configs — configs/proxy_configs.txt",
-    "source_url": "https://raw.githubusercontent.com/nyeinkokoaung404/V2ray-Configs/main/configs/proxy_configs.txt",
-    "source_origin": "repository_tree",
-    "source_status": "redundant",
-    "protocol": "trojan",
-    "validated_at": "2026-09-12T08:44:13.502640+00:00",
-    "validation_location": "github_actions_eu",
-    "xray_ok": true,
-    "google_204_ok": true,
-    "reachable": true,
-    "http_endpoint_results": [],
-    "http_endpoint_ok_count": 0,
-    "http_endpoint_checked": 0,
-    "http_endpoint_success_rate": 0.0,
-    "http_endpoint_note": "sample limit",
-    "latency_ms": 115.00493900007314,
-    "quality_score": 97.7,
-    "retried": false,
-    "source_metrics": {
-      "score": 96.6,
-      "tcp_success_rate": 0.9333,
-      "real_success_rate": 0.8333
-    },
-    "stability": {
-      "times_validated": 13,
-      "success_streak": 2,
-      "first_validated_at": "2026-08-27T15:21:18.816421+00:00",
-      "last_validated_at": "2026-09-12T08:44:13.502640+00:00",
+      "last_validated_at": "2026-09-13T09:39:08.681497+00:00",
       "stability_score": 100
     }
   },
@@ -1488,7 +996,7 @@
     "source_origin": "repository_tree",
     "source_status": "trusted",
     "protocol": "ss",
-    "validated_at": "2026-09-12T08:44:13.502640+00:00",
+    "validated_at": "2026-09-13T09:39:08.681497+00:00",
     "validation_location": "github_actions_eu",
     "xray_ok": true,
     "google_204_ok": true,
@@ -1498,33 +1006,105 @@
     "http_endpoint_checked": 0,
     "http_endpoint_success_rate": 0.0,
     "http_endpoint_note": "sample limit",
-    "latency_ms": 118.85475400003997,
-    "quality_score": 97.2,
+    "latency_ms": 93.42146699998466,
+    "quality_score": 100.0,
     "retried": false,
     "source_metrics": {
       "score": 64.1,
       "tcp_success_rate": 0.7667,
-      "real_success_rate": 0.3667
+      "real_success_rate": 0.4
     },
     "stability": {
-      "times_validated": 58,
-      "success_streak": 39,
+      "times_validated": 59,
+      "success_streak": 40,
       "first_validated_at": "2026-07-15T18:37:13.659260+00:00",
-      "last_validated_at": "2026-09-12T08:44:13.502640+00:00",
+      "last_validated_at": "2026-09-13T09:39:08.681497+00:00",
       "stability_score": 100
     }
   },
   {
-    "id": "vmess-67-220-85-46-18000-f8c8dc3d-0d37-46b0-8b34-a7232882fcfe-tcp-d3ee23a5",
-    "config": "vmess://eyJ2IjoiMiIsInBzIjoi8J+HuvCfh7hVU18zNTF8MS44TUIvc3xBMDA0LTI2MDYxOCIsImFkZCI6IjY3LjIyMC44NS40NiIsInBvcnQiOiIxODAwMCIsImlkIjoiZjhjOGRjM2QtMGQzNy00NmIwLThiMzQtYTcyMzI4ODJmY2ZlIiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ0Y3AiLCJ0eXBlIjoiIiwidGxzIjoiIn0=",
-    "normalized_identity": "vmess|67.220.85.46|18000|f8c8dc3d-0d37-46b0-8b34-a7232882fcfe|tcp|||",
+    "id": "ss-15-204-247-206-4444-aes-256-gcm-pkew8jpbytvtltm-877ebe2d",
+    "config": "ss://YWVzLTI1Ni1nY206cEtFVzhKUEJ5VFZUTHRN@15.204.247.206:4444#",
+    "normalized_identity": "ss|15.204.247.206|4444|aes-256-gcm|pKEW8JPByTVTLtM",
+    "source_id": "https-raw-githubusercontent-com-hidashimora-free-vpn-anti-rkn-main-confi-0435d3d7",
+    "source_label": "Hidashimora/free-vpn-anti-rkn — configs/6.2.txt",
+    "source_url": "https://raw.githubusercontent.com/Hidashimora/free-vpn-anti-rkn/main/configs/6.2.txt",
+    "source_origin": "repository_tree",
+    "source_status": "trusted",
+    "protocol": "ss",
+    "validated_at": "2026-09-13T09:39:08.681497+00:00",
+    "validation_location": "github_actions_eu",
+    "xray_ok": true,
+    "google_204_ok": true,
+    "reachable": true,
+    "http_endpoint_results": [],
+    "http_endpoint_ok_count": 0,
+    "http_endpoint_checked": 0,
+    "http_endpoint_success_rate": 0.0,
+    "http_endpoint_note": "sample limit",
+    "latency_ms": 94.48097700033031,
+    "quality_score": 100.0,
+    "retried": false,
+    "source_metrics": {
+      "score": 92.5,
+      "tcp_success_rate": 0.9,
+      "real_success_rate": 0.6667
+    },
+    "stability": {
+      "times_validated": 3,
+      "success_streak": 3,
+      "first_validated_at": "2026-09-11T09:00:30.341944+00:00",
+      "last_validated_at": "2026-09-13T09:39:08.681497+00:00",
+      "stability_score": 100
+    }
+  },
+  {
+    "id": "ss-149-22-95-183-443-aes-128-gcm-shadowsocks-a70ab9db",
+    "config": "ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@149.22.95.183:443#",
+    "normalized_identity": "ss|149.22.95.183|443|aes-128-gcm|shadowsocks",
+    "source_id": "https-raw-githubusercontent-com-firmfox-proxify-main-v2ray-configs-subsc-90a8bb68",
+    "source_label": "Firmfox/Proxify — v2ray_configs/subscriptions/subscription-39.txt",
+    "source_url": "https://raw.githubusercontent.com/Firmfox/Proxify/main/v2ray_configs/subscriptions/subscription-39.txt",
+    "source_origin": "repository_tree",
+    "source_status": "redundant",
+    "protocol": "ss",
+    "validated_at": "2026-09-13T09:39:08.681497+00:00",
+    "validation_location": "github_actions_eu",
+    "xray_ok": true,
+    "google_204_ok": true,
+    "reachable": true,
+    "http_endpoint_results": [],
+    "http_endpoint_ok_count": 0,
+    "http_endpoint_checked": 0,
+    "http_endpoint_success_rate": 0.0,
+    "http_endpoint_note": "sample limit",
+    "latency_ms": 113.28693100006149,
+    "quality_score": 98.0,
+    "retried": false,
+    "source_metrics": {
+      "score": 79.2,
+      "tcp_success_rate": 0.7667,
+      "real_success_rate": 0.4
+    },
+    "stability": {
+      "times_validated": 59,
+      "success_streak": 44,
+      "first_validated_at": "2026-07-15T18:37:13.659260+00:00",
+      "last_validated_at": "2026-09-13T09:39:08.681497+00:00",
+      "stability_score": 100
+    }
+  },
+  {
+    "id": "vmess-67-220-85-46-18000-f8c8dc3d-0d37-46b0-8b34-a7232882fcfe-raw-8267bcfa",
+    "config": "vmess://eyJ2IjoiMiIsInBzIjoi8J+HuvCfh7hVU185N3w5ODdLQi9zfEMwMDItMjYwNjIyIiwiYWRkIjoiNjcuMjIwLjg1LjQ2IiwicG9ydCI6IjE4MDAwIiwiaWQiOiJmOGM4ZGMzZC0wZDM3LTQ2YjAtOGIzNC1hNzIzMjg4MmZjZmUiLCJhaWQiOiIwIiwic2N5IjoiYWVzLTEyOC1nY20iLCJuZXQiOiJyYXciLCJ0eXBlIjoiIiwidGxzIjoiIn0=",
+    "normalized_identity": "vmess|67.220.85.46|18000|f8c8dc3d-0d37-46b0-8b34-a7232882fcfe|raw|||",
     "source_id": "https-raw-githubusercontent-com-hidashimora-free-vpn-anti-rkn-main-confi-da2a4108",
     "source_label": "Hidashimora/free-vpn-anti-rkn — configs/13.2.txt",
     "source_url": "https://raw.githubusercontent.com/Hidashimora/free-vpn-anti-rkn/main/configs/13.2.txt",
     "source_origin": "repository_tree",
     "source_status": "trusted",
     "protocol": "vmess",
-    "validated_at": "2026-09-12T08:44:13.502640+00:00",
+    "validated_at": "2026-09-13T09:39:08.681497+00:00",
     "validation_location": "github_actions_eu",
     "xray_ok": true,
     "google_204_ok": true,
@@ -1534,33 +1114,33 @@
     "http_endpoint_checked": 0,
     "http_endpoint_success_rate": 0.0,
     "http_endpoint_note": "sample limit",
-    "latency_ms": 121.40161600018473,
-    "quality_score": 96.8,
+    "latency_ms": 119.9101890001657,
+    "quality_score": 97.0,
     "retried": false,
     "source_metrics": {
       "score": 100.0,
       "tcp_success_rate": 0.95,
-      "real_success_rate": 0.6667
+      "real_success_rate": 0.4333
     },
     "stability": {
-      "times_validated": 36,
+      "times_validated": 16,
       "success_streak": 2,
-      "first_validated_at": "2026-07-19T12:33:58.162586+00:00",
-      "last_validated_at": "2026-09-12T08:44:13.502640+00:00",
+      "first_validated_at": "2026-07-24T06:45:23.138220+00:00",
+      "last_validated_at": "2026-09-13T09:39:08.681497+00:00",
       "stability_score": 100
     }
   },
   {
-    "id": "vmess-38-91-107-49-18000-f8c8dc3d-0d37-46b0-8b34-a7232882fcfe-tcp-a07e87ca",
-    "config": "vmess://eyJhZGQiOiIzOC45MS4xMDcuNDkiLCJhaWQiOiIwIiwiaG9zdCI6IiIsImlkIjoiZjhjOGRjM2QtMGQzNy00NmIwLThiMzQtYTcyMzI4ODJmY2ZlIiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiIxODAwMCIsInBzIjoiXHVkODNjXHVkZGZhXHVkODNjXHVkZGY4IEpvaW4rVGVsZWdyYW06QFNvbFZQTiBcdWQ4M2NcdWRkZmFcdWQ4M2NcdWRkZjgiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGVzdF9uYW1lIjoiMiIsInRscyI6IiIsInR5cGUiOiJub25lIiwidiI6IjIiLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlfQ==",
-    "normalized_identity": "vmess|38.91.107.49|18000|f8c8dc3d-0d37-46b0-8b34-a7232882fcfe|tcp|||",
-    "source_id": "https-raw-githubusercontent-com-solispirit-solvpn-main-all-configs-txt-f1112895",
-    "source_label": "SoliSpirit/SolVPN — all_configs.txt",
-    "source_url": "https://raw.githubusercontent.com/SoliSpirit/SolVPN/main/all_configs.txt",
+    "id": "ss-51-222-12-127-445-aes-256-gcm-zdnvedrfpqexg9v-192c4502",
+    "config": "ss://YWVzLTI1Ni1nY206ekROVmVkUkZQUWV4Rzl2@51.222.12.127:445#",
+    "normalized_identity": "ss|51.222.12.127|445|aes-256-gcm|zDNVedRFPQexG9v",
+    "source_id": "https-raw-githubusercontent-com-r3zarahimi-tg-v2ray-configs-every2h-main-d347190f",
+    "source_label": "R3ZARAHIMI/tg-v2ray-configs-every2h — Config_no_cf.txt",
+    "source_url": "https://raw.githubusercontent.com/R3ZARAHIMI/tg-v2ray-configs-every2h/main/Config_no_cf.txt",
     "source_origin": "repository_tree",
     "source_status": "trusted",
-    "protocol": "vmess",
-    "validated_at": "2026-09-12T08:44:13.502640+00:00",
+    "protocol": "ss",
+    "validated_at": "2026-09-13T09:39:08.681497+00:00",
     "validation_location": "github_actions_eu",
     "xray_ok": true,
     "google_204_ok": true,
@@ -1570,33 +1150,33 @@
     "http_endpoint_checked": 0,
     "http_endpoint_success_rate": 0.0,
     "http_endpoint_note": "sample limit",
-    "latency_ms": 133.46856700002263,
-    "quality_score": 95.0,
+    "latency_ms": 120.9339310003088,
+    "quality_score": 96.9,
     "retried": false,
     "source_metrics": {
-      "score": 100.0,
-      "tcp_success_rate": 0.8167,
+      "score": 75.0,
+      "tcp_success_rate": 0.6333,
       "real_success_rate": 0.3333
     },
     "stability": {
-      "times_validated": 42,
+      "times_validated": 20,
       "success_streak": 4,
-      "first_validated_at": "2026-07-15T18:37:13.659260+00:00",
-      "last_validated_at": "2026-09-12T08:44:13.502640+00:00",
+      "first_validated_at": "2026-08-16T04:55:42.035074+00:00",
+      "last_validated_at": "2026-09-13T09:39:08.681497+00:00",
       "stability_score": 100
     }
   },
   {
-    "id": "vmess-216-106-185-141-22324-04621bae-ab36-11ec-b909-0242ac120002-tcp-e3d604ea",
-    "config": "vmess://eyJ2IjogbnVsbCwgInBzIjogIvCfh7rwn4e4IDE3NSAtIFVTIC0gVk1lc3MgLSAyMjMyNCIsICJhZGQiOiAiMjE2LjEwNi4xODUuMTQxIiwgInBvcnQiOiAyMjMyNCwgImlkIjogIjA0NjIxYmFlLWFiMzYtMTFlYy1iOTA5LTAyNDJhYzEyMDAwMiIsICJhaWQiOiAiMCIsICJzY3kiOiBudWxsLCAibmV0IjogInRjcCIsICJ0eXBlIjogbnVsbCwgImhvc3QiOiAiIiwgImFscG4iOiBudWxsLCAicGF0aCI6ICIvIiwgInRscyI6ICIiLCAic25pIjogbnVsbCwgImZwIjogbnVsbCwgIm5hbWUiOiAi8J+HuvCfh7ggVVMgMiJ9",
-    "normalized_identity": "vmess|216.106.185.141|22324|04621bae-ab36-11ec-b909-0242ac120002|tcp|||/",
+    "id": "ss-51-79-49-116-8882-aes-256-gcm-kdwvxyzotbcgkc4-58bbd161",
+    "config": "ss://YWVzLTI1Ni1nY206a0RXdlhZWm9UQmNHa0M0@51.79.49.116:8882#",
+    "normalized_identity": "ss|51.79.49.116|8882|aes-256-gcm|kDWvXYZoTBcGkC4",
     "source_id": "https-raw-githubusercontent-com-nyeinkokoaung404-v2ray-configs-main-conf-8c5dfa92",
     "source_label": "nyeinkokoaung404/V2ray-Configs — configs/proxy_configs_tested.txt",
     "source_url": "https://raw.githubusercontent.com/nyeinkokoaung404/V2ray-Configs/main/configs/proxy_configs_tested.txt",
     "source_origin": "repository_tree",
     "source_status": "trusted",
-    "protocol": "vmess",
-    "validated_at": "2026-09-12T08:44:13.502640+00:00",
+    "protocol": "ss",
+    "validated_at": "2026-09-13T09:39:08.681497+00:00",
     "validation_location": "github_actions_eu",
     "xray_ok": true,
     "google_204_ok": true,
@@ -1606,19 +1186,55 @@
     "http_endpoint_checked": 0,
     "http_endpoint_success_rate": 0.0,
     "http_endpoint_note": "sample limit",
-    "latency_ms": 151.35873100001618,
-    "quality_score": 92.3,
+    "latency_ms": 121.2321950000046,
+    "quality_score": 96.8,
     "retried": false,
     "source_metrics": {
-      "score": 98.3,
-      "tcp_success_rate": 0.9667,
-      "real_success_rate": 0.8333
+      "score": 100.0,
+      "tcp_success_rate": 1.0,
+      "real_success_rate": 0.9
     },
     "stability": {
-      "times_validated": 37,
-      "success_streak": 4,
+      "times_validated": 16,
+      "success_streak": 5,
+      "first_validated_at": "2026-08-24T05:08:24.112255+00:00",
+      "last_validated_at": "2026-09-13T09:39:08.681497+00:00",
+      "stability_score": 100
+    }
+  },
+  {
+    "id": "vmess-216-106-185-141-22324-04621bae-ab36-11ec-b909-0242ac120002-tcp-e3d604ea",
+    "config": "vmess://eyJhZGQiOiAiMjE2LjEwNi4xODUuMTQxIiwgImFpZCI6ICIwIiwgImFscG4iOiBudWxsLCAiZnAiOiBudWxsLCAiaG9zdCI6ICIiLCAiaWQiOiAiMDQ2MjFiYWUtYWIzNi0xMWVjLWI5MDktMDI0MmFjMTIwMDAyIiwgIm5hbWUiOiAiVVMgXHVkODNjXHVkZGZhXHVkODNjXHVkZGY4IHwgQFJheWRpa2FseCB8IEY1QjFDQSIsICJuZXQiOiAidGNwIiwgInBhdGgiOiAiLyIsICJwb3J0IjogMjIzMjQsICJzY3kiOiBudWxsLCAic2tpcC1jZXJ0LXZlcmlmeSI6IHRydWUsICJzbmkiOiBudWxsLCAidGxzIjogIiIsICJ0eXBlIjogbnVsbCwgInYiOiBudWxsLCAicHMiOiAiXHVkODNkXHVkZDI1Sm9pbitUZWxlZ3JhbTpARmFyYWhfVlBOXHVkODNkXHVkZmUzIn0=",
+    "normalized_identity": "vmess|216.106.185.141|22324|04621bae-ab36-11ec-b909-0242ac120002|tcp|||/",
+    "source_id": "https-raw-githubusercontent-com-solispirit-v2ray-configs-main-subscripti-85a4ed83",
+    "source_label": "SoliSpirit/v2ray-configs — Subscriptions/Sub27.txt",
+    "source_url": "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/main/Subscriptions/Sub27.txt",
+    "source_origin": "repository_tree",
+    "source_status": "redundant",
+    "protocol": "vmess",
+    "validated_at": "2026-09-13T09:39:08.681497+00:00",
+    "validation_location": "github_actions_eu",
+    "xray_ok": true,
+    "google_204_ok": true,
+    "reachable": true,
+    "http_endpoint_results": [],
+    "http_endpoint_ok_count": 0,
+    "http_endpoint_checked": 0,
+    "http_endpoint_success_rate": 0.0,
+    "http_endpoint_note": "sample limit",
+    "latency_ms": 138.2731609999155,
+    "quality_score": 94.3,
+    "retried": false,
+    "source_metrics": {
+      "score": 67.6,
+      "tcp_success_rate": 0.7,
+      "real_success_rate": 0.3667
+    },
+    "stability": {
+      "times_validated": 38,
+      "success_streak": 5,
       "first_validated_at": "2026-07-15T18:37:13.659260+00:00",
-      "last_validated_at": "2026-09-12T08:44:13.502640+00:00",
+      "last_validated_at": "2026-09-13T09:39:08.681497+00:00",
       "stability_score": 100
     }
   }
