@@ -1,44 +1,183 @@
 [
   {
     "candidate": {
-      "id": "https-raw-githubusercontent-com-kasesm-free-config-main-vmess-sub-txt-a73dc371",
-      "label": "kasesm/Free-Config — vmess_sub.txt",
-      "url": "https://raw.githubusercontent.com/kasesm/Free-Config/main/vmess_sub.txt",
+      "id": "https-raw-githubusercontent-com-delta-kronecker-v2ray-config-main-config-838cba91",
+      "label": "Delta-Kronecker/V2ray-Config — config/farg/all_configs.json",
+      "url": "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/main/config/farg/all_configs.json",
       "origin": "repository_tree",
       "kind": "public_feed",
       "tags": [
         "repository-tree",
         "auto",
-        "github"
+        "github",
+        "english"
       ],
-      "discovered_at": "2026-09-26T09:25:57.230383+00:00",
+      "discovered_at": "2026-09-27T10:06:21.104523+00:00",
       "metadata": {
-        "repository": "kasesm/Free-Config",
+        "repository": "Delta-Kronecker/V2ray-Config",
         "branch": "main",
-        "path": "vmess_sub.txt"
+        "path": "config/farg/all_configs.json"
       }
     },
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 61,
-    "unique_items": 61,
+    "raw_items": 0,
+    "unique_items": 0,
     "duplicate_ratio": 0.0,
-    "protocols": {
-      "vless": 4,
-      "vmess": 57
-    },
-    "tcp_sample_size": 30,
-    "tcp_ok_count": 7,
-    "tcp_success_rate": 0.2333,
-    "score": 14.7,
+    "protocols": {},
+    "tcp_sample_size": 0,
+    "tcp_ok_count": 0,
+    "tcp_success_rate": 0.0,
+    "score": 0.0,
     "status": "rejected",
     "notes": [],
     "diagnostics": {
       "dedupe": {
-        "exact_unique_items": 61,
-        "normalized_unique_items": 61,
+        "exact_unique_items": 0,
+        "normalized_unique_items": 0,
         "normalized_removed": 0
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 0,
+        "ok": 0,
+        "success_rate": 0.0,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 0,
+        "note": "no configs"
+      },
+      "freshness": {
+        "score_adjustment": 0.0,
+        "config_churn_rate": null,
+        "history_available": true,
+        "reasons": [
+          "not applied to rejected empty/fetch-failed source"
+        ]
+      },
+      "history": {
+        "times_seen": 6,
+        "failure_streak": 6,
+        "avg_tcp_success_rate": 0.0,
+        "avg_real_success_rate": 0.0,
+        "last_config_churn_rate": 0.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-v2rayroot-v2root-configpilot-main-output-dbcac660",
+      "label": "V2RayRoot/V2Root-ConfigPilot — output/BestConfigs.txt",
+      "url": "https://raw.githubusercontent.com/V2RayRoot/V2Root-ConfigPilot/main/output/BestConfigs.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github",
+        "english"
+      ],
+      "discovered_at": "2026-09-27T10:06:09.472483+00:00",
+      "metadata": {
+        "repository": "V2RayRoot/V2Root-ConfigPilot",
+        "branch": "main",
+        "path": "output/BestConfigs.txt"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 8,
+    "unique_items": 6,
+    "duplicate_ratio": 0.25,
+    "protocols": {
+      "ss": 3,
+      "trojan": 1,
+      "vless": 2
+    },
+    "tcp_sample_size": 6,
+    "tcp_ok_count": 6,
+    "tcp_success_rate": 1.0,
+    "score": 52.0,
+    "status": "rejected",
+    "notes": [],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 8,
+        "normalized_unique_items": 6,
+        "normalized_removed": 2
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 6,
+        "ok": 0,
+        "success_rate": 0.0,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 0,
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": -17.0,
+        "config_churn_rate": 0.0,
+        "history_available": true,
+        "reasons": [
+          "stale unchanged configs",
+          "strong historical TCP",
+          "failure streak 9"
+        ]
+      },
+      "history": {
+        "times_seen": 10,
+        "failure_streak": 10,
+        "avg_tcp_success_rate": 1.0,
+        "avg_real_success_rate": 0.0,
+        "last_config_churn_rate": 0.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-elanski-proxy-preflight-main-sources-tg--853b690a",
+      "label": "elanski/proxy-preflight — sources_tg/vrayconfigs.txt",
+      "url": "https://raw.githubusercontent.com/elanski/proxy-preflight/main/sources_tg/vrayconfigs.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github",
+        "english"
+      ],
+      "discovered_at": "2026-09-27T10:05:53.153719+00:00",
+      "metadata": {
+        "repository": "elanski/proxy-preflight",
+        "branch": "main",
+        "path": "sources_tg/vrayconfigs.txt"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 52,
+    "unique_items": 49,
+    "duplicate_ratio": 0.0577,
+    "protocols": {
+      "vless": 30,
+      "vmess": 19
+    },
+    "tcp_sample_size": 30,
+    "tcp_ok_count": 8,
+    "tcp_success_rate": 0.2667,
+    "score": 14.9,
+    "status": "rejected",
+    "notes": [],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 52,
+        "normalized_unique_items": 49,
+        "normalized_removed": 3
       },
       "real_check": {
         "requested": true,
@@ -56,14 +195,13 @@
         "history_available": true,
         "reasons": [
           "stale unchanged configs",
-          "failure streak 23",
-          "last success older than 30 days"
+          "failure streak 27"
         ]
       },
       "history": {
-        "times_seen": 27,
-        "failure_streak": 24,
-        "avg_tcp_success_rate": 0.2814,
+        "times_seen": 28,
+        "failure_streak": 28,
+        "avg_tcp_success_rate": 0.2538,
         "avg_real_success_rate": 0.0,
         "last_config_churn_rate": 0.0
       }
@@ -71,21 +209,1502 @@
   },
   {
     "candidate": {
-      "id": "https-raw-githubusercontent-com-kort0881-vpn-vless-configs-russia-main-d-99c924d7",
-      "label": "kort0881/vpn-vless-configs-russia — data/githubmirror/ru-sni-local/trojan.txt",
-      "url": "https://raw.githubusercontent.com/kort0881/vpn-vless-configs-russia/main/data/githubmirror/ru-sni-local/trojan.txt",
+      "id": "https-raw-githubusercontent-com-igareck-vpn-configs-for-russia-main-blac-10b3c27b",
+      "label": "Telegram public channel igareq → raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/BLACK_SS+All_RU...",
+      "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/BLACK_SS+All_RUS.txt",
+      "origin": "telegram_discovered_link",
+      "kind": "public_feed",
+      "tags": [
+        "telegram",
+        "discovered-link",
+        "auto"
+      ],
+      "discovered_at": "2026-09-27T10:07:02.838868+00:00",
+      "metadata": {
+        "channel": "igareq",
+        "parent_url": "https://github.com/igareck/vpn-configs-for-russia",
+        "source": "telegram_web_link"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 20,
+    "unique_items": 5,
+    "duplicate_ratio": 0.75,
+    "protocols": {
+      "trojan": 5
+    },
+    "tcp_sample_size": 5,
+    "tcp_ok_count": 5,
+    "tcp_success_rate": 1.0,
+    "score": 55.5,
+    "status": "rejected",
+    "notes": [],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 20,
+        "normalized_unique_items": 5,
+        "normalized_removed": 15
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 5,
+        "ok": 1,
+        "success_rate": 0.2,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 1,
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": -1.0,
+        "config_churn_rate": 0.6667,
+        "history_available": true,
+        "reasons": [
+          "fresh config churn",
+          "strong historical TCP",
+          "failure streak 3"
+        ]
+      },
+      "history": {
+        "times_seen": 21,
+        "failure_streak": 4,
+        "avg_tcp_success_rate": 0.9249,
+        "avg_real_success_rate": 0.4723,
+        "last_config_churn_rate": 0.6667
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-aliilapro-v2rayng-config-main-config-yml-db558c48",
+      "label": "ALIILAPRO/v2rayNG-Config — _config.yml",
+      "url": "https://raw.githubusercontent.com/ALIILAPRO/v2rayNG-Config/main/_config.yml",
       "origin": "repository_tree",
       "kind": "public_feed",
       "tags": [
         "repository-tree",
         "auto",
-        "github"
+        "github",
+        "english"
       ],
-      "discovered_at": "2026-09-26T09:25:57.048765+00:00",
+      "discovered_at": "2026-09-27T10:05:57.451160+00:00",
       "metadata": {
-        "repository": "kort0881/vpn-vless-configs-russia",
+        "repository": "ALIILAPRO/v2rayNG-Config",
         "branch": "main",
-        "path": "data/githubmirror/ru-sni-local/trojan.txt"
+        "path": "_config.yml"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 0,
+    "unique_items": 0,
+    "duplicate_ratio": 0.0,
+    "protocols": {},
+    "tcp_sample_size": 0,
+    "tcp_ok_count": 0,
+    "tcp_success_rate": 0.0,
+    "score": 0.0,
+    "status": "rejected",
+    "notes": [],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 0,
+        "normalized_unique_items": 0,
+        "normalized_removed": 0
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 0,
+        "ok": 0,
+        "success_rate": 0.0,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 0,
+        "note": "no configs"
+      },
+      "freshness": {
+        "score_adjustment": 0.0,
+        "config_churn_rate": null,
+        "history_available": true,
+        "reasons": [
+          "not applied to rejected empty/fetch-failed source"
+        ]
+      },
+      "history": {
+        "times_seen": 14,
+        "failure_streak": 14,
+        "avg_tcp_success_rate": 0.0,
+        "avg_real_success_rate": 0.0,
+        "last_config_churn_rate": 0.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-amirrezafarnamtaheri-configstream-main-p-d5110d81",
+      "label": "AmirrezaFarnamTaheri/ConfigStream — .pre-commit-config.yaml",
+      "url": "https://raw.githubusercontent.com/AmirrezaFarnamTaheri/ConfigStream/main/.pre-commit-config.yaml",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github",
+        "english"
+      ],
+      "discovered_at": "2026-09-27T10:06:27.728359+00:00",
+      "metadata": {
+        "repository": "AmirrezaFarnamTaheri/ConfigStream",
+        "branch": "main",
+        "path": ".pre-commit-config.yaml"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 0,
+    "unique_items": 0,
+    "duplicate_ratio": 0.0,
+    "protocols": {},
+    "tcp_sample_size": 0,
+    "tcp_ok_count": 0,
+    "tcp_success_rate": 0.0,
+    "score": 0.0,
+    "status": "rejected",
+    "notes": [],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 0,
+        "normalized_unique_items": 0,
+        "normalized_removed": 0
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 0,
+        "ok": 0,
+        "success_rate": 0.0,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 0,
+        "note": "no configs"
+      },
+      "freshness": {
+        "score_adjustment": 0.0,
+        "config_churn_rate": null,
+        "history_available": true,
+        "reasons": [
+          "not applied to rejected empty/fetch-failed source"
+        ]
+      },
+      "history": {
+        "times_seen": 3,
+        "failure_streak": 3,
+        "avg_tcp_success_rate": 0.0,
+        "avg_real_success_rate": 0.0,
+        "last_config_churn_rate": 0.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-amirrezafarnamtaheri-configstream-main-c-a6c149be",
+      "label": "AmirrezaFarnamTaheri/ConfigStream — config/container-images.json",
+      "url": "https://raw.githubusercontent.com/AmirrezaFarnamTaheri/ConfigStream/main/config/container-images.json",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github",
+        "english"
+      ],
+      "discovered_at": "2026-09-27T10:06:27.728369+00:00",
+      "metadata": {
+        "repository": "AmirrezaFarnamTaheri/ConfigStream",
+        "branch": "main",
+        "path": "config/container-images.json"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 0,
+    "unique_items": 0,
+    "duplicate_ratio": 0.0,
+    "protocols": {},
+    "tcp_sample_size": 0,
+    "tcp_ok_count": 0,
+    "tcp_success_rate": 0.0,
+    "score": 0.0,
+    "status": "rejected",
+    "notes": [],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 0,
+        "normalized_unique_items": 0,
+        "normalized_removed": 0
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 0,
+        "ok": 0,
+        "success_rate": 0.0,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 0,
+        "note": "no configs"
+      },
+      "freshness": {
+        "score_adjustment": 0.0,
+        "config_churn_rate": null,
+        "history_available": true,
+        "reasons": [
+          "not applied to rejected empty/fetch-failed source"
+        ]
+      },
+      "history": {
+        "times_seen": 3,
+        "failure_streak": 3,
+        "avg_tcp_success_rate": 0.0,
+        "avg_real_success_rate": 0.0,
+        "last_config_churn_rate": 0.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-amirrezafarnamtaheri-configstream-main-c-e8e95a4e",
+      "label": "AmirrezaFarnamTaheri/ConfigStream — config/exception-boundary-budget.json",
+      "url": "https://raw.githubusercontent.com/AmirrezaFarnamTaheri/ConfigStream/main/config/exception-boundary-budget.json",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github",
+        "english"
+      ],
+      "discovered_at": "2026-09-27T10:06:27.728309+00:00",
+      "metadata": {
+        "repository": "AmirrezaFarnamTaheri/ConfigStream",
+        "branch": "main",
+        "path": "config/exception-boundary-budget.json"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 0,
+    "unique_items": 0,
+    "duplicate_ratio": 0.0,
+    "protocols": {},
+    "tcp_sample_size": 0,
+    "tcp_ok_count": 0,
+    "tcp_success_rate": 0.0,
+    "score": 0.0,
+    "status": "rejected",
+    "notes": [],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 0,
+        "normalized_unique_items": 0,
+        "normalized_removed": 0
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 0,
+        "ok": 0,
+        "success_rate": 0.0,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 0,
+        "note": "no configs"
+      },
+      "freshness": {
+        "score_adjustment": 0.0,
+        "config_churn_rate": null,
+        "history_available": true,
+        "reasons": [
+          "not applied to rejected empty/fetch-failed source"
+        ]
+      },
+      "history": {
+        "times_seen": 3,
+        "failure_streak": 3,
+        "avg_tcp_success_rate": 0.0,
+        "avg_real_success_rate": 0.0,
+        "last_config_churn_rate": 0.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-amirrezafarnamtaheri-configstream-main-c-964ceff7",
+      "label": "AmirrezaFarnamTaheri/ConfigStream — config/function-size-budget.json",
+      "url": "https://raw.githubusercontent.com/AmirrezaFarnamTaheri/ConfigStream/main/config/function-size-budget.json",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github",
+        "english"
+      ],
+      "discovered_at": "2026-09-27T10:06:27.728340+00:00",
+      "metadata": {
+        "repository": "AmirrezaFarnamTaheri/ConfigStream",
+        "branch": "main",
+        "path": "config/function-size-budget.json"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 0,
+    "unique_items": 0,
+    "duplicate_ratio": 0.0,
+    "protocols": {},
+    "tcp_sample_size": 0,
+    "tcp_ok_count": 0,
+    "tcp_success_rate": 0.0,
+    "score": 0.0,
+    "status": "rejected",
+    "notes": [],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 0,
+        "normalized_unique_items": 0,
+        "normalized_removed": 0
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 0,
+        "ok": 0,
+        "success_rate": 0.0,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 0,
+        "note": "no configs"
+      },
+      "freshness": {
+        "score_adjustment": 0.0,
+        "config_churn_rate": null,
+        "history_available": true,
+        "reasons": [
+          "not applied to rejected empty/fetch-failed source"
+        ]
+      },
+      "history": {
+        "times_seen": 3,
+        "failure_streak": 3,
+        "avg_tcp_success_rate": 0.0,
+        "avg_real_success_rate": 0.0,
+        "last_config_churn_rate": 0.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-amirrezafarnamtaheri-configstream-main-c-9adf37d2",
+      "label": "AmirrezaFarnamTaheri/ConfigStream — config/github-action-pins.json",
+      "url": "https://raw.githubusercontent.com/AmirrezaFarnamTaheri/ConfigStream/main/config/github-action-pins.json",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github",
+        "english"
+      ],
+      "discovered_at": "2026-09-27T10:06:27.728287+00:00",
+      "metadata": {
+        "repository": "AmirrezaFarnamTaheri/ConfigStream",
+        "branch": "main",
+        "path": "config/github-action-pins.json"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 0,
+    "unique_items": 0,
+    "duplicate_ratio": 0.0,
+    "protocols": {},
+    "tcp_sample_size": 0,
+    "tcp_ok_count": 0,
+    "tcp_success_rate": 0.0,
+    "score": 0.0,
+    "status": "rejected",
+    "notes": [],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 0,
+        "normalized_unique_items": 0,
+        "normalized_removed": 0
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 0,
+        "ok": 0,
+        "success_rate": 0.0,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 0,
+        "note": "no configs"
+      },
+      "freshness": {
+        "score_adjustment": 0.0,
+        "config_churn_rate": null,
+        "history_available": true,
+        "reasons": [
+          "not applied to rejected empty/fetch-failed source"
+        ]
+      },
+      "history": {
+        "times_seen": 3,
+        "failure_streak": 3,
+        "avg_tcp_success_rate": 0.0,
+        "avg_real_success_rate": 0.0,
+        "last_config_churn_rate": 0.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-amirrezafarnamtaheri-configstream-main-c-9aa36b7c",
+      "label": "AmirrezaFarnamTaheri/ConfigStream — config/pages-trust-policy.json",
+      "url": "https://raw.githubusercontent.com/AmirrezaFarnamTaheri/ConfigStream/main/config/pages-trust-policy.json",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github",
+        "english"
+      ],
+      "discovered_at": "2026-09-27T10:06:27.728350+00:00",
+      "metadata": {
+        "repository": "AmirrezaFarnamTaheri/ConfigStream",
+        "branch": "main",
+        "path": "config/pages-trust-policy.json"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 0,
+    "unique_items": 0,
+    "duplicate_ratio": 0.0,
+    "protocols": {},
+    "tcp_sample_size": 0,
+    "tcp_ok_count": 0,
+    "tcp_success_rate": 0.0,
+    "score": 0.0,
+    "status": "rejected",
+    "notes": [],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 0,
+        "normalized_unique_items": 0,
+        "normalized_removed": 0
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 0,
+        "ok": 0,
+        "success_rate": 0.0,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 0,
+        "note": "no configs"
+      },
+      "freshness": {
+        "score_adjustment": 0.0,
+        "config_churn_rate": null,
+        "history_available": true,
+        "reasons": [
+          "not applied to rejected empty/fetch-failed source"
+        ]
+      },
+      "history": {
+        "times_seen": 2,
+        "failure_streak": 2,
+        "avg_tcp_success_rate": 0.0,
+        "avg_real_success_rate": 0.0,
+        "last_config_churn_rate": 0.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-amirrezafarnamtaheri-configstream-main-c-65ea7b3b",
+      "label": "AmirrezaFarnamTaheri/ConfigStream — config/runtime-versions.json",
+      "url": "https://raw.githubusercontent.com/AmirrezaFarnamTaheri/ConfigStream/main/config/runtime-versions.json",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github",
+        "english"
+      ],
+      "discovered_at": "2026-09-27T10:06:27.728298+00:00",
+      "metadata": {
+        "repository": "AmirrezaFarnamTaheri/ConfigStream",
+        "branch": "main",
+        "path": "config/runtime-versions.json"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 0,
+    "unique_items": 0,
+    "duplicate_ratio": 0.0,
+    "protocols": {},
+    "tcp_sample_size": 0,
+    "tcp_ok_count": 0,
+    "tcp_success_rate": 0.0,
+    "score": 0.0,
+    "status": "rejected",
+    "notes": [],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 0,
+        "normalized_unique_items": 0,
+        "normalized_removed": 0
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 0,
+        "ok": 0,
+        "success_rate": 0.0,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 0,
+        "note": "no configs"
+      },
+      "freshness": {
+        "score_adjustment": 0.0,
+        "config_churn_rate": null,
+        "history_available": true,
+        "reasons": [
+          "not applied to rejected empty/fetch-failed source"
+        ]
+      },
+      "history": {
+        "times_seen": 3,
+        "failure_streak": 3,
+        "avg_tcp_success_rate": 0.0,
+        "avg_real_success_rate": 0.0,
+        "last_config_churn_rate": 0.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-amirrezafarnamtaheri-configstream-main-c-c61f628e",
+      "label": "AmirrezaFarnamTaheri/ConfigStream — config/source-snapshot.json",
+      "url": "https://raw.githubusercontent.com/AmirrezaFarnamTaheri/ConfigStream/main/config/source-snapshot.json",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github",
+        "english"
+      ],
+      "discovered_at": "2026-09-27T10:06:27.728261+00:00",
+      "metadata": {
+        "repository": "AmirrezaFarnamTaheri/ConfigStream",
+        "branch": "main",
+        "path": "config/source-snapshot.json"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 0,
+    "unique_items": 0,
+    "duplicate_ratio": 0.0,
+    "protocols": {},
+    "tcp_sample_size": 0,
+    "tcp_ok_count": 0,
+    "tcp_success_rate": 0.0,
+    "score": 0.0,
+    "status": "rejected",
+    "notes": [],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 0,
+        "normalized_unique_items": 0,
+        "normalized_removed": 0
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 0,
+        "ok": 0,
+        "success_rate": 0.0,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 0,
+        "note": "no configs"
+      },
+      "freshness": {
+        "score_adjustment": 0.0,
+        "config_churn_rate": null,
+        "history_available": true,
+        "reasons": [
+          "not applied to rejected empty/fetch-failed source"
+        ]
+      },
+      "history": {
+        "times_seen": 3,
+        "failure_streak": 3,
+        "avg_tcp_success_rate": 0.0,
+        "avg_real_success_rate": 0.0,
+        "last_config_churn_rate": 0.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-amirrezafarnamtaheri-configstream-main-f-84cadc2a",
+      "label": "AmirrezaFarnamTaheri/ConfigStream — frontend/.build-config.json",
+      "url": "https://raw.githubusercontent.com/AmirrezaFarnamTaheri/ConfigStream/main/frontend/.build-config.json",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github",
+        "english"
+      ],
+      "discovered_at": "2026-09-27T10:06:27.728319+00:00",
+      "metadata": {
+        "repository": "AmirrezaFarnamTaheri/ConfigStream",
+        "branch": "main",
+        "path": "frontend/.build-config.json"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 0,
+    "unique_items": 0,
+    "duplicate_ratio": 0.0,
+    "protocols": {},
+    "tcp_sample_size": 0,
+    "tcp_ok_count": 0,
+    "tcp_success_rate": 0.0,
+    "score": 0.0,
+    "status": "rejected",
+    "notes": [],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 0,
+        "normalized_unique_items": 0,
+        "normalized_removed": 0
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 0,
+        "ok": 0,
+        "success_rate": 0.0,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 0,
+        "note": "no configs"
+      },
+      "freshness": {
+        "score_adjustment": 0.0,
+        "config_churn_rate": null,
+        "history_available": true,
+        "reasons": [
+          "not applied to rejected empty/fetch-failed source"
+        ]
+      },
+      "history": {
+        "times_seen": 3,
+        "failure_streak": 3,
+        "avg_tcp_success_rate": 0.0,
+        "avg_real_success_rate": 0.0,
+        "last_config_churn_rate": 0.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-amirrezafarnamtaheri-configstream-main-s-591b9e92",
+      "label": "AmirrezaFarnamTaheri/ConfigStream — schema/singbox_outbound.schema.json",
+      "url": "https://raw.githubusercontent.com/AmirrezaFarnamTaheri/ConfigStream/main/schema/singbox_outbound.schema.json",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github",
+        "english"
+      ],
+      "discovered_at": "2026-09-27T10:06:27.728390+00:00",
+      "metadata": {
+        "repository": "AmirrezaFarnamTaheri/ConfigStream",
+        "branch": "main",
+        "path": "schema/singbox_outbound.schema.json"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 0,
+    "unique_items": 0,
+    "duplicate_ratio": 0.0,
+    "protocols": {},
+    "tcp_sample_size": 0,
+    "tcp_ok_count": 0,
+    "tcp_success_rate": 0.0,
+    "score": 0.0,
+    "status": "rejected",
+    "notes": [],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 0,
+        "normalized_unique_items": 0,
+        "normalized_removed": 0
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 0,
+        "ok": 0,
+        "success_rate": 0.0,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 0,
+        "note": "no configs"
+      },
+      "freshness": {
+        "score_adjustment": 0.0,
+        "config_churn_rate": null,
+        "history_available": true,
+        "reasons": [
+          "not applied to rejected empty/fetch-failed source"
+        ]
+      },
+      "history": {
+        "times_seen": 3,
+        "failure_streak": 3,
+        "avg_tcp_success_rate": 0.0,
+        "avg_real_success_rate": 0.0,
+        "last_config_churn_rate": 0.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-amirrezafarnamtaheri-configstream-main-s-e8896cfb",
+      "label": "AmirrezaFarnamTaheri/ConfigStream — src/configstream/data/source-admission.json",
+      "url": "https://raw.githubusercontent.com/AmirrezaFarnamTaheri/ConfigStream/main/src/configstream/data/source-admission.json",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github",
+        "english"
+      ],
+      "discovered_at": "2026-09-27T10:06:27.728380+00:00",
+      "metadata": {
+        "repository": "AmirrezaFarnamTaheri/ConfigStream",
+        "branch": "main",
+        "path": "src/configstream/data/source-admission.json"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 0,
+    "unique_items": 0,
+    "duplicate_ratio": 0.0,
+    "protocols": {},
+    "tcp_sample_size": 0,
+    "tcp_ok_count": 0,
+    "tcp_success_rate": 0.0,
+    "score": 0.0,
+    "status": "rejected",
+    "notes": [],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 0,
+        "normalized_unique_items": 0,
+        "normalized_removed": 0
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 0,
+        "ok": 0,
+        "success_rate": 0.0,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 0,
+        "note": "no configs"
+      },
+      "freshness": {
+        "score_adjustment": 0.0,
+        "config_churn_rate": null,
+        "history_available": true,
+        "reasons": [
+          "not applied to rejected empty/fetch-failed source"
+        ]
+      },
+      "history": {
+        "times_seen": 3,
+        "failure_streak": 3,
+        "avg_tcp_success_rate": 0.0,
+        "avg_real_success_rate": 0.0,
+        "last_config_churn_rate": 0.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-amirrezafarnamtaheri-configstream-main-s-77731356",
+      "label": "AmirrezaFarnamTaheri/ConfigStream — src/configstream/tools/dns_scanner/python/requirements.txt",
+      "url": "https://raw.githubusercontent.com/AmirrezaFarnamTaheri/ConfigStream/main/src/configstream/tools/dns_scanner/python/requirements.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github",
+        "english"
+      ],
+      "discovered_at": "2026-09-27T10:06:27.728330+00:00",
+      "metadata": {
+        "repository": "AmirrezaFarnamTaheri/ConfigStream",
+        "branch": "main",
+        "path": "src/configstream/tools/dns_scanner/python/requirements.txt"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 0,
+    "unique_items": 0,
+    "duplicate_ratio": 0.0,
+    "protocols": {},
+    "tcp_sample_size": 0,
+    "tcp_ok_count": 0,
+    "tcp_success_rate": 0.0,
+    "score": 0.0,
+    "status": "rejected",
+    "notes": [],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 0,
+        "normalized_unique_items": 0,
+        "normalized_removed": 0
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 0,
+        "ok": 0,
+        "success_rate": 0.0,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 0,
+        "note": "no configs"
+      },
+      "freshness": {
+        "score_adjustment": 0.0,
+        "config_churn_rate": null,
+        "history_available": true,
+        "reasons": [
+          "not applied to rejected empty/fetch-failed source"
+        ]
+      },
+      "history": {
+        "times_seen": 3,
+        "failure_streak": 3,
+        "avg_tcp_success_rate": 0.0,
+        "avg_real_success_rate": 0.0,
+        "last_config_churn_rate": 0.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-delta-kronecker-v2ray-config-main-config-255aac40",
+      "label": "Delta-Kronecker/V2ray-Config — config/countries/my_clash.yaml",
+      "url": "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/main/config/countries/my_clash.yaml",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github",
+        "english"
+      ],
+      "discovered_at": "2026-09-27T10:06:21.104593+00:00",
+      "metadata": {
+        "repository": "Delta-Kronecker/V2ray-Config",
+        "branch": "main",
+        "path": "config/countries/my_clash.yaml"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 7,
+    "unique_items": 5,
+    "duplicate_ratio": 0.2857,
+    "protocols": {
+      "ss": 2,
+      "trojan": 2,
+      "vmess": 1
+    },
+    "tcp_sample_size": 5,
+    "tcp_ok_count": 5,
+    "tcp_success_rate": 1.0,
+    "score": 71.5,
+    "status": "rejected",
+    "notes": [],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 7,
+        "normalized_unique_items": 5,
+        "normalized_removed": 2
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 5,
+        "ok": 3,
+        "success_rate": 0.6,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 3,
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": 3.0,
+        "config_churn_rate": 1.0,
+        "history_available": true,
+        "reasons": [
+          "fresh config churn",
+          "strong historical TCP",
+          "failure streak 2"
+        ]
+      },
+      "history": {
+        "times_seen": 3,
+        "failure_streak": 3,
+        "avg_tcp_success_rate": 1.0,
+        "avg_real_success_rate": 0.3944,
+        "last_config_churn_rate": 1.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-hidashimora-free-vpn-anti-rkn-main-confi-da2a4108",
+      "label": "Hidashimora/free-vpn-anti-rkn — configs/13.2.txt",
+      "url": "https://raw.githubusercontent.com/Hidashimora/free-vpn-anti-rkn/main/configs/13.2.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github",
+        "english"
+      ],
+      "discovered_at": "2026-09-27T10:05:52.345847+00:00",
+      "metadata": {
+        "repository": "Hidashimora/free-vpn-anti-rkn",
+        "branch": "main",
+        "path": "configs/13.2.txt"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 0,
+    "unique_items": 0,
+    "duplicate_ratio": 0.0,
+    "protocols": {},
+    "tcp_sample_size": 0,
+    "tcp_ok_count": 0,
+    "tcp_success_rate": 0.0,
+    "score": 0.0,
+    "status": "rejected",
+    "notes": [],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 0,
+        "normalized_unique_items": 0,
+        "normalized_removed": 0
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 0,
+        "ok": 0,
+        "success_rate": 0.0,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 0,
+        "note": "no configs"
+      },
+      "freshness": {
+        "score_adjustment": 0.0,
+        "config_churn_rate": 1.0,
+        "history_available": true,
+        "reasons": [
+          "not applied to rejected empty/fetch-failed source"
+        ]
+      },
+      "history": {
+        "times_seen": 11,
+        "failure_streak": 1,
+        "avg_tcp_success_rate": 0.8578,
+        "avg_real_success_rate": 0.594,
+        "last_config_churn_rate": 1.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-hidashimora-free-vpn-anti-rkn-main-confi-a4675621",
+      "label": "Hidashimora/free-vpn-anti-rkn — configs/18.2.txt",
+      "url": "https://raw.githubusercontent.com/Hidashimora/free-vpn-anti-rkn/main/configs/18.2.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github",
+        "english"
+      ],
+      "discovered_at": "2026-09-27T10:05:52.345945+00:00",
+      "metadata": {
+        "repository": "Hidashimora/free-vpn-anti-rkn",
+        "branch": "main",
+        "path": "configs/18.2.txt"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 0,
+    "unique_items": 0,
+    "duplicate_ratio": 0.0,
+    "protocols": {},
+    "tcp_sample_size": 0,
+    "tcp_ok_count": 0,
+    "tcp_success_rate": 0.0,
+    "score": 0.0,
+    "status": "rejected",
+    "notes": [],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 0,
+        "normalized_unique_items": 0,
+        "normalized_removed": 0
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 0,
+        "ok": 0,
+        "success_rate": 0.0,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 0,
+        "note": "no configs"
+      },
+      "freshness": {
+        "score_adjustment": 0.0,
+        "config_churn_rate": 1.0,
+        "history_available": true,
+        "reasons": [
+          "not applied to rejected empty/fetch-failed source"
+        ]
+      },
+      "history": {
+        "times_seen": 5,
+        "failure_streak": 1,
+        "avg_tcp_success_rate": 0.7734,
+        "avg_real_success_rate": 0.6,
+        "last_config_churn_rate": 1.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-hidashimora-free-vpn-anti-rkn-main-confi-8a7c8e67",
+      "label": "Hidashimora/free-vpn-anti-rkn — configs/25.1.txt",
+      "url": "https://raw.githubusercontent.com/Hidashimora/free-vpn-anti-rkn/main/configs/25.1.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github",
+        "english"
+      ],
+      "discovered_at": "2026-09-27T10:05:52.345962+00:00",
+      "metadata": {
+        "repository": "Hidashimora/free-vpn-anti-rkn",
+        "branch": "main",
+        "path": "configs/25.1.txt"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 244,
+    "unique_items": 200,
+    "duplicate_ratio": 0.1803,
+    "protocols": {
+      "vless": 200
+    },
+    "tcp_sample_size": 30,
+    "tcp_ok_count": 13,
+    "tcp_success_rate": 0.4333,
+    "score": 31.5,
+    "status": "rejected",
+    "notes": [],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 244,
+        "normalized_unique_items": 200,
+        "normalized_removed": 44
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 30,
+        "ok": 2,
+        "success_rate": 0.0667,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 2,
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": -15.0,
+        "config_churn_rate": 0.0,
+        "history_available": true,
+        "reasons": [
+          "stale unchanged configs",
+          "strong historical TCP",
+          "last success older than 30 days"
+        ]
+      },
+      "history": {
+        "times_seen": 5,
+        "failure_streak": 1,
+        "avg_tcp_success_rate": 0.6,
+        "avg_real_success_rate": 0.2066,
+        "last_config_churn_rate": 0.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-hidashimora-free-vpn-anti-rkn-main-confi-54a76de4",
+      "label": "Hidashimora/free-vpn-anti-rkn — configs/25.txt",
+      "url": "https://raw.githubusercontent.com/Hidashimora/free-vpn-anti-rkn/main/configs/25.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github",
+        "english"
+      ],
+      "discovered_at": "2026-09-27T10:05:52.345936+00:00",
+      "metadata": {
+        "repository": "Hidashimora/free-vpn-anti-rkn",
+        "branch": "main",
+        "path": "configs/25.txt"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 130,
+    "unique_items": 123,
+    "duplicate_ratio": 0.0538,
+    "protocols": {
+      "vless": 123
+    },
+    "tcp_sample_size": 30,
+    "tcp_ok_count": 10,
+    "tcp_success_rate": 0.3333,
+    "score": 19.5,
+    "status": "rejected",
+    "notes": [],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 130,
+        "normalized_unique_items": 123,
+        "normalized_removed": 7
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 30,
+        "ok": 0,
+        "success_rate": 0.0,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 0,
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": -20.0,
+        "config_churn_rate": 0.0,
+        "history_available": true,
+        "reasons": [
+          "stale unchanged configs",
+          "failure streak 5",
+          "last success older than 30 days"
+        ]
+      },
+      "history": {
+        "times_seen": 9,
+        "failure_streak": 6,
+        "avg_tcp_success_rate": 0.374,
+        "avg_real_success_rate": 0.0,
+        "last_config_churn_rate": 0.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-idolvpn-automate-v2ray-config-collector--c9a603eb",
+      "label": "Idolvpn/Automate-V2ray-Config-Collector — configs/.geoip_cache.json",
+      "url": "https://raw.githubusercontent.com/Idolvpn/Automate-V2ray-Config-Collector/main/configs/.geoip_cache.json",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github",
+        "english"
+      ],
+      "discovered_at": "2026-09-27T10:06:24.465192+00:00",
+      "metadata": {
+        "repository": "Idolvpn/Automate-V2ray-Config-Collector",
+        "branch": "main",
+        "path": "configs/.geoip_cache.json"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 0,
+    "unique_items": 0,
+    "duplicate_ratio": 0.0,
+    "protocols": {},
+    "tcp_sample_size": 0,
+    "tcp_ok_count": 0,
+    "tcp_success_rate": 0.0,
+    "score": 0.0,
+    "status": "rejected",
+    "notes": [],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 0,
+        "normalized_unique_items": 0,
+        "normalized_removed": 0
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 0,
+        "ok": 0,
+        "success_rate": 0.0,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 0,
+        "note": "no configs"
+      },
+      "freshness": {
+        "score_adjustment": 0.0,
+        "config_churn_rate": null,
+        "history_available": true,
+        "reasons": [
+          "not applied to rejected empty/fetch-failed source"
+        ]
+      },
+      "history": {
+        "times_seen": 2,
+        "failure_streak": 2,
+        "avg_tcp_success_rate": 0.0,
+        "avg_real_success_rate": 0.0,
+        "last_config_churn_rate": 0.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-idolvpn-automate-v2ray-config-collector--22e00b52",
+      "label": "Idolvpn/Automate-V2ray-Config-Collector — configs/country_NL.txt",
+      "url": "https://raw.githubusercontent.com/Idolvpn/Automate-V2ray-Config-Collector/main/configs/country_NL.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github",
+        "english"
+      ],
+      "discovered_at": "2026-09-27T10:06:24.465202+00:00",
+      "metadata": {
+        "repository": "Idolvpn/Automate-V2ray-Config-Collector",
+        "branch": "main",
+        "path": "configs/country_NL.txt"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 3,
+    "unique_items": 2,
+    "duplicate_ratio": 0.3333,
+    "protocols": {
+      "trojan": 2
+    },
+    "tcp_sample_size": 2,
+    "tcp_ok_count": 2,
+    "tcp_success_rate": 1.0,
+    "score": 72.6,
+    "status": "rejected",
+    "notes": [],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 3,
+        "normalized_unique_items": 2,
+        "normalized_removed": 1
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 2,
+        "ok": 2,
+        "success_rate": 1.0,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 2,
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": 10.0,
+        "config_churn_rate": 1.0,
+        "history_available": true,
+        "reasons": [
+          "fresh config churn",
+          "strong historical real validation",
+          "strong historical TCP",
+          "last success older than 14 days"
+        ]
+      },
+      "history": {
+        "times_seen": 2,
+        "failure_streak": 1,
+        "avg_tcp_success_rate": 0.95,
+        "avg_real_success_rate": 0.7833,
+        "last_config_churn_rate": 1.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-idolvpn-automate-v2ray-config-collector--683fe88a",
+      "label": "Idolvpn/Automate-V2ray-Config-Collector — configs/country_US.txt",
+      "url": "https://raw.githubusercontent.com/Idolvpn/Automate-V2ray-Config-Collector/main/configs/country_US.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github",
+        "english"
+      ],
+      "discovered_at": "2026-09-27T10:06:24.465132+00:00",
+      "metadata": {
+        "repository": "Idolvpn/Automate-V2ray-Config-Collector",
+        "branch": "main",
+        "path": "configs/country_US.txt"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 13,
+    "unique_items": 8,
+    "duplicate_ratio": 0.3846,
+    "protocols": {
+      "trojan": 6,
+      "vless": 2
+    },
+    "tcp_sample_size": 8,
+    "tcp_ok_count": 8,
+    "tcp_success_rate": 1.0,
+    "score": 76.6,
+    "status": "rejected",
+    "notes": [],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 13,
+        "normalized_unique_items": 8,
+        "normalized_removed": 5
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 8,
+        "ok": 3,
+        "success_rate": 0.375,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 3,
+        "note": "real validation completed via v2ray_finder.xray_connectivity"
+      },
+      "freshness": {
+        "score_adjustment": 12.0,
+        "config_churn_rate": 1.0,
+        "history_available": true,
+        "reasons": [
+          "fresh config churn",
+          "strong historical real validation",
+          "strong historical TCP",
+          "failure streak 1"
+        ]
+      },
+      "history": {
+        "times_seen": 2,
+        "failure_streak": 2,
+        "avg_tcp_success_rate": 1.0,
+        "avg_real_success_rate": 0.5625,
+        "last_config_churn_rate": 1.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-idolvpn-automate-v2ray-config-collector--709e5cfe",
+      "label": "Idolvpn/Automate-V2ray-Config-Collector — configs/reality.txt",
+      "url": "https://raw.githubusercontent.com/Idolvpn/Automate-V2ray-Config-Collector/main/configs/reality.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github",
+        "english"
+      ],
+      "discovered_at": "2026-09-27T10:06:24.465211+00:00",
+      "metadata": {
+        "repository": "Idolvpn/Automate-V2ray-Config-Collector",
+        "branch": "main",
+        "path": "configs/reality.txt"
       }
     },
     "fetch_ok": true,
@@ -95,12 +1714,12 @@
     "unique_items": 1,
     "duplicate_ratio": 0.0,
     "protocols": {
-      "trojan": 1
+      "vless": 1
     },
     "tcp_sample_size": 1,
     "tcp_ok_count": 1,
     "tcp_success_rate": 1.0,
-    "score": 55.5,
+    "score": 68.5,
     "status": "rejected",
     "notes": [],
     "diagnostics": {
@@ -120,300 +1739,40 @@
         "note": "real validation completed via v2ray_finder.xray_connectivity"
       },
       "freshness": {
-        "score_adjustment": -12.0,
+        "score_adjustment": 1.0,
         "config_churn_rate": null,
-        "history_available": true,
+        "history_available": false,
         "reasons": [
-          "no previous config fingerprint",
-          "failure streak 8"
+          "new source"
         ]
       },
       "history": {
-        "times_seen": 9,
-        "failure_streak": 9,
-        "avg_tcp_success_rate": 0.5396,
-        "avg_real_success_rate": 0.1111,
+        "times_seen": 1,
+        "failure_streak": 1,
+        "avg_tcp_success_rate": 1.0,
+        "avg_real_success_rate": 1.0,
         "last_config_churn_rate": 1.0
       }
     }
   },
   {
     "candidate": {
-      "id": "https-raw-githubusercontent-com-kort0881-vpn-vless-configs-russia-main-d-cd140ca7",
-      "label": "kort0881/vpn-vless-configs-russia — data/githubmirror/ru-sni-local/vmess.txt",
-      "url": "https://raw.githubusercontent.com/kort0881/vpn-vless-configs-russia/main/data/githubmirror/ru-sni-local/vmess.txt",
+      "id": "https-raw-githubusercontent-com-idolvpn-automate-v2ray-config-collector--aac5ccf4",
+      "label": "Idolvpn/Automate-V2ray-Config-Collector — configs/stats.json",
+      "url": "https://raw.githubusercontent.com/Idolvpn/Automate-V2ray-Config-Collector/main/configs/stats.json",
       "origin": "repository_tree",
       "kind": "public_feed",
       "tags": [
         "repository-tree",
         "auto",
-        "github"
+        "github",
+        "english"
       ],
-      "discovered_at": "2026-09-26T09:25:57.048756+00:00",
+      "discovered_at": "2026-09-27T10:06:24.465142+00:00",
       "metadata": {
-        "repository": "kort0881/vpn-vless-configs-russia",
+        "repository": "Idolvpn/Automate-V2ray-Config-Collector",
         "branch": "main",
-        "path": "data/githubmirror/ru-sni-local/vmess.txt"
-      }
-    },
-    "fetch_ok": false,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 0,
-    "unique_items": 0,
-    "duplicate_ratio": 0.0,
-    "protocols": {},
-    "tcp_sample_size": 0,
-    "tcp_ok_count": 0,
-    "tcp_success_rate": 0.0,
-    "score": 0.0,
-    "status": "rejected",
-    "notes": [
-      "fetch failed"
-    ],
-    "diagnostics": {
-      "freshness": {
-        "score_adjustment": 0.0,
-        "config_churn_rate": null,
-        "history_available": true,
-        "reasons": [
-          "not applied to rejected empty/fetch-failed source"
-        ]
-      },
-      "history": {
-        "times_seen": 6,
-        "failure_streak": 6,
-        "avg_tcp_success_rate": 0.0,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 0.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-kort0881-vpn-vless-configs-russia-main-d-c05a6c08",
-      "label": "kort0881/vpn-vless-configs-russia — data/githubmirror/ru-sni/vmess.txt",
-      "url": "https://raw.githubusercontent.com/kort0881/vpn-vless-configs-russia/main/data/githubmirror/ru-sni/vmess.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-09-26T09:25:57.048713+00:00",
-      "metadata": {
-        "repository": "kort0881/vpn-vless-configs-russia",
-        "branch": "main",
-        "path": "data/githubmirror/ru-sni/vmess.txt"
-      }
-    },
-    "fetch_ok": false,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 0,
-    "unique_items": 0,
-    "duplicate_ratio": 0.0,
-    "protocols": {},
-    "tcp_sample_size": 0,
-    "tcp_ok_count": 0,
-    "tcp_success_rate": 0.0,
-    "score": 0.0,
-    "status": "rejected",
-    "notes": [
-      "fetch failed"
-    ],
-    "diagnostics": {
-      "freshness": {
-        "score_adjustment": 0.0,
-        "config_churn_rate": null,
-        "history_available": true,
-        "reasons": [
-          "not applied to rejected empty/fetch-failed source"
-        ]
-      },
-      "history": {
-        "times_seen": 7,
-        "failure_streak": 7,
-        "avg_tcp_success_rate": 0.0,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 0.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-kort0881-vpn-vless-configs-russia-main-d-fdaf6e11",
-      "label": "kort0881/vpn-vless-configs-russia — data/normalized/trojan.txt",
-      "url": "https://raw.githubusercontent.com/kort0881/vpn-vless-configs-russia/main/data/normalized/trojan.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-09-26T09:25:57.048788+00:00",
-      "metadata": {
-        "repository": "kort0881/vpn-vless-configs-russia",
-        "branch": "main",
-        "path": "data/normalized/trojan.txt"
-      }
-    },
-    "fetch_ok": false,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 0,
-    "unique_items": 0,
-    "duplicate_ratio": 0.0,
-    "protocols": {},
-    "tcp_sample_size": 0,
-    "tcp_ok_count": 0,
-    "tcp_success_rate": 0.0,
-    "score": 0.0,
-    "status": "rejected",
-    "notes": [
-      "fetch failed"
-    ],
-    "diagnostics": {
-      "freshness": {
-        "score_adjustment": 0.0,
-        "config_churn_rate": null,
-        "history_available": true,
-        "reasons": [
-          "not applied to rejected empty/fetch-failed source"
-        ]
-      },
-      "history": {
-        "times_seen": 7,
-        "failure_streak": 7,
-        "avg_tcp_success_rate": 0.0,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 0.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-kort0881-vpn-vless-configs-russia-main-d-22d1b709",
-      "label": "kort0881/vpn-vless-configs-russia — data/normalized/vless.txt",
-      "url": "https://raw.githubusercontent.com/kort0881/vpn-vless-configs-russia/main/data/normalized/vless.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-09-26T09:25:57.048732+00:00",
-      "metadata": {
-        "repository": "kort0881/vpn-vless-configs-russia",
-        "branch": "main",
-        "path": "data/normalized/vless.txt"
-      }
-    },
-    "fetch_ok": false,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 0,
-    "unique_items": 0,
-    "duplicate_ratio": 0.0,
-    "protocols": {},
-    "tcp_sample_size": 0,
-    "tcp_ok_count": 0,
-    "tcp_success_rate": 0.0,
-    "score": 0.0,
-    "status": "rejected",
-    "notes": [
-      "fetch failed"
-    ],
-    "diagnostics": {
-      "freshness": {
-        "score_adjustment": 0.0,
-        "config_churn_rate": null,
-        "history_available": true,
-        "reasons": [
-          "not applied to rejected empty/fetch-failed source"
-        ]
-      },
-      "history": {
-        "times_seen": 8,
-        "failure_streak": 8,
-        "avg_tcp_success_rate": 0.0,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 0.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-kort0881-vpn-vless-configs-russia-main-d-d82fd798",
-      "label": "kort0881/vpn-vless-configs-russia — data/normalized/vmess.txt",
-      "url": "https://raw.githubusercontent.com/kort0881/vpn-vless-configs-russia/main/data/normalized/vmess.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-09-26T09:25:57.048690+00:00",
-      "metadata": {
-        "repository": "kort0881/vpn-vless-configs-russia",
-        "branch": "main",
-        "path": "data/normalized/vmess.txt"
-      }
-    },
-    "fetch_ok": false,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 0,
-    "unique_items": 0,
-    "duplicate_ratio": 0.0,
-    "protocols": {},
-    "tcp_sample_size": 0,
-    "tcp_ok_count": 0,
-    "tcp_success_rate": 0.0,
-    "score": 0.0,
-    "status": "rejected",
-    "notes": [
-      "fetch failed"
-    ],
-    "diagnostics": {
-      "freshness": {
-        "score_adjustment": 0.0,
-        "config_churn_rate": null,
-        "history_available": true,
-        "reasons": [
-          "not applied to rejected empty/fetch-failed source"
-        ]
-      },
-      "history": {
-        "times_seen": 7,
-        "failure_streak": 7,
-        "avg_tcp_success_rate": 0.0,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 0.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-nyeinkokoaung404-v2ray-configs-main-conf-5b1c8b07",
-      "label": "nyeinkokoaung404/V2ray-Configs — configs/singbox_configs_secure.json",
-      "url": "https://raw.githubusercontent.com/nyeinkokoaung404/V2ray-Configs/main/configs/singbox_configs_secure.json",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-09-26T09:25:52.583493+00:00",
-      "metadata": {
-        "repository": "nyeinkokoaung404/V2ray-Configs",
-        "branch": "main",
-        "path": "configs/singbox_configs_secure.json"
+        "path": "configs/stats.json"
       }
     },
     "fetch_ok": true,
@@ -454,8 +1813,8 @@
         ]
       },
       "history": {
-        "times_seen": 11,
-        "failure_streak": 11,
+        "times_seen": 2,
+        "failure_streak": 2,
         "avg_tcp_success_rate": 0.0,
         "avg_real_success_rate": 0.0,
         "last_config_churn_rate": 0.0
@@ -464,1249 +1823,78 @@
   },
   {
     "candidate": {
-      "id": "https-raw-githubusercontent-com-soroushyasini-proxysmith-main-bash-manua-5c7b631d",
-      "label": "soroushyasini/proxysmith — bash/manualconfig.txt",
-      "url": "https://raw.githubusercontent.com/soroushyasini/proxysmith/main/bash/manualconfig.txt",
+      "id": "https-raw-githubusercontent-com-idolvpn-automate-v2ray-config-collector--4e6c03fa",
+      "label": "Idolvpn/Automate-V2ray-Config-Collector — configs/vless.txt",
+      "url": "https://raw.githubusercontent.com/Idolvpn/Automate-V2ray-Config-Collector/main/configs/vless.txt",
       "origin": "repository_tree",
       "kind": "public_feed",
       "tags": [
         "repository-tree",
         "auto",
-        "github"
+        "github",
+        "english"
       ],
-      "discovered_at": "2026-09-26T09:25:55.338711+00:00",
+      "discovered_at": "2026-09-27T10:06:24.465084+00:00",
       "metadata": {
-        "repository": "soroushyasini/proxysmith",
+        "repository": "Idolvpn/Automate-V2ray-Config-Collector",
         "branch": "main",
-        "path": "bash/manualconfig.txt"
+        "path": "configs/vless.txt"
       }
     },
     "fetch_ok": true,
     "http_status": 200,
     "error": "",
-    "raw_items": 3,
-    "unique_items": 3,
+    "raw_items": 5,
+    "unique_items": 5,
     "duplicate_ratio": 0.0,
     "protocols": {
-      "ss": 1,
-      "trojan": 1,
-      "vless": 1
+      "vless": 5
     },
-    "tcp_sample_size": 3,
-    "tcp_ok_count": 2,
-    "tcp_success_rate": 0.6667,
-    "score": 36.0,
-    "status": "rejected",
-    "notes": [],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 3,
-        "normalized_unique_items": 3,
-        "normalized_removed": 0
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 3,
-        "ok": 0,
-        "success_rate": 0.0,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 0,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": -20.0,
-        "config_churn_rate": 0.0,
-        "history_available": true,
-        "reasons": [
-          "stale unchanged configs",
-          "failure streak 3",
-          "last success older than 14 days"
-        ]
-      },
-      "history": {
-        "times_seen": 21,
-        "failure_streak": 4,
-        "avg_tcp_success_rate": 0.1269,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 0.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-thealiiakbarii-ai-vcc-main-configs-last--a6a68acd",
-      "label": "thealiiakbarii-ai/VCC — configs/last_update.txt",
-      "url": "https://raw.githubusercontent.com/thealiiakbarii-ai/VCC/main/configs/last_update.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-09-26T09:25:57.968761+00:00",
-      "metadata": {
-        "repository": "thealiiakbarii-ai/VCC",
-        "branch": "main",
-        "path": "configs/last_update.txt"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 0,
-    "unique_items": 0,
-    "duplicate_ratio": 0.0,
-    "protocols": {},
-    "tcp_sample_size": 0,
-    "tcp_ok_count": 0,
-    "tcp_success_rate": 0.0,
-    "score": 0.0,
-    "status": "rejected",
-    "notes": [],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 0,
-        "normalized_unique_items": 0,
-        "normalized_removed": 0
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 0,
-        "ok": 0,
-        "success_rate": 0.0,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 0,
-        "note": "no configs"
-      },
-      "freshness": {
-        "score_adjustment": 0.0,
-        "config_churn_rate": null,
-        "history_available": true,
-        "reasons": [
-          "not applied to rejected empty/fetch-failed source"
-        ]
-      },
-      "history": {
-        "times_seen": 14,
-        "failure_streak": 14,
-        "avg_tcp_success_rate": 0.0,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 0.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-thealiiakbarii-ai-vcc-main-configs-snell-b95d3cb4",
-      "label": "thealiiakbarii-ai/VCC — configs/snell.txt",
-      "url": "https://raw.githubusercontent.com/thealiiakbarii-ai/VCC/main/configs/snell.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-09-26T09:25:57.968820+00:00",
-      "metadata": {
-        "repository": "thealiiakbarii-ai/VCC",
-        "branch": "main",
-        "path": "configs/snell.txt"
-      }
-    },
-    "fetch_ok": false,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 0,
-    "unique_items": 0,
-    "duplicate_ratio": 0.0,
-    "protocols": {},
-    "tcp_sample_size": 0,
-    "tcp_ok_count": 0,
-    "tcp_success_rate": 0.0,
-    "score": 0.0,
-    "status": "rejected",
-    "notes": [
-      "fetch failed"
-    ],
-    "diagnostics": {
-      "freshness": {
-        "score_adjustment": 0.0,
-        "config_churn_rate": null,
-        "history_available": true,
-        "reasons": [
-          "not applied to rejected empty/fetch-failed source"
-        ]
-      },
-      "history": {
-        "times_seen": 16,
-        "failure_streak": 16,
-        "avg_tcp_success_rate": 0.0,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 0.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-thealiiakbarii-ai-vcc-main-configs-tuic--742d800d",
-      "label": "thealiiakbarii-ai/VCC — configs/tuic.txt",
-      "url": "https://raw.githubusercontent.com/thealiiakbarii-ai/VCC/main/configs/tuic.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-09-26T09:25:57.968798+00:00",
-      "metadata": {
-        "repository": "thealiiakbarii-ai/VCC",
-        "branch": "main",
-        "path": "configs/tuic.txt"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 0,
-    "unique_items": 0,
-    "duplicate_ratio": 0.0,
-    "protocols": {},
-    "tcp_sample_size": 0,
-    "tcp_ok_count": 0,
-    "tcp_success_rate": 0.0,
-    "score": 0.0,
-    "status": "rejected",
-    "notes": [],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 0,
-        "normalized_unique_items": 0,
-        "normalized_removed": 0
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 0,
-        "ok": 0,
-        "success_rate": 0.0,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 0,
-        "note": "no configs"
-      },
-      "freshness": {
-        "score_adjustment": 0.0,
-        "config_churn_rate": null,
-        "history_available": true,
-        "reasons": [
-          "not applied to rejected empty/fetch-failed source"
-        ]
-      },
-      "history": {
-        "times_seen": 17,
-        "failure_streak": 17,
-        "avg_tcp_success_rate": 0.0,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 0.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-wenxig-dongtai-sub-main-tsconfig-json-5dd2e2cd",
-      "label": "wenxig/dongtai-sub — tsconfig.json",
-      "url": "https://raw.githubusercontent.com/wenxig/dongtai-sub/main/tsconfig.json",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-09-26T09:25:59.340434+00:00",
-      "metadata": {
-        "repository": "wenxig/dongtai-sub",
-        "branch": "main",
-        "path": "tsconfig.json"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 0,
-    "unique_items": 0,
-    "duplicate_ratio": 0.0,
-    "protocols": {},
-    "tcp_sample_size": 0,
-    "tcp_ok_count": 0,
-    "tcp_success_rate": 0.0,
-    "score": 0.0,
-    "status": "rejected",
-    "notes": [],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 0,
-        "normalized_unique_items": 0,
-        "normalized_removed": 0
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 0,
-        "ok": 0,
-        "success_rate": 0.0,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 0,
-        "note": "no configs"
-      },
-      "freshness": {
-        "score_adjustment": 0.0,
-        "config_churn_rate": null,
-        "history_available": true,
-        "reasons": [
-          "not applied to rejected empty/fetch-failed source"
-        ]
-      },
-      "history": {
-        "times_seen": 19,
-        "failure_streak": 19,
-        "avg_tcp_success_rate": 0.0,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 0.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-wenxig-free-nodes-sub-main-tsconfig-json-db1c9dec",
-      "label": "wenxig/free-nodes-sub — tsconfig.json",
-      "url": "https://raw.githubusercontent.com/wenxig/free-nodes-sub/main/tsconfig.json",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-09-26T09:25:59.524676+00:00",
-      "metadata": {
-        "repository": "wenxig/free-nodes-sub",
-        "branch": "main",
-        "path": "tsconfig.json"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 0,
-    "unique_items": 0,
-    "duplicate_ratio": 0.0,
-    "protocols": {},
-    "tcp_sample_size": 0,
-    "tcp_ok_count": 0,
-    "tcp_success_rate": 0.0,
-    "score": 0.0,
-    "status": "rejected",
-    "notes": [],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 0,
-        "normalized_unique_items": 0,
-        "normalized_removed": 0
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 0,
-        "ok": 0,
-        "success_rate": 0.0,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 0,
-        "note": "no configs"
-      },
-      "freshness": {
-        "score_adjustment": 0.0,
-        "config_churn_rate": null,
-        "history_available": true,
-        "reasons": [
-          "not applied to rejected empty/fetch-failed source"
-        ]
-      },
-      "history": {
-        "times_seen": 19,
-        "failure_streak": 19,
-        "avg_tcp_success_rate": 0.0,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 0.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-whoahaow-rjsxrd-main-source-config-urls--fdc939ed",
-      "label": "whoahaow/rjsxrd — source/config/URLS.txt",
-      "url": "https://raw.githubusercontent.com/whoahaow/rjsxrd/main/source/config/URLS.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-09-26T09:25:54.252129+00:00",
-      "metadata": {
-        "repository": "whoahaow/rjsxrd",
-        "branch": "main",
-        "path": "source/config/URLS.txt"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 0,
-    "unique_items": 0,
-    "duplicate_ratio": 0.0,
-    "protocols": {},
-    "tcp_sample_size": 0,
-    "tcp_ok_count": 0,
-    "tcp_success_rate": 0.0,
-    "score": 0.0,
-    "status": "rejected",
-    "notes": [],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 0,
-        "normalized_unique_items": 0,
-        "normalized_removed": 0
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 0,
-        "ok": 0,
-        "success_rate": 0.0,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 0,
-        "note": "no configs"
-      },
-      "freshness": {
-        "score_adjustment": 0.0,
-        "config_churn_rate": null,
-        "history_available": true,
-        "reasons": [
-          "not applied to rejected empty/fetch-failed source"
-        ]
-      },
-      "history": {
-        "times_seen": 20,
-        "failure_streak": 20,
-        "avg_tcp_success_rate": 0.0,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 0.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-whoahaow-rjsxrd-main-source-config-cidrw-19990174",
-      "label": "whoahaow/rjsxrd — source/config/cidrwhitelist.txt",
-      "url": "https://raw.githubusercontent.com/whoahaow/rjsxrd/main/source/config/cidrwhitelist.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-09-26T09:25:54.252152+00:00",
-      "metadata": {
-        "repository": "whoahaow/rjsxrd",
-        "branch": "main",
-        "path": "source/config/cidrwhitelist.txt"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 0,
-    "unique_items": 0,
-    "duplicate_ratio": 0.0,
-    "protocols": {},
-    "tcp_sample_size": 0,
-    "tcp_ok_count": 0,
-    "tcp_success_rate": 0.0,
-    "score": 0.0,
-    "status": "rejected",
-    "notes": [],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 0,
-        "normalized_unique_items": 0,
-        "normalized_removed": 0
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 0,
-        "ok": 0,
-        "success_rate": 0.0,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 0,
-        "note": "no configs"
-      },
-      "freshness": {
-        "score_adjustment": 0.0,
-        "config_churn_rate": null,
-        "history_available": true,
-        "reasons": [
-          "not applied to rejected empty/fetch-failed source"
-        ]
-      },
-      "history": {
-        "times_seen": 20,
-        "failure_streak": 20,
-        "avg_tcp_success_rate": 0.0,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 0.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-whoahaow-rjsxrd-main-source-config-serve-aa7725ab",
-      "label": "whoahaow/rjsxrd — source/config/servers.txt",
-      "url": "https://raw.githubusercontent.com/whoahaow/rjsxrd/main/source/config/servers.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-09-26T09:25:54.252178+00:00",
-      "metadata": {
-        "repository": "whoahaow/rjsxrd",
-        "branch": "main",
-        "path": "source/config/servers.txt"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 47,
-    "unique_items": 43,
-    "duplicate_ratio": 0.0851,
-    "protocols": {
-      "trojan": 1,
-      "vless": 41,
-      "vmess": 1
-    },
-    "tcp_sample_size": 30,
-    "tcp_ok_count": 6,
-    "tcp_success_rate": 0.2,
-    "score": 13.4,
-    "status": "rejected",
-    "notes": [],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 47,
-        "normalized_unique_items": 43,
-        "normalized_removed": 4
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 30,
-        "ok": 1,
-        "success_rate": 0.0333,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 1,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": -20.0,
-        "config_churn_rate": 0.0,
-        "history_available": true,
-        "reasons": [
-          "stale unchanged configs",
-          "weak historical real validation",
-          "failure streak 16",
-          "last success older than 30 days"
-        ]
-      },
-      "history": {
-        "times_seen": 20,
-        "failure_streak": 17,
-        "avg_tcp_success_rate": 0.255,
-        "avg_real_success_rate": 0.0333,
-        "last_config_churn_rate": 0.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-whoahaow-rjsxrd-main-source-config-tg-pr-1650b2a3",
-      "label": "whoahaow/rjsxrd — source/config/tg_proxies.txt",
-      "url": "https://raw.githubusercontent.com/whoahaow/rjsxrd/main/source/config/tg_proxies.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-09-26T09:25:54.252171+00:00",
-      "metadata": {
-        "repository": "whoahaow/rjsxrd",
-        "branch": "main",
-        "path": "source/config/tg_proxies.txt"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 0,
-    "unique_items": 0,
-    "duplicate_ratio": 0.0,
-    "protocols": {},
-    "tcp_sample_size": 0,
-    "tcp_ok_count": 0,
-    "tcp_success_rate": 0.0,
-    "score": 0.0,
-    "status": "rejected",
-    "notes": [],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 0,
-        "normalized_unique_items": 0,
-        "normalized_removed": 0
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 0,
-        "ok": 0,
-        "success_rate": 0.0,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 0,
-        "note": "no configs"
-      },
-      "freshness": {
-        "score_adjustment": 0.0,
-        "config_churn_rate": null,
-        "history_available": true,
-        "reasons": [
-          "not applied to rejected empty/fetch-failed source"
-        ]
-      },
-      "history": {
-        "times_seen": 20,
-        "failure_streak": 20,
-        "avg_tcp_success_rate": 0.0,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 0.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-whoahaow-rjsxrd-main-source-config-white-f4473ab8",
-      "label": "whoahaow/rjsxrd — source/config/whitelist-all.txt",
-      "url": "https://raw.githubusercontent.com/whoahaow/rjsxrd/main/source/config/whitelist-all.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-09-26T09:25:54.252162+00:00",
-      "metadata": {
-        "repository": "whoahaow/rjsxrd",
-        "branch": "main",
-        "path": "source/config/whitelist-all.txt"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 0,
-    "unique_items": 0,
-    "duplicate_ratio": 0.0,
-    "protocols": {},
-    "tcp_sample_size": 0,
-    "tcp_ok_count": 0,
-    "tcp_success_rate": 0.0,
-    "score": 0.0,
-    "status": "rejected",
-    "notes": [],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 0,
-        "normalized_unique_items": 0,
-        "normalized_removed": 0
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 0,
-        "ok": 0,
-        "success_rate": 0.0,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 0,
-        "note": "no configs"
-      },
-      "freshness": {
-        "score_adjustment": 0.0,
-        "config_churn_rate": null,
-        "history_available": true,
-        "reasons": [
-          "not applied to rejected empty/fetch-failed source"
-        ]
-      },
-      "history": {
-        "times_seen": 19,
-        "failure_streak": 19,
-        "avg_tcp_success_rate": 0.0,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 0.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-github-githubassets-com-assets-notifications-subscriptions-menu-d6-4aaafe98",
-      "label": "Telegram public channel raydikalx → github.githubassets.com/assets/notifications-subscriptions-menu.d63e528545f14...",
-      "url": "https://github.githubassets.com/assets/notifications-subscriptions-menu.d63e528545f14c18.module.css",
-      "origin": "telegram_discovered_link",
-      "kind": "public_feed",
-      "tags": [
-        "telegram",
-        "discovered-link",
-        "auto"
-      ],
-      "discovered_at": "2026-09-26T09:26:12.060601+00:00",
-      "metadata": {
-        "channel": "raydikalx",
-        "parent_url": "https://github.com/0xRadikal/IRon-Gate",
-        "source": "telegram_web_link"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 0,
-    "unique_items": 0,
-    "duplicate_ratio": 0.0,
-    "protocols": {},
-    "tcp_sample_size": 0,
-    "tcp_ok_count": 0,
-    "tcp_success_rate": 0.0,
-    "score": 0.0,
-    "status": "rejected",
-    "notes": [],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 0,
-        "normalized_unique_items": 0,
-        "normalized_removed": 0
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 0,
-        "ok": 0,
-        "success_rate": 0.0,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 0,
-        "note": "no configs"
-      },
-      "freshness": {
-        "score_adjustment": 0.0,
-        "config_churn_rate": null,
-        "history_available": false,
-        "reasons": [
-          "not applied to rejected empty/fetch-failed source"
-        ]
-      },
-      "history": {
-        "times_seen": 1,
-        "failure_streak": 1,
-        "avg_tcp_success_rate": 0.0,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 0.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-wenxig-dongtai-sub-main-clash-template-y-7cd0bd46",
-      "label": "wenxig/dongtai-sub — clash_template.yaml",
-      "url": "https://raw.githubusercontent.com/wenxig/dongtai-sub/main/clash_template.yaml",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-09-26T09:25:59.340467+00:00",
-      "metadata": {
-        "repository": "wenxig/dongtai-sub",
-        "branch": "main",
-        "path": "clash_template.yaml"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 0,
-    "unique_items": 0,
-    "duplicate_ratio": 0.0,
-    "protocols": {},
-    "tcp_sample_size": 0,
-    "tcp_ok_count": 0,
-    "tcp_success_rate": 0.0,
-    "score": 0.0,
-    "status": "rejected",
-    "notes": [],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 0,
-        "normalized_unique_items": 0,
-        "normalized_removed": 0
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 0,
-        "ok": 0,
-        "success_rate": 0.0,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 0,
-        "note": "no configs"
-      },
-      "freshness": {
-        "score_adjustment": 0.0,
-        "config_churn_rate": null,
-        "history_available": true,
-        "reasons": [
-          "not applied to rejected empty/fetch-failed source"
-        ]
-      },
-      "history": {
-        "times_seen": 16,
-        "failure_streak": 16,
-        "avg_tcp_success_rate": 0.0,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 0.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-wenxig-free-nodes-sub-main-clash-templat-c8895433",
-      "label": "wenxig/free-nodes-sub — clash_template.yaml",
-      "url": "https://raw.githubusercontent.com/wenxig/free-nodes-sub/main/clash_template.yaml",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-09-26T09:25:59.524698+00:00",
-      "metadata": {
-        "repository": "wenxig/free-nodes-sub",
-        "branch": "main",
-        "path": "clash_template.yaml"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 0,
-    "unique_items": 0,
-    "duplicate_ratio": 0.0,
-    "protocols": {},
-    "tcp_sample_size": 0,
-    "tcp_ok_count": 0,
-    "tcp_success_rate": 0.0,
-    "score": 0.0,
-    "status": "rejected",
-    "notes": [],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 0,
-        "normalized_unique_items": 0,
-        "normalized_removed": 0
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 0,
-        "ok": 0,
-        "success_rate": 0.0,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 0,
-        "note": "no configs"
-      },
-      "freshness": {
-        "score_adjustment": 0.0,
-        "config_churn_rate": null,
-        "history_available": true,
-        "reasons": [
-          "not applied to rejected empty/fetch-failed source"
-        ]
-      },
-      "history": {
-        "times_seen": 14,
-        "failure_streak": 14,
-        "avg_tcp_success_rate": 0.0,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 0.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-walterlow-freecut-main-editorconfig-c9b94c0e",
-      "label": "Telegram public channel beiten → raw.githubusercontent.com/walterlow/freecut/main/.editorconfig",
-      "url": "https://raw.githubusercontent.com/walterlow/freecut/main/.editorconfig",
-      "origin": "telegram_discovered_link",
-      "kind": "public_feed",
-      "tags": [
-        "telegram",
-        "discovered-link",
-        "auto"
-      ],
-      "discovered_at": "2026-09-26T09:26:41.968319+00:00",
-      "metadata": {
-        "channel": "beiten",
-        "parent_url": "https://github.com/walterlow/freecut",
-        "source": "telegram_web_link"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 0,
-    "unique_items": 0,
-    "duplicate_ratio": 0.0,
-    "protocols": {},
-    "tcp_sample_size": 0,
-    "tcp_ok_count": 0,
-    "tcp_success_rate": 0.0,
-    "score": 0.0,
-    "status": "rejected",
-    "notes": [],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 0,
-        "normalized_unique_items": 0,
-        "normalized_removed": 0
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 0,
-        "ok": 0,
-        "success_rate": 0.0,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 0,
-        "note": "no configs"
-      },
-      "freshness": {
-        "score_adjustment": 0.0,
-        "config_churn_rate": null,
-        "history_available": false,
-        "reasons": [
-          "not applied to rejected empty/fetch-failed source"
-        ]
-      },
-      "history": {
-        "times_seen": 1,
-        "failure_streak": 1,
-        "avg_tcp_success_rate": 0.0,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 0.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-leon406-word-discoverer-ng-master-webpac-85b73499",
-      "label": "Telegram public channel freenodeshare → raw.githubusercontent.com/Leon406/word-discoverer-ng/master/webpack.config.js",
-      "url": "https://raw.githubusercontent.com/Leon406/word-discoverer-ng/master/webpack.config.js",
-      "origin": "telegram_discovered_link",
-      "kind": "public_feed",
-      "tags": [
-        "telegram",
-        "discovered-link",
-        "auto"
-      ],
-      "discovered_at": "2026-09-26T09:26:29.153865+00:00",
-      "metadata": {
-        "channel": "freenodeshare",
-        "parent_url": "https://github.com/Leon406/word-discoverer-ng",
-        "source": "telegram_web_link"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 0,
-    "unique_items": 0,
-    "duplicate_ratio": 0.0,
-    "protocols": {},
-    "tcp_sample_size": 0,
-    "tcp_ok_count": 0,
-    "tcp_success_rate": 0.0,
-    "score": 0.0,
-    "status": "rejected",
-    "notes": [],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 0,
-        "normalized_unique_items": 0,
-        "normalized_removed": 0
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 0,
-        "ok": 0,
-        "success_rate": 0.0,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 0,
-        "note": "no configs"
-      },
-      "freshness": {
-        "score_adjustment": 0.0,
-        "config_churn_rate": null,
-        "history_available": true,
-        "reasons": [
-          "not applied to rejected empty/fetch-failed source"
-        ]
-      },
-      "history": {
-        "times_seen": 16,
-        "failure_streak": 16,
-        "avg_tcp_success_rate": 0.0,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 0.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-igareck-vpn-configs-for-russia-main-mirr-728300ab",
-      "label": "Telegram public channel igareq → raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/MIRRORS.md",
-      "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/MIRRORS.md",
-      "origin": "telegram_discovered_link",
-      "kind": "public_feed",
-      "tags": [
-        "telegram",
-        "discovered-link",
-        "auto"
-      ],
-      "discovered_at": "2026-09-26T09:26:42.958582+00:00",
-      "metadata": {
-        "channel": "igareq",
-        "parent_url": "https://github.com/igareck/vpn-configs-for-russia",
-        "source": "telegram_web_link"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 0,
-    "unique_items": 0,
-    "duplicate_ratio": 0.0,
-    "protocols": {},
-    "tcp_sample_size": 0,
-    "tcp_ok_count": 0,
-    "tcp_success_rate": 0.0,
-    "score": 0.0,
-    "status": "rejected",
-    "notes": [],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 0,
-        "normalized_unique_items": 0,
-        "normalized_removed": 0
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 0,
-        "ok": 0,
-        "success_rate": 0.0,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 0,
-        "note": "no configs"
-      },
-      "freshness": {
-        "score_adjustment": 0.0,
-        "config_churn_rate": null,
-        "history_available": true,
-        "reasons": [
-          "not applied to rejected empty/fetch-failed source"
-        ]
-      },
-      "history": {
-        "times_seen": 5,
-        "failure_streak": 5,
-        "avg_tcp_success_rate": 0.0,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 0.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-0xradikal-free-v2ray-configs-main-gitign-4425bf23",
-      "label": "Telegram public channel raydikalx → raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/.gitignore",
-      "url": "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/.gitignore",
-      "origin": "telegram_discovered_link",
-      "kind": "public_feed",
-      "tags": [
-        "telegram",
-        "discovered-link",
-        "auto"
-      ],
-      "discovered_at": "2026-09-26T09:26:12.498858+00:00",
-      "metadata": {
-        "channel": "raydikalx",
-        "parent_url": "https://github.com/0xRadikal/Free-v2ray-Configs",
-        "source": "telegram_web_link"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 0,
-    "unique_items": 0,
-    "duplicate_ratio": 0.0,
-    "protocols": {},
-    "tcp_sample_size": 0,
-    "tcp_ok_count": 0,
-    "tcp_success_rate": 0.0,
-    "score": 0.0,
-    "status": "rejected",
-    "notes": [],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 0,
-        "normalized_unique_items": 0,
-        "normalized_removed": 0
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 0,
-        "ok": 0,
-        "success_rate": 0.0,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 0,
-        "note": "no configs"
-      },
-      "freshness": {
-        "score_adjustment": 0.0,
-        "config_churn_rate": null,
-        "history_available": true,
-        "reasons": [
-          "not applied to rejected empty/fetch-failed source"
-        ]
-      },
-      "history": {
-        "times_seen": 16,
-        "failure_streak": 16,
-        "avg_tcp_success_rate": 0.0,
-        "avg_real_success_rate": 0.0,
-        "last_config_churn_rate": 0.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-raw-githubusercontent-com-romaxa55-megav-public-main-subs-vless-tx-7d59ae00",
-      "label": "Romaxa55/MegaV_Public — subs/vless.txt",
-      "url": "https://raw.githubusercontent.com/Romaxa55/MegaV_Public/main/subs/vless.txt",
-      "origin": "repository_tree",
-      "kind": "public_feed",
-      "tags": [
-        "repository-tree",
-        "auto",
-        "github"
-      ],
-      "discovered_at": "2026-09-26T09:25:55.736327+00:00",
-      "metadata": {
-        "repository": "Romaxa55/MegaV_Public",
-        "branch": "main",
-        "path": "subs/vless.txt"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 2,
-    "unique_items": 2,
-    "duplicate_ratio": 0.0,
-    "protocols": {
-      "vless": 2
-    },
-    "tcp_sample_size": 2,
-    "tcp_ok_count": 2,
+    "tcp_sample_size": 5,
+    "tcp_ok_count": 5,
     "tcp_success_rate": 1.0,
-    "score": 71.6,
+    "score": 78.8,
     "status": "rejected",
     "notes": [],
     "diagnostics": {
       "dedupe": {
-        "exact_unique_items": 2,
-        "normalized_unique_items": 2,
+        "exact_unique_items": 5,
+        "normalized_unique_items": 5,
         "normalized_removed": 0
       },
       "real_check": {
         "requested": true,
         "available": true,
-        "checked": 2,
+        "checked": 5,
         "ok": 2,
-        "success_rate": 1.0,
+        "success_rate": 0.4,
         "validation_location": "github_actions_eu",
         "validated_config_count": 2,
         "note": "real validation completed via v2ray_finder.xray_connectivity"
       },
       "freshness": {
-        "score_adjustment": 4.0,
+        "score_adjustment": 11.0,
         "config_churn_rate": 1.0,
         "history_available": true,
         "reasons": [
           "fresh config churn",
-          "strong historical real validation",
-          "strong historical TCP",
-          "failure streak 14"
+          "strong historical TCP"
         ]
       },
       "history": {
-        "times_seen": 15,
-        "failure_streak": 15,
-        "avg_tcp_success_rate": 1.0,
-        "avg_real_success_rate": 0.6001,
+        "times_seen": 5,
+        "failure_streak": 1,
+        "avg_tcp_success_rate": 0.9601,
+        "avg_real_success_rate": 0.3266,
         "last_config_churn_rate": 1.0
       }
     }
   },
   {
     "candidate": {
-      "id": "https-raw-githubusercontent-com-romaxa55-megav-public-main-subs-trojan-t-b9c3cd6d",
-      "label": "Romaxa55/MegaV_Public — subs/trojan.txt",
-      "url": "https://raw.githubusercontent.com/Romaxa55/MegaV_Public/main/subs/trojan.txt",
+      "id": "https-raw-githubusercontent-com-leilaomi-automergepublicnodes-optimized--682e608b",
+      "label": "LeilaoMi/AutoMergePublicNodes-Optimized — config/scoring.low_latency.yaml",
+      "url": "https://raw.githubusercontent.com/LeilaoMi/AutoMergePublicNodes-Optimized/main/config/scoring.low_latency.yaml",
       "origin": "repository_tree",
       "kind": "public_feed",
       "tags": [
@@ -1714,81 +1902,11 @@
         "auto",
         "github"
       ],
-      "discovered_at": "2026-09-26T09:25:55.736359+00:00",
+      "discovered_at": "2026-09-27T10:05:51.201471+00:00",
       "metadata": {
-        "repository": "Romaxa55/MegaV_Public",
+        "repository": "LeilaoMi/AutoMergePublicNodes-Optimized",
         "branch": "main",
-        "path": "subs/trojan.txt"
-      }
-    },
-    "fetch_ok": true,
-    "http_status": 200,
-    "error": "",
-    "raw_items": 2,
-    "unique_items": 2,
-    "duplicate_ratio": 0.0,
-    "protocols": {
-      "trojan": 2
-    },
-    "tcp_sample_size": 2,
-    "tcp_ok_count": 1,
-    "tcp_success_rate": 0.5,
-    "score": 46.6,
-    "status": "rejected",
-    "notes": [],
-    "diagnostics": {
-      "dedupe": {
-        "exact_unique_items": 2,
-        "normalized_unique_items": 2,
-        "normalized_removed": 0
-      },
-      "real_check": {
-        "requested": true,
-        "available": true,
-        "checked": 2,
-        "ok": 0,
-        "success_rate": 0.0,
-        "validation_location": "github_actions_eu",
-        "validated_config_count": 0,
-        "note": "real validation completed via v2ray_finder.xray_connectivity"
-      },
-      "freshness": {
-        "score_adjustment": 4.0,
-        "config_churn_rate": 1.0,
-        "history_available": true,
-        "reasons": [
-          "fresh config churn",
-          "strong historical real validation",
-          "strong historical TCP",
-          "failure streak 7"
-        ]
-      },
-      "history": {
-        "times_seen": 8,
-        "failure_streak": 8,
-        "avg_tcp_success_rate": 0.9375,
-        "avg_real_success_rate": 0.75,
-        "last_config_churn_rate": 1.0
-      }
-    }
-  },
-  {
-    "candidate": {
-      "id": "https-t-me-abc-configs-d22d8480",
-      "label": "Telegram public channel abc_configs → t.me/abc_configs",
-      "url": "https://t.me/abc_configs",
-      "origin": "telegram_discovered_link",
-      "kind": "public_feed",
-      "tags": [
-        "telegram",
-        "discovered-link",
-        "auto"
-      ],
-      "discovered_at": "2026-09-26T09:26:16.234917+00:00",
-      "metadata": {
-        "channel": "abc_configs",
-        "parent_url": "https://t.me/s/abc_configs",
-        "source": "telegram_web_link"
+        "path": "config/scoring.low_latency.yaml"
       }
     },
     "fetch_ok": true,
@@ -1829,8 +1947,337 @@
         ]
       },
       "history": {
-        "times_seen": 6,
-        "failure_streak": 6,
+        "times_seen": 19,
+        "failure_streak": 19,
+        "avg_tcp_success_rate": 0.0,
+        "avg_real_success_rate": 0.0,
+        "last_config_churn_rate": 0.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-leilaomi-automergepublicnodes-optimized--489785c3",
+      "label": "LeilaoMi/AutoMergePublicNodes-Optimized — config/scoring.yaml",
+      "url": "https://raw.githubusercontent.com/LeilaoMi/AutoMergePublicNodes-Optimized/main/config/scoring.yaml",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github"
+      ],
+      "discovered_at": "2026-09-27T10:05:51.201462+00:00",
+      "metadata": {
+        "repository": "LeilaoMi/AutoMergePublicNodes-Optimized",
+        "branch": "main",
+        "path": "config/scoring.yaml"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 0,
+    "unique_items": 0,
+    "duplicate_ratio": 0.0,
+    "protocols": {},
+    "tcp_sample_size": 0,
+    "tcp_ok_count": 0,
+    "tcp_success_rate": 0.0,
+    "score": 0.0,
+    "status": "rejected",
+    "notes": [],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 0,
+        "normalized_unique_items": 0,
+        "normalized_removed": 0
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 0,
+        "ok": 0,
+        "success_rate": 0.0,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 0,
+        "note": "no configs"
+      },
+      "freshness": {
+        "score_adjustment": 0.0,
+        "config_churn_rate": null,
+        "history_available": true,
+        "reasons": [
+          "not applied to rejected empty/fetch-failed source"
+        ]
+      },
+      "history": {
+        "times_seen": 21,
+        "failure_streak": 21,
+        "avg_tcp_success_rate": 0.0,
+        "avg_real_success_rate": 0.0,
+        "last_config_churn_rate": 0.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-leilaomi-automergepublicnodes-optimized--4ad442bd",
+      "label": "LeilaoMi/AutoMergePublicNodes-Optimized — config/sources.yaml",
+      "url": "https://raw.githubusercontent.com/LeilaoMi/AutoMergePublicNodes-Optimized/main/config/sources.yaml",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github"
+      ],
+      "discovered_at": "2026-09-27T10:05:51.201443+00:00",
+      "metadata": {
+        "repository": "LeilaoMi/AutoMergePublicNodes-Optimized",
+        "branch": "main",
+        "path": "config/sources.yaml"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 0,
+    "unique_items": 0,
+    "duplicate_ratio": 0.0,
+    "protocols": {},
+    "tcp_sample_size": 0,
+    "tcp_ok_count": 0,
+    "tcp_success_rate": 0.0,
+    "score": 0.0,
+    "status": "rejected",
+    "notes": [],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 0,
+        "normalized_unique_items": 0,
+        "normalized_removed": 0
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 0,
+        "ok": 0,
+        "success_rate": 0.0,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 0,
+        "note": "no configs"
+      },
+      "freshness": {
+        "score_adjustment": 0.0,
+        "config_churn_rate": null,
+        "history_available": true,
+        "reasons": [
+          "not applied to rejected empty/fetch-failed source"
+        ]
+      },
+      "history": {
+        "times_seen": 21,
+        "failure_streak": 21,
+        "avg_tcp_success_rate": 0.0,
+        "avg_real_success_rate": 0.0,
+        "last_config_churn_rate": 0.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-leon406-subcrawler-main-config-detekt-ym-4a75ae43",
+      "label": "Leon406/SubCrawler — config/detekt.yml",
+      "url": "https://raw.githubusercontent.com/Leon406/SubCrawler/main/config/detekt.yml",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github",
+        "zh",
+        "chinese",
+        "github_zh_search"
+      ],
+      "discovered_at": "2026-09-27T10:06:10.229298+00:00",
+      "metadata": {
+        "repository": "Leon406/SubCrawler",
+        "branch": "main",
+        "path": "config/detekt.yml"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 0,
+    "unique_items": 0,
+    "duplicate_ratio": 0.0,
+    "protocols": {},
+    "tcp_sample_size": 0,
+    "tcp_ok_count": 0,
+    "tcp_success_rate": 0.0,
+    "score": 0.0,
+    "status": "rejected",
+    "notes": [],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 0,
+        "normalized_unique_items": 0,
+        "normalized_removed": 0
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 0,
+        "ok": 0,
+        "success_rate": 0.0,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 0,
+        "note": "no configs"
+      },
+      "freshness": {
+        "score_adjustment": 0.0,
+        "config_churn_rate": null,
+        "history_available": true,
+        "reasons": [
+          "not applied to rejected empty/fetch-failed source"
+        ]
+      },
+      "history": {
+        "times_seen": 8,
+        "failure_streak": 8,
+        "avg_tcp_success_rate": 0.0,
+        "avg_real_success_rate": 0.0,
+        "last_config_churn_rate": 0.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-mohammadbahemmat-v2ray-collector-main-co-bd15dc91",
+      "label": "MohammadBahemmat/V2ray-Collector — config/requirements.txt",
+      "url": "https://raw.githubusercontent.com/MohammadBahemmat/V2ray-Collector/main/config/requirements.txt",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github"
+      ],
+      "discovered_at": "2026-09-27T10:05:51.838778+00:00",
+      "metadata": {
+        "repository": "MohammadBahemmat/V2ray-Collector",
+        "branch": "main",
+        "path": "config/requirements.txt"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 0,
+    "unique_items": 0,
+    "duplicate_ratio": 0.0,
+    "protocols": {},
+    "tcp_sample_size": 0,
+    "tcp_ok_count": 0,
+    "tcp_success_rate": 0.0,
+    "score": 0.0,
+    "status": "rejected",
+    "notes": [],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 0,
+        "normalized_unique_items": 0,
+        "normalized_removed": 0
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 0,
+        "ok": 0,
+        "success_rate": 0.0,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 0,
+        "note": "no configs"
+      },
+      "freshness": {
+        "score_adjustment": 0.0,
+        "config_churn_rate": null,
+        "history_available": true,
+        "reasons": [
+          "not applied to rejected empty/fetch-failed source"
+        ]
+      },
+      "history": {
+        "times_seen": 31,
+        "failure_streak": 31,
+        "avg_tcp_success_rate": 0.0,
+        "avg_real_success_rate": 0.0,
+        "last_config_churn_rate": 0.0
+      }
+    }
+  },
+  {
+    "candidate": {
+      "id": "https-raw-githubusercontent-com-scannervpn-cdnscanner-main-tsconfig-json-3bba28fc",
+      "label": "ScannerVpn/CdnScanner — tsconfig.json",
+      "url": "https://raw.githubusercontent.com/ScannerVpn/CdnScanner/main/tsconfig.json",
+      "origin": "repository_tree",
+      "kind": "public_feed",
+      "tags": [
+        "repository-tree",
+        "auto",
+        "github",
+        "english"
+      ],
+      "discovered_at": "2026-09-27T10:06:09.179622+00:00",
+      "metadata": {
+        "repository": "ScannerVpn/CdnScanner",
+        "branch": "main",
+        "path": "tsconfig.json"
+      }
+    },
+    "fetch_ok": true,
+    "http_status": 200,
+    "error": "",
+    "raw_items": 0,
+    "unique_items": 0,
+    "duplicate_ratio": 0.0,
+    "protocols": {},
+    "tcp_sample_size": 0,
+    "tcp_ok_count": 0,
+    "tcp_success_rate": 0.0,
+    "score": 0.0,
+    "status": "rejected",
+    "notes": [],
+    "diagnostics": {
+      "dedupe": {
+        "exact_unique_items": 0,
+        "normalized_unique_items": 0,
+        "normalized_removed": 0
+      },
+      "real_check": {
+        "requested": true,
+        "available": true,
+        "checked": 0,
+        "ok": 0,
+        "success_rate": 0.0,
+        "validation_location": "github_actions_eu",
+        "validated_config_count": 0,
+        "note": "no configs"
+      },
+      "freshness": {
+        "score_adjustment": 0.0,
+        "config_churn_rate": null,
+        "history_available": true,
+        "reasons": [
+          "not applied to rejected empty/fetch-failed source"
+        ]
+      },
+      "history": {
+        "times_seen": 9,
+        "failure_streak": 9,
         "avg_tcp_success_rate": 0.0,
         "avg_real_success_rate": 0.0,
         "last_config_churn_rate": 0.0
